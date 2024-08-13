@@ -1,24 +1,63 @@
 from flask import Flask, jsonify, request
+import json
 
-# Create a Flask application instance
+
 app = Flask(__name__)
 
-# Define a route for the root URL
-@app.route('/')
-def home():
-    return "<h2>Welcome to the Flask API!</h2>"
 
-# Define a route for a simple API endpoint
-@app.route('/api/hello', methods=['GET'])
-def hello():
-    return jsonify({"message": "Hello, World!"})
 
-# Define a route that takes a parameter
-@app.route('/api/greet', methods=['GET'])
-def greet():
-    name = request.args.get('name', 'Stranger')  # Get 'name' from query string or default to 'Stranger'
-    return jsonify({"message": f"Hello, {name}!"})
+@app.route('/v1/StudentOptions', methods=['GET'])
 
-# Run the Flask application
+
+def get_data():
+    
+     # Get the 'id' query parameter from the request
+    qualification = request.args.get('qualification')
+   
+        # Load the JSON data
+    with open('./json/StudentOptions/'+qualification+'.json') as f:
+            data = json.load(f)
+    # Retrieve data from the JSON file
+    
+    item = data.get(qualification)
+        
+    return jsonify(item)
+
+    
+
+@app.route('/v1/Exams')
+        
+
+def get_data_exams():
+
+    subject_name=request.args.get('subject')
+    
+    with open('./json/Exams/'+subject_name+'.json') as f:
+            data=json.load(f)
+    item= data.get(subject_name)
+    return jsonify(item)
+
+@app.route('/v1/Courses',methods=['GET'])
+
+def get_data_courses():
+      
+      course_name=request.args.get('course_name')
+
+      with open('./json/Courses/'+course_name+'.json') as f:
+            data=json.load(f)
+      item=data.get(course_name)
+      return jsonify(item)      
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+        
+    
+    
+
+
+
+
+
+
