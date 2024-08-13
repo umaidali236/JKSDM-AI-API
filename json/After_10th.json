@@ -1,0 +1,152 @@
+{
+    "10th": [
+        {
+            "Intermediate (2 Years)": [
+                {
+                    "Science": [
+                        "MPC",
+                        "BiPC",
+                        "Library Science"
+                    ]
+                },
+                {
+                    "Commerce": [
+                        "CEC"
+                    ]
+                },
+                {
+                    "Arts": [
+                        "MEC",
+                        "HEC"
+                    ]
+                }
+            ]
+        },
+        {
+            "Polytechnic (3 Years)": [
+                "Mechanical",
+                "Computer Science",
+                "Civil",
+                "EEE",
+                "IT",
+                "Automobile",
+                "Electronics & Communication",
+                "Bio-Technology",
+                "Electrical",
+                "Chemical",
+                "Aeronautical",
+                "Agriculture",
+                "Architecture",
+                "Bio-Medical",
+                "Marine Technology",
+                "Mining Technology",
+                "Leather Technology",
+                "Textile Technology",
+                "Petroleum Technology",
+                "Plastic Technology",
+                "Rubber Technology"
+            ]
+        },
+        {
+            "ITI (2 Years)": [
+                "Fitter",
+                "Computer",
+                "Civil(Draughtman)",
+                "Electrician",
+                "Plumber",
+                "Surveyor",
+                "Electrical",
+                "Machine Tools",
+                "Welder",
+                "Firemen",
+                "Cookery",
+                "Paint Technology",
+                {
+                    "Mechanical": [
+                        "Radio & TV",
+                        "Motor Vehicle",
+                        "Diesel",
+                        "Marine"
+                    ]
+                }
+            ]
+        },
+        {
+            "Paramedical (3 Years)": [
+                "DLMT",
+                "DHFM",
+                "DOA",
+                "DOT",
+                "Health Inspector",
+                "Sanitary Inspector"
+            ]
+        },
+        {
+            "Short Term Courses (6 Months / 1 Year": [
+                "DTP",
+                "PGDCA",
+                "Tally",
+                "Internet",
+                "Graphics",
+                "Animation",
+                "Web Designing",
+                "Cyber Security"
+            ]
+        },
+        {
+            "Others": [
+                "Beauty",
+                "Cosmetology",
+                "Jewelry Designing",
+                "Fashion Designing",
+                "Photography"
+            ]
+        },
+        {
+            "IIT": []
+        },
+        {
+            "Examinations": [
+                {
+                    "Exam": "JUET",
+                    "Website": "www.jammuuniversity.ac.in"
+                },
+                {
+                    "Exam": "1. JK Polytechnic Entrance Test",
+                    "Website": "www.jkbopee.gov.in"
+                },
+                {
+                    "Exam": "2. B.Sc. Nursing/Para Medical Diploma Courses",
+                    "Website": "www.jkbopee.gov.in"
+                },
+                {
+                    "Exam": "3. CET Engineering",
+                    "Website": "www.jkbopee.gov.in"
+                },
+                {
+                    "Exam": "4. 10th Based Para Medical Course",
+                    "Website": "www.jkbopee.gov.in"
+                }
+            ]
+        },
+        {
+            "Govt. Jobs": [
+                "Sub Inspector",
+                "Patwari",
+                "Lecturer",
+                "Assistant Professor",
+                "Account Assistant",
+                "Forester",
+                "Naib Tehsildar",
+                "Supervisor",
+                "Junior Engineer",
+                "Scientific Officer",
+                "Junior Scale Stenographer",
+                "Staff Nurse",
+                "Mechanic",
+                "Typist",
+                "Driver"
+            ]
+        }
+    ]
+}

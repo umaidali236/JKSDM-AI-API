@@ -1,0 +1,186 @@
+{
+    "Talent Tests-at a Glance (from school level to Intermediate": [
+        {
+            "S.No": 1,
+            "Name of the Exam": "NDSE (National Talent Search Exam)",
+            "Eligible Students": "10th class Students",
+            "Syllabus": "Science, Maths, Social, Mental ability",
+            "Website": "www.ncert.nic.in"
+        },
+        {
+            "S.No": 2,
+            "Name of the Exam": "KYPY (Kishor Vygnanika Proshaah Yogena",
+            "Eligible Students": "Inter (MPC/BiPC)",
+            "Syllabus": "Inter syllabus",
+            "Website": "www.kypy.iisc.ernet.in"
+        },
+        {
+            "S.No": 3,
+            "Name of the Exam": "HBBVS (Dr. Homi Baba bala vidyanic spertha",
+            "Eligible Students": "6th to 9th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.instrs.in"
+        },
+        {
+            "S.No": 4,
+            "Name of the Exam": "NSO (National Science Olympiad)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.sofworld.org"
+        },
+        {
+            "S.No": 5,
+            "Name of the Exam": "NCO (National Cyber Olympiad)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.sofworld.org"
+        },
+        {
+            "S.No": 6,
+            "Name of the Exam": "UCO (Unified Cyber Olympiad)",
+            "Eligible Students": "8 to 12th class students",
+            "Syllabus": "Mental ability,Reasoning,Computer Skills",
+            "Website": "www.unifiedcouncil.com"
+        },
+        {
+            "S.No": 7,
+            "Name of the Exam": "NDSE (National Science Talent Search Exam)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.unifiedcouncil.com"
+        },
+        {
+            "S.No": 8,
+            "Name of the Exam": "MTSE (Maths Talent Search Exam)",
+            "Eligible Students": "3rd to 9th class students",
+            "Syllabus": "Mental ability,Reasoning,Maths",
+            "Website": "www.ganithasastraparishad.org"
+        },
+        {
+            "S.No": 9,
+            "Name of the Exam": "IMO (International Mathematics Olympiad)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.imo_official.in"
+        },
+        {
+            "S.No": 10,
+            "Name of the Exam": "NLSTSE (National Level Science Talent Search Exam)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.unifiedcouncil.com"
+        },
+        {
+            "S.No": 11,
+            "Name of the Exam": "NSEJS (National Standard Exam in Junior Science)",
+            "Eligible Students": "1 to 10th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.iapt.org.in"
+        },
+        {
+            "S.No": 12,
+            "Name of the Exam": "SSTSE (State Level Science Talent Search Exam)",
+            "Eligible Students": "4th to 10th class students",
+            "Syllabus": "SCERT Syllabus",
+            "Website": "www.unifiedcouncil.com"
+        },
+        {
+            "S.No": 13,
+            "Name of the Exam": "IAIS (International Assessment for Indian Schools)",
+            "Eligible Students": "3 to 12th class students",
+            "Syllabus": "CBSE/ICSE/SCERT Syllabus",
+            "Website": "www.macmillaneducation.in/iais"
+        },
+        {
+            "S.No": 14,
+            "Name of the Exam": "IOS (International Olympiad in Science)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "www.sofworld.org"
+        },
+        {
+            "S.No": 15,
+            "Name of the Exam": "RMO (Regional Mathematics Olympiad)",
+            "Eligible Students": "Intermediate",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "www.isical.ac.in"
+        },
+        {
+            "S.No": 16,
+            "Name of the Exam": "IOEL (International Olympiad of English Language)",
+            "Eligible Students": "1 to 12th class students",
+            "Syllabus": "CBSE/ICSE Syllabus",
+            "Website": "http://schools.aglasari.com"
+        },
+        {
+            "S.No": 17,
+            "Name of the Exam": "NSIB (National Srandard Exam in Biology)",
+            "Eligible Students": "Senior Inter students",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "http://iapt.org.in"
+        },
+        {
+            "S.No": 18,
+            "Name of the Exam": "NSEC (National Standard Exam in Chemistry)",
+            "Eligible Students": "Senior Inter students",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "http://iapt.org.in"
+        },
+        {
+            "S.No": 19,
+            "Name of the Exam": "NSEA (National Standard Exam in Astronomy)",
+            "Eligible Students": "Senior Inter students",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "http://iapt.org.in"
+        },
+        {
+            "S.No": 20,
+            "Name of the Exam": "NSEP (National Standard Exam in Physics)",
+            "Eligible Students": "Senior Inter students",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "http://iapt.org.in"
+        },
+        {
+            "S.No": 21,
+            "Name of the Exam": "ZIO (Zonal Information Olympiad)",
+            "Eligible Students": "8 to 12th class students",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "www.iarcs.org.in"
+        },
+        {
+            "S.No": 22,
+            "Name of the Exam": "IIO (International Information Olympiad)",
+            "Eligible Students": "1 to 8th class students",
+            "Syllabus": "CBSE/ICSE/SCERT Syllabus",
+            "Website": "www.iarcs.org.in"
+        },
+        {
+            "S.No": 23,
+            "Name of the Exam": "NIMO (National Interactive Mathematics Olympiad)",
+            "Eligible Students": "5 to 12th class students",
+            "Syllabus": "Maths, Science, Mental Ability",
+            "Website": "www.eduhealfoundation.org"
+        },
+        {
+            "S.No": 24,
+            "Name of the Exam": "NBTO (National Bio-Technology Olympiad)",
+            "Eligible Students": "5 to 12th class students",
+            "Syllabus": "CBSE/ICSE/SCERT Syllabus",
+            "Website": "www.eduhealfoundation.org"
+        },
+        {
+            "S.No": 25,
+            "Name of the Exam": "IGO (Indian Geography Olympiad)",
+            "Eligible Students": "2nd to 12th class students",
+            "Syllabus": "CBSE Syllabus",
+            "Website": "www.geogeniusindia.org"
+        },
+        {
+            "S.No": 26,
+            "Name of the Exam": "KO (Knowledge Olimpiade)",
+            "Eligible Students": "2nd to 12th class students",
+            "Syllabus": "CBSE/ICSE/SCERT Syllabus",
+            "Website": "http://aisect.org"
+        }
+    ]
+}
