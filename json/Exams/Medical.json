@@ -1,0 +1,46 @@
+{
+    "Medical": [
+        {
+            "National Eligibility Cum Entrance Test (NEET)": {
+                "Purpose": "Admission to MBBS/BDS",
+                "Eligibility": "Class 12 (PCB)",
+                "Application mode": "Online",
+                "Source": "http://aipmt.nic.in/aipmt/Welcome.aspx"
+            }
+        },
+        {
+            "National Level Medical Entrance Exams": [
+                {
+                    "S.No": 1,
+                    "Exam Name": "AIIMS",
+                    "Website URL": "http://aiimsexams.org/"
+                },
+                {
+                    "S.No": 2,
+                    "Exam Name": "CMC-Vellore",
+                    "Website URL": "http://admissions.cmcvellore.ac.in//"
+                },
+                {
+                    "S.No": 3,
+                    "Exam Name": "CMC-Ludhiana",
+                    "Website URL": "http://cmcludhiana.in//"
+                },
+                {
+                    "S.No": 4,
+                    "Exam Name": "COMED-K",
+                    "Website URL": "http://www.comedk.org/"
+                },
+                {
+                    "S.No": 5,
+                    "Exam Name": "JIPMER",
+                    "Website URL": "http://jipmer.edu.in/"
+                },
+                {
+                    "S.No": 6,
+                    "Exam Name": "Manipal (MBBS)",
+                    "Website URL": "www.admissions.manipal.edu"
+                }
+            ]
+        }
+    ]
+}

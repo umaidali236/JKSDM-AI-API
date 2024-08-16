@@ -1,0 +1,166 @@
+{
+    "Exams(CETS)": [
+        {
+            "S.No": "1",
+            "Name of the Examination": "APEAMCET",
+            "Conducted By": "Andhra Pradesh Govt.",
+            "Application Invited For": "APEAMCET Board",
+            "Notification Month": "March",
+            "Mode of Selection": "Through State Level Entrance Exam",
+            "Website": "http://www.ap.gov.in/eamcet"
+        },
+        {
+            "S.No": "2",
+            "Name of the Examination": "JEE (MAIN)",
+            "Conducted By": "National Testing Agency",
+            "Application Invited For": "B.Tech",
+            "Notification Month": "October",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "https://jeemain.nta.ac.in"
+        },
+        {
+            "S.No": "3",
+            "Name of the Examination": "JEE (Advance)",
+            "Conducted By": "IIT Madras",
+            "Application Invited For": "B.Tech",
+            "Notification Month": "April",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "http://jeeadv.ac.in"
+        },
+        {
+            "S.No": "4",
+            "Name of the Examination": "VITEEE",
+            "Conducted By": "VIT University",
+            "Application Invited For": "B.Tech",
+            "Notification Month": "March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.vit.ac.in"
+        },
+        {
+            "S.No": "5",
+            "Name of the Examination": "AIIMS",
+            "Conducted By": "All India Institute of Medical Sciences",
+            "Application Invited For": "MBBS",
+            "Notification Month": "Feb/March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.aiimsexams.org"
+        },
+        {
+            "S.No": "6",
+            "Name of the Examination": "NEET",
+            "Conducted By": "CBSE",
+            "Application Invited For": "MBBS-BDS",
+            "Notification Month": "Feb/March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.cbseneet.nic.in"
+        },
+        {
+            "S.No": "7",
+            "Name of the Examination": "CMC-Velore",
+            "Conducted By": "Christian Medical College Vellore",
+            "Application Invited For": "MBBS",
+            "Notification Month": "March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.cmch-vellore.edu"
+        },
+        {
+            "S.No": "8",
+            "Name of the Examination": "JIPMER",
+            "Conducted By": "All India Institute of Medical Sciences",
+            "Application Invited For": "MBBS",
+            "Notification Month": "March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.jipmer.edu.in"
+        },
+        {
+            "S.No": "9",
+            "Name of the Examination": "BITSAT",
+            "Conducted By": "BITS Pilani",
+            "Application Invited For": "Integrated Degree Programmes",
+            "Notification Month": "Feb/March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.bitsadmission.com"
+        },
+        {
+            "S.No": "10",
+            "Name of the Examination": "CLAT",
+            "Conducted By": "Chanakya Law University",
+            "Application Invited For": "Undergraduate Law Programmes",
+            "Notification Month": "Feb/March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "www.clat.ac.in"
+        },
+        {
+            "S.No": "11",
+            "Name of the Examination": "AIEEE",
+            "Conducted By": "Indian Council of Agricultural Research",
+            "Application Invited For": "Undergraduate Programmes in Agriculture",
+            "Notification Month": "Feb/March",
+            "Mode of Selection": "Through National Entrance Exam",
+            "Website": "http://www.icar.org"
+        },
+        {
+            "S.No": "12",
+            "Name of the Examination": "IIST",
+            "Conducted By": "Indian Institute of Science & Technology",
+            "Application Invited For": "4 Year B.Tech & 5 Year Dual Degree",
+            "Notification Month": "May/June",
+            "Mode of Selection": "Based on JEE Advanced",
+            "Website": "https://www.iist.ac"
+        },
+        {
+            "S.No": "13",
+            "Name of the Examination": "IISc",
+            "Conducted By": "Indian Institute Science,Bangalore",
+            "Application Invited For": "Integrated Degree Programmes",
+            "Notification Month": "April",
+            "Mode of Selection": "*KVPY Score / *IIT-JEEAdvanced / *NEET Exam",
+            "Website": "www.iisc.ernet.in"
+        },
+        {
+            "S.No": "14",
+            "Name of the Examination": "KEAM",
+            "Conducted By": "Commissioner of Entrance Examinations,Govt. of Kerala",
+            "Application Invited For": "Medical,Agriculture,Forestry,Veterinary,Fisheries,Engineering & Architecture Courses",
+            "Notification Month": "Feb/March",
+            "Mode of Selection": "*Common Entrance Exam(For Engg.)*Based on NEET Score(For Medical)",
+            "Website": "www.cee.kerala.gov.in"
+        },
+        {
+            "S.No": "15",
+            "Name of the Examination": "CET",
+            "Conducted By": "Indian Maritime University(IMU) under Govt. of India",
+            "Application Invited For": "Undergraduate Course Marine & Science Technology",
+            "Notification Month": "June",
+            "Mode of Selection": "Common Entrance Test",
+            "Website": "http://www.imu.edu.in"
+        },
+        {
+            "S.No": "16",
+            "Name of the Examination": "NDA",
+            "Conducted By": "Union Public Service Commission ",
+            "Application Invited For": "NDA & National Naval Academy",
+            "Notification Month": "February",
+            "Mode of Selection": "Through National Level Entrance Exam",
+            "Website": "www.upsconline.nic.in"
+        },
+        {
+            "S.No": "17",
+            "Name of the Examination": "NEST",
+            "Conducted By": "Department of Atomic Energy under Govt. of India",
+            "Application Invited For": "Integrated M.Sc Programmes",
+            "Notification Month": "March",
+            "Mode of Selection": "Through National Level Entrance Exam",
+            "Website": "www.nestexam.in"
+        },
+        {
+            "S.No": "18",
+            "Name of the Examination": "NATA",
+            "Conducted By": "Council of Architecture",
+            "Application Invited For": "5 Year B.Arch Degree Courses",
+            "Notification Month": "February",
+            "Mode of Selection": "Through National Level Entrance Exam",
+            "Website": "www.nata.nic.in"
+        }
+    ]
+}

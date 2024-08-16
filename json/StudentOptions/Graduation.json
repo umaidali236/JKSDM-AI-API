@@ -1,0 +1,196 @@
+{
+    "Graduation": [
+        {
+            "Engineering Students": [
+                "M.Tech",
+                "MBA",
+                "JOB"
+            ]
+        },
+        {
+            "Medical Students": [
+                "Practice",
+                "MS",
+                "MD",
+                "JOB"
+            ]
+        },
+        {
+            "Degree Students": [
+                {
+                    "BA Students": [
+                        "JOB",
+                        "MA",
+                        "B.Ed",
+                        "MBA",
+                        "LLB",
+                        "Phd"
+                    ],
+                    "B.Sc Students": [
+                        "JOB",
+                        "MSC",
+                        "B.Ed",
+                        "LLB",
+                        "Phd"
+                    ],
+                    "B.Com Students": [
+                        "JOB",
+                        "M.Com",
+                        "MBA",
+                        "LLB",
+                        "Phd"
+                    ],
+                    "LLB Students": [
+                        "JOB",
+                        "DTL",
+                        "DLL",
+                        "LLM"
+                    ],
+                    "BCA Students": [
+                        "JOB",
+                        "MCA",
+                        "MBA",
+                        "MSc Comp",
+                        "Phd"
+                    ],
+                    "BBA/BBM Students": [
+                        "JOB",
+                        "MBA",
+                        "Phd"
+                    ]
+                }
+            ]
+        },
+        {
+            "Teaching Students": {
+                "B.Ed/B.PEd": {
+                    "M.Ed": [
+                        "JOB",
+                        "Phd"
+                    ],
+                    "JOB": []
+                }
+            }
+        },
+        {
+            "Others": [
+                {
+                    "Post Graduation": [
+                        {
+                            "Post Graduation Course": "MA Telugu",
+                            "Eligibility": "Any degree with one subject Telugu"
+                        },
+                        {
+                            "Post Graduation Course": "MA English",
+                            "Eligibility": "Any degree with one subject English"
+                        },
+                        {
+                            "Post Graduation Course": "MA Hindi",
+                            "Eligibility": "Any degree with one subject Hindi"
+                        },
+                        {
+                            "Post Graduation Course": "MA Economics",
+                            "Eligibility": "BA with Economics as one of the subject"
+                        },
+                        {
+                            "Post Graduation Course": "MA History",
+                            "Eligibility": "BA with History as one of the subject"
+                        },
+                        {
+                            "Post Graduation Course": "MA Sociology",
+                            "Eligibility": "BA"
+                        },
+                        {
+                            "Post Graduation Course": "MA Political Science",
+                            "Eligibility": "BA"
+                        },
+                        {
+                            "Post Graduation Course": "MA Public Administration",
+                            "Eligibility": "BA"
+                        },
+                        {
+                            "Post Graduation Course": "MS Public Relations",
+                            "Eligibility": "BA"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Computers",
+                            "Eligibility": "B.Sc Computers/B.Com Computers/BA"
+                        },
+                        {
+                            "Post Graduation Course": "M.Com",
+                            "Eligibility": "B.Com/BA with Commerce one of the subject"
+                        },
+                        {
+                            "Post Graduation Course": "MCA",
+                            "Eligibility": "BA/B.Sc with Maths"
+                        },
+                        {
+                            "Post Graduation Course": "MBA",
+                            "Eligibility": "Any degree"
+                        },
+                        {
+                            "Post Graduation Course": "MA Archaeology",
+                            "Eligibility": "BA"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Maths",
+                            "Eligibility": "B.Sc/BA with one subject Maths"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Chemistry",
+                            "Eligibility": "B.Sc with chemistry"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Botany",
+                            "Eligibility": "B.Sc with Botany"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Zoology",
+                            "Eligibility": "B.Sc with Zoology"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Physics",
+                            "Eligibility": "B.Sc with Physics"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Home Science",
+                            "Eligibility": "B.Sc with Botany + Zoology"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Anthropology",
+                            "Eligibility": "B.Sc with Zoology/BA"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Psychology",
+                            "Eligibility": "Any degree"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Bio-Chemistry",
+                            "Eligibility": "B.Sc with one subject chemistry"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Bio-Technology",
+                            "Eligibility": "B.Sc with one subject Bio-Technology"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Microbiology",
+                            "Eligibility": "B.Sc with Zoology"
+                        },
+                        {
+                            "Post Graduation Course": "M.Sc Virology",
+                            "Eligibility": "B.Sc with Zoology"
+                        },
+                        {
+                            "Post Graduation Course": "MLIC",
+                            "Eligibility": "BLIC"
+                        },
+                        {
+                            "Post Graduation Course": "LLM",
+                            "Eligibility": "BL/LLB"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

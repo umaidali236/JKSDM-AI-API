@@ -1,0 +1,209 @@
+{
+    "Intermediate": [
+        {
+            "Teaching ": [
+                "D.ED (2 Years, D.ED Entrance, Primary School Teacher)",
+                "UDPED (2 Years, UDPED Entrance, PET Teacher)",
+                "ECCED (Early Childhood Care Education)"
+            ]
+        },
+        {
+            "Others (Diploma Courses)": [
+                "Foreign Languages",
+                "Fire Safety",
+                "Journalism",
+                "Home Science",
+                "Tourism",
+                "Hotel Management",
+                "Rural Development",
+                {
+                    "Designing": [
+                        "Fashion",
+                        "Interior",
+                        "Jewellery"
+                    ]
+                },
+                {
+                    "Film Making": [
+                        "Direction",
+                        "Screen Writing",
+                        "Cinematography",
+                        "Sound Designing",
+                        "Editing",
+                        "Action"
+                    ]
+                },
+                {
+                    "Management": [
+                        "Finance Management",
+                        "Event Management",
+                        "Hotel Management"
+                    ]
+                }
+            ]
+        },
+        {
+            "Degree": [
+                {
+                    "Degree (3 Years)": [
+                        {
+                            "BA": [
+                                "BA-HEP",
+                                "BA-HTP",
+                                "BA-Linguistics",
+                                "BA-Economics",
+                                "BA-Psychology",
+                                "BA-Fine Arts",
+                                "BA-Political Science",
+                                "BA-Sociology",
+                                "BA-Library Science"
+                            ]
+                        },
+                        {
+                            "B.Com": [
+                                "B.Com-Regular",
+                                "B.Com-Computers",
+                                "B.Com-Bank Management",
+                                "B.Com-Tax Procedure"
+                            ]
+                        },
+                        {
+                            "B.Sc": [
+                                "B.Sc-MPC",
+                                "B.Sc-MEC",
+                                "B.Sc-Applied Mathematics",
+                                "B.Sc-BZC/CBZ",
+                                "B.Sc-CPZ",
+                                "B.Sc-Horticulture",
+                                "B.Sc-Computer Science",
+                                "B.Sc-Home Science",
+                                "B.Sc-HorticultureBio-Chemistry",
+                                "B.Sc-Micro-Biology",
+                                "B.Sc-Bio-Technology",
+                                "B.Sc-Anthropology",
+                                "B.Sc-Dairy Science"
+                            ]
+                        },
+                        {
+                            "Other Degrees": [
+                                "LLB",
+                                "BBA (Bachelor in Business Administration)",
+                                "BCA (Bachelor in Computer Application)",
+                                "BBM (Bachelor in Business Management)",
+                                "BAF (Bachelor in Accounting & Finance)",
+                                "BFM (Bachelor in Finance Management)",
+                                "BMS (Bachelor in Management Studies)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Dual Degree (4 Years)": [
+                        "BA + B.Ed",
+                        "BSc + B.Ed",
+                        "BA + LLB",
+                        "BCom + LLB",
+                        "BBM + LLB",
+                        "BBA + LLB"
+                    ]
+                },
+                {
+                    "Professional Courses": [
+                        {
+                            "CA": {
+                                "CPT": {
+                                    "ATC (9 Months)/IPCC": {
+                                        "ITT (100 Hours)": {
+                                            "Articleship (Work under a CA)": [
+                                                "Clear Final Exam (Become a CA)"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "ICWA",
+                        "CS"
+                    ]
+                }
+            ]
+        },
+        {
+            "NDA": [
+                "Army",
+                "Navy",
+                "Air Force"
+            ]
+        },
+        {
+            "Medical (Eligible: 12th PCB))": [
+                {
+                    "Medicine (5 Years)": {
+                        "Entrance Tests: EAMCET,NEET": [
+                            "MBBS-Allopathic",
+                            "BUMS-Unani",
+                            "BHMS-Homeopathy",
+                            "BAMS-Ayurveda",
+                            "BNYS-Naturopathy",
+                            "Ag.Bsc-Agricultural",
+                            "BDS-Dental",
+                            "BVSc-Veterinary",
+                            "BPT-Physiotherapy"
+                        ]
+                    }
+                },
+                {
+                    "Allied Health Sciences (2/3 Years)": [
+                        "B.Pharma",
+                        "BSc Nursing",
+                        "BOT-Occupational Therapy",
+                        "BSc-Anaesthesia Technology",
+                        "BSc-Cardiac Technology",
+                        "BSc-Medical Lab Technology",
+                        "BSc-Radio Therapy Technology",
+                        "BSc-Clinical Optometry",
+                        "BSc-Nuclear Medicine",
+                        "BSc-Operation Theatre",
+                        "BSc-Physician Assistant",
+                        "BSc-Respiratory Care",
+                        "BMLT-Medical Lab Technology"
+                    ]
+                },
+                {
+                    "Paramedical": [
+                        "Dialysis Technician",
+                        "ECG Technician",
+                        "X-Ray Technician",
+                        "Operation Theatre Technician"
+                    ]
+                }
+            ]
+        },
+        {
+            "Engineering (4 Years)": " BE/B.Tech",
+            "Eligible": "12th PCM",
+            "Entrance Tests": "JEE MAIN,BITSAT ..etc",
+            "Courses": [
+                "CSE",
+                "IT",
+                "ECE",
+                "EEE",
+                "Civil Engineering",
+                "Mechanical Engineering",
+                "Chemical Engineering",
+                "Aeronautical Engineering",
+                "Aerospace Engineering",
+                "Agricultural Engineering",
+                "Automobile Engineering",
+                "Bio-Medical Engineering",
+                "Bio-Technology Engineering",
+                "Ceramic Engineering",
+                "Industrial Engineering",
+                "Environmental Engineering",
+                "Marine Engineering",
+                "Mining Engineering",
+                "Silk & Textile Engineering"
+            ]
+        }
+    ]
+}
