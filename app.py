@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 import json
-<<<<<<< HEAD
 import pandas as pd
 import time
 import random
@@ -120,14 +119,6 @@ def report():
 
 
 
-# Run the Flask application
-if __name__ == "__main__":
-=======
-
-
-app = Flask(__name__)
-
-
 
 @app.route('/v1/StudentOptions', methods=['GET'])
 
@@ -169,16 +160,17 @@ def get_data_courses():
       with open('./json/Courses/'+course_name+'.json') as f:
             data=json.load(f)
       item=data.get(course_name)
-      return jsonify(item)      
+      return jsonify(item)  
+ 
 
 
 if __name__ == '__main__':
->>>>>>> eb2be0e61e4d833e8cffe4e16650dc0d13b76b9b
     app.run(debug=True)
 
         
     
     
+
 
 
 
