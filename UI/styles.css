@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #015a97;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#intro-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #e7e7e7;
+    margin-bottom:20px;
+}
+
+#intro-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#intro-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 60%;
+    margin: auto;
+    
+}
+
+#intro-section button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#intro-section button:hover {
+    background-color: #45a049;
+}
+
+#psychometric-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.question-slider {
+    margin: 20px auto;
+    width: 60%;
+}
+
+.question {
+    margin: 20px auto;
+}
+
+.question p {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: border 0.3s ease;
+    margin: 20px auto;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.selected {
+    border: 2px solid #4CAF50;
+    font-weight:bold;
+}
+
+#hero {
+    background-color: #e7e7e7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    margin-bottom: 20px;
+}
+
+#hero button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#hero button:hover {
+    background-color: #45a049;
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#smallbutton
+{
+    
+    padding: 5px;
+    font-size: 16px;
+    background-color: #1a6cf1;
+    color:white;
+    line-height: 1.2em;
+    display: block;
+    width:40%;
+    margin: 5px auto;
+    border-radius:8px;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    bottom: 0;
+    width: 100%;
+}

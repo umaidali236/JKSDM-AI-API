@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilling Opportunities Portal</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript">
+        const sectorsSelected =  ["IT-ITes", "Automotive"]; //get from somewhere.
+    </script>
+</head>
+<body>
+    <header>
+        <h1>JKYSE</h1>
+        <nav>
+        </nav>
+    </header>
+    
+    <section id="intro-section">
+        <h2>Let's Get to Know You Better</h2>
+        <p>Please answer the following questions to generate personalized recommendations for you in skilling opportunities. There are a total of 6 questions, two each from the sectors you have chosen. 
+            There is no time limit on answering the questions, and you can choose to complete or skip questions. It is recommended that you answer all the questions to help us tailor the best opportunities for you.<br> 
+            <br><b>Your chosen sectors are:</b> <span id = "chosensectors"></span>. 
+            <i>If that is correct please click <b>Continue</b> below, else go to your profile, update your interests and preferred sectors and come back to take this forward.</i></p>
+        
+        <button style="margin:20px;" onclick="startAssessment()">Continue</button>
+    </section>
+    <div id="loading" style="display:none;">
+        <img src="loading.webp" alt="Loading..." />
+    </div>
+    <section id="psychometric-section" style="display:none;">
+        <div class="question-slider" id="question-1">
+            <div class="question">
+                <p>How comfortable are you with working in teams?</p>
+            </div>
+            <div class="option" onclick="selectOption('teamwork', 'option1')">Very Comfortable</div>
+            <div class="option" onclick="selectOption('teamwork', 'option2')">Somewhat Comfortable</div>
+            <div class="option" onclick="selectOption('teamwork', 'option3')">Neutral</div>
+            <div class="option" onclick="selectOption('teamwork', 'option4')">Not Comfortable</div>
+            
+            <button onclick="nextQuestion(2)">Next</button>
+        </div>
+
+        <div class="question-slider" id="question-2" style="display:none;">
+            <div class="question">
+                <p>How interested are you in entrepreneurship?</p>
+                <input type="range" min="1" max="5" value="3" class="slider" id="entrepreneurship-interest">
+                <span id="entrepreneurship-value">3</span>
+            </div>
+            <button onclick="nextQuestion(3)">Next</button>
+        </div>
+
+        <div class="question-slider" id="question-3" style="display:none;">
+            <div class="question">
+                <p>How confident are you in your technical skills?</p>
+                <input type="range" min="1" max="5" value="3" class="slider" id="technical-skills">
+                <span id="technical-value">3</span>
+            </div>
+            <button onclick="completeAssessment()">Complete Assessment</button>
+        </div>
+    </section>
+
+    <section id="hero" style="display:none;">
+        <h2>Your Path to Success Starts Here</h2>
+        <button onclick="showSection('courses')">Explore Courses</button>
+        <button onclick="showSection('jobs')">Find Jobs</button>
+        <button onclick="showSection('entrepreneurship')">Start a Business</button>
+        <button onclick="showSection('career-guidance')">Get Career Guidance</button>
+    </section>
+
+
+    <section id="courses" class="content-section">
+        <h2>Courses</h2>
+        <p>Find the best courses to upskill yourself in various domains.</p>
+    </section>
+
+    <section id="jobs" class="content-section">
+        <h2>Jobs</h2>
+        <p>Explore job opportunities tailored to your skills and interests.</p>
+    </section>
+
+    <section id="entrepreneurship" class="content-section">
+        <h2>Entrepreneurship</h2>
+        <p>Learn about entrepreneurship opportunities and resources to start your own business.</p>
+    </section>
+
+    <section id="career-guidance" class="content-section">
+        <h2>Career Guidance</h2>
+        <p>Get personalized career guidance and advice to achieve your career goals.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JKYSE</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        sectorssection = document.getElementById("chosensectors");
+        //alert(sectorsSelected);
+        sectorsSelected.forEach(selectedSector=> {
+        sectorssection.innerHTML+= "<span id='smallbutton'>"+selectedSector+"</span>";
+        });
+    </script>
+</body>
+</html>
