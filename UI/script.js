@@ -1,18 +1,5 @@
+        
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Attach event listeners to options
-    const options = document.querySelectorAll(".option");
-    options.forEach(option => {
-        option.addEventListener("click", function() {
-            // Remove 'selected' class from all options in the current question
-            this.parentNode.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
-            
-            // Add 'selected' class to the clicked option
-            this.classList.add("selected");
-        });
-    });
-});
 
 
 
@@ -22,7 +9,17 @@ function startAssessment() {
     sendAJAXRequest();
 }
 
+QA = {}
+
 function nextQuestion(questionNumber) {
+    //alert(questionNumber-1);
+    //alert(this.QA[questionNumber-1].option_id_selected);
+    //alert(this.QA[questionNumber-1].option_id_selected);
+    if (this.QA[questionNumber-1].option_id_selected == "")
+    {
+        alert('Choose an option and then click next!');
+        return;
+    }
     // Hide all question sliders
     const questions = document.querySelectorAll('.question-slider');
     questions.forEach(question => question.style.display = 'none');
@@ -64,10 +61,7 @@ function sendAJAXRequest() {
     
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5000/api/v1/questionBank";
-    
-    
-
-    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=2";
+    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=6";
     
     xhr.open("GET", url +"?"+params);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -97,6 +91,18 @@ function sendAJAXRequest() {
 }
 
 
+
+
+function chooseOption(w,x,y,z)
+
+{
+    this.QA[x]['sector_name'] = sector_name;
+    this.QA[x]['question_id'] = question_id;
+    this.QA[x]['option_id_selected'] = z;
+    this.QA[x]['option_id_correct'] = '';        
+}
+
+
 function parseQuestionBank(responseStatus, responseText)
 {
     responseDict = JSON.parse(responseText)
@@ -123,36 +129,124 @@ function parseQuestionBank(responseStatus, responseText)
         
 
     psychometricsection = document.getElementById('psychometric-section');
-    console.log(responseDict.message);
-    responseDict.message.forEach(sectorquestions => {
-        console.log(sectorquestions.sector);
-    });
+    //console.log(responseDict.message);
+    //responseDict.message.forEach(sectorquestions => {
+    //    console.log(sectorquestions.sector);
+    //});
+
+    //console.log(responseDict);
 
 
+    // responseDict.message.forEach(selectedSector=> {
+    //     console.log(selectedSector);
+    //     console.log("***");
+
+
+    // });
     document.getElementById("intro-section").style.display = "none";
     document.getElementById("loading").style.display = "none";
     document.getElementById("psychometric-section").style.display = "block";
-   //sectorsSelected.forEach(selectedSector=> {
-        //    sectorssection.innerHTML+= "<span id='smallbutton'>"+selectedSector+"</span>";
-        // psychometricsection.innerHTML += "<div class='question-slider' id='question-1">
-        //     <div class="question">
-        //         <p>How comfortable are you with working in teams?</p>
-        //     </div>
-        //     <div class="option" onclick="selectOption('teamwork', 'option1')">Very Comfortable</div>
-        //     <div class="option" onclick="selectOption('teamwork', 'option2')">Somewhat Comfortable</div>
-        //     <div class="option" onclick="selectOption('teamwork', 'option3')">Neutral</div>
-        //     <div class="option" onclick="selectOption('teamwork', 'option4')">Not Comfortable</div>
+    qn_count = 1
+    for(s=0; s<responseDict.message.length; s++)
+    {
+
+        
+        for (q=0; q<responseDict.message[s].data.length; q++)
+        {
+            htmltext = "";
+            question_id = responseDict.message[s].data[q].question.id
+            question_statement = responseDict.message[s].data[q].question.statement;
+            if (qn_count==1)
+            {
+                htmltext += "<div class='question-slider' id='question-"+qn_count+"' style='display:block;'>";
+            }
+            else
+            {
+                htmltext += "<div class='question-slider' id='question-"+qn_count+"' style='display:none;'>";
+            }
+            htmltext += "<div class='question' data-value='"+question_id+"' ><p>"+ question_statement+"</p></div>";
             
-        //     <button onclick="nextQuestion(2)">Next</button>
-        // </div>
+            //Sector name = responseDict.message[s].sector
+            //Question_object = responseDict.message[s].data[q].question (params, id, statement)
+            //Question_params = responseDict.message[s].data[q].question.params
+            //Question_id = responseDict.message[s].data[q].question.id
+            //Question_statement = responseDict.message[s].data[q].question.statement
+            
+            
+            //Options_object for a question=//Question_id = responseDict.message[s].data[q].question.options (array of option objects)
+            for(o=0; o<responseDict.message[s].data[q].question.options.length;o++)
+            {
+               sector_name = responseDict.message[s].sector
+               //option_id  = responseDict.message[0].data[0].question.options[o].id
+               //option_statement  = responseDict.message[0].data[0].question.options[o].statement
+               option_id  = responseDict.message[s].data[q].question.options[o].id
+               correct_option_id = responseDict.message[s].data[q].question.correct_option.id
+               option_statement = responseDict.message[s].data[q].question.options[o].statement
+               op_=o+1
+
+               //functiontext = "<div class=\"option\" onclick=\"selectOption('teamwork', 'option"+op_+"')\">"+option_statement+"</div>";
+               //console.log(functiontext);
+               //selectionpair = "'"+question_id+"','"+option_id+"'";
+               this.QA[qn_count]={}
+               this.QA[qn_count]['sector_name'] = sector_name;
+               this.QA[qn_count]['question_id'] = question_id;
+               this.QA[qn_count]['option_id_selected'] = '';
+               this.QA[qn_count]['option_id_correct'] = '';
+               htmltext += "<div class='option' data-value='"+option_id+"' class=\"\" onclick=\"chooseOption('"+sector_name+"','"+qn_count+"','"+question_id+"','"+option_id+"')\">"+option_statement+"</div>";
+               
+            }
+            qq = qn_count+1;
+            htmltext +="<button id='nextbutton' onclick=\"nextQuestion("+qq+")\">Next</button></div>";
+            psychometricsection.innerHTML +=htmltext;
+
+            //correct_option object for a question = //Question_id = responseDict.message[s].data[q].question.correct_option (id, statement)
+            //correct_option_id  a question = //Question_id = responseDict.message[s].data[q].question.correct_option.id
+            //correct_option_statement = //Question_id = responseDict.message[s].data[q].question.correct_option.statement
+
+
+            qn_count++;
+        }
+    }
+    
+
+
 
 
     }
         
 
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Attach event listeners to options
+//     const options = document.querySelectorAll(".option");
+//     options.forEach(option => {
+//         option.addEventListener("click", function() {
+//             // Remove 'selected' class from all options in the current question
+//             this.parentNode.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
+            
+//             // Add 'selected' class to the clicked option
+//             this.classList.add("selected");
+//             alert('Hi');
+            
+//         });
+//     });
+// });
 
-        
-        
-     
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Attach the event listener to the parent container
+    const parent = document.querySelector("#psychometric-section");
+
+    // Use event delegation to handle clicks on dynamically added options
+    parent.addEventListener("click", function(event) {
+        // Check if the clicked element has the class 'option'
+        if (event.target.classList.contains("option")) {
+            // Remove 'selected' class from all options in the current question
+            const options = event.target.parentNode.querySelectorAll(".option");
+            options.forEach(option => option.classList.remove("selected"));
+
+            // Add 'selected' class to the clicked option
+            event.target.classList.add("selected");
+        }
+    });
+});

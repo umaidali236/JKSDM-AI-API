@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 #LOAD DATA
 data = dict()
-X = pd.ExcelFile("./db/Sample question.xlsx")
+X = pd.ExcelFile("./db/Sample questions SET 2.xlsx")
 print(f"Sheets present: {X.sheet_names} : Number of sheets in API: {len(X.sheet_names)}")
 data["IT-ITes"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=1)
 data["Automotive"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=3)
@@ -74,7 +74,7 @@ def returnQuestionBank():
             return json.dumps({"status":"fail", "message": f"Error - One or more sector not found intgerated with API:>, {s}!"})
 
 
-    all_questions = dict()
+    all_questions = []
     question_bank = dict()
     
     for key_num, key in tqdm(enumerate(sectors)):
@@ -98,7 +98,7 @@ def returnQuestionBank():
         question_bank["data"] = random.sample(question_bank["data"], num_questions_needed)
 
         
-        all_questions["sector"+str(key_num)]=(question_bank.copy())
+        all_questions.append((question_bank.copy()))
         return_value = dict()
     return_value["status"] = "success"
     return_value["message"] = all_questions

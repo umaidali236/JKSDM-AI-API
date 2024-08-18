@@ -8,6 +8,7 @@
 
     <script type="text/javascript">
         const sectorsSelected =  ["IT-ITes", "Automotive"]; //get from somewhere.
+        const qualificationSelected = ["Bachelors Engineering"];
     </script>
 </head>
 <body>
@@ -21,8 +22,9 @@
         <h2>Let's Get to Know You Better</h2>
         <p>Please answer the following questions to generate personalized recommendations for you in skilling opportunities. There are a total of 6 questions, two each from the sectors you have chosen. 
             There is no time limit on answering the questions, and you can choose to complete or skip questions. It is recommended that you answer all the questions to help us tailor the best opportunities for you.<br> 
-            <br><b>Your chosen sectors are:</b> <span id = "chosensectors"></span>. 
-            <i>If that is correct please click <b>Continue</b> below, else go to your profile, update your interests and preferred sectors and come back to take this forward.</i></p>
+            <br><b>Your chosen sectors are:</b> <span id="chosensectors"></span> 
+            <br><b>Your qualification is:</b> <span id="chosenqualification"></span>
+            <i>If all the above information is correct, please click <b>Continue</b> below, else go to your profile, update your interests, preferred sectors, and qualification and come back to take this forward.</i></p>
         
         <button style="margin:20px;" onclick="startAssessment()">Continue</button>
     </section>
@@ -30,35 +32,7 @@
         <img src="loading.webp" alt="Loading..." />
     </div>
     <section id="psychometric-section" style="display:none;">
-        <div class="question-slider" id="question-1">
-            <div class="question">
-                <p>How comfortable are you with working in teams?</p>
-            </div>
-            <div class="option" onclick="selectOption('teamwork', 'option1')">Very Comfortable</div>
-            <div class="option" onclick="selectOption('teamwork', 'option2')">Somewhat Comfortable</div>
-            <div class="option" onclick="selectOption('teamwork', 'option3')">Neutral</div>
-            <div class="option" onclick="selectOption('teamwork', 'option4')">Not Comfortable</div>
-            
-            <button onclick="nextQuestion(2)">Next</button>
-        </div>
-
-        <div class="question-slider" id="question-2" style="display:none;">
-            <div class="question">
-                <p>How interested are you in entrepreneurship?</p>
-                <input type="range" min="1" max="5" value="3" class="slider" id="entrepreneurship-interest">
-                <span id="entrepreneurship-value">3</span>
-            </div>
-            <button onclick="nextQuestion(3)">Next</button>
-        </div>
-
-        <div class="question-slider" id="question-3" style="display:none;">
-            <div class="question">
-                <p>How confident are you in your technical skills?</p>
-                <input type="range" min="1" max="5" value="3" class="slider" id="technical-skills">
-                <span id="technical-value">3</span>
-            </div>
-            <button onclick="completeAssessment()">Complete Assessment</button>
-        </div>
+    
     </section>
 
     <section id="hero" style="display:none;">
@@ -94,13 +68,21 @@
         <p>&copy; 2024 JKYSE</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>    
+
     <script>
         sectorssection = document.getElementById("chosensectors");
         //alert(sectorsSelected);
         sectorsSelected.forEach(selectedSector=> {
         sectorssection.innerHTML+= "<span id='smallbutton'>"+selectedSector+"</span>";
         });
+
+        qualificationsection = document.getElementById("chosenqualification");
+        //alert(sectorsSelected);
+        qualificationsection.innerHTML+= "<span id='smallbuttonr'>"+qualificationSelected+"</span>";
+
+ 
+
     </script>
 </body>
 </html>
