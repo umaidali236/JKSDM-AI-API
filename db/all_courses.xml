@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<start>
+  <course>
+    <node>
+      <id>C10</id>
+      <level>X0</level>
+      <name>10th</name>
+      <description>10th Grade</description>
+      <parent></parent>
+      <children>
+                <child><child_type>course</child_type><child_name>Industrial Training</child_name></child>
+                <child><child_type>course</child_type><child_name>Intermediate (11th/12th)</child_name></child>
+                <child><child_type>course</child_type><child_name>Polytechnic</child_name></child>
+      </children>
+      <jobs>
+        <job>No information available</job>
+      </jobs>
+    </node>
+  </course>
+
+
+
+
+
+  <course>
+    <node>
+      <id>CITI</id>
+      <level>A1</level>
+      <name>Industrial Training</name>
+      <description>Industrial Training (ITIs)</description>
+      <parent>10th</parent>
+      <children>
+                <child><child_type>course</child_type><child_name>Computer Operator (COPA)</child_name></child>
+                <child><child_type>course</child_type><child_name>Fitter</child_name></child>
+                <child><child_type>course</child_type><child_name>Welder</child_name></child>
+                <child><child_type>course</child_type><child_name>Electrician</child_name></child>
+                <child><child_type>course</child_type><child_name>Motor Mechanic</child_name></child>
+                <child><child_type>course</child_type><child_name>Tourist Guide</child_name></child>
+      </children>
+      <jobs>
+        <job>Private</job>
+      </jobs>
+    </node>
+
+
+  </course>
+
+
+  <course>
+    <node>
+      <id>CITIComputer</id>
+      <level>A100</level>
+      <name>Computer Operator (COPA)</name>
+      <duration>1 year</duration>
+      <offline>
+        <college>Govt. ITI Anantnag</college>
+        <college>Govt. ITI Bandipora</college>
+        <college>Govt. ITI Baramulla</college>
+        <college>Govt. ITI Doda</college>
+        <college>Govt. ITI Budgam</college>
+        <college>Govt. ITI Jammu</college>
+      </offline>
+      <sector>IT</sector>
+      <description>ITI trade Computer Operator and Programming Assistant (COPA) is powered by NCVT. The Trade qualifies a candidate to work as a middle level computer professional. Concepts of both Hardware and Software are given in the training. The trainees become conversant with operating systems like DOS, Windows and UNIX, Language Programming as D-Base and C/C++ is done and knowledge is also imparted about Internet and its scope.set up own cutting/tailors shops.</description>
+      <parent>Industrial Training</parent>
+      <jobs>
+        <job>Computer Operator</job>
+        <job>Data Entry Operator</job>
+      </jobs>
+    </node>
+  </course>
+
+    <course>
+    <node>
+      <id>CITIFitter</id>
+      <level>A100</level>
+      <name>Fitter</name>
+      <duration>1 year</duration>
+      <sector>Capital Goods</sector>
+      <offline>
+        <college>Govt. ITI Anantnag</college>
+        <college>Govt. ITI Baramulla</college>
+        <college>Govt. ITI Kathua</college>
+        <college>Govt. ITI Jammu</college>
+        <college>Govt. ITI Kishtwar</college>
+      </offline>
+      <description>ITI trade - Fitter is powered by NCVT.  ITI trade Fitter  is a job oriented trade and is suitable for government job and private job. This ITI trade Fitter is perfectly design to fulfill industrial requirement of Indian Industries as well as International industries.</description>
+      <parent>Industrial Training</parent>
+      <jobs>
+        <job>Infrastructure and defence organizations</job>
+        <job>Self-employment</job>
+      </jobs>
+    </node>
+  </course>
+
+   <course>
+    <node>
+      <id>CITIWelder</id>
+      <level>A100</level>
+      <name>Welder</name>
+      <duration>1 year</duration>
+      <sector>Capital Goods</sector>
+      <offline>
+        <college>Govt. ITI Kishtwar</college>
+        <college>Govt. ITI Rajpouri</college>
+        <college>Govt. ITI Ramban</college>
+
+      </offline>
+      <description>ITI trade - Welder is powered by NCVT.</description>
+      <parent>Industrial Training</parent>
+      <jobs>
+        <job>Infrastructure and defence organizations</job>
+        <job>Self-employment</job>
+      </jobs>
+    </node>
+  </course>
+
+     <course>
+    <node>
+      <id>CITIElectrician</id>
+      <level>A100</level>
+      <name>Electrician</name>
+      <duration>2 year</duration>
+      <sector>Capital Goods</sector>
+      <offline>
+        <college>Govt. ITI Srinagar</college>
+        <college>Govt. ITI Jammu</college>
+      </offline>
+      <description>ITI trade - Electrician is powered by NCVT. The training aims at producing a general purpose technician with skills in Domestic Wiring, Motor Winding and Transformers Winding etc. The training also provides useful knowledge of Electrical Gadgets, Electronic Circuits and other Home appliances. </description>
+      <parent>Industrial Training</parent>
+      <jobs>
+        <job>Service/Maintenance Technician </job>
+        <job>Electrical appliance repair</job>
+        <job>Electrical appliance repair</job>
+        <job>Indian Railway (Asst. Driver, Tech. Gr. III, Appr. Technician)</job>
+      </jobs>
+    </node>
+  </course>
+
+  <course>
+    <node>
+      <id>CITIMotorMechanic</id>
+      <level>A100</level>
+      <name>Motor Mechanic</name>
+      <duration>2 year</duration>
+      <sector>Automobile</sector>
+      <offline>
+        <college>Govt. ITI Srinagar</college>
+        <college>Govt. ITI Jammu</college>
+      </offline>
+      <description>ITI trade - Mechanic is powered by NCVT. The training aims at producing a general purpose mechanic technician with skills in vehicle repair (automobile parts). </description>
+      <parent>Industrial Training</parent>
+      <jobs>
+        <job>Machinist </job>
+        <job>Self-employment</job>
+      </jobs>
+    </node>
+  </course>
+
+   <course>
+    <node>
+      <id>CITITouristGuide</id>
+      <level>A100</level>
+      <name>Tourist Guide</name>
+      <duration>1 year</duration>
+      <sector>Tourism</sector>
+      <offline>
+        <college>Govt. ITI Srinagar</college>
+        <college>Govt. ITI Jammu</college>
+      </offline>
+      <description>ITI trade - Tourist Guide is powered by NCVT. The training aims at producing a general purpose mechanic tourist guide capable to communicate effectively with tourists. </description>
+      <parent>Industrial Training</parent>
+      <jobs>
+        <job>Tourist guide</job>
+        <job>Self-employment</job>
+      </jobs>
+    </node>
+  </course>
+
+
+
+
+  <course>
+    <node>
+      <id>CPolytechnic</id>
+      <level>A2</level>
+      <name>Polytechnic</name>
+      <description>Polytechnic courses</description>
+      <parent>10th</parent>
+      <children>
+                <child><child_type>course</child_type><child_name>Computer Engineering</child_name></child>
+                <child><child_type>course</child_type><child_name>Automobile Engineering</child_name></child>
+                <child><child_type>course</child_type><child_name>Electrical Engineering</child_name></child>
+                <child><child_type>course</child_type><child_name>Wood Technology</child_name></child>
+                <child><child_type>course</child_type><child_name>Information Technology</child_name></child>
+                <child><child_type>course</child_type><child_name>Civil Engineering</child_name></child>
+      </children>
+      <jobs>
+        <job></job>
+      </jobs>
+    </node>
+  </course>
+
+
+
+<course>
+    <node>
+      <id>CPOLYComputerEngineering</id>
+      <level>B100</level>
+      <name>Computer Engineering</name>
+      <duration>3 year</duration>
+      <sector>IT</sector>
+      <offline>
+        <college>Kashmir Government Polytechnic, Srinagar</college>
+        <college>Government Polytechnic, Jammu</college>
+      </offline>
+      <description>Polytechnic course - Computer Engineering is a comprehensive 3-year course in fundamental engineering aspects in Computer Science, that is suited for government jobs, private jobs, and lateral entry to Bachelors in Engineering course.</description>
+      <parent>Polytechnic</parent>
+      <jobs>
+        <job>Computer/Network Engineer</job>
+        <job>Self-employment</job>
+        <job>Lateral entry to B.E./B.Tech in Computer Science/Engineering</job>
+      </jobs>
+    </node>
+  </course>
+
+<course>
+    <node>
+      <id>CPOLYAutomobileEngineering</id>
+      <level>B100</level>
+      <name>Automobile Engineering</name>
+      <duration>3 year</duration>
+      <sector>Automobile</sector>
+      <offline>
+        <college>Kashmir Government Polytechnic, Srinagar</college>
+        <college>Government Polytechnic, Jammu</college>
+      </offline>
+      <description>Polytechnic course - Automobile Engineering is a comprehensive 3-year course in fundamental aspects in automobile/mechanical engineering, that is suited for government jobs, private jobs, and lateral entry to Bachelors in Engineering course.</description>
+      <parent>Polytechnic</parent>
+      <jobs>
+        <job>Aumotive Engineer</job>
+        <job>Self-employment</job>
+        <job>Lateral entry to B.E./B.Tech in Mechanical/Automobile Engineering</job>
+      </jobs>
+    </node>
+  </course>
+
+
+<course>
+    <node>
+      <id>CPOLYElectricalEngineering</id>
+      <level>B100</level>
+      <name>Electrical Engineering</name>
+      <duration>3 year</duration>
+      <sector>Electrical</sector>
+      <offline>
+        <college>Government Polytechnic, Baramulla</college>
+        <college>Government Polytechnic, Jammu</college>
+      </offline>
+      <description>Polytechnic course - Electrical Engineering is a comprehensive 3-year course in fundamental aspects in electrical engineering, that is suited for government jobs, private jobs, and lateral entry to Bachelors in Engineering course.</description>
+      <parent>Polytechnic</parent>
+      <jobs>
+        <job>Electrician</job>
+        <job>Self-employment</job>
+        <job>Lateral entry to B.E./B.Tech in Electrical Engineering</job>
+      </jobs>
+    </node>
+  </course>
+
+
+  <course>
+    <node>
+      <id>CPOLYIT</id>
+      <level>B100</level>
+      <name>Information Technology</name>
+      <duration>3 year</duration>
+      <sector>IT</sector>
+      <offline>
+        <college>Government Polytechnic for Women, Bemina</college>
+        <college>Government Polytechnic for Women, Jammu</college>
+      </offline>
+      <description>Polytechnic course - IT is a comprehensive 3-year course in fundamental aspects in IT Engineering, that is suited for government jobs, private jobs, and lateral entry to Bachelors in Engineering course.</description>
+      <parent>Polytechnic</parent>
+      <jobs>
+        <job>IT Engineer</job>
+        <job>Self-employment</job>
+        <job>Lateral entry to B.E./B.Tech in IT</job>
+      </jobs>
+    </node>
+  </course>
+
+
+   <course>
+    <node>
+      <id>CPOLYIT</id>
+      <level>B100</level>
+      <name>Wood Technology</name>
+      <duration>3 year</duration>
+      <sector>Construction</sector>
+      <offline>
+        <college>Kashmir Government Polytechnic, Bemina</college>
+        <college>Government Polytechnic for Women, Jammu</college>
+      </offline>
+      <description>Polytechnic course - Wood technology is a comprehensive 3-year course in fundamental aspects in Wood technology, that is suited for government jobs, private jobs.</description>
+      <parent>Polytechnic</parent>
+      <jobs>
+        <job>Construction Manager</job>
+        <job>Self-employment</job>
+      </jobs>
+    </node>
+  </course>
+
+  <course>
+    <node>
+      <id>CPOLYIT</id>
+      <level>B100</level>
+      <name>Civil Engineering</name>
+      <duration>3 year</duration>
+      <sector>Construction</sector>
+      <offline>
+        <college>Government Polytechnic for Women, Bemina</college>
+        <college>Government Polytechnic for Women, Jammu</college>
+      </offline>
+      <description>Polytechnic course - Civil engineering is a comprehensive 3-year course in fundamental aspects in Civil engineering, that is suited for government jobs, private jobs.</description>
+      <parent>Polytechnic</parent>
+      <jobs>
+        <job>Construction Manager</job>
+        <job>Self-employment</job>
+        <job>Lateral entry in B.E./B.Tech in Civil Engineering</job>
+      </jobs>
+    </node>
+  </course>
+
+
+  <course>
+    <node>
+      <id>C12</id>
+      <level>C1</level>
+      <name>Intermediate (11th/12th)</name>
+      <description>11th-12th Grade</description>
+      <parent>10th</parent>
+      <children>
+                <child><child_type>ncscourse</child_type><child_name>BFSI</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Defence</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Design</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Education</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Engineering</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Fine Arts</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Fisheries</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>General</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Government</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Health &amp; Wellness</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Hospitality &amp; Tourism</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>IT</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Language</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Legal</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Logistics</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Management</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Media</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Science</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Social Studies</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Sports</child_name></child>
+                <child><child_type>ncscourse</child_type><child_name>Vocational</child_name></child>
+      </children>
+    </node>
+
+
+  </course>
+
+
+</start>

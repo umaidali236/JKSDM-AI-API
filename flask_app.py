@@ -7,12 +7,16 @@ from tqdm import tqdm
 from random import sample
 from flask_cors import cross_origin
 import urllib.parse
+import xml.etree.ElementTree as ET
+
 
 app = Flask(__name__)
 
 
 
 #LOAD DATA
+
+#PSYCHOMETRIC TEST
 data = dict()
 X = pd.ExcelFile("./db/Sample questions SET 2.xlsx")
 print(f"Sheets present: {X.sheet_names} : Number of sheets in API: {len(X.sheet_names)}")
@@ -23,6 +27,63 @@ data["AI"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=5)
 question_pack = dict()
 keys = list(data.keys())
 print(f"Sectors:",keys, f": {len(keys)} total sectors added to API")
+
+
+## CAREER OPTIONS
+
+courses = dict()
+root = ET.parse('./db/all_courses.xml')
+for i, item in enumerate(root.findall('course')):
+    courses[i] = dict()
+    if item.tag == "course": 
+        for node in item:
+            courses[i]['course_id'] = node.find('id').text
+            courses[i]['course_level'] = node.find('level').text       
+            courses[i]['course_name'] = node.find('name').text            
+            courses[i]['description']= node.find('description').text
+            courses[i]['parent'] = node.find('parent').text
+            
+            if not int(courses[i]['course_level'][1:]) == 100:  #non-leaf node
+                #print(node.find('name').text)
+                courses[i]['node_placement'] = 'non-leaf'
+                courses[i]['children'] = dict()
+                children = node.find('children')
+                for j, child in enumerate(children.findall('child')):
+                    child_type = child.find('child_type').text
+                    #print(child_type)
+                    child_name = child.find('child_name').text
+                    courses[i]['children'][j] = {'child_type':child_type, 'child_name':child_name}
+                #print(courses[i]['children'])
+            
+            if int(courses[i]['course_level'][1:]) == 100:  #leaf node
+                
+                courses[i]['node_placement'] = 'leaf'
+                courses[i]['duration'] =  node.find('duration').text
+                courses[i]['sector'] =  node.find('sector').text
+                colleges = node.find('offline')
+                courses[i]['offline'] = []
+                for col in colleges.findall('college'):
+                    courses[i]['offline'].append(col.text)
+                
+                
+                
+                
+            
+            
+            
+            
+            
+                
+                
+            
+            
+            
+            
+            
+
+## FOREIGN LANGUAGES
+
+
 
 
 
@@ -87,6 +148,8 @@ def returnQuestionBank():
             question = data[key]["Question Statement"].iloc[i].strip()
             question_difficulty = data[key]["Difficulty level"].iloc[i]
             options = dict()
+
+            #add foreign langs sheet here
             options["option1"] = str(data[key]["Option 1"].iloc[i]).strip()
             options["option2"] = str(data[key]["Option 2"].iloc[i]).strip()
             options["option3"] = str(data[key]["Option 3"].iloc[i]).strip()
@@ -120,48 +183,59 @@ def report():
 
 
 
-@app.route('/v1/StudentOptions', methods=['GET'])
-
-
-def get_data():
-    
+@app.route('/api/v1/ExploreCareerOptions', methods=['GET'])
+@cross_origin()
+def return_CareerOptions():
      # Get the 'id' query parameter from the request
-    qualification = request.args.get('qualification')
-   
-        # Load the JSON data
-    with open('./json/StudentOptions/'+qualification+'.json') as f:
-            data = json.load(f)
-    # Retrieve data from the JSON file
+    qualification = urllib.parse.unquote(request.args.get('qualification', '10th'))
+    course_type = request.args.get('course_type', 'course')
+    course_id = request.args.get('course_id', 'C10')
+    if course_type == "course":
+        for c in courses.keys():
+            if courses[c]['course_name'] == qualification:
+                print(courses[c]['course_name'])
+                returnValue = {'status':'success', 'message':courses[c]}
+                return jsonify(returnValue)
+        else:
+            return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
     
-    item = data.get(qualification)
-        
-    return jsonify(item)
+    elif course_type == "ncscourse":
+        #find in another file
+        return jsonify({'status':'under-development'})
 
-    
+@app.route('/api/v1/RecommendCoursesBasedOnCareerChosen', methods=['GET'])
+@cross_origin()
+def recommend_coursesOnCareer():
+     # Get the 'id' query parameter from the request
+    career = request.args.get('career', 'IT')
+    sector = request.args.get('sector', 'IT')   
 
-@app.route('/v1/Exams')
-        
+    #interactive courses if any
+    #self learning corses if any
+    # professional courses if any      
+    return jsonify({'status':'under-development'})
 
-def get_data_exams():
 
-    subject_name=request.args.get('subject')
-    
-    with open('./json/Exams/'+subject_name+'.json') as f:
-            data=json.load(f)
-    item= data.get(subject_name)
-    return jsonify(item)
 
-@app.route('/v1/Courses',methods=['GET'])
 
-def get_data_courses():
-      
-      course_name=request.args.get('course_name')
 
-      with open('./json/Courses/'+course_name+'.json') as f:
-            data=json.load(f)
-      item=data.get(course_name)
-      return jsonify(item)  
- 
+@app.route('/api/v1/RecommendDPRsBasedOnSectorChosen', methods=['GET'])
+@cross_origin()
+def recommend_DPRs():
+     # Get the 'id' query parameter from the request
+    sector = request.args.get('sector', 'IT')         
+    return jsonify({'status':'under-development'})
+
+
+
+
+@app.route('/api/v1/RecommendForeignLanguagesBasedOnPsychometry', methods=['GET'])
+@cross_origin()
+def recommend_foreign():
+     # Get the 'id' query parameter from the request
+    language = request.args.get('language', 'Arabic')         
+    return jsonify({'status':'under-development'})
+
 
 
 if __name__ == '__main__':
