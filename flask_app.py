@@ -29,8 +29,10 @@ keys = list(data.keys())
 print(f"Sectors:",keys, f": {len(keys)} total sectors added to API")
 
 
-## CAREER OPTIONS
 
+
+
+## CAREER OPTIONS
 courses = dict()
 root = ET.parse('./db/all_courses.xml')
 for i, item in enumerate(root.findall('course')):
@@ -64,18 +66,55 @@ for i, item in enumerate(root.findall('course')):
                 courses[i]['offline'] = []
                 for col in colleges.findall('college'):
                     courses[i]['offline'].append(col.text)
+## NCS CAREER OPTIONS            
+CAREER_PATHS = pd.read_excel('./db/CAREERS_500.xlsx')
+Y_FILLED_SECTORS = CAREER_PATHS['Sector'].fillna(method='ffill', axis=0)
+Y_FILLED_SECTOR_DESC = CAREER_PATHS['Sector Description'].fillna(method='ffill', axis=0)
+sector_names = list(CAREER_PATHS['Sector'].unique())
+CAREER_PATHS['Sector'] = Y_FILLED_SECTORS
+CAREER_PATHS['Sector Description'] = Y_FILLED_SECTOR_DESC
+career_names = list(CAREER_PATHS['Sector'].unique())
+leaf_career_jobs = list(CAREER_PATHS['Career Name'].unique())
+ncscourses = dict()
+for i, career_name in enumerate(career_names):
+    ncscourses[i] = dict()
+    ncscourses[i]['course_id'] = 'C'+career_name    
+    ncscourses[i]['course_level'] = "D3"
+    ncscourses[i]['course_name'] = career_name
+    ncscourses[i]['description']= ''
+    ncscourses[i]['parent'] = "Intermediate (11th/12th)"
+    ncscourses[i]['node_placement'] = 'non-leaf'
+    for ncscourse in sector_names:
+        if str(ncscourse) == "nan":
+            continue
+        courses_in_sector = CAREER_PATHS[CAREER_PATHS['Sector'] == ncscourse]['Career Name'].tolist()
+        ncscourses[i]['children'] = dict()
+        for j, c in enumerate(courses_in_sector):
+            ncscourses[i]['children'][j] = {'child_type':'ncscourse', 'child_name':c}
+
+            
+for k in range(i+1, CAREER_PATHS.shape[0]+(i+1)):
+    ncscourses[k] = dict()
+    ncscourses[k]['course_id'] = 'C'+CAREER_PATHS['Career Name'].iloc[k-i-1]  
+    ncscourses[k]['course_level'] = "D100"
+    ncscourses[k]['course_name'] = CAREER_PATHS['Career Name'].iloc[k-i-1]
+    ncscourses[k]['description']= CAREER_PATHS['Career Description'].iloc[k-i-1]
+    ncscourses[k]['parent'] = CAREER_PATHS['Sector'].iloc[k-i-1]
+    ncscourses[k]['node_placement'] = 'leaf'
+    ncscourses[k]['sector'] =  CAREER_PATHS['Sector'].iloc[k-i-1]
+    ncscourses[k]['offline'] =  CAREER_PATHS['Where will you study?'].iloc[k-i-1]
+    ncscourses[k]['duration'] = ''
+    ncscourses[k]['details'] = {'Personal_Competencies': CAREER_PATHS['Personal Competencies'].iloc[k-i-1], 
+                                'Where_will_you_work': CAREER_PATHS['Where will you work?'].iloc[k-i-1],
+                                'Expected_Growth_Path': CAREER_PATHS['Expected Growth Path'].iloc[k-i-1],
+                                'Fees': CAREER_PATHS['Fees'].iloc[k-i-1],
+                                'Scholarships_Loans': CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1],
+                                'Expected_Income': CAREER_PATHS['Expected Income'].iloc[k-i-1]
+                               }
+    
+    
                 
                 
-                
-                
-            
-            
-            
-            
-            
-                
-                
-            
             
             
             
@@ -182,7 +221,6 @@ def report():
 
 
 
-
 @app.route('/api/v1/ExploreCareerOptions', methods=['GET'])
 @cross_origin()
 def return_CareerOptions():
@@ -194,14 +232,24 @@ def return_CareerOptions():
         for c in courses.keys():
             if courses[c]['course_name'] == qualification:
                 print(courses[c]['course_name'])
+                courses[c]['course_type'] = 'course'
                 returnValue = {'status':'success', 'message':courses[c]}
                 return jsonify(returnValue)
         else:
             return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
     
     elif course_type == "ncscourse":
-        #find in another file
-        return jsonify({'status':'under-development'})
+        for c in ncscourses.keys():
+            if ncscourses[c]['course_name'] == qualification:
+                print(ncscourses[c]['course_name'])
+                ncscourses[c]['course_type'] ='ncscourse'
+                returnValue = {'status':'success', 'message':ncscourses[c]}
+                return jsonify(returnValue)
+        else:
+            return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
+
+
+
 
 @app.route('/api/v1/RecommendCoursesBasedOnCareerChosen', methods=['GET'])
 @cross_origin()

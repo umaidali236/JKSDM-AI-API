@@ -194,6 +194,7 @@ color: #000000;
             color: #2B2862;
             margin-left:10px;
             margin-bottom:20px;
+            padding:10px;
           }
           
           p{
@@ -402,16 +403,43 @@ function displayOptions(responseStatus, responseText, z, who)
     }
     else
     {
-      textNextCareer = "<div id=entry-"+zz+"><div class=lines><div class=dot></div><div class=line></div></div>";
-      textNextCareer += "<div class=card style='border:2px solid #000;'>";
-      course_description =  responseDictCareerOptions.message.description;
-      course_duration = responseDictCareerOptions.message.duration;
-      offline_colleges = responseDictCareerOptions.message.offline;
-      textNextCareer += "<h2>Course Description</h2><p id=desc>"+course_description+"</p>";
-      textNextCareer += "<h2>Course Duration</h2><p id=desc>"+course_duration+"</p>";
-      textNextCareer += "<h2>Offline Course</h2><p id=desc>The course can be pursues in the following indicative institutions:<br>"+offline_colleges+"</p>";
-      textNextCareer += "</div></div><span style=margin:30px;>&nbsp;</span";
-      document.getElementById('careerscards').innerHTML += textNextCareer;
+
+      if (responseDictCareerOptions.message.course_type=='course')
+       {
+          textNextCareer = "<div id=entry-"+zz+"><div class=lines><div class=dot></div><div class=line></div></div>";
+          textNextCareer += "<div class=card style='border:2px solid #000;'>";
+          course_description =  responseDictCareerOptions.message.description;
+          course_duration = responseDictCareerOptions.message.duration;
+          offline_colleges = responseDictCareerOptions.message.offline;
+          textNextCareer += "<h2>Course Description</h2><p id=desc>"+course_description+"</p>";
+          textNextCareer += "<h2>Course Duration</h2><p id=desc>"+course_duration+"</p>";
+          textNextCareer += "<h2>Offline Course</h2><p id=desc>The course can be pursues in the following indicative institutions:<br>"+offline_colleges+"</p>";
+          textNextCareer += "</div></div><span style=margin:30px;>&nbsp;</span";
+          document.getElementById('careerscards').innerHTML += textNextCareer;
+        }
+        if (responseDictCareerOptions.message.course_type=='ncscourse')
+        {
+          textNextCareer = "<div id=entry-"+zz+"><div class=lines><div class=dot></div><div class=line></div></div>";
+          textNextCareer += "<div class=card style='border:2px solid #000;'>";
+          course_description =  responseDictCareerOptions.message.description;
+          course_details = responseDictCareerOptions.message.details
+          //course_duration = responseDictCareerOptions.message.duration;
+          //offline_colleges = responseDictCareerOptions.message.offline;
+          textNextCareer += "<h2>Course Description</h2><p id=desc>"+course_description+"</p>";
+          //textNextCareer += "<h2>Course Duration</h2><p id=desc>"+course_duration+"</p>";
+          textNextCareer += "<h2>Personal Competencies</h2><p id=desc>"+responseDictCareerOptions.message.details.Personal_Competencies+"</p>";
+          textNextCareer += "<h2>Institutions where you can study</h2><p id=desc>The course can be pursues in the following indicative institutions:<br>"+responseDictCareerOptions.message.offline+"</p>";
+          textNextCareer += "<h2>Fees</h2><p id=desc>"+responseDictCareerOptions.message.details.Fees+"</p>";
+          textNextCareer += "<h2>Scholarships & Loans</h2><p id=desc>"+responseDictCareerOptions.message.details.Scholarships_Loans+"</p>";
+          textNextCareer += "<h2>Expected Growth Path</h2><p id=desc>"+responseDictCareerOptions.message.details.Expected_Growth_Path+"</p>";
+          textNextCareer += "<h2>Where will you work:</h2><p id=desc>"+responseDictCareerOptions.message.details.Where_will_you_work+"</p>";
+          textNextCareer += "<h2>Expected Income</h2><p id=desc>"+responseDictCareerOptions.message.details.Expected_Income+"</p>";
+          
+          textNextCareer += "</div></div><span style=margin:30px;>&nbsp;</span";
+          document.getElementById('careerscards').innerHTML += textNextCareer;
+          
+        }   
+
     }
     
                                   
