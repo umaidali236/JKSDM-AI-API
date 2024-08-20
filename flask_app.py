@@ -124,7 +124,7 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
                                 'fees': NCS_CAREER_PATHS['Fees'].iloc[k-i-1],
                                 'scholarshipsAndLoans': NCS_CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1],
                                 'expectedIncome': NCS_CAREER_PATHS['Expected Income'].iloc[k-i-1],
-                                'externalLink': NCS_CAREER_PATHS['NCS Link'].iloc[k-i-1]
+                                'externalLink': str(NCS_CAREER_PATHS['NCS Link'].iloc[k-i-1]).lower()
                                 
                                }
                 

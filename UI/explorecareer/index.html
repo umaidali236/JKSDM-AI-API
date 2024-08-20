@@ -463,7 +463,7 @@ function displayOptions(responseStatus, responseText, z, who)
           textNextCareer += "<h2>Expected Growth Path</h2><p id=desc>"+responseDictCareerOptions.message.details.expectedGrowthPath+"</p>";
           textNextCareer += "<h2>Where will you work:</h2><p id=desc>"+responseDictCareerOptions.message.details.whereToWork+"</p>";
           textNextCareer += "<h2>Expected Income</h2><p id=desc>"+responseDictCareerOptions.message.details.expectedIncome+"</p>";
-          if (responseDictCareerOptions.message.details.externalLink != 'NA'){
+          if (responseDictCareerOptions.message.details.externalLink != "nan"){
             textNextCareer += "<a href="+responseDictCareerOptions.message.details.externalLink+"><div class=externalBtn>Click here to know more</div></a>";
           }
 
