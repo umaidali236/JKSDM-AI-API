@@ -8,6 +8,18 @@ from random import sample
 from flask_cors import cross_origin
 import urllib.parse
 import xml.etree.ElementTree as ET
+import unicodedata
+
+# def remove_diacritics(input_str):
+#     # Normalize the string to separate the base characters and diacritics
+#     nfkd_form = unicodedata.normalize('NFKD', input_str)
+#     # Join characters that are not diacritical marks
+#     return ''.join([char for char in nfkd_form if not unicodedata.combining(char)])
+
+
+
+
+
 
 
 app = Flask(__name__)
@@ -66,59 +78,56 @@ for i, item in enumerate(root.findall('course')):
                 courses[i]['offline'] = []
                 for col in colleges.findall('college'):
                     courses[i]['offline'].append(col.text)
+
+
 ## NCS CAREER OPTIONS            
-CAREER_PATHS = pd.read_excel('./db/CAREERS_500.xlsx')
-Y_FILLED_SECTORS = CAREER_PATHS['Sector'].fillna(method='ffill', axis=0)
-Y_FILLED_SECTOR_DESC = CAREER_PATHS['Sector Description'].fillna(method='ffill', axis=0)
-sector_names = list(CAREER_PATHS['Sector'].unique())
-CAREER_PATHS['Sector'] = Y_FILLED_SECTORS
-CAREER_PATHS['Sector Description'] = Y_FILLED_SECTOR_DESC
-career_names = list(CAREER_PATHS['Sector'].unique())
-leaf_career_jobs = list(CAREER_PATHS['Career Name'].unique())
+NCS_CAREER_PATHS = pd.read_excel('./db/CAREERS_500.xlsx')
+Y_FILLED_SECTORS = NCS_CAREER_PATHS['Sector'].fillna(method='ffill', axis=0)
+Y_FILLED_SECTOR_DESC = NCS_CAREER_PATHS['Sector Description'].fillna(method='ffill', axis=0)
+ncs_sector_names = list(Y_FILLED_SECTORS.unique())
+NCS_CAREER_PATHS['Sector'] = Y_FILLED_SECTORS
+NCS_CAREER_PATHS['Sector Description'] = Y_FILLED_SECTOR_DESC
+ncs_career_names = list(NCS_CAREER_PATHS['Career Name'].unique())
 ncscourses = dict()
-for i, career_name in enumerate(career_names):
+for i, ncs_sector_name in enumerate(ncs_sector_names):
     ncscourses[i] = dict()
-    ncscourses[i]['course_id'] = 'C'+career_name    
+    ncscourses[i]['course_id'] = 'C'+"".join(ncs_sector_name.split(" ")).strip()   
     ncscourses[i]['course_level'] = "D3"
-    ncscourses[i]['course_name'] = career_name
-    ncscourses[i]['description']= ''
+    ncscourses[i]['course_name'] = ncs_sector_name
+    ncscourses[i]['description']= str(NCS_CAREER_PATHS[NCS_CAREER_PATHS['Sector'] == ncs_sector_name]['Sector Description'].tolist()[0])
     ncscourses[i]['parent'] = "Intermediate (11th/12th)"
     ncscourses[i]['node_placement'] = 'non-leaf'
-    for ncscourse in sector_names:
-        if str(ncscourse) == "nan":
-            continue
-        courses_in_sector = CAREER_PATHS[CAREER_PATHS['Sector'] == ncscourse]['Career Name'].tolist()
-        ncscourses[i]['children'] = dict()
-        for j, c in enumerate(courses_in_sector):
-            ncscourses[i]['children'][j] = {'child_type':'ncscourse', 'child_name':c}
+    if str(ncs_sector_name) == "nan":
+        continue
+    
+    courses_in_ncs_sector = NCS_CAREER_PATHS[NCS_CAREER_PATHS['Sector'] == ncs_sector_name]['Career Name'].tolist().copy()
+    ncscourses[i]['children'] = dict()
+    for jx, cx in enumerate(courses_in_ncs_sector):
+        ncscourses[i]['children'][jx] = {'child_type':'ncscourse', 'child_name':", ".join(cx.split("/"))}
 
+          
             
-for k in range(i+1, CAREER_PATHS.shape[0]+(i+1)):
+for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
     ncscourses[k] = dict()
-    ncscourses[k]['course_id'] = 'C'+CAREER_PATHS['Career Name'].iloc[k-i-1]  
+    ncscourses[k]['course_id'] = 'C_NCS_ENDPOINT'+str(k)  
     ncscourses[k]['course_level'] = "D100"
-    ncscourses[k]['course_name'] = CAREER_PATHS['Career Name'].iloc[k-i-1]
-    ncscourses[k]['description']= CAREER_PATHS['Career Description'].iloc[k-i-1]
-    ncscourses[k]['parent'] = CAREER_PATHS['Sector'].iloc[k-i-1]
+    ncscourses[k]['course_name'] = ", ".join(NCS_CAREER_PATHS['Career Name'].iloc[k-i-1].split("/"))
+    ncscourses[k]['description']= NCS_CAREER_PATHS['Career Description'].iloc[k-i-1]
+    ncscourses[k]['parent'] = NCS_CAREER_PATHS['Sector'].iloc[k-i-1]
     ncscourses[k]['node_placement'] = 'leaf'
-    ncscourses[k]['sector'] =  CAREER_PATHS['Sector'].iloc[k-i-1]
-    ncscourses[k]['offline'] =  CAREER_PATHS['Where will you study?'].iloc[k-i-1]
+    ncscourses[k]['sector'] =  NCS_CAREER_PATHS['Sector'].iloc[k-i-1]
+    ncscourses[k]['offline'] =  NCS_CAREER_PATHS['Where will you study?'].iloc[k-i-1]
     ncscourses[k]['duration'] = ''
-    ncscourses[k]['details'] = {'Personal_Competencies': CAREER_PATHS['Personal Competencies'].iloc[k-i-1], 
-                                'Where_will_you_work': CAREER_PATHS['Where will you work?'].iloc[k-i-1],
-                                'Expected_Growth_Path': CAREER_PATHS['Expected Growth Path'].iloc[k-i-1],
-                                'Fees': CAREER_PATHS['Fees'].iloc[k-i-1],
-                                'Scholarships_Loans': CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1],
-                                'Expected_Income': CAREER_PATHS['Expected Income'].iloc[k-i-1]
+    ncscourses[k]['details'] = {'personalCompetencies': NCS_CAREER_PATHS['Personal Competencies'].iloc[k-i-1], 
+                                'whereToWork': NCS_CAREER_PATHS['Where will you work?'].iloc[k-i-1],
+                                'expectedGrowthPath': NCS_CAREER_PATHS['Expected Growth Path'].iloc[k-i-1],
+                                'fees': NCS_CAREER_PATHS['Fees'].iloc[k-i-1],
+                                'scholarshipsAndLoans': NCS_CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1],
+                                'expectedIncome': NCS_CAREER_PATHS['Expected Income'].iloc[k-i-1],
+                                'externalLink': NCS_CAREER_PATHS['NCS Link'].iloc[k-i-1]
+                                
                                }
-    
-    
                 
-                
-            
-            
-            
-            
 
 ## FOREIGN LANGUAGES
 
@@ -225,7 +234,7 @@ def report():
 @cross_origin()
 def return_CareerOptions():
      # Get the 'id' query parameter from the request
-    qualification = urllib.parse.unquote(request.args.get('qualification', '10th'))
+    qualification = request.args.get('qualification', '10th')
     course_type = request.args.get('course_type', 'course')
     course_id = request.args.get('course_id', 'C10')
     if course_type == "course":
@@ -240,6 +249,7 @@ def return_CareerOptions():
             if ncscourses[c]['course_name'] == qualification:
                 print(ncscourses[c]['course_name'])
                 ncscourses[c]['course_type'] ='ncscourse'
+                print(ncscourses[c])
                 returnValue = {'status':'success', 'message':ncscourses[c]}
                 return jsonify(returnValue)
     return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})

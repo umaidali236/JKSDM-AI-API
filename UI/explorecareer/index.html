@@ -267,6 +267,34 @@ color: #000000;
     }
   }
 }
+
+.externalbtn{
+                
+                max-width:200px;
+                height:18px;
+                mix-blend-mode: normal;
+                cursor:pointer;
+                border: 1px solid #30af02b9;
+                border-radius: 5px;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
+                transition:0.s;
+                background:#30af02b9;
+                color:#fff;
+                border-color:#30af02b9;
+                padding:10px;
+                margin-left:10px;
+                &:hover{
+                transform:scale(1.01);
+                background:#30af02b9;
+                padding-left:10px;
+                padding-right:10px;
+                
+                }
+        }
 </style>
 
 
@@ -300,7 +328,7 @@ color: #000000;
                         <div class="card">
                             <h4> </h4>
                             <div class="button-container">
-                                <button class="btn" onclick="getCareer('10th','course', 1, this)">Completed 10th</button>   
+                                <div class="btn" onclick="getCareer('10th','course', 1, this)">Completed 10th</div>   
                             </div>
                         </div>
                     </div>
@@ -372,7 +400,7 @@ function displayOptions(responseStatus, responseText, z, who)
     siblingDivs.forEach(div => {
       //alert(div.tagName)
       
-    if (div.tagName.toLowerCase() === "button") {
+    if (div.tagName.toLowerCase() === "div") {
       //alert('hi');
         div.style.background = "#0d5aa8"; // Change background color
     }
@@ -397,7 +425,7 @@ function displayOptions(responseStatus, responseText, z, who)
       for (child in responseDictCareerOptions.message.children){
         child_name = responseDictCareerOptions.message.children[child].child_name;
         child_type = responseDictCareerOptions.message.children[child].child_type;
-        textNextCareer += "<button class=btn onclick=getCareer('"+encodeURIComponent(child_name)+"','"+child_type+"',"+zz+",this)>"+child_name+"</button>";
+        textNextCareer += "<div class=btn onclick=getCareer('"+encodeURIComponent(child_name)+"','"+child_type+"',"+zz+",this)>"+child_name+"</div>";
       }
       textNextCareer += "</div></div></div>";
       document.getElementById('careerscards').innerHTML += textNextCareer;
@@ -428,14 +456,18 @@ function displayOptions(responseStatus, responseText, z, who)
           //offline_colleges = responseDictCareerOptions.message.offline;
           textNextCareer += "<h2>Course Description</h2><p id=desc>"+course_description+"</p>";
           //textNextCareer += "<h2>Course Duration</h2><p id=desc>"+course_duration+"</p>";
-          textNextCareer += "<h2>Personal Competencies</h2><p id=desc>"+responseDictCareerOptions.message.details.Personal_Competencies+"</p>";
+          textNextCareer += "<h2>Personal Competencies</h2><p id=desc>"+responseDictCareerOptions.message.details.personalCompetencies+"</p>";
           textNextCareer += "<h2>Institutions where you can study</h2><p id=desc>The course can be pursues in the following indicative institutions:<br>"+responseDictCareerOptions.message.offline+"</p>";
-          textNextCareer += "<h2>Fees</h2><p id=desc>"+responseDictCareerOptions.message.details.Fees+"</p>";
-          textNextCareer += "<h2>Scholarships & Loans</h2><p id=desc>"+responseDictCareerOptions.message.details.Scholarships_Loans+"</p>";
-          textNextCareer += "<h2>Expected Growth Path</h2><p id=desc>"+responseDictCareerOptions.message.details.Expected_Growth_Path+"</p>";
-          textNextCareer += "<h2>Where will you work:</h2><p id=desc>"+responseDictCareerOptions.message.details.Where_will_you_work+"</p>";
-          textNextCareer += "<h2>Expected Income</h2><p id=desc>"+responseDictCareerOptions.message.details.Expected_Income+"</p>";
-          
+          textNextCareer += "<h2>Fees</h2><p id=desc>"+responseDictCareerOptions.message.details.fees+"</p>";
+          textNextCareer += "<h2>Scholarships & Loans</h2><p id=desc>"+responseDictCareerOptions.message.details.scholarshipsAndLoans+"</p>";
+          textNextCareer += "<h2>Expected Growth Path</h2><p id=desc>"+responseDictCareerOptions.message.details.expectedGrowthPath+"</p>";
+          textNextCareer += "<h2>Where will you work:</h2><p id=desc>"+responseDictCareerOptions.message.details.whereToWork+"</p>";
+          textNextCareer += "<h2>Expected Income</h2><p id=desc>"+responseDictCareerOptions.message.details.expectedIncome+"</p>";
+          if (responseDictCareerOptions.message.details.externalLink != 'NA'){
+            textNextCareer += "<a href="+responseDictCareerOptions.message.details.externalLink+"><div class=externalBtn>Click here to know more</div></a>";
+          }
+
+
           textNextCareer += "</div></div><span style=margin:30px;>&nbsp;</span";
           document.getElementById('careerscards').innerHTML += textNextCareer;
           
