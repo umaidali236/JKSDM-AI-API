@@ -116,14 +116,14 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
     ncscourses[k]['parent'] = NCS_CAREER_PATHS['Sector'].iloc[k-i-1]
     ncscourses[k]['node_placement'] = 'leaf'
     ncscourses[k]['sector'] =  NCS_CAREER_PATHS['Sector'].iloc[k-i-1]
-    ncscourses[k]['offline'] =  NCS_CAREER_PATHS['Where will you study?'].iloc[k-i-1]
+    ncscourses[k]['offline'] = str(NCS_CAREER_PATHS['Where will you study?'].iloc[k-i-1])
     ncscourses[k]['duration'] = ''
-    ncscourses[k]['details'] = {'personalCompetencies': NCS_CAREER_PATHS['Personal Competencies'].iloc[k-i-1], 
-                                'whereToWork': NCS_CAREER_PATHS['Where will you work?'].iloc[k-i-1],
-                                'expectedGrowthPath': NCS_CAREER_PATHS['Expected Growth Path'].iloc[k-i-1],
-                                'fees': NCS_CAREER_PATHS['Fees'].iloc[k-i-1],
-                                'scholarshipsAndLoans': NCS_CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1],
-                                'expectedIncome': NCS_CAREER_PATHS['Expected Income'].iloc[k-i-1],
+    ncscourses[k]['details'] = {'personalCompetencies': str(NCS_CAREER_PATHS['Personal Competencies'].iloc[k-i-1]), 
+                                'whereToWork': str(NCS_CAREER_PATHS['Where will you work?'].iloc[k-i-1]),
+                                'expectedGrowthPath': str(NCS_CAREER_PATHS['Expected Growth Path'].iloc[k-i-1]),
+                                'fees': str(NCS_CAREER_PATHS['Fees'].iloc[k-i-1]),
+                                'scholarshipsAndLoans': str(NCS_CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1]),
+                                'expectedIncome': str(NCS_CAREER_PATHS['Expected Income'].iloc[k-i-1]),
                                 'externalLink': str(NCS_CAREER_PATHS['NCS Link'].iloc[k-i-1]).lower()
 
                                }
