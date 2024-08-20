@@ -234,10 +234,7 @@ def return_CareerOptions():
                 print(courses[c]['course_name'])
                 courses[c]['course_type'] = 'course'
                 returnValue = {'status':'success', 'message':courses[c]}
-                return jsonify(returnValue)
-        else:
-            return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
-    
+                return jsonify(returnValue) 
     elif course_type == "ncscourse":
         for c in ncscourses.keys():
             if ncscourses[c]['course_name'] == qualification:
@@ -245,8 +242,7 @@ def return_CareerOptions():
                 ncscourses[c]['course_type'] ='ncscourse'
                 returnValue = {'status':'success', 'message':ncscourses[c]}
                 return jsonify(returnValue)
-        else:
-            return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
+    return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
 
 
 
