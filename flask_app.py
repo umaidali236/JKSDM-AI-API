@@ -18,6 +18,7 @@ from tqdm import tqdm
 
 
 
+
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 model.eval()
@@ -157,8 +158,27 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
 
 ####
 #SELF LEARNING COURSES RECOMMENDATION
-self_learning_path = "./db/CONTENT/Self-learningNEWandOLD"
+# self_learning_path = "./db/CONTENT/Self-learningNEWandOLD"
+# self_learning_courses = dict()
+# for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
+#     self_learning_courses[self_learning_sector_name] = dict()
+    
+#     self_learning_courses[self_learning_sector_name]['courses'] = list()
+    
+#     self_learning_courses[self_learning_sector_name]['sector_embedding'] = get_bert_embedding(self_learning_sector_name)
+#     for self_learning_course_in_a_sector in os.listdir(self_learning_path+"/"+self_learning_sector_name):
+#         self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector, 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector)})
+        
+# cosine_similarity_with_careers = dict()
+# #embedding_of_sector_name = get_bert_embedding(sector_name)
+
+
+# for self_learning_career_name in list(self_learning_courses_embedding_map.keys()):
+#     cosine_similarity_with_careers[self_learning_career_name] = torch.nn.functional.cosine_similarity(embedding_of_career_name, self_learning_courses_embedding_map[self_learning_career_name], dim=0)
+
+self_learning_path = "./CONTENT/Self-learningNEWandOLD"
 self_learning_courses = dict()
+self_learning_courses_embedding_map = dict()
 for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
     self_learning_courses[self_learning_sector_name] = dict()
     
@@ -166,9 +186,21 @@ for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
     
     self_learning_courses[self_learning_sector_name]['sector_embedding'] = get_bert_embedding(self_learning_sector_name)
     for self_learning_course_in_a_sector in os.listdir(self_learning_path+"/"+self_learning_sector_name):
-        self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector, 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector)})
+        if self_learning_course_in_a_sector.endswith(".csv"):
+            self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector.split(".csv")[0], 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector.split(".csv")[0])})
+            self_learning_courses_embedding_map[self_learning_course_in_a_sector.split(".csv")[0]] = get_bert_embedding(self_learning_course_in_a_sector.split(".csv")[0])
+        elif self_learning_course_in_a_sector.endswith(".xlsx"):
+            self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector.split(".xlsx")[0], 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector.split(".xlsx")[0])})
+            self_learning_courses_embedding_map[self_learning_course_in_a_sector.split(".csv")[0]] = get_bert_embedding(self_learning_course_in_a_sector.split(".xlsx")[0])
+        else:
+            self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector, 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector)})
+            self_learning_courses_embedding_map[self_learning_course_in_a_sector] = get_bert_embedding(self_learning_course_in_a_sector)
+
         
-        
+
+
+
+    
 
 
 
@@ -303,23 +335,31 @@ def recommendCoursesOnCareer():
     # Get the 'id' query parameter from the request
     career_name = request.args.get('career_name', 'Computer Engineering')
     sector_name = request.args.get('sector_name', 'Information Technology') 
-    cosine_similarity_with_sectors = dict()
-    embedding_of_sector_name = get_bert_embedding(sector_name)
-    embedding_of_career_name = get_bert_embedding(career_name)
+    # cosine_similarity_with_sectors = dict()
+    # embedding_of_sector_name = get_bert_embedding(sector_name)
+    # embedding_of_career_name = get_bert_embedding(career_name)
 
 
-    for self_learning_sector_name in list(self_learning_courses.keys()):
-        cosine_similarity_with_sectors[self_learning_sector_name] = torch.nn.functional.cosine_similarity(embedding_of_sector_name, self_learning_courses[self_learning_sector_name]['sector_embedding'], dim=0)
+    # for self_learning_sector_name in list(self_learning_courses.keys()):
+    #     cosine_similarity_with_sectors[self_learning_sector_name] = torch.nn.functional.cosine_similarity(embedding_of_sector_name, self_learning_courses[self_learning_sector_name]['sector_embedding'], dim=0)
 
-    max_cosine_similarity_sector = -2
-    sector_name_with_max_cosine_similarity = 'Information Technology'
+    # max_cosine_similarity_sector = -2
+    # sector_name_with_max_cosine_similarity = 'Information Technology'
 
-    for (key, val) in cosine_similarity_with_sectors.items():
-        #print(key,val)
-        if val >= max_cosine_similarity_sector:
-            sector_name_with_min_cosine_similarity = key
-            max_cosine_similarity_sector = val
+    # for (key, val) in cosine_similarity_with_sectors.items():
+    #     #print(key,val)
+    #     if val >= max_cosine_similarity_sector:
+    #         sector_name_with_min_cosine_similarity = key
+    #         max_cosine_similarity_sector = val
     
+    careers_data_sorted = {k: v for k, v in sorted(cosine_similarity_with_careers.items(), key=lambda x: x[1])}
+    careers_data_sorted_list = list(careers_data_sorted.keys())
+    CAREERS_DATA_SORTED = dict()
+    CAREERS_DATA_SORTED['status'] ='success'
+    CAREERS_DATA_SORTED['courses_recommended']= [careers_data_sorted_list[-1], careers_data_sorted_list[-2], careers_data_sorted_list[-3], careers_data_sorted_list[-4], careers_data_sorted_list[-5]] 
+    
+    return jsonify(CAREERS_DATA_SORTED)       
+
 
 
 
