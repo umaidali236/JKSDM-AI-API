@@ -1,0 +1,21 @@
+S.No.,Sector,CourseName,Duration,Minimum Education,Language,Module,TopicName,URL
+1,Cybersecurity,Identity and Access Management in Salesforce,33hrs 12min,12th,English/Hindi,Module 1: Introduction to Salesforce Identity and Access Management,Login Flow In Salesforce,https://www.youtube.com/watch?v=kCr-3EHRDP8
+2,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 1: Introduction to Salesforce Identity and Access Management,Multi-Factor Authentication | Two-factor authentication Salesforce,https://www.youtube.com/watch?v=KfCFkskVhwA
+3,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 1: Introduction to Salesforce Identity and Access Management,Introduction of Salesforce sso & Service provider flow,https://www.youtube.com/watch?v=Y5J3r1cmHWc
+4,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 1: Introduction to Salesforce Identity and Access Management,SAML Identity Provider Initiated SSO | IDP SSO Flow,https://www.youtube.com/watch?v=_P73fndPCbU
+5,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 2: SAML Based SSO,OpenID Connect Flow | OIDC,https://www.youtube.com/watch?v=S_sVBpEI-WQ
+6,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 2: SAML Based SSO,Delegated Authentication Flow,https://www.youtube.com/watch?v=uQq86GkEcCQ
+7,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 2: SAML Based SSO,Single Sign On Decision Guide,https://www.youtube.com/watch?v=dczJorlRGYw
+8,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 2: SAML Based SSO,SAML Flow in Salesforce | SSO Demo,https://www.youtube.com/watch?v=1tI5g63-lzA
+9,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 3: OpenID Connect SSO,Social Sign on in Salesforce | SSO with Facebook,https://www.youtube.com/watch?v=vsrl8bo1r1M
+10,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 3: OpenID Connect SSO,OpenId Connect in Salesforce | SSO Between Google and Salesforce,https://www.youtube.com/watch?v=0qNQ_YEIM8s
+11,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 3: OpenID Connect SSO,Canvas App in Salesforce SSO,https://www.youtube.com/watch?v=gvxI6HzqNhA
+12,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 3: OpenID Connect SSO,Setup Okta Single Sign-On (SSO) with Salesforce,https://www.youtube.com/watch?v=t6HWJW7cz70
+13,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 4: Social Sign on in Salesforce | SSO with Facebook,OAuth Concepts,https://www.youtube.com/watch?v=b4gXo_kPZbg
+14,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 4: Social Sign on in Salesforce | SSO with Facebook,Authorization Code with Secret Flow | Web Server Flow in Salesforce | EP1,https://www.youtube.com/watch?v=8LOKZDq1n8g
+15,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 4: Social Sign on in Salesforce | SSO with Facebook,Implicit Grant User Agent Flow | EP2,https://www.youtube.com/watch?v=92znCQOFZRs
+16,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 5: OAuth 2.0 and its Flows,Authorisation Code With PKCE Flow | EP3,https://www.youtube.com/watch?v=dfRKJXUka7E
+17,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 5: OAuth 2.0 and its Flows,JWT / SAML Assertion Bearer Flows | EP 4,https://www.youtube.com/watch?v=u2pNUo9WUy8
+18,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 5: OAuth 2.0 and its Flows,Username and Password Flow | Ep5,https://www.youtube.com/watch?v=SxDwdZ7cDQw
+19,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 5: OAuth 2.0 and its Flows,oAuth Decision Guide,https://www.youtube.com/watch?v=OA1kPPbCsPA
+20,Cybersecurity,Identity and Access Management in Salesforce,,12th,English/Hindi,Module 5: OAuth 2.0 and its Flows,Oauth Authorization flows in Salesforce | Web Server flow | JWT Bearer token flow,https://www.youtube.com/watch?v=cViU2-xVscA

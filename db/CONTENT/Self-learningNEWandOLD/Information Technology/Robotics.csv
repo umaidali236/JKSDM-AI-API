@@ -1,0 +1,16 @@
+S.No.,Sector,CourseName,Duration,Minimum Education,Language,Module,TopicName,URL
+1,Robotics,Robotics,25hrs 13min,12th,English/Hindi,Module 1: Spatial Descriptions and Transformations,Spatial Descriptions and Transformation Matrices for Robotic Manipulators,https://www.youtube.com/watch?v=4Y1_y9DI_Hw
+2,Robotics,Robotics,,12th,English/Hindi,Module 1: Spatial Descriptions and Transformations,Spacial Descriptions and Transformations - Worked Example,https://www.youtube.com/watch?v=r244ADkuexk
+3,Robotics,Robotics,,12th,English/Hindi,Module 1: Spatial Descriptions and Transformations,Compound Transformation Matrices and Inverse Transformation Matrices - Robotic Basics,https://www.youtube.com/watch?v=sm7d1A2npWA
+4,Robotics,Robotics,,12th,English/Hindi,Module 1: Spatial Descriptions and Transformations,Fixed and Euler Angle Representation for Rotation Matrices,https://www.youtube.com/watch?v=uG0P9RX65Ek
+5,Robotics,Robotics,,12th,English/Hindi,Module 2: Euler Angles and Rotation,Angles of Rotation for Euler Angle Representation (Worked Example)-Robotics Basics,https://www.youtube.com/watch?v=8FD1jgb3Df4
+6,Robotics,Robotics,,12th,English/Hindi,Module 2: Euler Angles and Rotation,Frame Assignment For Robotic Manipulators - Direct Kinematics I,https://www.youtube.com/watch?v=fNIyNF87q9I
+7,Robotics,Robotics,,12th,English/Hindi,Module 2: Euler Angles and Rotation,Denavit - Hartenberg (DH) Tables For Robotic Systems - Direct Kinematics II,https://www.youtube.com/watch?v=DPO9Se6ZqN0
+8,Robotics,Robotics,,12th,English/Hindi,Module 3: Direct Kinematics,Creating Transformation Matrices From DH Tables | Robotics (Direct Kinematics III),https://www.youtube.com/watch?v=yjLVBbK_rOU
+9,Robotics,Robotics,,12th,English/Hindi,Module 3: Direct Kinematics,Worked Example - Frame Assignment | DH Tables | Transformation Matrices (Direct Kinematics IV),https://www.youtube.com/watch?v=KdKAJ6kLY6U
+10,Robotics,Robotics,,12th,English/Hindi,Module 3: Direct Kinematics,Jacobian Matrix and Singularities | Robotics | Introduction | Part 1,https://www.youtube.com/watch?v=h2YM0CDzDl4
+11,Robotics,Robotics,,12th,English/Hindi,Module 3: Direct Kinematics,Jacobian Matrix - Partial Differentiation Method | Robotics | Part 2,https://www.youtube.com/watch?v=YS3kt_eqOPY
+12,Robotics,Robotics,,12th,English/Hindi,Module 4:  Jacobian Matrix and Singularities,Jacobian Matrix - Velocity Propagation Method | Robotics | Part 3,https://www.youtube.com/watch?v=YhEq_hUo3Ek
+13,Robotics,Robotics,,12th,English/Hindi,Module 4:  Jacobian Matrix and Singularities,Jacobian Matrix - Torques and Forces on Joints | Robotics | Part 4,https://www.youtube.com/watch?v=DsWaju7vbk4
+14,Robotics,Robotics,,12th,English/Hindi,Module 4:  Jacobian Matrix and Singularities,Lagrangian Mechanics (Torques and Forces) | Robotics | Part 5,https://www.youtube.com/watch?v=zO5o-tAwOPc
+15,Robotics,Robotics,,12th,English/Hindi,Module 4:  Jacobian Matrix and Singularities,Trajectory Planning and Generation | Cubic Polynomials | Parabolic Blends | Robotics,https://www.youtube.com/watch?v=TXHM9xsRUkA

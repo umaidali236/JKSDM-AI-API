@@ -1,0 +1,10 @@
+S.No.,Sector,CourseName,Duration,Minimum Education,Language,Module,TopicName,URL
+1,Architecture,Software Architecture and Design,19hrs 12min,12th,English/Hindi,Module 1: Introduction to Software Architecture,Getting the Basics - Software Architecture Introduction (part 1),https://www.youtube.com/watch?v=8UlLgOf20Ho
+2,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 1: Introduction to Software Architecture,Scaling Distributed Systems - Software Architecture Introduction (part 2),https://www.youtube.com/watch?v=gxfERVP18-g
+3,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 1: Introduction to Software Architecture,Distributed Cache explained - Software Architecture Introduction (part 3),https://www.youtube.com/watch?v=QBMTGngjWdU
+4,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 2: Event Driven Architecture,What is Event Driven Architecture? (EDA - part 1),https://www.youtube.com/watch?v=DQ5Cbt8DQbM
+5,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 2: Event Driven Architecture,The Saga Pattern in Microservices (EDA - part 2),https://www.youtube.com/watch?v=C0rGwyJkDTU
+6,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 2: Event Driven Architecture,What is Event Sourcing and CQRS? (EDA - part 3),https://www.youtube.com/watch?v=i2eVTk2Fb40
+7,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 3: Microservices and Distributed Systems,What is Service Discovery?,https://www.youtube.com/watch?v=v4u7m2Im7ng
+8,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 3: Microservices and Distributed Systems,Microservices Security Architecture  (+ Cybersecurity basics),https://www.youtube.com/watch?v=m438IXxaQJ4
+9,Architecture,Software Architecture and Design,,12th,English/Hindi,Module 3: Microservices and Distributed Systems,Distributed Systems Design Introduction (Concepts & Challenges),https://www.youtube.com/watch?v=Sa_gJwB55jY

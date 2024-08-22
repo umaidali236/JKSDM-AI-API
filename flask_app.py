@@ -9,6 +9,30 @@ from flask_cors import cross_origin
 import urllib.parse
 import xml.etree.ElementTree as ET
 import unicodedata
+from transformers import BertTokenizer, BertModel
+import torch
+import os
+from tqdm import tqdm
+
+
+
+
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+model.eval()
+
+
+
+def get_bert_embedding(text):
+    # Tokenize input text and convert to PyTorch tensors
+    inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=512)
+    with torch.no_grad():
+        outputs = model(**inputs)
+    # Get the embeddings for the [CLS] token
+    embeddings = outputs.last_hidden_state[:, 0, :].squeeze()
+    return embeddings
+
 
 # def remove_diacritics(input_str):
 #     # Normalize the string to separate the base characters and diacritics
@@ -130,6 +154,22 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
 
 
 ## FOREIGN LANGUAGES
+
+####
+#SELF LEARNING COURSES RECOMMENDATION
+self_learning_path = "./db/CONTENT/Self-learningNEWandOLD"
+self_learning_courses = dict()
+for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
+    self_learning_courses[self_learning_sector_name] = dict()
+    
+    self_learning_courses[self_learning_sector_name]['courses'] = list()
+    
+    self_learning_courses[self_learning_sector_name]['sector_embedding'] = get_bert_embedding(self_learning_sector_name)
+    for self_learning_course_in_a_sector in os.listdir(self_learning_path+"/"+self_learning_sector_name):
+        self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector, 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector)})
+        
+        
+
 
 
 
@@ -259,15 +299,36 @@ def return_CareerOptions():
 
 @app.route('/api/v1/RecommendCoursesBasedOnCareerChosen', methods=['GET'])
 @cross_origin()
-def recommend_coursesOnCareer():
-     # Get the 'id' query parameter from the request
-    career = request.args.get('career', 'IT')
-    sector = request.args.get('sector', 'IT')   
+def recommendCoursesOnCareer():
+    # Get the 'id' query parameter from the request
+    career_name = request.args.get('career_name', 'Computer Engineering')
+    sector_name = request.args.get('sector_name', 'Information Technology') 
+    cosine_similarity_with_sectors = dict()
+    embedding_of_sector_name = get_bert_embedding(sector_name)
+    embedding_of_career_name = get_bert_embedding(career_name)
+
+
+    for self_learning_sector_name in list(self_learning_courses.keys()):
+        cosine_similarity_with_sectors[self_learning_sector_name] = torch.nn.functional.cosine_similarity(embedding_of_sector_name, self_learning_courses[self_learning_sector_name]['sector_embedding'], dim=0)
+
+    max_cosine_similarity_sector = -2
+    sector_name_with_max_cosine_similarity = 'Information Technology'
+
+    for (key, val) in cosine_similarity_with_sectors.items():
+        #print(key,val)
+        if val >= max_cosine_similarity_sector:
+            sector_name_with_min_cosine_similarity = key
+            max_cosine_similarity_sector = val
+    
+
+
+
+
 
     #interactive courses if any
     #self learning corses if any
     # professional courses if any      
-    return jsonify({'status':'under-development'})
+    return jsonify({'status':'success', 'sector_recommended': sector_name_with_min_cosine_similarity})
 
 
 
