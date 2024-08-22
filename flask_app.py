@@ -176,7 +176,7 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
 # for self_learning_career_name in list(self_learning_courses_embedding_map.keys()):
 #     cosine_similarity_with_careers[self_learning_career_name] = torch.nn.functional.cosine_similarity(embedding_of_career_name, self_learning_courses_embedding_map[self_learning_career_name], dim=0)
 
-self_learning_path = "./CONTENT/Self-learningNEWandOLD"
+self_learning_path = "./db/CONTENT/Self-learningNEWandOLD"
 self_learning_courses = dict()
 self_learning_courses_embedding_map = dict()
 for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
@@ -351,6 +351,10 @@ def recommendCoursesOnCareer():
     #     if val >= max_cosine_similarity_sector:
     #         sector_name_with_min_cosine_similarity = key
     #         max_cosine_similarity_sector = val
+    embedding_of_career_name = get_bert_embedding(career_name)
+    cosine_similarity_with_careers = dict()
+    for self_learning_career_name in list(self_learning_courses_embedding_map.keys()):
+        cosine_similarity_with_careers[self_learning_career_name] = torch.nn.functional.cosine_similarity(embedding_of_career_name, self_learning_courses_embedding_map[self_learning_career_name], dim=0)
     
     careers_data_sorted = {k: v for k, v in sorted(cosine_similarity_with_careers.items(), key=lambda x: x[1])}
     careers_data_sorted_list = list(careers_data_sorted.keys())
@@ -361,14 +365,10 @@ def recommendCoursesOnCareer():
     return jsonify(CAREERS_DATA_SORTED)       
 
 
-
-
-
-
     #interactive courses if any
     #self learning corses if any
     # professional courses if any      
-    return jsonify({'status':'success', 'sector_recommended': sector_name_with_min_cosine_similarity})
+    # return jsonify({'status':'success', 'sector_recommended': sector_name_with_min_cosine_similarity})
 
 
 
