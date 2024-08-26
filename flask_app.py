@@ -328,7 +328,7 @@ def recommendCoursesOnCareer():
     #interactive courses if any
     #self learning corses if any
     # professional courses if any      
-    return jsonify({'status':'success', 'sector_recommended': sector_name_with_min_cosine_similarity})
+    return jsonify({'status':'success', 'sector_recommended': [sector_name_with_min_cosine_similarity,'Automotive','Banking','AI']})
 
 
 
