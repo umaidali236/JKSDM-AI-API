@@ -728,7 +728,10 @@ function displayOptions(responseStatus, responseText, z, who)
         textNextCareer += "<div class=btn onclick=getCareer('"+encodeURIComponent(child_name)+"','"+child_type+"',"+zz+",this)>"+child_name+"</div>";
       }
       textNextCareer += "</div></div></div>";
-      document.getElementById('careerscards').innerHTML += textNextCareer;
+
+      tempDiv = document.createElement('div');
+      tempDiv.innerHTML = textNextCareer;
+      document.getElementById('careerscards').appendChild(tempDiv);
     }
     else
     {
@@ -743,7 +746,10 @@ function displayOptions(responseStatus, responseText, z, who)
           textNextCareer += "<h2>Course Duration</h2><p id=desc>"+course_duration+"</p>";
           textNextCareer += "<h2>Offline Course</h2><p id=desc>The course can be pursues in the following indicative institutions:<br>"+offline_colleges+"</p>";
           textNextCareer += "</div></div><span style=margin:30px;>&nbsp;</span";
-          document.getElementById('careerscards').innerHTML += textNextCareer;
+          tempDiv = document.createElement('div');
+          tempDiv.innerHTML = textNextCareer;
+          document.getElementById('careerscards').appendChild(tempDiv);
+          //document.getElementById('careerscards').appendChild(textNextCareer);
         }
         if (responseDictCareerOptions.message.course_type=='ncscourse')
         {
@@ -775,7 +781,11 @@ function displayOptions(responseStatus, responseText, z, who)
 
     
           textNextCareer += "</div></div><span style=margin:30px;>&nbsp;</span";
-          document.getElementById('careerscards').innerHTML += textNextCareer;
+
+          tempDiv = document.createElement('div');
+          tempDiv.innerHTML = textNextCareer;
+          document.getElementById('careerscards').appendChild(tempDiv);
+          //document.getElementById('careerscards').innerHTML += textNextCareer;
           
         }   
 
