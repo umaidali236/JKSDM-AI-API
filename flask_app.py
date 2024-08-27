@@ -179,24 +179,43 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
 self_learning_path = "./db/CONTENT/Self-learningNEWandOLD"
 self_learning_courses = dict()
 self_learning_courses_embedding_map = dict()
+self_learning_courses_links = dict()
+
 for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
     self_learning_courses[self_learning_sector_name] = dict()
     
     self_learning_courses[self_learning_sector_name]['courses'] = list()
     
     self_learning_courses[self_learning_sector_name]['sector_embedding'] = get_bert_embedding(self_learning_sector_name)
+    
     for self_learning_course_in_a_sector in os.listdir(self_learning_path+"/"+self_learning_sector_name):
         if self_learning_course_in_a_sector.endswith(".csv"):
             self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector.split(".csv")[0], 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector.split(".csv")[0])})
             self_learning_courses_embedding_map[self_learning_course_in_a_sector.split(".csv")[0]] = get_bert_embedding(self_learning_course_in_a_sector.split(".csv")[0])
+            try:
+                pd_df = pd.DataFrame(pd.read_csv(self_learning_path+"/"+self_learning_sector_name+"/"+self_learning_course_in_a_sector, encoding='utf-8'))
+            except Exception as e:
+                print(self_learning_sector_name, self_learning_course_in_a_sector)
+                print(e)
+            df_last_column = pd_df.columns[-1]
+            self_learning_courses_links[self_learning_course_in_a_sector.split(".csv")[0]] = pd_df[df_last_column].iloc[0]
+       
         elif self_learning_course_in_a_sector.endswith(".xlsx"):
             self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector.split(".xlsx")[0], 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector.split(".xlsx")[0])})
-            self_learning_courses_embedding_map[self_learning_course_in_a_sector.split(".csv")[0]] = get_bert_embedding(self_learning_course_in_a_sector.split(".xlsx")[0])
+            self_learning_courses_embedding_map[self_learning_course_in_a_sector.split(".xlsx")[0]] = get_bert_embedding(self_learning_course_in_a_sector.split(".xlsx")[0])
+            #print(self_learning_course_in_a_sector)
+            try:
+                pd_df = pd.DataFrame(pd.read_excel(self_learning_path+"/"+self_learning_sector_name+"/"+self_learning_course_in_a_sector, sheet_name=0))
+            except Exception as e:
+                print(self_learning_sector_name, self_learning_course_in_a_sector)
+                print(e)
+            df_last_column = pd_df.columns[-1]
+            self_learning_courses_links[self_learning_course_in_a_sector.split(".xlsx")[0]] = pd_df[df_last_column].iloc[0]
         else:
             self_learning_courses[self_learning_sector_name]['courses'].append({'course_name':self_learning_course_in_a_sector, 'course_embedding':get_bert_embedding(self_learning_course_in_a_sector)})
             self_learning_courses_embedding_map[self_learning_course_in_a_sector] = get_bert_embedding(self_learning_course_in_a_sector)
+            self_learning_courses_links[self_learning_course_in_a_sector] = ''
 
-        
 
 
 
@@ -361,7 +380,11 @@ def recommendCoursesOnCareer():
     CAREERS_DATA_SORTED = dict()
     CAREERS_DATA_SORTED['status'] ='success'
     CAREERS_DATA_SORTED['courses_recommended']= [careers_data_sorted_list[-1], careers_data_sorted_list[-2], careers_data_sorted_list[-3], careers_data_sorted_list[-4], careers_data_sorted_list[-5]] 
+    CAREERS_DATA_SORTED['courses_links']= [self_learning_courses_links[careers_data_sorted_list[-1]], self_learning_courses_links[careers_data_sorted_list[-2]], self_learning_courses_links[careers_data_sorted_list[-3]], self_learning_courses_links[careers_data_sorted_list[-4]], self_learning_courses_links[careers_data_sorted_list[-5]]]
     
+    
+    
+
     return jsonify(CAREERS_DATA_SORTED)       
 
 

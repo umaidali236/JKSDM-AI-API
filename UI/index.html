@@ -5,13 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilling Opportunities Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .scrollable-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px; /* Adjust padding as needed */
+}
 
+.tile {
+  flex: 0 0 auto;
+  width: 200px; /* Adjust tile width as needed */
+  text-align: center;
+  margin-right: 10px;
+  border-radius:5px;
+}
+
+.tile iframe {
+  width: 100%;
+  height: 200px; /* Adjust iframe height as needed */
+  border-radius:15px;
+}
+.clickable {
+  cursor: pointer;
+  color: blue;
+  margin-top:2px;
+}
+    </style>
     <script type="text/javascript">
+
         const sectorsSelected =  ["IT-ITes", "Automotive"]; //get from somewhere.
         const qualificationSelected = ["Bachelors Engineering"];
+
+        function setSessionCookie(sectorsSelected, qualificationSelected) {
+            document.cookie = "sectorSelected" + "=" + encodeURIComponent(sectorsSelected) + "; path=/; expires=; HttpOnly";
+            document.cookie = "qualificationSelected" + "=" + encodeURIComponent(qualificationSelected) + "; path=/; expires=; HttpOnly";
+        }
+        setSessionCookie(sectorsSelected, qualificationSelected);
     </script>
 </head>
-<body>
+<body onload="setSessionCookie(sectorsSelected,qualificationSelected)">
     <header>
         <h1>JKYSE</h1>
         <nav>
@@ -35,48 +68,60 @@
     
     </section>
 
-    <section id="hero" style="display:none;">
+
+
+    <section id="hero" class="careerpathsiframe" style="display:none;">
+        <h2>Assessment Results</h2>
+        <iframe style="width:100%; height:360px; border:0;" src="charts/index.html"></iframe>
+        <div id="scorer" style="display: flex; align-items: center; align-content: center;">
+            <div style="width:50%; height:200px; "><h1>IT-ITes</h1><h6>Correct: 2</h6><h6> Incorrect: 0</h6></div>
+            <div style="width:50%; height:200px;"><h1>Automotive</h1><h6>Correct: 0</h6><h6> Incorrect: 2</h6></div>
+        <BR>
+        </div>
         <h2>Your Path to Success Starts Here</h2>
-        <button onclick="showSection('courses')">Explore Courses</button>
-        <button onclick="showSection('jobs')">Find Jobs</button>
-        <button onclick="showSection('entrepreneurship')">Start a Business</button>
-        <button onclick="showSection('career-guidance')">Get Career Guidance</button>
+        <div onload="drawcharts()"></div>
+        <button onclick="showSection('courses')">Explore Courses tailored for you</button>
+        <button onclick="showSection('entrepreneurship')">Learn to start a business</button>
+        <button onclick="showSection('career-guidance')">Know about your career options</button>
+        <!--<button onclick="showSection('career-guidance')">Unsure? Schedule a counsellor</button>-->
     </section>
 
-
-    <section id="career-paths" class="career-paths">
-        <h2></h2>
-        <iframe src="careeroptions/index.html"></iframe>
-    </section>
-
-    
-    <section id="courses" class="recommended-courses">
+    <section id="courses" class="content-section" style="display:none;">
         <h2>Courses</h2>
         <p>Find the best courses to upskill yourself in various domains.</p>
+        <div id="recommendedCoursesSection" class="scrollable-container">
+
+            <!--<div class="tile">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;   
+                web-share" allowfullscreen></iframe> 
+              <h2 class="clickable">Title 1</h2>
+            </div>-->
     </section>
 
     <!-- <section id="jobs" class="content-section">
         <h2>Jobs</h2>
-        <p>Explore job opportunities tailored to your skills and interests.</p>
-    </section>
-
-    <section id="entrepreneurship" class="content-section">
-        <h2>Entrepreneurship</h2>
-        <p>Learn about entrepreneurship opportunities and resources to start your own business.</p>
-    </section>
-
-
-    <section id="career-guidance" class="content-section">
-        <h2>Career Guidance</h2>
-        <p>Get personalized career guidance and advice to achieve your career goals.</p>
+        <p>Recommended jobs will appear here.</p>
     </section> -->
 
+
+
+    <section id="career-guidance" class="content-section" style="display:none;">
+        <iframe style="width:100%; height:100vw; border:0;" src="explorecareer/index.html"></iframe>
+    </section>
+
+    
+    <section id="entrepreneurship" class="content-section" style="display:none;">
+        <h2>Entrepreneurship</h2>
+        <p>Learn about entrepreneurship opportunities and resources to start your own business.</p>
+        <p>Recommended DPRs will appear here.</p>
+    </section>
+    
     <footer>
         <p>&copy; 2024 JKYSE</p>
     </footer>
 
     <script src="script.js"></script>    
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         sectorssection = document.getElementById("chosensectors");
         //alert(sectorsSelected);

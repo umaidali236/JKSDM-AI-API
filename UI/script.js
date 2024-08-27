@@ -29,21 +29,26 @@ function nextQuestion(questionNumber) {
     if (question) {
         question.style.display = 'block';
     }
+    else
+    {
+        completeAssessment()
+    }
 }
 
 function completeAssessment() {
     // Collect selected options
-    const teamworkSelection = document.querySelector('#question-1 .selected');
-    const entrepreneurshipInterestSelection = document.querySelector('#question-2 .selected');
-    const technicalSkillsSelection = document.querySelector('#question-3 .selected');
+    // const teamworkSelection = document.querySelector('#question-1 .selected');
+    // const entrepreneurshipInterestSelection = document.querySelector('#question-2 .selected');
+    // const technicalSkillsSelection = document.querySelector('#question-3 .selected');
 
-    console.log(`Teamwork: ${teamworkSelection ? teamworkSelection.textContent : 'Not Selected'}`);
-    console.log(`Entrepreneurship Interest: ${entrepreneurshipInterestSelection ? entrepreneurshipInterestSelection.textContent : 'Not Selected'}`);
-    console.log(`Technical Skills: ${technicalSkillsSelection ? technicalSkillsSelection.textContent : 'Not Selected'}`);
+    // console.log(`Teamwork: ${teamworkSelection ? teamworkSelection.textContent : 'Not Selected'}`);
+    // console.log(`Entrepreneurship Interest: ${entrepreneurshipInterestSelection ? entrepreneurshipInterestSelection.textContent : 'Not Selected'}`);
+    // console.log(`Technical Skills: ${technicalSkillsSelection ? technicalSkillsSelection.textContent : 'Not Selected'}`);
 
     // Hide the psychometric section and show the hero section
     document.getElementById("psychometric-section").style.display = "none";
     document.getElementById("hero").style.display = "block";
+
 }
 
 function showSection(sectionId) {
@@ -52,16 +57,58 @@ function showSection(sectionId) {
 
     // Show the selected section
     document.getElementById(sectionId).style.display = 'block';
+
+    
+    if(sectionId=='courses'){
+        for(kn=0;kn<sectorsSelected.length;kn++){
+            sendRecommendationRequestCourses(sectorsSelected[kn]);
+        }
+        sendRecommendationRequestCourses(qualificationSelected);
+    }
+    
+}
+
+function drawcharts()
+{
+    
+    // Chart 1
+    var ctx1 = document.getElementById('chart1').getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'pie',
+      data: {
+        labels: ['Correct', 'Incorrect'],
+        datasets: [{
+          data: [2,0],
+          backgroundColor: ['#FF6384', '#36A2EB'],
+          borderWidth: 1
+        }]
+      }
+    });
+
+    // Chart 2
+    var ctx2 = document.getElementById('chart2').getContext('2d');
+    var chart2 = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Correct', 'Incorrect'],
+        datasets: [{
+          data: [1,1],
+          backgroundColor: ['#4CAF50', '#E91E63'],
+          borderWidth: 1
+        }]
+      }
+    });
 }
 
 
 
 var response = {}
+
+
 function sendAJAXRequest() {
-    
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5000/api/v1/questionBank";
-    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=6";
+    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=1";
     
     xhr.open("GET", url +"?"+params);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -91,6 +138,74 @@ function sendAJAXRequest() {
 }
 
 
+function sendRecommendationRequestCourses(name_of_match) {
+    var xhr = new XMLHttpRequest();
+    //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
+    var url = "http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen";
+    var params = "career_name=" +JSON.stringify(name_of_match);
+    xhr.open("GET", url +"?"+params);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.timeout = 5000;
+
+    xhr.ontimeout = function() {
+        parseRecommendedCourses(xhr.status, xhr.responseText);
+    };
+    error = 1
+    // Set the onload callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            parseRecommendedCourses(xhr.status, xhr.responseText);
+        } 
+        else 
+        {
+            parseRecommendedCourses(xhr.status, xhr.responseText);
+        }
+    };
+    xhr.send();
+}
+
+
+
+function parseRecommendedCourses(responseStatus, responseText)
+{
+    responseDictCourses= JSON.parse(responseText)
+    if (responseStatus != 200) //error has occured during fetching
+    {
+        alert('Error occurred! Try again. Error Code:'+responseStatus+ '. Error Details:'+responseText);
+        return;
+    }
+    
+    if (responseDictCourses.status=="fail")
+        {
+            alert('Error occurred! Try again. Error Details:'+responseDictCourses.message);
+            //document.getElementById("intro-section").style.display = "block";
+            //document.getElementById("psychometric-section").style.display = "none";
+            return;
+        }
+
+    //parse all questions
+        
+
+    recommendedCoursesSection = document.getElementById('recommendedCoursesSection');
+
+    for(kkk=0; kkk<responseDictCourses.courses_links.length; kkk++)
+    {
+        course_name = responseDictCourses.courses_recommended[kkk];
+        if (course_name.length>10)
+        {
+            course_name = course_name.substring(0, 10)+"...";
+        }
+        course_link = responseDictCourses.courses_links[kkk];
+        embed_link = course_link.replace("/watch?v=", "/embed/");
+        recommendedCoursesSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+embed_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+course_link+"' target='_blank'> <h2 class='clickable'>"+course_name +"</h2></a></div>";
+    }
+
+    //console.log(responseDict.message);
+    //responseDict.message.forEach(sectorquestions => {
+    //    console.log(sectorquestions.sector);
+    //});
+
+ }
 
 
 function chooseOption(w,x,y,z)
