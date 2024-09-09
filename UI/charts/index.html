@@ -1,4 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+<body onload=checkCookie() >
 <style>
     .chart-container {
         display: flex;
@@ -23,15 +24,56 @@
     </div>
 </div>
 
-
+</body>
     <script>
+
+
+        function setCookie(cname,cvalue,exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+
+
+        function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+
+        function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+            user = prompt("Please enter your name:","");
+            if (user != "" && user != null) {
+            setCookie("username", user, 30);
+            }
+        }
+        }
+
+
        var chrt1 = document.getElementById("chart1").getContext("2d");
        var chartId1 = new Chart(chrt1, {
           type: 'doughnut',
           data: {
              labels: ["Correct", "Incorrect"],
              datasets: [{
-             label: "IT-ITes",
+             label: "",
              data: [0.5, 0.5],
              backgroundColor: [ '#333333', '#ff5500'],
              hoverOffset: 5
@@ -42,7 +84,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'IT-ITes', // Title of the chart,
+                    text: '', // Title of the chart,
                     font: {
                         size: 18 // Font size for the title
                     },
@@ -62,7 +104,7 @@
           data: {
              labels: ["Correct", "Incorrect"],
              datasets: [{
-             label: "Automotive",
+             label: "",
              data: [0.8, 0.2],
              backgroundColor: [ '#4d0000', '#80dfff'],
              hoverOffset: 5
@@ -72,7 +114,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Automotive', // Title of the chart,
+                    text: '', // Title of the chart,
                     font: {
                         size: 18 // Font size for the title
                     },

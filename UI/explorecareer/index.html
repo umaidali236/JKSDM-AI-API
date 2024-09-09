@@ -800,7 +800,6 @@ function getRecommended(x, y) {
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen";
     var params = "career_name=" + encodeURIComponent(x) + "sector_name=" + encodeURIComponent(y);
-
     xhr.open("GET", url + "?" + params);
     xhr.setRequestHeader('Content-Type', 'application/json');
     

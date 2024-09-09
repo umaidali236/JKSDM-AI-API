@@ -52,23 +52,22 @@ app = Flask(__name__)
 
 
 #LOAD DATA
-
+print("Loading Questions for Psychometry")
 #PSYCHOMETRIC TEST
 data = dict()
 X = pd.ExcelFile("./db/Sample questions SET 2.xlsx")
 print(f"Sheets present: {X.sheet_names} : Number of sheets in API: {len(X.sheet_names)}")
-data["IT-ITes"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=1)
-data["Automotive"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=3)
-data["Banking and Insurance"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=4)
-data["AI"] = pd.read_excel("./db/Sample question.xlsx", sheet_name=5)
+data["Multimedia"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=2)
+data["IT-ITes"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=5)
+data["Banking and Insurance"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=13)
+data["AI"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=4)
 question_pack = dict()
 keys = list(data.keys())
 print(f"Sectors:",keys, f": {len(keys)} total sectors added to API")
 
 
 
-
-
+print("Loding Career Paths")
 ## CAREER OPTIONS
 courses = dict()
 root = ET.parse('./db/all_courses.xml')
@@ -105,6 +104,7 @@ for i, item in enumerate(root.findall('course')):
                     courses[i]['offline'].append(col.text)
 
 
+print("Loding NCS Career Paths")
 ## NCS CAREER OPTIONS            
 NCS_CAREER_PATHS = pd.read_excel('./db/CAREERS_500.xlsx')
 Y_FILLED_SECTORS = NCS_CAREER_PATHS['Sector'].fillna(method='ffill', axis=0)
@@ -175,6 +175,9 @@ for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
 
 # for self_learning_career_name in list(self_learning_courses_embedding_map.keys()):
 #     cosine_similarity_with_careers[self_learning_career_name] = torch.nn.functional.cosine_similarity(embedding_of_career_name, self_learning_courses_embedding_map[self_learning_career_name], dim=0)
+
+
+print("Loding Self Learning (non-certified) Courses")
 
 self_learning_path = "./db/CONTENT/Self-learningNEWandOLD"
 self_learning_courses = dict()
@@ -353,7 +356,7 @@ def return_CareerOptions():
 def recommendCoursesOnCareer():
     # Get the 'id' query parameter from the request
     career_name = request.args.get('career_name', 'Computer Engineering')
-    sector_name = request.args.get('sector_name', 'Information Technology') 
+    career_score = float(request.args.get('career_score', '0.5'))
     # cosine_similarity_with_sectors = dict()
     # embedding_of_sector_name = get_bert_embedding(sector_name)
     # embedding_of_career_name = get_bert_embedding(career_name)
@@ -379,11 +382,14 @@ def recommendCoursesOnCareer():
     careers_data_sorted_list = list(careers_data_sorted.keys())
     CAREERS_DATA_SORTED = dict()
     CAREERS_DATA_SORTED['status'] ='success'
-    CAREERS_DATA_SORTED['courses_recommended']= [careers_data_sorted_list[-1], careers_data_sorted_list[-2], careers_data_sorted_list[-3], careers_data_sorted_list[-4], careers_data_sorted_list[-5]] 
-    CAREERS_DATA_SORTED['courses_links']= [self_learning_courses_links[careers_data_sorted_list[-1]], self_learning_courses_links[careers_data_sorted_list[-2]], self_learning_courses_links[careers_data_sorted_list[-3]], self_learning_courses_links[careers_data_sorted_list[-4]], self_learning_courses_links[careers_data_sorted_list[-5]]]
     
     
     
+    CAREERS_DATA_SORTED['courses_recommended']= [careers_data_sorted_list[-kkk] for kkk in range(1, int(career_score*10))] 
+    CAREERS_DATA_SORTED['courses_links']= [self_learning_courses_links[careers_data_sorted_list[-kkk]] for kkk in range(1, int(career_score*10))]
+    
+    
+
 
     return jsonify(CAREERS_DATA_SORTED)       
 

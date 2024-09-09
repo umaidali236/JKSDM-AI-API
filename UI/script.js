@@ -62,8 +62,12 @@ function showSection(sectionId) {
     if(sectionId=='courses'){
         for(kn=0;kn<sectorsSelected.length;kn++){
             sendRecommendationRequestCourses(sectorsSelected[kn]);
+            sendRecommendationRequestCertifiedCourses(sectorsSelected[kn])
         }
         sendRecommendationRequestCourses(qualificationSelected);
+        sendRecommendationRequestCertifiedCourses(qualificationSelected);
+        
+        
     }
     
 }
@@ -108,7 +112,7 @@ var response = {}
 function sendAJAXRequest() {
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5000/api/v1/questionBank";
-    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=1";
+    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=2";
     
     xhr.open("GET", url +"?"+params);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -193,7 +197,7 @@ function parseRecommendedCourses(responseStatus, responseText)
         course_name = responseDictCourses.courses_recommended[kkk];
         if (course_name.length>10)
         {
-            course_name = course_name.substring(0, 10)+"...";
+            course_name = course_name.substring(0, 20)+"...";
         }
         course_link = responseDictCourses.courses_links[kkk];
         embed_link = course_link.replace("/watch?v=", "/embed/");
@@ -207,6 +211,78 @@ function parseRecommendedCourses(responseStatus, responseText)
 
  }
 
+
+
+
+
+
+ function sendRecommendationRequestCertifiedCourses(name_of_match) {
+    var xhr = new XMLHttpRequest();
+    //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
+    var url = "http://127.0.0.1:5002/api/v1/RecommendCertifiedCoursesBasedOnCareerChosen";
+    var params = "career_name=" +JSON.stringify(name_of_match);
+    xhr.open("GET", url +"?"+params);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.timeout = 5000;
+
+    xhr.ontimeout = function() {
+        parseRecommendedCertifiedCourses(xhr.status, xhr.responseText);
+    };
+    error = 1
+    // Set the onload callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            parseRecommendedCertifiedCourses(xhr.status, xhr.responseText);
+        } 
+        else 
+        {
+            parseRecommendedCertifiedCourses(xhr.status, xhr.responseText);
+        }
+    };
+    xhr.send();
+}
+
+
+
+function parseRecommendedCertifiedCourses(responseStatus, responseText)
+{
+    responseDictCertifiedCourses= JSON.parse(responseText)
+    if (responseStatus != 200) //error has occured during fetching
+    {
+        alert('Error occurred! Try again. Error Code:'+responseStatus+ '. Error Details:'+responseText);
+        return;
+    }
+    
+    if (responseDictCertifiedCourses.status=="fail")
+        {
+            alert('Error occurred! Try again. Error Details:'+responseDictCourses.message);
+            //document.getElementById("intro-section").style.display = "block";
+            //document.getElementById("psychometric-section").style.display = "none";
+            return;
+        }
+
+    //parse all questions
+        
+
+    recommendedCertifiedCoursesSection = document.getElementById('recommendedCertifiedCoursesSection');
+
+    for(kkk=0; kkk<responseDictCertifiedCourses.courses_links.length; kkk++)
+    {
+        course_name = responseDictCertifiedCourses.courses_recommended[kkk];
+        if (course_name.length>10)
+        {
+            course_name = course_name.substring(0, 20)+"...";
+        }
+        course_link = responseDictCertifiedCourses.courses_links[kkk];
+        recommendedCertifiedCoursesSection.innerHTML += "<div class='tile'><img src='download.jpg' style='width:250px; height:200px;' /><a href='"+course_link+"' target='_blank'> <h2 class='clickable' style='border:1px solid #000; padding:5px;'>"+course_name +"</h2></a></div>";
+    }
+
+    //console.log(responseDict.message);
+    //responseDict.message.forEach(sectorquestions => {
+    //    console.log(sectorquestions.sector);
+    //});
+
+ }
 
 function chooseOption(w,x,y,z)
 
