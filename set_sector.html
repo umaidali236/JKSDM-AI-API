@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Choose your interests</legend>
+        <legend><u>Sectors</u></legend><br>
+        
+        <div>
+            <input type="checkbox" id="IT" name="interest" value="IT" />
+            <label for="coding">IT</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="Auto" name="interest" value="Automotive" />
+            <label for="Auto">Automotive</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="Finance" name="interest" value="Finance" />
+            <label for="Finance">Finance</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Health" name="interest" value="HealthCare" />
+            <label for="Health">HealthCare</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Aero" name="interest" value="Aerospace & Aviation" />
+            <label for="Aero">Aerospace & Aviation</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Apparel" name="interest" value="Apparel, Made-Ups & Home Furnishing" />
+            <label for="Apparel">Apparel, Made-Ups & Home Furnishing</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Beauty" name="interest" value="Beauty & Wellness" />
+            <label for="Beauty">Beauty & Wellness</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Furniture" name="interest" value="Furniture & Fittings" />
+            <label for="Furniture">Furniture & Fittings</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Management" name="interest" value="Management & Entrepreneurship and Professional Skills" />
+            <label for="Management">Management & Entrepreneurship and Professional Skills</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Media" name="interest" value="Media and Journalism" />
+            <label for="Media">Media and Journalism</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Power" name="interest" value="Power and Electrical" />
+            <label for="Power">Power and Electrical</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Rubber" name="interest" value="Rubber, Chemical and Petrochemical" />
+            <label for="Rubber">Rubber, Chemical and Petrochemical</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Tourism" name="interest" value="Tourism and Hospitality" />
+            <label for="Tourism">Tourism and Hospitality</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Plumbing" name="interest" value="Water Management and Plumbing" />
+            <label for="Plumbing">Water Management and Plumbing</label>
+        </div>
+
+
+        <br>
+        <button onclick="saveCheckboxValues()">Submit</button>
+    </fieldset>
+    <br><br>
+    <div id="getvalues" class="cookievalues">
+        <button onclick="loadCheckboxValues()">Get Values</button>
+    </div>
+    <br>
+    <div id="showvalues" class="arrayval"></div>
+    <script>
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Function to save checkbox state in a cookie
+        function saveCheckboxValues() {
+            const checkboxes = document.querySelectorAll('fieldset input[type="checkbox"]');
+            let state = [];
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    state.push(checkbox.value);
+                }
+            });
+            const encodedValues = state.map(value => encodeURIComponent(value));
+
+            setCookie('Sectors', encodedValues.join(','), 7); // Save for 7 days
+            console.log("hello")
+        }
+        function loadCheckboxValues() {
+            const values = getCookie('Sectors')
+            
+            if (values) {
+
+                // const valArray = values.split(',')
+                const decodedValues = values.split(',').map(value => decodeURIComponent(value));
+                console.log(decodedValues)
+                decodedValues.forEach(x => {
+                    var val = document.getElementById('showvalues')
+                    val.innerHTML += '<ol>' + x + '</ol>'
+                });
+
+            }
+            else {
+                alert('No value')
+            }
+
+
+            
+        }
+
+    </script>
+</body>
+
+</html>
