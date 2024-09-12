@@ -117,7 +117,7 @@
             const encodedValues = state.map(value => encodeURIComponent(value));
 
             setCookie('Sectors', encodedValues.join(','), 7); // Save for 7 days
-            console.log("hello")
+            //console.log("hello")
         }
         function loadCheckboxValues() {
             const values = getCookie('Sectors')
@@ -126,15 +126,17 @@
 
                 // const valArray = values.split(',')
                 const decodedValues = values.split(',').map(value => decodeURIComponent(value));
-                console.log(decodedValues)
-                decodedValues.forEach(x => {
-                    var val = document.getElementById('showvalues')
-                    val.innerHTML += '<ol>' + x + '</ol>'
-                });
+                //console.log(decodedValues)
+                // decodedValues.forEach(x => {
+                //     var val = document.getElementById('showvalues')
+                //     val.innerHTML += '<ol>' + x + '</ol>'
+                // });
+                return decodedValues;
 
             }
             else {
-                alert('No value')
+                alert('No sectors selected. Choose sectors first');
+                return [];
             }
 
 

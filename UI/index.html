@@ -33,9 +33,76 @@
   font-size:12px;
 }
     </style>
+   <script>
+
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Function to save checkbox state in a cookie
+    function saveCheckboxValues() {
+        const checkboxes = document.querySelectorAll('fieldset input[type="checkbox"]');
+        let state = [];
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                state.push(checkbox.value);
+            }
+        });
+        const encodedValues = state.map(value => encodeURIComponent(value));
+
+        setCookie('Sectors', encodedValues.join(','), 7); // Save for 7 days
+        //console.log("hello")
+    }
+    function loadCheckboxValues() {
+        const values = getCookie('Sectors')
+        
+        if (values) {
+
+            // const valArray = values.split(',')
+            const decodedValues = values.split(',').map(value => decodeURIComponent(value));
+            //console.log(decodedValues)
+            // decodedValues.forEach(x => {
+            //     var val = document.getElementById('showvalues')
+            //     val.innerHTML += '<ol>' + x + '</ol>'
+            // });
+            return decodedValues;
+
+        }
+        else {
+            alert('No sectors selected. Choose sectors first');
+            return [];
+        }
+
+
+        
+    }
+
+</script>
+
+
+
     <script type="text/javascript">
 
-        const sectorsSelected =  ["IT-ITeS", "Multimedia"]; //get from somewhere.
+        //const sectorsSelected =  ["IT-ITeS", "Multimedia"]; //get from somewhere.
+        const sectorsSelected = loadCheckboxValues();
         const qualificationSelected = ["Bachelors Engineering"];
 
         function setSessionCookie(sectorsSelected, qualificationSelected) {
