@@ -51,22 +51,6 @@ app = Flask(__name__)
 
 
 
-#LOAD DATA
-print("Loading Questions for Psychometry")
-#PSYCHOMETRIC TEST
-data = dict()
-X = pd.ExcelFile("./db/Sample questions SET 2.xlsx")
-print(f"Sheets present: {X.sheet_names} : Number of sheets in API: {len(X.sheet_names)}")
-data["Multimedia"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=2)
-data["IT-ITes"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=5)
-data["Banking and Insurance"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=13)
-data["AI"] = pd.read_excel("./db/Sample questions SET 2.xlsx", sheet_name=4)
-question_pack = dict()
-keys = list(data.keys())
-print(f"Sectors:",keys, f": {len(keys)} total sectors added to API")
-
-
-
 print("Loding Career Paths")
 ## CAREER OPTIONS
 courses = dict()
@@ -222,7 +206,42 @@ for self_learning_sector_name in tqdm(os.listdir(self_learning_path)):
 
 
 
-    
+ 
+
+#LOAD DATA
+print("Loading Questions for Psychometry")
+#PSYCHOMETRIC TEST
+data = dict()
+X = pd.ExcelFile("./db/Sample questions SET 2.xlsx")
+
+
+data["IT-ITeS"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=0)
+data["Power and Electrical"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=1)
+data["Rubber, Chemical and Petrochemical"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=3)
+
+data["Apparel, Made-Ups & Home Furnishing"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=29)
+data["Beauty & Wellness"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=30)
+data["Capital Goods"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=31)
+
+data["Construction"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=32)
+data["BFSI"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=27)
+data["HealthCare"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=24)
+
+data["Automotive"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=22)
+data["Green Jobs"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=21)
+data["Furniture & Fittings"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=18)
+data["Multimedia"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=17)
+data["Media and Journalism"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=13)
+data["Tourism and Hospitality"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=10)
+data["Logistics"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=8)
+data["Life Sciences"] = pd.read_excel("./db/Sample question_38 courses.xlsx", sheet_name=7)
+
+
+question_pack = dict()
+keys = list(data.keys())
+print(f"Sectors:",keys, f": {len(keys)} total sectors added to API")
+
+   
 
 
 
