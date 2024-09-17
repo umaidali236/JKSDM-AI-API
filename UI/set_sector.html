@@ -90,10 +90,10 @@
                 // const valArray = values.split(',')
                 const decodedValues = values.split(',').map(value => decodeURIComponent(value));
                 //console.log(decodedValues)
-                // decodedValues.forEach(x => {
-                //     var val = document.getElementById('showvalues')
-                //     val.innerHTML += '<ol>' + x + '</ol>'
-                // });
+                decodedValues.forEach(x => {
+                    var val = document.getElementById('showvalues')
+                    val.innerHTML += '<ol>' + x + '</ol>'
+                });
                 return decodedValues;
 
             }

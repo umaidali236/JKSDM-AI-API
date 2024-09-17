@@ -11,15 +11,16 @@ function startAssessment() {
 
 QA = {}
 
+
 function nextQuestion(questionNumber) {
     //alert(questionNumber-1);
     //alert(this.QA[questionNumber-1].option_id_selected);
     //alert(this.QA[questionNumber-1].option_id_selected);
-    if (this.QA[questionNumber-1].option_id_selected == "")
-    {
-        alert('Choose an option and then click next!');
-        return;
-    }
+    // if (this.QA[questionNumber-1].option_id_selected == "")
+    // {
+    //     alert('Choose an option and then click next!');
+    //     return;
+    // }
     // Hide all question sliders
     const questions = document.querySelectorAll('.question-slider');
     questions.forEach(question => question.style.display = 'none');
@@ -44,7 +45,18 @@ function completeAssessment() {
     // console.log(`Teamwork: ${teamworkSelection ? teamworkSelection.textContent : 'Not Selected'}`);
     // console.log(`Entrepreneurship Interest: ${entrepreneurshipInterestSelection ? entrepreneurshipInterestSelection.textContent : 'Not Selected'}`);
     // console.log(`Technical Skills: ${technicalSkillsSelection ? technicalSkillsSelection.textContent : 'Not Selected'}`);
-
+    for (sector in this.QA){
+        SECTORS_EVALUATED[sector]=0;
+        for (question in this.QA[sector]){
+            if(this.QA[sector][question]['option_id_selected'] == this.QA[sector][question]['option_id_correct']){
+                SECTORS_EVALUATED[sector] += 1;
+            }
+        }
+    
+    //save_to_cookie(SECTORS_EVALUATED);
+    }
+    console.log(SECTORS_EVALUATED);
+    console.log(this.QA);
     // Hide the psychometric section and show the hero section
     document.getElementById("psychometric-section").style.display = "none";
     document.getElementById("hero").style.display = "block";
@@ -284,13 +296,25 @@ function parseRecommendedCertifiedCourses(responseStatus, responseText)
 
  }
 
-function chooseOption(w,x,y,z)
+function chooseOption(sector_name,question_number,question_id,selected_option_id)
 
 {
-    this.QA[x]['sector_name'] = sector_name;
-    this.QA[x]['question_id'] = question_id;
-    this.QA[x]['option_id_selected'] = z;
-    this.QA[x]['option_id_correct'] = '';        
+    // this.QA[x]['sector_name'] = sector_name;
+    // this.QA[x]['question_id'] = question_id;
+    // this.QA[]['option_id_selected'] = z;
+    // this.QA[x]['option_id_correct'] = '';
+    //QA['Capital Goods']['Q/2/ID1726559635062084497']['option_id_selected']
+    // console.log(QA);
+    // console.log("******");
+    // console.log(QA[sector_name]);
+    // console.log("******");
+    // console.log(QA[sector_name][question_id]);
+    // console.log("******");
+    // console.log(QA[sector_name][question_id]['option_id_selected']);
+    //alert(QA[sector_name][question_id]["option_id_selected"]);
+    QA[sector_name][question_id]["option_id_selected"]= selected_option_id;
+    //alert(QA[sector_name][question_id]["option_id_selected"]);
+    
 }
 
 
@@ -340,7 +364,8 @@ function parseQuestionBank(responseStatus, responseText)
     qn_count = 1
     for(s=0; s<responseDict.message.length; s++)
     {
-
+        sector_name = responseDict.message[s].sector
+        this.QA[sector_name] = {};
         
         for (q=0; q<responseDict.message[s].data.length; q++)
         {
@@ -364,10 +389,13 @@ function parseQuestionBank(responseStatus, responseText)
             //Question_statement = responseDict.message[s].data[q].question.statement
             
             
+            this.QA[sector_name][question_id] = {};
+            this.QA[sector_name][question_id]["option_id_selected"] = '';
+
             //Options_object for a question=//Question_id = responseDict.message[s].data[q].question.options (array of option objects)
             for(o=0; o<responseDict.message[s].data[q].question.options.length;o++)
             {
-               sector_name = responseDict.message[s].sector
+               
                //option_id  = responseDict.message[0].data[0].question.options[o].id
                //option_statement  = responseDict.message[0].data[0].question.options[o].statement
                option_id  = responseDict.message[s].data[q].question.options[o].id
@@ -378,11 +406,14 @@ function parseQuestionBank(responseStatus, responseText)
                //functiontext = "<div class=\"option\" onclick=\"selectOption('teamwork', 'option"+op_+"')\">"+option_statement+"</div>";
                //console.log(functiontext);
                //selectionpair = "'"+question_id+"','"+option_id+"'";
-               this.QA[qn_count]={}
-               this.QA[qn_count]['sector_name'] = sector_name;
-               this.QA[qn_count]['question_id'] = question_id;
-               this.QA[qn_count]['option_id_selected'] = '';
-               this.QA[qn_count]['option_id_correct'] = '';
+               
+               this.QA[sector_name][question_id]["option_id_correct"] = correct_option_id;
+               
+               //this.QA[qn_count]={}
+               //this.QA[qn_count]['sector_name'] = sector_name;
+               //this.QA[qn_count]['question_id'] = question_id;
+               //this.QA[qn_count]['option_id_selected'] = '';
+               //this.QA[qn_count]['option_id_correct'] = '';
                htmltext += "<div class='option' data-value='"+option_id+"' class=\"\" onclick=\"chooseOption('"+sector_name+"','"+qn_count+"','"+question_id+"','"+option_id+"')\">"+option_statement+"</div>";
                
             }
@@ -414,7 +445,8 @@ function parseQuestionBank(responseStatus, responseText)
 //         option.addEventListener("click", function() {
 //             // Remove 'selected' class from all options in the current question
 //             this.parentNode.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
-            
+
+
 //             // Add 'selected' class to the clicked option
 //             this.classList.add("selected");
 //             alert('Hi');

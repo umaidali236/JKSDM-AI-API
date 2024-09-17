@@ -1,0 +1,115 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+<!--<body onload=checkCookie() >-->
+<body>
+<style>
+    .chart-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+    }
+    .chart-wrapper {
+        width: 45%;
+        display: flex;
+        justify-content: center; /* Centers the canvas horizontally */
+        align-items: center; /* Centers the canvas vertically */
+    }
+</style>
+
+<div class="chart-container" id="chartContainer">    
+</div>
+
+</body>
+
+    <script>
+
+    SECTORS_EVALUATED= {"IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9}
+    
+    
+    chartContainer = document.getElementById("chartContainer");
+    charts_html= "";
+    chart_number =0;
+
+    colorPairs = {}
+    colorPairs[1] = ["Red", "Black"];
+    colorPairs[2] = ["Blue", "Green"];
+    colorPairs[3] = ["Purple", "Lime"];
+    colorPairs[4] = ["Cyan", "Black"];
+    colorPairs[5] = ["Magenta", "Green"];
+    
+    for (sector in SECTORS_EVALUATED)
+    {
+        chart_number++;
+        charts_html +=  "<div class='chart-wrapper'><canvas id='chart"+chart_number+"' aria-label='chart' height='350' width='350'></canvas></div>";
+        
+    }
+    chartContainer.innerHTML = charts_html;
+    //imputed chart divs in chartContainer
+    
+    chart_number =0;
+    for (sector in SECTORS_EVALUATED)
+    {
+        loadcharts(++chart_number, sector, SECTORS_EVALUATED[sector]);
+
+    }
+    
+    function loadcharts(chart_number, sector_name, marks_in_sector)
+    {
+       var chrt = document.getElementById("chart"+chart_number).getContext("2d");
+       var chartId = new Chart(chrt, {
+          type: 'doughnut',
+          data: {
+             labels: ["Correct", "Incorrect"],
+             datasets: [{
+             label: "",
+             data: [marks_in_sector, 1-marks_in_sector],
+             backgroundColor: colorPairs[chart_number],
+             hoverOffset: 5
+             }],
+          },
+          
+          options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: sector_name, // Title of the chart,
+                    font: {
+                        size: 18 // Font size for the title
+                    },
+                    padding: {
+                        top: 10,
+                        bottom: 30
+                    }
+                },
+            },
+             responsive: false,
+          },
+       });
+
+
+
+    }
+
+    
+    
+    
+     
+    function generateColorPairs() {
+    let colorPairs = {};  // Create an empty object to store color pairs
+
+    // Define two arrays of colors
+    let primaryColors = ["Red", "Blue", "Green", "Yellow", "Purple"];
+    let secondaryColors = ["Orange", "Pink", "Cyan", "Magenta", "Lime"];
+
+    // Loop through both arrays and pair them
+    for (let i = 0; i < primaryColors.length; i++) {
+        // Use primary color as key and secondary color as value
+        colorPairs[i] = secondaryColors[i];
+    }
+
+    return colorPairs;  // Return the associative array
+}
+
+
+    </script>
+ </body>
