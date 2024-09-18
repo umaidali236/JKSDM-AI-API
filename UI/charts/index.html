@@ -129,4 +129,27 @@
           },
        });
     </script>
+    <button id="sendData">Send Data</button>
+
+    <script src="C:\GitHub\JKSDM-AI-API\UI\script.js">
+        
+        document.getElementById('sendData').addEventListener('click', function() {
+            const associativeArray = {
+                "IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9
+            };
+
+            fetch('http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(associativeArray), // Send the associative array as JSON
+            })
+            .then(response => response.json())
+            .then(data => console.log('Response from Flask:', data))
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
  </body>

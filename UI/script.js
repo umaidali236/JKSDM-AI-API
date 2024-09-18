@@ -86,11 +86,11 @@ function showSection(sectionId) {
     
     if(sectionId=='courses'){
         for(kn=0;kn<sectorsSelected.length;kn++){
-            sendRecommendationRequestCourses(sectorsSelected[kn]);
+            sendRecommendationRequestSLCourses();
             sendRecommendationRequestCertifiedCourses(sectorsSelected[kn])
         }
-        sendRecommendationRequestCourses(qualificationSelected);
-        sendRecommendationRequestCertifiedCourses(qualificationSelected);
+        //sendRecommendationRequestSLCourses(qualificationSelected);
+        //sendRecommendationRequestCertifiedCourses(qualificationSelected);
         
         
     }
@@ -136,34 +136,78 @@ function sendAJAXRequest() {
     xhr.send();
 }
 
+// document.getElementById('sendData').addEventListener('click', function() {
+//     const associativeArray = {
+//         "IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9
+//     };
 
-function sendRecommendationRequestCourses(name_of_match) {
+//     fetch('http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(associativeArray), // Send the associative array as JSON
+//     })
+//     .then(response => response.json())
+//     .then(data => console.log('Response from Flask:', data))
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
+// });
+
+
+function sendRecommendationRequestSLCourses() {
     var xhr = new XMLHttpRequest();
-    //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
-    var url = "http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen";
-    var params = "career_name=" +JSON.stringify(name_of_match);
-    xhr.open("GET", url +"?"+params);
+    var url = "http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry";
+    
+    xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
     xhr.timeout = 5000;
 
     xhr.ontimeout = function() {
-        parseRecommendedCourses(xhr.status, xhr.responseText);
+        parseRecommendedSLCourses(xhr.status, xhr.responseText);
     };
     error = 1
     // Set the onload callback function
     xhr.onload = function () {
         if (xhr.status == 200) {
-            parseRecommendedCourses(xhr.status, xhr.responseText);
+            parseRecommendedSLCourses(xhr.status, xhr.responseText);
         } 
         else 
         {
-            parseRecommendedCourses(xhr.status, xhr.responseText);
+            parseRecommendedSLCourses(xhr.status, xhr.responseText);
         }
     };
-    xhr.send();
+    var sectors_evaluated = JSON.stringify(SECTORS_EVALUATED);
+    xhr.send(sectors_evaluated);
 }
 
+function parseRecommendedSLCourses(responseStatus, responseText)
+{
+    responseDictCourses= JSON.parse(responseText)
+    if (responseStatus != 200) //error has occured during fetching
+    {
+        alert('Error occurred! Try again. Error Code:'+responseStatus+ '. Error Details:'+responseText);
+        return;
+    }
+    
+    if (responseDictCourses.status=="fail")
+        {
+            alert('Error occurred! Try again. Error Details:'+responseDictCourses.message);
+            //document.getElementById("intro-section").style.display = "block";
+            //document.getElementById("psychometric-section").style.display = "none";
+            return;
+        }
 
+    //parse all questions
+        
+
+    recommendedCoursesSection = document.getElementById('recommendedCoursesSection');
+    console.log(responseDictCourses)
+
+
+}
 
 function parseRecommendedCourses(responseStatus, responseText)
 {

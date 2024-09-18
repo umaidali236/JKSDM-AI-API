@@ -4,22 +4,23 @@ from transformers import BertTokenizer, BertModel
 import torch
 import os
 from tqdm import tqdm
-from flask_cors import cross_origin
+from flask_cors import cross_origin, CORS
 app = Flask(__name__)
-
+cors = CORS(app, resources={r"/api/v1/RecommendSelfLearningCoursesAfterPsychometry": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 
 
 # Route for the root URL
-@app.route("/")
+@app.route("/api/v2/2",  methods=['GET'])
 @cross_origin()
 def home():
-    return f"<h2>Welcome to the JKYSE API for Self Learning Videos!</h2><br> Total sectors added to API </h2>"
+    return f"<h2>Welcome to the JKYSE API for Self Learning Videos!</h2><br></h2>"
 
 
 @app.route('/api/v1/RecommendSelfLearningCoursesAfterPsychometry', methods=['POST'])
-@cross_origin()
+@cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def recommendSLCoursesAfterPsychometry():
     
     #sectors_and_marks =  json.loads(request.args.get("sectors", "[\"IT-ITes\":\"0.5\"]"))
