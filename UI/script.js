@@ -10,7 +10,7 @@ function startAssessment() {
 }
 
 QA = {}
-
+var num_questions_per_sector = 2;
 
 function nextQuestion(questionNumber) {
     //alert(questionNumber-1);
@@ -55,11 +55,24 @@ function completeAssessment() {
     
     //save_to_cookie(SECTORS_EVALUATED);
     }
-    console.log(SECTORS_EVALUATED);
-    console.log(this.QA);
+    for (sector in this.QA){
+        SECTORS_EVALUATED[sector]=SECTORS_EVALUATED[sector]/num_questions_per_sector;    
+    //save_to_cookie(SECTORS_EVALUATED);
+    }
+
+    // console.log(SECTORS_EVALUATED);
+    // console.log(this.QA);
     // Hide the psychometric section and show the hero section
     document.getElementById("psychometric-section").style.display = "none";
     document.getElementById("hero").style.display = "block";
+    generatecharts();
+    
+    let sortedKeysDesc = Object.keys(SECTORS_EVALUATED).sort((a, b) => SECTORS_EVALUATED[b] - SECTORS_EVALUATED[a]);
+    //console.log(SECTORS_EVALUATED); // Output: ['key2', 'key4', 'key1', 'key3']
+    //console.log(sortedKeysDesc); // Output: ['key2', 'key4', 'key1', 'key3']
+
+
+    
 
 }
 
@@ -84,47 +97,17 @@ function showSection(sectionId) {
     
 }
 
-function drawcharts()
-{
-    
-    // Chart 1
-    var ctx1 = document.getElementById('chart1').getContext('2d');
-    var chart1 = new Chart(ctx1, {
-      type: 'pie',
-      data: {
-        labels: ['Correct', 'Incorrect'],
-        datasets: [{
-          data: [2,0],
-          backgroundColor: ['#FF6384', '#36A2EB'],
-          borderWidth: 1
-        }]
-      }
-    });
-
-    // Chart 2
-    var ctx2 = document.getElementById('chart2').getContext('2d');
-    var chart2 = new Chart(ctx2, {
-      type: 'pie',
-      data: {
-        labels: ['Correct', 'Incorrect'],
-        datasets: [{
-          data: [1,1],
-          backgroundColor: ['#4CAF50', '#E91E63'],
-          borderWidth: 1
-        }]
-      }
-    });
-}
 
 
 
 var response = {}
 
 
+
 function sendAJAXRequest() {
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5000/api/v1/questionBank";
-    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector=2";
+    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector="+num_questions_per_sector;
     
     xhr.open("GET", url +"?"+params);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -454,6 +437,90 @@ function parseQuestionBank(responseStatus, responseText)
 //         });
 //     });
 // });
+
+function generatecharts(){
+            
+    //SECTORS_EVALUATED= {"IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9}
+    console.log("***SectorsEvaluated*****");
+    console.log(SECTORS_EVALUATED);
+    
+    chartContainer = document.getElementById("chartContainer");
+    charts_html= "";
+    chart_number =0;
+
+    colorPairs = {}
+    colorPairs[1] = ["Red", "Black"];
+    colorPairs[2] = ["Blue", "Green"];
+    colorPairs[3] = ["Purple", "Lime"];
+    colorPairs[4] = ["Cyan", "Black"];
+    colorPairs[5] = ["Magenta", "Green"];
+    
+    for (sector in SECTORS_EVALUATED)
+    {
+        console.log('loop running')
+        chart_number++;
+        charts_html +=  "<div class='chart-wrapper'><canvas id='chart"+chart_number+"' aria-label='chart' height='350' width='350'></canvas></div>";
+        
+    }
+    chartContainer.innerHTML = charts_html;
+    //imputed chart divs in chartContainer
+    
+    chart_number =0;
+    for (sector in this.SECTORS_EVALUATED)
+    {
+        loadcharts(++chart_number, sector, SECTORS_EVALUATED[sector]);
+
+    }
+    
+    function loadcharts(chart_number, sector_name, marks_in_sector)
+    {
+       var chrt = document.getElementById("chart"+chart_number).getContext("2d");
+       var chartId = new Chart(chrt, {
+        type: 'doughnut',
+        data: {
+          labels: ["Correct", "Incorrect"],
+          datasets: [{
+            label: "",
+            data: [marks_in_sector, (1 - marks_in_sector)],
+            backgroundColor: colorPairs[chart_number],
+            hoverOffset: 5
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,  // Set to false if you don't want the legend
+              position: 'top'
+            },
+            tooltip: {
+              enabled: true // Customize tooltips here
+            },
+            datalabels: {
+              formatter: (value, ctx) => {
+                let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                let percentage = (value / sum * 100).toFixed(2) + "%";  // Calculate percentage
+                return percentage;
+              },
+              color: '#fff', // Label color
+              font: {
+                weight: 'bold',
+                size: 14  // Adjust font size
+              },
+              anchor: 'center',
+              align: 'center'
+            }
+          },
+          cutout: '50%',  // Adjust the doughnut hole size
+        }
+      });
+
+
+
+    }
+    
+}
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
