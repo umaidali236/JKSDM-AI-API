@@ -7,7 +7,7 @@ const url = new URL(window.location.href); // or replace with your URL string
 const params = new URLSearchParams(url.search);
 const sectors=url.searchParams.get('sectors')
 let sectorArray=[]
-sectorArray=JSON.parse(sectors)
+sectorArray=JSON.parse(decodeURIComponent(sectors))
 
 // params.forEach((value, key) => {
 //     console.log(key+':', value);
