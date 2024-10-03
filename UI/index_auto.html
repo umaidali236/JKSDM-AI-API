@@ -1,0 +1,17 @@
+<html>
+<script>
+// Create a URL object
+const url = new URL(window.location.href); // or replace with your URL string
+//file:///C:/Users/UMAID/Desktop/index_auto.html?sectors=["Apparel, Made-ups & Home Furnishing", "IT-ITeS"]
+// Get parameters using URLSearchParams
+const params = new URLSearchParams(url.search);
+const sectors=url.searchParams.get('sectors')
+let sectorArray=[]
+sectorArray=JSON.parse(sectors)
+
+// params.forEach((value, key) => {
+//     console.log(key+':', value);
+// });
+console.log(sectorArray)
+</script>
+</html>
