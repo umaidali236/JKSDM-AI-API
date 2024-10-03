@@ -177,16 +177,16 @@
         
             colorPairs = {}
             
-            colorPairs[0] = ["#FF5733", "#33CFFF"];
+            colorPairs[0] = ["#125AED", "#EDA512"];
             colorPairs[1] = ["Red","Black"];
             
-            colorPairs[2] = ["#28A745","#FF4141"];
-            colorPairs[3] = ["#9C27B0","#FFBF00"];
-            colorPairs[4] = ["#FF1493","#14FF77"];
+            colorPairs[2] = ["#D42B8B", "#2BD474"];
+            colorPairs[3] = ["#F00F84", "#0FF07B"];
+            colorPairs[4] = ["#C0663F", "#3F99C0"];
             colorPairs[5] = ["#4CAF50","#FF6347"];
-            colorPairs[6] =  ["#3F51B5","#FFC107"];
+            colorPairs[6] = ["#3F51B5","#FFC107"];
             
-            
+             
             for (sector in SECTORS_EVALUATED)
             {
                 console.log('loop running')
@@ -214,7 +214,7 @@
                      datasets: [{
                      label: "",
                      data: [marks_in_sector, 1-marks_in_sector],
-                     backgroundColor: colorPairs[chart_number],
+                     backgroundColor: colorPairs[chart_number-1],
                      hoverOffset: 5
                      }],
                   },

@@ -72,9 +72,10 @@ function completeAssessment() {
     //console.log(sortedKeysDesc); // Output: ['key2', 'key4', 'key1', 'key3']
 
 
-    
+
 
 }
+
 
 function showSection(sectionId) {
     // Hide all sections
@@ -83,7 +84,6 @@ function showSection(sectionId) {
     // Show the selected section
     document.getElementById(sectionId).style.display = 'block';
 
-    
     if(sectionId=='courses'){
         for(kn=0;kn<sectorsSelected.length;kn++){
             sendRecommendationRequestSLCourses();
@@ -99,7 +99,6 @@ function showSection(sectionId) {
 
 
 
-
 var response = {}
 
 
@@ -107,10 +106,16 @@ var response = {}
 function sendAJAXRequest() {
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5000/api/v1/questionBank";
-    var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector="+num_questions_per_sector;
-    
-    xhr.open("GET", url +"?"+params);
+    //var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector="+num_questions_per_sector;
+    var data = JSON.stringify({
+        sectors: sectorsSelected,
+        numQuestionsInEachSector: num_questions_per_sector
+    });
+
+
+    xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
     
     xhr.timeout = 5000;
 
@@ -133,33 +138,12 @@ function sendAJAXRequest() {
 
     
     // Send the request
-    xhr.send();
+    xhr.send(data);
 }
-
-// document.getElementById('sendData').addEventListener('click', function() {
-//     const associativeArray = {
-//         "IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9
-//     };
-
-//     fetch('http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(associativeArray), // Send the associative array as JSON
-//     })
-//     .then(response => response.json())
-//     .then(data => console.log('Response from Flask:', data))
-//     .catch((error) => {
-//         console.error('Error:', error);
-//     });
-// });
-
 
 function sendRecommendationRequestSLCourses() {
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry";
-    
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
@@ -199,15 +183,51 @@ function parseRecommendedSLCourses(responseStatus, responseText)
             //document.getElementById("psychometric-section").style.display = "none";
             return;
         }
-
-    //parse all questions
-        
-
     recommendedCoursesSection = document.getElementById('recommendedCoursesSection');
+    for(s=0; s<responseDictCourses.length; s++)
+    {
+        for(c=0; s<responseDictCourses[s][0].length; c++){
+            course_name = responseDictCourses[s][0][c]['SL_course_title'];
+            topic_num = 0
+            topic_names = responseDictCourses[s][0][c]['SL_videos_in_course'][topic_num][0];
+            topic_links = responseDictCourses[s][0][c]['SL_videos_in_course'][topic_num][1];
+            embed_link = topic_links.replace("/watch?v=", "/embed/");
+            recommendedCoursesSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+embed_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+topic_links+"' target='_blank'> <h2 class='clickable'>"+course_name +"</h2></a></div>";
+        }
+        
+    }
     console.log(responseDictCourses)
 
-
 }
+
+
+function sendRecommendationRequestCourses(name_of_match) {
+    var xhr = new XMLHttpRequest();
+    //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
+    var url = "http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen";
+    var params = "career_name=" +JSON.stringify(name_of_match);
+    xhr.open("GET", url +"?"+params);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.timeout = 5000;
+
+    xhr.ontimeout = function() {
+        parseRecommendedCourses(xhr.status, xhr.responseText);
+    };
+    error = 1
+    // Set the onload callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            parseRecommendedCourses(xhr.status, xhr.responseText);
+        } 
+        else 
+        {
+            parseRecommendedCourses(xhr.status, xhr.responseText);
+        }
+    };
+    xhr.send();
+}
+
+
 
 function parseRecommendedCourses(responseStatus, responseText)
 {
