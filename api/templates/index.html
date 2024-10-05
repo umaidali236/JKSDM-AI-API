@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilling Opportunities Portal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="styles.css">
     <style>
         .scrollable-container {
   display: flex;
@@ -19,7 +19,6 @@
   text-align: center;
   margin-right: 10px;
   border-radius:5px;
-  overflow:hidden;
 }
 
 .tile iframe {
@@ -116,11 +115,7 @@
     <script type="text/javascript">    
         var SECTORS_EVALUATED = {};
         //const sectorsSelected =  ["IT-ITeS", "Multimedia"]; //get from somewhere.
-        
-        const url = new URL(window.location.href); // or replace with your URL string
-        //console.log(url);
-        const sectorsSelected = JSON.parse(decodeURIComponent(url.searchParams.get('sectors')));
-        //console.log(sectorsSelected);
+        const sectorsSelected = loadCheckboxValues();
         const qualificationSelected = ["Bachelors Engineering"];
 
         function setSessionCookie(sectorsSelected, qualificationSelected) {
@@ -129,7 +124,7 @@
         }
         setSessionCookie(sectorsSelected, qualificationSelected);
     </script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>   
+    <script src="script.js"></script>   
 </head>
 <body onload="setSessionCookie(sectorsSelected,qualificationSelected)">
     <header>
@@ -143,13 +138,13 @@
         <p>Please answer the following questions to generate personalized recommendations for you in skilling opportunities. There are a total of 6 questions, two each from the sectors you have chosen. 
             There is no time limit on answering the questions, and you can choose to complete or skip questions. It is recommended that you answer all the questions to help us tailor the best opportunities for you.<br> 
             <br><b>Your chosen sectors are:</b> <span id="chosensectors"></span> 
-            <br><!--<b>Your qualification is:</b> <span id="chosenqualification"></span>-->
+            <br><b>Your qualification is:</b> <span id="chosenqualification"></span>
             <i>If all the above information is correct, please click <b>Continue</b> below, else go to your profile, update your interests, preferred sectors, and qualification and come back to take this forward.</i></p>
         
         <button style="margin:20px;" onclick="startAssessment()">Continue</button>
     </section>
     <div id="loading" style="display:none;">
-        <img src="{{ url_for('static', filename='loading.webp') }}" alt="Loading..." />
+        <img src="loading.webp" alt="Loading..." />
     </div>
     <section id="psychometric-section" style="display:none;">
     

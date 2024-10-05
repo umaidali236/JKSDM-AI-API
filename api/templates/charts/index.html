@@ -1,0 +1,155 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+<!--<body onload=checkCookie() >-->
+<body>
+<style>
+    .chart-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+    }
+    .chart-wrapper {
+        width: 45%;
+        display: flex;
+        justify-content: center; /* Centers the canvas horizontally */
+        align-items: center; /* Centers the canvas vertically */
+    }
+</style>
+
+<div class="chart-container">
+    <div class="chart-wrapper">
+        <canvas id="chart1" aria-label="chart" height="350" width="350"></canvas>
+    </div>
+    <div class="chart-wrapper">
+        <canvas id="chart2" aria-label="chart" height="350" width="350"></canvas>
+    </div>
+</div>
+
+</body>
+    <script>
+
+
+        // function setCookie(cname,cvalue,exdays) {
+        // const d = new Date();
+        // d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        // let expires = "expires=" + d.toUTCString();
+        // document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        // }
+
+
+
+        // function getCookie(cname) {
+        // let name = cname + "=";
+        // let decodedCookie = decodeURIComponent(document.cookie);
+        // let ca = decodedCookie.split(';');
+        // for(let i = 0; i < ca.length; i++) {
+        //     let c = ca[i];
+        //     while (c.charAt(0) == ' ') {
+        //     c = c.substring(1);
+        //     }
+        //     if (c.indexOf(name) == 0) {
+        //     return c.substring(name.length, c.length);
+        //     }
+        // }
+        // return "";
+        // }
+
+
+        // function checkCookie() {
+        // let user = getCookie("username");
+        // if (user != "") {
+        //     alert("Welcome again " + user);
+        // } else {
+        //     user = prompt("Please enter your name:","");
+        //     if (user != "" && user != null) {
+        //     setCookie("username", user, 30);
+        //     }
+        // }
+        // }
+
+
+       var chrt1 = document.getElementById("chart1").getContext("2d");
+       var chartId1 = new Chart(chrt1, {
+          type: 'doughnut',
+          data: {
+             labels: ["Correct", "Incorrect"],
+             datasets: [{
+             label: "",
+             data: [0.5, 0.5],
+             backgroundColor: [ '#333333', '#ff5500'],
+             hoverOffset: 5
+             }],
+          },
+          
+          options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: '', // Title of the chart,
+                    font: {
+                        size: 18 // Font size for the title
+                    },
+                    padding: {
+                        top: 10,
+                        bottom: 30
+                    }
+                },
+            },
+             responsive: false,
+          },
+       });
+
+       var chrt2 = document.getElementById("chart2").getContext("2d");
+       var chartId2 = new Chart(chrt2, {
+          type: 'doughnut',
+          data: {
+             labels: ["Correct", "Incorrect"],
+             datasets: [{
+             label: "",
+             data: [0.8, 0.2],
+             backgroundColor: [ '#4d0000', '#80dfff'],
+             hoverOffset: 5
+             }],
+          },
+          options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: '', // Title of the chart,
+                    font: {
+                        size: 18 // Font size for the title
+                    },
+                    padding: {
+                        top: 10,
+                        bottom: 30
+                    }
+                },
+            },
+             responsive: false,
+          },
+       });
+    </script>
+    <button id="sendData">Send Data</button>
+
+    <script src="C:\GitHub\JKSDM-AI-API\UI\script.js">
+        
+        document.getElementById('sendData').addEventListener('click', function() {
+            const associativeArray = {
+                "IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9
+            };
+
+            fetch('http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(associativeArray), // Send the associative array as JSON
+            })
+            .then(response => response.json())
+            .then(data => console.log('Response from Flask:', data))
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+ </body>

@@ -1,0 +1,29 @@
+SECTOR_NAME,EMBEDDING_PATH
+Furniture & Fittings,./utils/embeddings/DPR_sectors/data/Furniture0.pth
+"Apparel, Made-Ups & Home Furnishing",./utils/embeddings/DPR_sectors/data/Apparel1.pth
+Power and Electrical,./utils/embeddings/DPR_sectors/data/Power2.pth
+Electronics,./utils/embeddings/DPR_sectors/data/Electronics3.pth
+Other Sectors,./utils/embeddings/DPR_sectors/data/Other4.pth
+IT-ITeS,./utils/embeddings/DPR_sectors/data/IT-ITeS5.pth
+Construction,./utils/embeddings/DPR_sectors/data/Construction6.pth
+"Rubber, Chemical and Petrochemical",./utils/embeddings/DPR_sectors/data/Rubber7.pth
+Automotive,./utils/embeddings/DPR_sectors/data/Automotive8.pth
+Retail,./utils/embeddings/DPR_sectors/data/Retail9.pth
+Food Processing,./utils/embeddings/DPR_sectors/data/Food10.pth
+Logistics,./utils/embeddings/DPR_sectors/data/Logistics11.pth
+HealthCare,./utils/embeddings/DPR_sectors/data/HealthCare12.pth
+Agriculture,./utils/embeddings/DPR_sectors/data/Agriculture13.pth
+Media & Entertainment,./utils/embeddings/DPR_sectors/data/Media14.pth
+Handicrafts and Carpet,./utils/embeddings/DPR_sectors/data/Handicrafts15.pth
+Textile,./utils/embeddings/DPR_sectors/data/Textile16.pth
+Strategic Manufacturing,./utils/embeddings/DPR_sectors/data/Strategic17.pth
+Iron and Steel,./utils/embeddings/DPR_sectors/data/Iron18.pth
+Life Sciences,./utils/embeddings/DPR_sectors/data/Life19.pth
+Gem and Jewellery,./utils/embeddings/DPR_sectors/data/Gem20.pth
+Beauty & Wellness,./utils/embeddings/DPR_sectors/data/Beauty21.pth
+"Sports, Physical Education, Fitness & Leisure",./utils/embeddings/DPR_sectors/data/Sports22.pth
+Infrastructure Equipment,./utils/embeddings/DPR_sectors/data/Infrastructure23.pth
+Leather,./utils/embeddings/DPR_sectors/data/Leather24.pth
+Green Jobs,./utils/embeddings/DPR_sectors/data/Green25.pth
+Water Management and Plumbing,./utils/embeddings/DPR_sectors/data/Water26.pth
+Domestic Works,./utils/embeddings/DPR_sectors/data/Domestic27.pth

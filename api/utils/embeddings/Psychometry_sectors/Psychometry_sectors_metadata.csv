@@ -1,0 +1,37 @@
+SECTOR_NAME,EMBEDDING_PATH
+Aerospace & Aviation,./utils/embeddings/NSDC_sectors/data/Aerospace0.pth
+Agriculture,./utils/embeddings/NSDC_sectors/data/Agriculture1.pth
+"Apparel, Made-Ups & Home Furnishing",./utils/embeddings/NSDC_sectors/data/Apparel2.pth
+Automotive,./utils/embeddings/NSDC_sectors/data/Automotive3.pth
+Beauty & Wellness,./utils/embeddings/NSDC_sectors/data/Beauty4.pth
+BFSI,./utils/embeddings/NSDC_sectors/data/BFSI5.pth
+Capital Goods,./utils/embeddings/NSDC_sectors/data/Capital6.pth
+Construction,./utils/embeddings/NSDC_sectors/data/Construction7.pth
+Domestic Works,./utils/embeddings/NSDC_sectors/data/Domestic8.pth
+Electronics,./utils/embeddings/NSDC_sectors/data/Electronics9.pth
+Food Processing,./utils/embeddings/NSDC_sectors/data/Food10.pth
+Furniture & Fittings,./utils/embeddings/NSDC_sectors/data/Furniture11.pth
+Green Jobs,./utils/embeddings/NSDC_sectors/data/Green12.pth
+Gem & Jewellery,./utils/embeddings/NSDC_sectors/data/Gem13.pth
+Handicrafts and Carpet,./utils/embeddings/NSDC_sectors/data/Handicrafts14.pth
+Hydrocarbons,./utils/embeddings/NSDC_sectors/data/Hydrocarbons15.pth
+HealthCare,./utils/embeddings/NSDC_sectors/data/HealthCare16.pth
+Iron and Steel,./utils/embeddings/NSDC_sectors/data/Iron17.pth
+Infrastructure Equipment,./utils/embeddings/NSDC_sectors/data/Infrastructure18.pth
+Instrumentation Automation Surveillance & Communication,./utils/embeddings/NSDC_sectors/data/Instrumentation19.pth
+IT-ITeS,./utils/embeddings/NSDC_sectors/data/IT-ITeS20.pth
+Leather,./utils/embeddings/NSDC_sectors/data/Leather21.pth
+Life Sciences,./utils/embeddings/NSDC_sectors/data/Life22.pth
+Logistics,./utils/embeddings/NSDC_sectors/data/Logistics23.pth
+Management & Entrepreneurship and Professional Skills,./utils/embeddings/NSDC_sectors/data/Management24.pth
+Media and Journalism,./utils/embeddings/NSDC_sectors/data/Media25.pth
+Mining,./utils/embeddings/NSDC_sectors/data/Mining26.pth
+Power and Electrical,./utils/embeddings/NSDC_sectors/data/Power27.pth
+Persons with Disability,./utils/embeddings/NSDC_sectors/data/Persons28.pth
+Retail,./utils/embeddings/NSDC_sectors/data/Retail29.pth
+"Rubber, Chemical and Petrochemical",./utils/embeddings/NSDC_sectors/data/Rubber30.pth
+"Sports, Physical Education, Fitness & Leisure",./utils/embeddings/NSDC_sectors/data/Sports31.pth
+Telecom,./utils/embeddings/NSDC_sectors/data/Telecom32.pth
+Textile,./utils/embeddings/NSDC_sectors/data/Textile33.pth
+Tourism and Hospitality,./utils/embeddings/NSDC_sectors/data/Tourism34.pth
+Water Management and Plumbing,./utils/embeddings/NSDC_sectors/data/Water35.pth

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send JSON to Flask</title>
+</head>
+<body>
+    <button id="sendData">Send Data</button>
+
+    <script>
+        document.getElementById('sendData').addEventListener('click', function() {
+            const associativeArray = {
+                "name": "John Doe",
+                "email": "johndoe@example.com",
+                "age": 30,
+                "isStudent": false
+            };
+
+            fetch('http://127.0.0.1:5010/api/v1/RecommendSelfLearningCoursesAfterPsychometry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(associativeArray), // Send the associative array as JSON
+            })
+            .then(response => response.json())
+            .then(data => console.log('Response from Flask:', data))
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

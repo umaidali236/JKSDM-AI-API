@@ -1,0 +1,23 @@
+SECTOR_NAME,EMBEDDING_PATH
+Agriculture,./utils/embeddings/CC_sectors/data/Agriculture0.pth
+Automotive,./utils/embeddings/CC_sectors/data/Automotive1.pth
+IT-ITeS,./utils/embeddings/CC_sectors/data/IT-ITeS2.pth
+"Banking, Financial Services & Insurance (BFSI)",./utils/embeddings/CC_sectors/data/Banking3.pth
+Beauty & Wellness,./utils/embeddings/CC_sectors/data/Beauty4.pth
+Construction,./utils/embeddings/CC_sectors/data/Construction5.pth
+Electronics,./utils/embeddings/CC_sectors/data/Electronics6.pth
+Domestic Workers,./utils/embeddings/CC_sectors/data/Domestic7.pth
+"Management,Entrepreneurship and Professional Skills",./utils/embeddings/CC_sectors/data/Management8.pth
+Food Industry Capacity and Skill Initiative,./utils/embeddings/CC_sectors/data/Food9.pth
+Green Jobs,./utils/embeddings/CC_sectors/data/Green10.pth
+Furniture and Fittings,./utils/embeddings/CC_sectors/data/Furniture11.pth
+Handicrafts and Carpet,./utils/embeddings/CC_sectors/data/Handicrafts12.pth
+Healthcare,./utils/embeddings/CC_sectors/data/Healthcare13.pth
+Water Management and Plumbing,./utils/embeddings/CC_sectors/data/Water14.pth
+Leather,./utils/embeddings/CC_sectors/data/Leather15.pth
+Media & Entertainment,./utils/embeddings/CC_sectors/data/Media16.pth
+Apparel Made Ups and Home Furnishing,./utils/embeddings/CC_sectors/data/Apparel17.pth
+People with Disability,./utils/embeddings/CC_sectors/data/People18.pth
+Retailers Association's,./utils/embeddings/CC_sectors/data/Retailers19.pth
+Telecom,./utils/embeddings/CC_sectors/data/Telecom20.pth
+Tourism and Hospitality,./utils/embeddings/CC_sectors/data/Tourism21.pth

@@ -32,7 +32,10 @@ function nextQuestion(questionNumber) {
     }
     else
     {
-        completeAssessment()
+        
+        completeAssessment();
+        showSection("recommendationSection");
+    
     }
 }
 
@@ -84,10 +87,11 @@ function showSection(sectionId) {
     // Show the selected section
     document.getElementById(sectionId).style.display = 'block';
 
-    if(sectionId=='courses'){
+    if(sectionId=='recommendationSection'){
         {
             sendRecommendationRequestSLCourses();
-            sendRecommendationRequestCCCourses()
+             sendRecommendationRequestCCCourses();
+             sendRecommendationRequestDPR();
         }
         //sendRecommendationRequestSLCourses(qualificationSelected);
         //sendRecommendationRequestCertifiedCourses(qualificationSelected);
@@ -169,7 +173,7 @@ function sendRecommendationRequestSLCourses() {
 
 function parseRecommendedSLCourses(responseStatus, responseText)
 {
-    responseDictCourses= JSON.parse(responseText)
+    responseDictCourses= JSON.parse(responseText);
     if (responseStatus != 200) //error has occured during fetching
     {
         alert('Error occurred! Try again. Error Code:'+responseStatus+ '. Error Details:'+responseText);
@@ -186,11 +190,11 @@ function parseRecommendedSLCourses(responseStatus, responseText)
     recommendedCoursesSection = document.getElementById('recommendedCoursesSection');
     for(s=0; s<responseDictCourses.length; s++)
     {
-        for(c=0; s<responseDictCourses[s].length; c++){
-            course_name = responseDictCourses[s][c]['SL_course_title'];
+        for(c=0; s<responseDictCourses[s][0].length; c++){
+            course_name = responseDictCourses[s][0][c]['SL_course_title'];
             topic_num = 0
-            topic_names = responseDictCourses[s][c]['SL_videos_in_course'][topic_num][0];
-            topic_links = responseDictCourses[s][c]['SL_videos_in_course'][topic_num][1];
+            topic_names = responseDictCourses[s][0][c]['SL_videos_in_course'][topic_num][0];
+            topic_links = responseDictCourses[s][0][c]['SL_videos_in_course'][topic_num][1];
             embed_link = topic_links.replace("/watch?v=", "/embed/");
             recommendedCoursesSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+embed_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+topic_links+"' target='_blank'> <h2 class='clickable'>"+course_name +"</h2></a></div>";
         }
@@ -231,28 +235,28 @@ function sendRecommendationRequestCCCourses() {
 
 function parseRecommendedCCCourses(responseStatus, responseText)
 {
-    responseDictCourses= JSON.parse(responseText)
+    responseDictCCCourses= JSON.parse(responseText);
     if (responseStatus != 200) //error has occured during fetching
     {
         alert('Error occurred! Try again. Error Code:'+responseStatus+ '. Error Details:'+responseText);
         return;
     }
     
-    if (responseDictCourses.status=="fail")
+    if (responseDictCCCourses.status=="fail")
         {
-            alert('Error occurred! Try again. Error Details:'+responseDictCourses.message);
+            alert('Error occurred! Try again. Error Details:'+responseDictCCCourses.message);
             //document.getElementById("intro-section").style.display = "block";
             //document.getElementById("psychometric-section").style.display = "none";
             return;
         }
     recommendedCoursesSection = document.getElementById('recommendedCertifiedCoursesSection');
-    for(s=0; s<responseDictCourses.length; s++)
+    for(s=0; s<responseDictCCCourses.length; s++)
     {
-        for(c=0; s<responseDictCourses[s][0].length; c++){
-            course_name = responseDictCourses[s][0][c]['CC_course_title'];
+        for(c=0; s<responseDictCCCourses[s]['Course Details'].length; c++){
+            course_name = responseDictCCCourses[s]['Course Details'][c]['CC_course_title'];
             topic_num = 0;
-            course_description = responseDictCourses[s][0][c]['CC_course_description'];
-            course_link = responseDictCourses[s][0][c]['CC_course_link'];
+            course_description = responseDictCCCourses[s]['Course Details'][c]['CC_course_description'];
+            course_link = responseDictCCCourses[s]['Course Details'][c]['CC_course_link'];
             
             recommendedCoursesSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+course_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+course_link+"' target='_blank'> <h2 class='clickable'>"+course_name +"</h2></a></div>";
         }
@@ -263,6 +267,61 @@ function parseRecommendedCCCourses(responseStatus, responseText)
 }
 
 
+function sendRecommendationRequestDPR() {
+    var xhr = new XMLHttpRequest();
+    var url = "http://127.0.0.1:5000/api/v1/RecommendDPRAfterPsychometry";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    
+    xhr.timeout = 5000;
+
+    xhr.ontimeout = function() {
+        parseRecommendedDPR(xhr.status, xhr.responseText);
+    };
+    error = 1
+    // Set the onload callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            parseRecommendedDPR(xhr.status, xhr.responseText);
+        } 
+        else 
+        {
+            parseRecommendedDPR(xhr.status, xhr.responseText);
+        }
+    };
+    
+    xhr.send(JSON.stringify(SECTORS_EVALUATED));
+}
+
+function parseRecommendedDPR(responseStatus, responseText)
+{
+    responseDictDPR= JSON.parse(responseText);
+    if (responseStatus != 200) //error has occured during fetching
+    {
+        alert('Error occurred! Try again. Error Code:'+responseStatus+ '. Error Details:'+responseText);
+        return;
+    }
+    
+    if (responseDictDPR.status=="fail")
+        {
+            alert('Error occurred! Try again. Error Details:'+responseDictDPR.message);
+            //document.getElementById("intro-section").style.display = "block";
+            //document.getElementById("psychometric-section").style.display = "none";
+            return;
+        }
+    recommendedDPRSection = document.getElementById('recommendedDPRSection');
+    for(s=0; s<responseDictDPR.length; s++)
+    {
+        for(c=0; s<responseDictDPR[s]['DPR Details'].length; c++){
+            dpr_name = responseDictDPR[s]['DPR Details'][c]['DPR_title'];
+            dpr_link = responseDictDPR[s]['DPR Details'][c]['DPR_link'];
+            
+            recommendedDPRSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+dpr_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+dpr_link+"' target='_blank'> <h2 class='clickable'>"+dpr_name +"</h2></a></div>";
+        }
+        
+    }
+
+}
 
 
  function sendRecommendationRequestCertifiedCourses(name_of_match) {

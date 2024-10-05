@@ -1,0 +1,22 @@
+SECTOR_NAME,EMBEDDING_PATH
+"Apparel, Made-Ups & Home Furnishing",./utils/embeddings/SL_sectors/data/Apparel0.pth
+HealthCare,./utils/embeddings/SL_sectors/data/HealthCare1.pth
+Tourism and Hospitality,./utils/embeddings/SL_sectors/data/Tourism2.pth
+Communication,./utils/embeddings/SL_sectors/data/Communication3.pth
+Stenography,./utils/embeddings/SL_sectors/data/Stenography4.pth
+IT-ITeS,./utils/embeddings/SL_sectors/data/IT-ITeS5.pth
+Chemistry,./utils/embeddings/SL_sectors/data/Chemistry6.pth
+Mathematics & Statistics,./utils/embeddings/SL_sectors/data/Mathematics7.pth
+Physics,./utils/embeddings/SL_sectors/data/Physics8.pth
+Electronics,./utils/embeddings/SL_sectors/data/Electronics9.pth
+Life Sciences,./utils/embeddings/SL_sectors/data/Life10.pth
+Media and Journalism,./utils/embeddings/SL_sectors/data/Media11.pth
+Business Administration,./utils/embeddings/SL_sectors/data/Business12.pth
+Beauty & Wellness,./utils/embeddings/SL_sectors/data/Beauty13.pth
+Capital Goods,./utils/embeddings/SL_sectors/data/Capital14.pth
+Green Jobs,./utils/embeddings/SL_sectors/data/Green15.pth
+Mechanical,./utils/embeddings/SL_sectors/data/Mechanical16.pth
+Furniture & Fittings,./utils/embeddings/SL_sectors/data/Furniture17.pth
+Power and Electrical,./utils/embeddings/SL_sectors/data/Power18.pth
+Construction,./utils/embeddings/SL_sectors/data/Construction19.pth
+Automotive,./utils/embeddings/SL_sectors/data/Automotive20.pth

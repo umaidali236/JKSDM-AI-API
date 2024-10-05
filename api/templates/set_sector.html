@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Choose your interests</legend>
+        <legend><u>Sectors</u></legend><br>
+        
+        <div><input type='checkbox' id='Aerospace & Aviation' name='interest' value='Aerospace & Aviation' /><label for='Aerospace & Aviation'>Aerospace & Aviation</label></div>
+        <div><input type='checkbox' id='Agriculture' name='interest' value='Agriculture' /><label for='Agriculture'>Agriculture</label></div>
+        <div><input type='checkbox' id='Apparel, Made-Ups & Home Furnishing' name='interest' value='Apparel, Made-Ups & Home Furnishing' /><label for='Apparel, Made-Ups & Home Furnishing'>Apparel, Made-Ups & Home Furnishing</label></div>
+        <div><input type='checkbox' id='Automotive' name='interest' value='Automotive' /><label for='Automotive'>Automotive</label></div>
+        <div><input type='checkbox' id='Beauty & Wellness' name='interest' value='Beauty & Wellness' /><label for='Beauty & Wellness'>Beauty & Wellness</label></div>
+        <div><input type='checkbox' id='BFSI' name='interest' value='BFSI' /><label for='BFSI'>BFSI</label></div>
+        <div><input type='checkbox' id='Capital Goods' name='interest' value='Capital Goods' /><label for='Capital Goods'>Capital Goods</label></div>
+        <div><input type='checkbox' id='Construction' name='interest' value='Construction' /><label for='Construction'>Construction</label></div>
+        <div><input type='checkbox' id='Electronics' name='interest' value='Electronics' /><label for='Electronics'>Electronics</label></div>
+        <div><input type='checkbox' id='Furniture & Fittings' name='interest' value='Furniture & Fittings' /><label for='Furniture & Fittings'>Furniture & Fittings</label></div>
+        <div><input type='checkbox' id='Green Jobs' name='interest' value='Green Jobs' /><label for='Green Jobs'>Green Jobs</label></div>
+        <div><input type='checkbox' id='HealthCare' name='interest' value='HealthCare' /><label for='HealthCare'>HealthCare</label></div>
+        <div><input type='checkbox' id='IT-ITeS' name='interest' value='IT-ITeS' /><label for='IT-ITeS'>IT-ITeS</label></div>
+        <div><input type='checkbox' id='Life Sciences' name='interest' value='Life Sciences' /><label for='Life Sciences'>Life Sciences</label></div>
+        <div><input type='checkbox' id='Logistics' name='interest' value='Logistics' /><label for='Logistics'>Logistics</label></div>
+        <div><input type='checkbox' id='Management & Entrepreneurship and Professional Skills' name='interest' value='Management & Entrepreneurship and Professional Skills' /><label for='Management & Entrepreneurship and Professional Skills'>Management & Entrepreneurship and Professional Skills</label></div>
+        <div><input type='checkbox' id='Media and Journalism' name='interest' value='Media and Journalism' /><label for='Media and Journalism'>Media and Journalism</label></div>
+        <div><input type='checkbox' id='Power and Electrical' name='interest' value='Power and Electrical' /><label for='Power and Electrical'>Power and Electrical</label></div>
+        <div><input type='checkbox' id='Rubber, Chemical and Petrochemical' name='interest' value='Rubber, Chemical and Petrochemical' /><label for='Rubber, Chemical and Petrochemical'>Rubber, Chemical and Petrochemical</label></div>
+        <div><input type='checkbox' id='Tourism and Hospitality' name='interest' value='Tourism and Hospitality' /><label for='Tourism and Hospitality'>Tourism and Hospitality</label></div>
+        <div><input type='checkbox' id='Water Management and Plumbing' name='interest' value='Water Management and Plumbing' /><label for='Water Management and Plumbing'>Water Management and Plumbing</label></div>
+
+
+        <br>
+        <button onclick="saveCheckboxValues()">Submit</button>
+    </fieldset>
+    <br><br>
+    <div id="getvalues" class="cookievalues">
+        <button onclick="loadCheckboxValues()">Get Values</button>
+    </div>
+    <br>
+    <div id="showvalues" class="arrayval"></div>
+    <script>
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Function to save checkbox state in a cookie
+        function saveCheckboxValues() {
+            const checkboxes = document.querySelectorAll('fieldset input[type="checkbox"]');
+            let state = [];
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    state.push(checkbox.value);
+                }
+            });
+            const encodedValues = state.map(value => encodeURIComponent(value));
+
+            setCookie('Sectors', encodedValues.join(','), 7); // Save for 7 days
+            //console.log("hello")
+        }
+        function loadCheckboxValues() {
+            const values = getCookie('Sectors')
+            
+            if (values) {
+
+                // const valArray = values.split(',')
+                const decodedValues = values.split(',').map(value => decodeURIComponent(value));
+                //console.log(decodedValues)
+                decodedValues.forEach(x => {
+                    var val = document.getElementById('showvalues')
+                    val.innerHTML += '<ol>' + x + '</ol>'
+                });
+                return decodedValues;
+
+            }
+            else {
+                alert('No sectors selected. Choose sectors first');
+                return [];
+            }
+
+
+            
+        }
+
+    </script>
+</body>
+
+</html>
