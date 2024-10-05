@@ -608,7 +608,7 @@ def recommendDPRsAfterPsychometry():
 
 @app.route("/api/v1/RecommendFLAfterPsychometry", methods=["POST"])
 @cross_origin()
-def recommendDPRsAfterPsychometry():   
+def recommendFLAfterPsychometry():   
     #sectors_and_marks =  json.loads(request.args.get("sectors", "[\"IT-ITes\":\"0.5\"]"))
     sectors_and_marks = request.get_json()
     print(sectors_and_marks)
