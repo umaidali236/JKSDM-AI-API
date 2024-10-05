@@ -196,7 +196,7 @@ function parseRecommendedSLCourses(responseStatus, responseText)
         }
         
     }
-    console.log(responseDictCourses)
+    //console.log(responseDictCourses)
 
 }
 
@@ -279,9 +279,14 @@ function parseRecommendedCourses(responseStatus, responseText)
     var xhr = new XMLHttpRequest();
     //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
     var url = "http://127.0.0.1:5002/api/v1/RecommendCertifiedCoursesBasedOnCareerChosen";
-    var params = "career_name=" +JSON.stringify(name_of_match);
-    xhr.open("GET", url +"?"+params);
+    
+    xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
+    // var params = "career_name=" +JSON.stringify(name_of_match);
+    // xhr.open("GET", url +"?"+params);
+    // xhr.setRequestHeader('Content-Type', 'application/json');
+    
     xhr.timeout = 5000;
 
     xhr.ontimeout = function() {

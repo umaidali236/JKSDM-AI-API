@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilling Opportunities Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .scrollable-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.tile {
+  flex: 0 0 auto;
+  width: 200px; /* Adjust tile width as needed */
+  text-align: center;
+  margin-right: 10px;
+  border-radius:5px;
+}
+
+.tile iframe {
+  width: 100%;
+  height: 200px; /* Adjust iframe height as needed */
+  border-radius:15px;
+}
+.clickable {
+  cursor: pointer;
+  color: black;
+  margin-top:2px;
+  font-size:12px;
+}
+
+
+.chart-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+    }
+    .chart-wrapper {
+        width: 45%;
+        display: flex;
+        justify-content: center; /* Centers the canvas horizontally */
+        align-items: center; /* Centers the canvas vertically */
+    }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+   <script>
+
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Function to save checkbox state in a cookie
+    function saveCheckboxValues() {
+        const checkboxes = document.querySelectorAll('fieldset input[type="checkbox"]');
+        let state = [];
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                state.push(checkbox.value);
+            }
+        });
+        const encodedValues = state.map(value => encodeURIComponent(value));
+
+        setCookie('Sectors', encodedValues.join(','), 7); // Save for 7 days
+        //console.log("hello")
+    }
+    function loadCheckboxValues() {
+        const values = getCookie('Sectors')
+        
+        if (values) {
+
+            // const valArray = values.split(',')
+            const decodedValues = values.split(',').map(value => decodeURIComponent(value));
+            //console.log(decodedValues)
+            // decodedValues.forEach(x => {
+            //     var val = document.getElementById('showvalues')
+            //     val.innerHTML += '<ol>' + x + '</ol>'
+            // });
+            return decodedValues;
+
+        }
+        else {
+            alert('No sectors selected. Choose sectors first');
+            return [];
+        }
+
+
+        
+    }
+
+</script>
+
+    <script type="text/javascript">    
+        var SECTORS_EVALUATED = {};
+        //const sectorsSelected =  ["IT-ITeS", "Multimedia"]; //get from somewhere.
+
+        const url = new URL(window.location.href); // or replace with your URL string
+        const params = new URLSearchParams(url.search);
+        const param_sectors=url.searchParams.get('sectors')
+
+        const sectorsSelected = JSON.parse(decodeURIComponent(param_sectors))
+        const qualificationSelected = ["Bachelors Engineering"];
+
+        function setSessionCookie(sectorsSelected, qualificationSelected) {
+            document.cookie = "sectorSelected" + "=" + encodeURIComponent(sectorsSelected) + "; path=/; expires=; HttpOnly";
+            document.cookie = "qualificationSelected" + "=" + encodeURIComponent(qualificationSelected) + "; path=/; expires=; HttpOnly";
+        }
+        setSessionCookie(sectorsSelected, qualificationSelected);
+    </script>
+    <script src="script.js"></script>   
+</head>
+<body onload="setSessionCookie(sectorsSelected,qualificationSelected)">
+    <header>
+        <h1>JKYSE</h1>
+        <nav>
+        </nav>
+    </header>
+    
+    <section id="intro-section">
+        <h2>Let's Get to Know You Better</h2>
+        <p>Please answer the following questions to generate personalized recommendations for you in skilling opportunities. There are a total of 6 questions, two each from the sectors you have chosen. 
+            There is no time limit on answering the questions, and you can choose to complete or skip questions. It is recommended that you answer all the questions to help us tailor the best opportunities for you.<br> 
+            <br><b>Your chosen sectors are:</b> <span id="chosensectors"></span> <br>
+            <!--<br><b>Your qualification is:</b> <span id="chosenqualification"></span>-->
+            <i>If all the above information is correct, please click <b>Continue</b> below, else go to your profile, update your interests, preferred sectors, and qualification and come back to take this forward.</i></p>
+        
+        <button style="margin:20px;" onclick="startAssessment()">Continue</button>
+    </section>
+    <div id="loading" style="display:none;">
+        <img src="loading.webp" alt="Loading..." />
+    </div>
+    <section id="psychometric-section" style="display:none;">
+    
+    </section>
+
+
+
+    <section id="hero" class="careerpathsiframe" style="display:none;">
+        <h2>Assessment Results</h2>
+
+        
+            <div class="chart-container" id="chartContainer">
+
+            </div>
+
+        <!--<iframe style="width:100%; height:360px; border:0;" src="charts/index.html"></iframe>-->
+        <h2>Your Path to Success Starts Here</h2>        
+        <div class="chart-container" id="chartContainer">    </div>
+        
+        <script>
+        function generatecharts(){
+            
+            //SECTORS_EVALUATED= {"IT-ITeS":0.5,"HealthCare":0.6, "ABC":0.9}
+            console.log("***SectorsEvaluated*****");
+            console.log(SECTORS_EVALUATED);
+            
+            chartContainer = document.getElementById("chartContainer");
+            charts_html= "";
+            chart_number =0;
+        
+            colorPairs = {}
+            
+            colorPairs[0] = ["#125AED", "#EDA512"];
+            colorPairs[1] = ["Red","Black"];
+            
+            colorPairs[2] = ["#D42B8B", "#2BD474"];
+            colorPairs[3] = ["#F00F84", "#0FF07B"];
+            colorPairs[4] = ["#C0663F", "#3F99C0"];
+            colorPairs[5] = ["#4CAF50","#FF6347"];
+            colorPairs[6] = ["#3F51B5","#FFC107"];
+            
+             
+            for (sector in SECTORS_EVALUATED)
+            {
+                console.log('loop running')
+                chart_number++;
+                charts_html +=  "<div class='chart-wrapper'><canvas id='chart"+chart_number+"' aria-label='chart' height='350' width='350'></canvas></div>";
+                
+            }
+            chartContainer.innerHTML = charts_html;
+            //imputed chart divs in chartContainer
+            
+            chart_number =0;
+            for (sector in this.SECTORS_EVALUATED)
+            {
+                loadcharts(++chart_number, sector, SECTORS_EVALUATED[sector]);
+        
+            }
+            
+            function loadcharts(chart_number, sector_name, marks_in_sector)
+            {
+               var chrt = document.getElementById("chart"+chart_number).getContext("2d");
+               var chartId = new Chart(chrt, {
+                  type: 'doughnut',
+                  data: {
+                     labels: ["Correct", "Incorrect"],
+                     datasets: [{
+                     label: "",
+                     data: [marks_in_sector, 1-marks_in_sector],
+                     backgroundColor: colorPairs[chart_number-1],
+                     hoverOffset: 5
+                     }],
+                  },
+                  
+                  options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: sector_name, // Title of the chart,
+                            font: {
+                                size: 18 // Font size for the title
+                            },
+                            padding: {
+                                top: 10,
+                                bottom: 30
+                            }
+                        },
+                        tooltip: {
+        callbacks: {
+          label: function(tooltipItem) {
+            // Get the dataset and calculate the percentage
+            let dataset = tooltipItem.dataset.data;
+            let currentValue = dataset[tooltipItem.dataIndex];
+            let total = dataset.reduce((a, b) => a + b, 0);
+            let percentage = ((currentValue / total) * 100).toFixed(0);
+            
+            // Return the label with the percentage
+            return tooltipItem.label + ": " + percentage + "%";
+          }
+        }
+      }
+                    },
+                     responsive: false,
+                  },
+               });
+        
+        
+        
+            }
+            
+        }
+        </script>
+        <button onclick="showSection('courses')">Explore Courses tailored for you</button>
+        <button onclick="showSection('entrepreneurship')">Learn to start a business</button>
+        <button onclick="showSection('career-guidance')">Know about your career options</button>
+        <!--<button onclick="showSection('career-guidance')">Unsure? Schedule a counsellor</button>-->
+    </section>
+
+    <section id="courses" class="content-section" style="display:none;">
+        <h2>Courses</h2>
+        <p>Below are some recommended non-certified courses to upskill yourself in various domains.</p>
+        <div id="recommendedCoursesSection" class="scrollable-container"></div>
+
+            <!--<div class="tile">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;   
+                web-share" allowfullscreen></iframe> 
+              <h2 class="clickable">Title 1</h2>
+            </div>-->
+
+        <h2>Certified Courses Recommended fo you</h2>
+        <p>Here are some recommended certified courses to advance your skills.</p>
+        <div id="recommendedCertifiedCoursesSection" class="scrollable-container"></div>
+    </section>
+
+
+    
+
+    <!-- <section id="jobs" class="content-section">
+        <h2>Jobs</h2>
+        <p>Recommended jobs will appear here.</p>
+    </section> -->
+
+
+
+    <section id="career-guidance" class="content-section" style="display:none;">
+        <iframe style="width:100%; height:100vw; border:0;" src="explorecareer/index.html"></iframe>
+    </section>
+
+    
+    <section id="entrepreneurship" class="content-section" style="display:none;">
+        <h2>Entrepreneurship</h2>
+        <p>Learn about entrepreneurship opportunities and resources to start your own business.</p>
+        <p>Recommended DPRs will appear here.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 JKYSE</p>
+    </footer>
+
+     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        sectorssection = document.getElementById("chosensectors");
+        //alert(sectorsSelected);
+        sectorsSelected.forEach(selectedSector=> {
+        sectorssection.innerHTML+= "<span id='smallbutton'>"+selectedSector+"</span>";
+        });
+
+        qualificationsection = document.getElementById("chosenqualification");
+        //alert(sectorsSelected);
+        qualificationsection.innerHTML+= "<span id='smallbuttonr'>"+qualificationSelected+"</span>";
+
+ 
+
+    </script>
+</body>
+</html>
