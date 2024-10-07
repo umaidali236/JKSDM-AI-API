@@ -1,6 +1,6 @@
         
 
-
+var base_url="http://127.0.0.1";
 
 
 
@@ -109,7 +109,7 @@ var response = {}
 
 function sendAJAXRequest() {
     var xhr = new XMLHttpRequest();
-    var url = "http://127.0.0.1:5000/api/v1/questionBank";
+    var url = base_url+":5000/api/v1/questionBank";
     //var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector="+num_questions_per_sector;
     var data = JSON.stringify({
         sectors: sectorsSelected,
@@ -147,7 +147,7 @@ function sendAJAXRequest() {
 
 function sendRecommendationRequestSLCourses() {
     var xhr = new XMLHttpRequest();
-    var url = "http://127.0.0.1:5000/api/v1/RecommendSelfLearningCoursesAfterPsychometry";
+    var url = base_url+":5000/api/v1/RecommendSelfLearningCoursesAfterPsychometry";
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     
@@ -190,7 +190,7 @@ function parseRecommendedSLCourses(responseStatus, responseText)
     recommendedCoursesSection = document.getElementById('recommendedCoursesSection');
     for(s=0; s<responseDictCourses.length; s++)
     {
-        for(c=0; s<responseDictCourses[s][0].length; c++){
+        for(c=0; c<responseDictCourses[s][0].length; c++){
             course_name = responseDictCourses[s][0][c]['SL_course_title'];
             topic_num = 0
             topic_names = responseDictCourses[s][0][c]['SL_videos_in_course'][topic_num][0];
@@ -209,7 +209,7 @@ function parseRecommendedSLCourses(responseStatus, responseText)
 
 function sendRecommendationRequestCCCourses() {
     var xhr = new XMLHttpRequest();
-    var url = "http://127.0.0.1:5000/api/v1/RecommendCertifiedCoursesAfterPsychometry";
+    var url = base_url+":5000/api/v1/RecommendCertifiedCoursesAfterPsychometry";
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     
@@ -252,7 +252,7 @@ function parseRecommendedCCCourses(responseStatus, responseText)
     recommendedCoursesSection = document.getElementById('recommendedCertifiedCoursesSection');
     for(s=0; s<responseDictCCCourses.length; s++)
     {
-        for(c=0; s<responseDictCCCourses[s]['Course Details'].length; c++){
+        for(c=0; c<responseDictCCCourses[s]['Course Details'].length; c++){
             course_name = responseDictCCCourses[s]['Course Details'][c]['CC_course_title'];
             topic_num = 0;
             course_description = responseDictCCCourses[s]['Course Details'][c]['CC_course_description'];
@@ -269,7 +269,7 @@ function parseRecommendedCCCourses(responseStatus, responseText)
 
 function sendRecommendationRequestDPR() {
     var xhr = new XMLHttpRequest();
-    var url = "http://127.0.0.1:5000/api/v1/RecommendDPRAfterPsychometry";
+    var url = base_url+":5000/api/v1/RecommendDPRAfterPsychometry";
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     
@@ -312,7 +312,7 @@ function parseRecommendedDPR(responseStatus, responseText)
     recommendedDPRSection = document.getElementById('recommendedDPRSection');
     for(s=0; s<responseDictDPR.length; s++)
     {
-        for(c=0; s<responseDictDPR[s]['DPR Details'].length; c++){
+        for(c=0; c<responseDictDPR[s]['DPR Details'].length; c++){
             dpr_name = responseDictDPR[s]['DPR Details'][c]['DPR_title'];
             dpr_link = responseDictDPR[s]['DPR Details'][c]['DPR_link'];
             
@@ -327,7 +327,7 @@ function parseRecommendedDPR(responseStatus, responseText)
  function sendRecommendationRequestCertifiedCourses(name_of_match) {
     var xhr = new XMLHttpRequest();
     //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
-    var url = "http://127.0.0.1:5002/api/v1/RecommendCertifiedCoursesBasedOnCareerChosen";
+    var url = base_url+":5002/api/v1/RecommendCertifiedCoursesBasedOnCareerChosen";
     
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');

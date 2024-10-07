@@ -14,9 +14,6 @@ import time
 from tqdm import tqdm
 import random
 
-
-
-
 #BERT PART
 from transformers import BertTokenizer, BertModel
 import torch
