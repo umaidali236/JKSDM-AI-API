@@ -1,6 +1,5 @@
-        
 
-var base_url="http://127.0.0.1";
+var base_url="http://127.0.0.1:5000";
 
 
 
@@ -109,13 +108,13 @@ var response = {}
 
 function sendAJAXRequest() {
     var xhr = new XMLHttpRequest();
-    var url = base_url+":5000/api/v1/questionBank";
+    var url = base_url+"/api/v1/questionBank";
     //var params = "sectors=" +JSON.stringify(sectorsSelected) + "&numQuestionsInEachSector="+num_questions_per_sector;
     var data = JSON.stringify({
         sectors: sectorsSelected,
         numQuestionsInEachSector: num_questions_per_sector
     });
-
+    console.log(data);
 
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -147,7 +146,7 @@ function sendAJAXRequest() {
 
 function sendRecommendationRequestSLCourses() {
     var xhr = new XMLHttpRequest();
-    var url = base_url+":5000/api/v1/RecommendSelfLearningCoursesAfterPsychometry";
+    var url = base_url+"/api/v1/RecommendSelfLearningCoursesAfterPsychometry";
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     
@@ -209,7 +208,7 @@ function parseRecommendedSLCourses(responseStatus, responseText)
 
 function sendRecommendationRequestCCCourses() {
     var xhr = new XMLHttpRequest();
-    var url = base_url+":5000/api/v1/RecommendCertifiedCoursesAfterPsychometry";
+    var url = base_url+"/api/v1/RecommendCertifiedCoursesAfterPsychometry";
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     
@@ -258,7 +257,7 @@ function parseRecommendedCCCourses(responseStatus, responseText)
             course_description = responseDictCCCourses[s]['Course Details'][c]['CC_course_description'];
             course_link = responseDictCCCourses[s]['Course Details'][c]['CC_course_link'];
             
-            recommendedCoursesSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+course_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+course_link+"' target='_blank'> <h2 class='clickable'>"+course_name +"</h2></a></div>";
+            recommendedCoursesSection.innerHTML += "<div class='tile'><a href='"+course_link+"' target='_blank'><img src='static/certified_courses_thumbnail.jpg' width='310' height='310' ><h2 class='clickable'>"+course_name +"</h2></a></div>";            
         }
         
     }
@@ -269,7 +268,7 @@ function parseRecommendedCCCourses(responseStatus, responseText)
 
 function sendRecommendationRequestDPR() {
     var xhr = new XMLHttpRequest();
-    var url = base_url+":5000/api/v1/RecommendDPRAfterPsychometry";
+    var url = base_url+"/api/v1/RecommendDPRAfterPsychometry";
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     
@@ -315,8 +314,8 @@ function parseRecommendedDPR(responseStatus, responseText)
         for(c=0; c<responseDictDPR[s]['DPR Details'].length; c++){
             dpr_name = responseDictDPR[s]['DPR Details'][c]['DPR_title'];
             dpr_link = responseDictDPR[s]['DPR Details'][c]['DPR_link'];
+            recommendedDPRSection.innerHTML += "<div class='tile'><a href='"+dpr_link+"' target='_blank'><img src='static/dpr_thumbnail.jpg' width='310' height='310' ><h2 class='clickable'>"+dpr_name +"</h2></a></div>";
             
-            recommendedDPRSection.innerHTML += "<div class='tile'><iframe width='560' height='315' src='"+dpr_link +"' title='"+course_name +"' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe><a href='"+dpr_link+"' target='_blank'> <h2 class='clickable'>"+dpr_name +"</h2></a></div>";
         }
         
     }
@@ -326,7 +325,7 @@ function parseRecommendedDPR(responseStatus, responseText)
 
  function sendRecommendationRequestCertifiedCourses(name_of_match) {
     var xhr = new XMLHttpRequest();
-    //http://127.0.0.1:5000/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
+    //http://127.0.0.1/api/v1/RecommendCoursesBasedOnCareerChosen?career_name=industry
     var url = base_url+":5002/api/v1/RecommendCertifiedCoursesBasedOnCareerChosen";
     
     xhr.open("POST", url, true);

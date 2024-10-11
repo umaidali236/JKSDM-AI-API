@@ -402,7 +402,7 @@ def getData_DPR(how='postgresql'):
         postgresql_obj.close()
         return data_DPR_courses
     else:
-        file_path_to_load_DPR_courses = "../db/DPRs-distinct.csv"
+        file_path_to_load_DPR_courses = "../db/DPRs-distinctA.csv"
         data_from_csv = pd.read_csv(file_path_to_load_DPR_courses)
         data_DPR_courses = data_from_csv[columns]
         return data_DPR_courses
@@ -645,5 +645,5 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000,debug=True)
+    app.run(host="0.0.0.0",port=5000,debug=True)
 
