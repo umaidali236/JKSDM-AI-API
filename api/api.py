@@ -634,8 +634,36 @@ def recommendFLAfterPsychometry():
     return RESULTANT_DPR
 
 
+FL_path = "../db/Foreign Language Report.csv"
+language_data=pd.read_csv(FL_path)
 
 
+@app.route('/api/v1/recommend_languages', methods=['POST'])
+def recommend_languages():
+    user_input = request.get_json()
+    
+    if not user_input or 'interested_languages' not in user_input:
+        return jsonify({"error": "Invalid input. Please provide a list of interested languages."}), 400
+
+    interested_languages = user_input['interested_languages']
+    
+    # Filter the data based on user input
+    recommendations = language_data[language_data['Name Of Language'].isin(interested_languages)]
+
+    # Prepare the response
+    response = []
+    for index, row in recommendations.iterrows():
+        response.append({
+            "language": row['Name Of Language'],
+            "video_name": row['Video Name'],
+            "url": row['URL']
+        })
+
+    if not response:
+        return jsonify({"message": "No recommendations found for the selected languages."}), 404
+
+    sorted_response = sorted(response, key=lambda x: x['language'])
+    return jsonify({"recommendations": sorted_response})
 
 
 @app.route("/")
