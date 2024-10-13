@@ -10,12 +10,12 @@
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
-  padding: 10px; /* Adjust padding as needed */
+  padding: 10px; 
 }
 
 .tile {
   flex: 0 0 auto;
-  width: 310px; /* Adjust tile width as needed */
+  width: 310px; 
   text-align: center;
   margin-right: 10px;
   border-radius:5px;
@@ -24,7 +24,7 @@
 
 .tile iframe {
   width: 100%;
-  height: 200px; /* Adjust iframe height as needed */
+  height: 200px; 
   border-radius:15px;
 }
 
@@ -39,7 +39,21 @@
   margin-top:2px;
   font-size:12px;
 }
-
+#recommendedlanguagesSection {
+    display: block; /* Ensures child elements stack vertically */
+}
+.language-section {
+    margin-bottom: 20px; /* Space between language sections */
+    border: 1px solid #ccc; /* Add a border around each section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside sections */
+    background-color: #f9f9f9; /* Background color for each section */
+}
+.language-section h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Font size for language titles */
+    color: #333; /* Darker text color for contrast */
+}
 
 .chart-container {
         display: flex;
@@ -152,14 +166,21 @@
             <br><!--<b>Your qualification is:</b> <span id="chosenqualification"></span>-->
             <i>If all the above information is correct, please click <b>Continue</b> below, else go to your profile, update your interests, preferred sectors, and qualification and come back to take this forward.</i></p>
         
-        <button style="margin:20px;" onclick="startAssessment()">Continue</button>
+        <!-- <button style="margin:20px;" onclick="startAssessment()">Continue</button> -->
+        <button style="margin:20px;" onclick="showLanguageSelection()">Continue</button>
+    </section>
+    <section id="languageSelectionContainer" style="display: none;" >
+        
+
     </section>
     <div id="loading" style="display:none;">
         <img src="{{ url_for('static', filename='loading.webp') }}" alt="Loading..." />
     </div>
-    <section id="psychometric-section" style="display:none;">
     
+    <section id="psychometric-section" style="display:none;">
+        
     </section>
+    
 
 
 
@@ -286,6 +307,12 @@
         <h2 id="DPRs">Looking for Entrepreneurship Opportunities?</h2>
         <p>Here are some recommended DPR teamplates chosen based on your interests.</p>
         <div id="recommendedDPRSection" class="scrollable-container"></div>
+
+        <br><hr>
+        <h2 id="languages">Videos based on your interests in languages</h2>
+        <p>Here are some recommended videos to help you learn foreign languages.</p>
+        <div id="recommendedlanguagesSection" class="scrollable-container"></div>
+        
     </section>
 
 
