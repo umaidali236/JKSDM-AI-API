@@ -2,8 +2,8 @@
 var base_url="http://127.0.0.1:5000";
 
 
-
 function startAssessment() {
+   
     document.getElementById("loading").style.display ='block';
     sendAJAXRequest();
 }
@@ -30,8 +30,7 @@ function nextQuestion(questionNumber) {
         question.style.display = 'block';
     }
     else
-    {
-        
+    {  
         completeAssessment();
         showSection("recommendationSection");
     
@@ -65,6 +64,7 @@ function completeAssessment() {
     // console.log(SECTORS_EVALUATED);
     // console.log(this.QA);
     // Hide the psychometric section and show the hero section
+    
     document.getElementById("psychometric-section").style.display = "none";
     document.getElementById("hero").style.display = "block";
     generatecharts();
@@ -78,7 +78,7 @@ function completeAssessment() {
 
 }
 
-
+// selected_languages=["Arabic","Japanese"]
 function showSection(sectionId) {
     // Hide all sections
     document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
@@ -91,6 +91,7 @@ function showSection(sectionId) {
             sendRecommendationRequestSLCourses();
              sendRecommendationRequestCCCourses();
              sendRecommendationRequestDPR();
+            //loadlistoncountry(selected_languages);
         }
         //sendRecommendationRequestSLCourses(qualificationSelected);
         //sendRecommendationRequestCertifiedCourses(qualificationSelected);
@@ -536,7 +537,122 @@ function parseQuestionBank(responseStatus, responseText)
 
     }
         
+    
+function loadlistoncountry(selected_languages) {
+    var xhr = new XMLHttpRequest();
+    var url = base_url+"/api/v1/recommend_languages";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    
+    xhr.timeout = 5000;
 
+    xhr.ontimeout = function() {
+        parseRecommendedlanguages(xhr.status, xhr.responseText);
+    };
+    error = 1
+    // Set the onload callback function
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            parseRecommendedlanguages(xhr.status, xhr.responseText);
+        } 
+        else 
+        {
+            parseRecommendedlanguages(xhr.status, xhr.responseText);
+        }
+    };
+    var requestBody = {
+        "interested_languages":selected_languages 
+    };
+    xhr.send(JSON.stringify(requestBody));
+}
+function parseRecommendedlanguages(responseStatus, responseText) {
+    let responseDictlanguages = JSON.parse(responseText);
+    
+    if (responseStatus !== 200) { 
+        alert('Error occurred! Try again. Error Code: ' + responseStatus + '. Error Details: ' + responseText);
+        return;
+    }
+    // Check for recommendations in the response
+    if (!responseDictlanguages.recommendations || responseDictlanguages.recommendations.length === 0) {
+        alert('No recommendations found for the selected languages.');
+        return;
+    }
+    recommendedlanguagesSection = document.getElementById('recommendedlanguagesSection');
+    recommendedlanguagesSection.innerHTML = ''; 
+    let lastLanguageName=null;
+for (let c = 0; c < responseDictlanguages.recommendations.length; c++) {
+    let language_name = responseDictlanguages.recommendations[c]['language'];
+    let video_name = responseDictlanguages.recommendations[c]['video_name'];
+    let video_link = responseDictlanguages.recommendations[c]['url'];
+    let videoID = video_link.split('v=')[1]?.split('&')[0]; // Extracts the ID
+    let embed_link = videoID ? `https://www.youtube.com/embed/${videoID}` : '';
+    
+     // Check if the language has changed
+     if (language_name !== lastLanguageName) {
+        // Close the previous language section if it's not the first language
+        if (lastLanguageName !== null) {
+            const lastContainer = document.createElement('div');
+            lastContainer.innerHTML = `</div></div>`;
+            recommendedlanguagesSection.appendChild(lastContainer);
+        }
+
+        // Create a new language section with a new scrollable container
+        const languageSection = document.createElement('div');
+        languageSection.classList.add('language-section');
+        languageSection.innerHTML = `<h3>${language_name}</h3><div class='scrollable-container'>`;
+        recommendedlanguagesSection.appendChild(languageSection);
+
+        lastLanguageName = language_name; // Update last language name
+    }
+    // Create and append the tile
+    const tile = document.createElement('div');
+    tile.classList.add('tile');
+    tile.innerHTML = `
+        <iframe width='100%' src='${embed_link}' title='${language_name}' frameborder='0' allowfullscreen></iframe>
+        <a href='${video_link}' target='_blank'>
+            <h4 class='clickable'>${video_name}</h4>
+        </a>`;
+    recommendedlanguagesSection.lastChild.lastChild.appendChild(tile);
+}
+
+// Close the last language section after the loop
+if (lastLanguageName !== null) {
+    const closingDiv = document.createElement('div');
+    closingDiv.innerHTML = `</div></div>`;
+    recommendedlanguagesSection.appendChild(closingDiv);
+}
+}
+function showLanguageSelection() {
+    
+    const container=document.getElementById('languageSelectionContainer');
+    document.getElementById('intro-section').style.display = "none";
+    document.querySelector('header').style.display = 'none';
+    document.querySelector('footer').style.display = 'none';
+
+    fetch('./static/languages.html') 
+        .then(response => response.text())
+        .then(html => {
+            container.innerHTML = html;
+            container.style.display='block';
+            document.body.appendChild(container);
+            document.getElementById('languageForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                const checkedLanguages = Array.from(document.querySelectorAll('input[name="languages"]:checked'))
+                    .map(checkbox => checkbox.value);
+                
+                loadlistoncountry(checkedLanguages);
+                document.body.removeChild(container);
+                container.style.display='none';
+                document.querySelector('header').style.display = 'block';
+                document.querySelector('footer').style.display = 'block';
+                startAssessment();
+            });
+        })
+        .catch(error => {
+            console.error('Error loading the language selection:', error);
+        });
+}
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     // Attach event listeners to options
