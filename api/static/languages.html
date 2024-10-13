@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Languages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            /* height: 100vh; */
+            flex-direction: column; 
+           
+            margin: 0;
+        }
+        header,footer{
+            width: 100vw;     
+        }
+        .container {
+            background: rgb(255, 255, 255);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            
+        }
+        h2 {
+            font-size: large;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+            justify-content: space-between; 
+            margin-bottom: 20px;
+        }
+        label {
+            
+            display: flex; /* Use flex to align items */
+            align-items: center; /* Center align checkbox and text */
+            margin: 10px 0;
+            width: calc(50% - 10px); /* Set width to 50% of the container with spacing */
+            cursor: pointer;
+            position: relative;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        input[type="checkbox"] + span {
+            border: 1px solid #b9f0ff; 
+            /* box-shadow: 0 2px 5px rgba(117, 252, 247, 0.2);  */
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        input[type="checkbox"]:checked + span {
+            background-color: #00b37d;
+        }
+        button {
+            
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+            background-color: #00b37d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #00b37d;
+        }
+        label:hover {
+        background-color: rgba(8, 239, 166, 0.238); /* Light background on hover */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JKYSE</h1>
+        <nav>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Before continuing for assessment, select one or more from the following foreign languages as your interests</h2><hr>
+        <form id="languageForm">
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="languages" value=Arabic><span></span>Arabic</label>
+                <label><input type="checkbox" name="languages" value=French><span></span>French</label>
+                <label><input type="checkbox" name="languages" value=German><span></span>German</label>
+                <label><input type="checkbox" name="languages" value=Italian><span></span>Italian</label>
+                <label><input type="checkbox" name="languages" value=Japanese><span></span>Japanese</label>
+                <label><input type="checkbox" name="languages" value=Korean><span></span>Korean</label>
+                <label><input type="checkbox" name="languages" value=Chinese><span></span>Chinese</label>
+                <label><input type="checkbox" name="languages" value=Portuguese><span></span>Portuguese</label>
+                <label><input type="checkbox" name="languages" value=Russian><span></span>Russian</label>
+                <label><input type="checkbox" name="languages" value=Spanish><span></span>Spanish</label>
+                <label><input type="checkbox" name="languages" value=Dutch><span></span>Dutch</label>
+                <label><input type="checkbox" name="languages" value=Indonesian><span></span>Indonesian</label>
+                <label><input type="checkbox" name="languages" value=Nigerian><span></span>Nigerian</label>
+                <label><input type="checkbox" name="languages" value=Turkish><span></span>Turkish</label>
+            </div><hr><br>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 JKYSE</p>
+    </footer>
+</body>
+</html>
+
