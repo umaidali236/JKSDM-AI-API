@@ -633,12 +633,22 @@ def recommendFLAfterPsychometry():
     
     return RESULTANT_DPR
 
+#related to foreign languages
+
+@app.route('/api/v1/get_languages', methods=['POST'])
+@cross_origin()
+def getFlanguages():
+    # {['Arabic', 'Arabic'], ['German', 'German']}
+    pass #return list of unique language names as a JSON    ['German', 'Arabic', 'Turkish']
+
 
 FL_path = "../db/Foreign Language Report.csv"
 language_data=pd.read_csv(FL_path)
 
 
+
 @app.route('/api/v1/recommend_languages', methods=['POST'])
+@cross_origin
 def recommend_languages():
     user_input = request.get_json()
     

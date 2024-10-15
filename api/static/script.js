@@ -638,6 +638,7 @@ function showLanguageSelection() {
             document.getElementById('languageForm').addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent default form submission
                 
+
                 const checkedLanguages = Array.from(document.querySelectorAll('input[name="languages"]:checked'))
                     .map(checkbox => checkbox.value);
                 
