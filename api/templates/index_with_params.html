@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilling Opportunities Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='section-styles.css')}}"> -->
     <style>
         .scrollable-container {
   display: flex;
@@ -170,7 +172,19 @@
         <button style="margin:20px;" onclick="showLanguageSelection()">Continue</button>
     </section>
     <section id="languageSelectionContainer" style="display: none;" >
-        
+        <div class="container">
+            <h2>If given a chance , what countries would you like to visit?
+            </h2>
+            <hr>
+            <form id="languageForm">
+                <div class="checkbox-group" id="languageCheckboxes">
+                
+                </div>
+                <hr><br>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    
 
     </section>
     <div id="loading" style="display:none;">
@@ -309,7 +323,7 @@
         <div id="recommendedDPRSection" class="scrollable-container"></div>
 
         <br><hr>
-        <h2 id="languages">Videos based on your interests in languages</h2>
+        <h2 id="languages">Videos based on your travel interests</h2>
         <p>Here are some recommended videos to help you learn foreign languages.</p>
         <div id="recommendedlanguagesSection" class="scrollable-container"></div>
         
