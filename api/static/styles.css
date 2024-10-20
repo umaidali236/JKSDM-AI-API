@@ -188,7 +188,7 @@ footer {
 
 
 
-/*===================== styles for section with id ="languageSelectionContainer" ======================*/
+/*===================== styles for section with id = "languageSelectionContainer" ======================*/
 
 #languageSelectionContainer {
     font-family: 'Roboto', sans-serif;
@@ -213,7 +213,7 @@ footer {
 }
 
 #languageSelectionContainer .container h2 {
-    font-size: large;
+    font-size: larger;
     font-weight: 700;
     margin-bottom: 20px;
     color: #333;
