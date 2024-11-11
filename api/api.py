@@ -661,9 +661,6 @@ def getFlanguages():
     formatted_languages = [[language_to_Country.get(lang,'Unknown Country'),lang] for lang in unique_languages]
 
     return jsonify(formatted_languages)
-    # {['Arabic', 'Arabic'], ['German', 'German']}
-    pass #return list of unique language names as a JSON    ['German', 'Arabic', 'Turkish']
-
 
 @app.route('/api/v1/recommend_languages', methods=['POST'])
 @cross_origin()
@@ -695,7 +692,6 @@ def recommend_languages():
 
     sorted_response = sorted(response, key=lambda x: x['language'])
     return jsonify({"recommendations": sorted_response})
-
 
 @app.route("/")
 def home():

@@ -1,0 +1,832 @@
+QP/JOB ROLE NAME,EMBEDDING_PATH
+3d Printing Modelling Engineer,./utils/embeddings/PMKVY_JobRoles/data/3d Printing Modelling Engineer.pt
+3D Printing Operator,./utils/embeddings/PMKVY_JobRoles/data/3D Printing Operator.pt
+3d Printing Software Developer,./utils/embeddings/PMKVY_JobRoles/data/3d Printing Software Developer.pt
+Actor,./utils/embeddings/PMKVY_JobRoles/data/Actor.pt
+Additive Manufacturing (3D Printing),./utils/embeddings/PMKVY_JobRoles/data/Additive Manufacturing (3D Printing).pt
+ADVERTISING OPERATIONS COORDINATOR,./utils/embeddings/PMKVY_JobRoles/data/ADVERTISING OPERATIONS COORDINATOR.pt
+Aerial Work Platform Operator,./utils/embeddings/PMKVY_JobRoles/data/Aerial Work Platform Operator.pt
+Aerospace CNC Machinist,./utils/embeddings/PMKVY_JobRoles/data/Aerospace CNC Machinist.pt
+Aerospace Composite Technician,./utils/embeddings/PMKVY_JobRoles/data/Aerospace Composite Technician.pt
+Aerospace Structural Fitter,./utils/embeddings/PMKVY_JobRoles/data/Aerospace Structural Fitter.pt
+Agri-residue Aggregator,./utils/embeddings/PMKVY_JobRoles/data/Agri-residue Aggregator.pt
+Agriculture Extension Service Provider,./utils/embeddings/PMKVY_JobRoles/data/Agriculture Extension Service Provider.pt
+Agriculture Warehouse Worker,./utils/embeddings/PMKVY_JobRoles/data/Agriculture Warehouse Worker.pt
+AI & ML – Jr. Telecom Data Analyst,./utils/embeddings/PMKVY_JobRoles/data/AI & ML – Jr. Telecom Data Analyst.pt
+AI - Business Intelligence Analyst,./utils/embeddings/PMKVY_JobRoles/data/AI - Business Intelligence Analyst.pt
+AI - Data Architect,./utils/embeddings/PMKVY_JobRoles/data/AI - Data Architect.pt
+AI - Data Engineer,./utils/embeddings/PMKVY_JobRoles/data/AI - Data Engineer.pt
+AI - Data Quality Analyst,./utils/embeddings/PMKVY_JobRoles/data/AI - Data Quality Analyst.pt
+AI - Data Scientist,./utils/embeddings/PMKVY_JobRoles/data/AI - Data Scientist.pt
+AI - Machine Learning Engineer,./utils/embeddings/PMKVY_JobRoles/data/AI - Machine Learning Engineer.pt
+AI - Solution Architect,./utils/embeddings/PMKVY_JobRoles/data/AI - Solution Architect.pt
+AI Devices Installation Operator,./utils/embeddings/PMKVY_JobRoles/data/AI Devices Installation Operator.pt
+AI-Database Administrator,./utils/embeddings/PMKVY_JobRoles/data/AI-Database Administrator.pt
+Aircraft Airframe & Powerplant Technician,./utils/embeddings/PMKVY_JobRoles/data/Aircraft Airframe & Powerplant Technician.pt
+Aircraft Avionics Technician,./utils/embeddings/PMKVY_JobRoles/data/Aircraft Avionics Technician.pt
+Airline Baggage Handler,./utils/embeddings/PMKVY_JobRoles/data/Airline Baggage Handler.pt
+Airline Cargo Assistant,./utils/embeddings/PMKVY_JobRoles/data/Airline Cargo Assistant.pt
+Airline Customer Service Executive,./utils/embeddings/PMKVY_JobRoles/data/Airline Customer Service Executive.pt
+Analyst Application Security,./utils/embeddings/PMKVY_JobRoles/data/Analyst Application Security.pt
+Analyst Compliance Audit,./utils/embeddings/PMKVY_JobRoles/data/Analyst Compliance Audit.pt
+Analyst End Point Security,./utils/embeddings/PMKVY_JobRoles/data/Analyst End Point Security.pt
+Analyst Security Operations Centre,./utils/embeddings/PMKVY_JobRoles/data/Analyst Security Operations Centre.pt
+Analyst-Chemist-Quality Control- High-Performance Liquid Chromatography (HPLC),./utils/embeddings/PMKVY_JobRoles/data/Analyst-Chemist-Quality Control- High-Performance Liquid Chromatography (HPLC).pt
+Animal Waste Manure Aggregator,./utils/embeddings/PMKVY_JobRoles/data/Animal Waste Manure Aggregator.pt
+Animator,./utils/embeddings/PMKVY_JobRoles/data/Animator.pt
+Application Architect - Web & Mobile,./utils/embeddings/PMKVY_JobRoles/data/Application Architect - Web & Mobile.pt
+Application Developer - Web & Mobile,./utils/embeddings/PMKVY_JobRoles/data/Application Developer - Web & Mobile.pt
+Applique Artisan,./utils/embeddings/PMKVY_JobRoles/data/Applique Artisan.pt
+Aquaculture Worker,./utils/embeddings/PMKVY_JobRoles/data/Aquaculture Worker.pt
+AR-VR Architect,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Architect.pt
+AR-VR Consultant,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Consultant.pt
+AR-VR Developer,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Developer.pt
+AR-VR Infrastructure Engineer,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Infrastructure Engineer.pt
+AR-VR Researcher,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Researcher.pt
+AR-VR Support Analyst,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Support Analyst.pt
+AR-VR Test Engineer,./utils/embeddings/PMKVY_JobRoles/data/AR-VR Test Engineer.pt
+Archival Conservator,./utils/embeddings/PMKVY_JobRoles/data/Archival Conservator.pt
+ARVR Designer,./utils/embeddings/PMKVY_JobRoles/data/ARVR Designer.pt
+Assembling & Curing Operator-Footwear & Sports Good,./utils/embeddings/PMKVY_JobRoles/data/Assembling & Curing Operator-Footwear & Sports Good.pt
+Assembly Line Operator,./utils/embeddings/PMKVY_JobRoles/data/Assembly Line Operator.pt
+Assembly Operator-RAC,./utils/embeddings/PMKVY_JobRoles/data/Assembly Operator-RAC.pt
+Assembly Operator-TV,./utils/embeddings/PMKVY_JobRoles/data/Assembly Operator-TV.pt
+Assistant -  Packaging & Marking Operation,./utils/embeddings/PMKVY_JobRoles/data/Assistant -  Packaging & Marking Operation.pt
+Assistant - Machinist - Iron And Steel,./utils/embeddings/PMKVY_JobRoles/data/Assistant - Machinist - Iron And Steel.pt
+Assistant Bar Bender and Steel Fixer,./utils/embeddings/PMKVY_JobRoles/data/Assistant Bar Bender and Steel Fixer.pt
+Assistant Beauty & Wellness Consultant,./utils/embeddings/PMKVY_JobRoles/data/Assistant Beauty & Wellness Consultant.pt
+Assistant Cameraman,./utils/embeddings/PMKVY_JobRoles/data/Assistant Cameraman.pt
+Assistant Carpenter,./utils/embeddings/PMKVY_JobRoles/data/Assistant Carpenter.pt
+Assistant Construction Fitter,./utils/embeddings/PMKVY_JobRoles/data/Assistant Construction Fitter.pt
+Assistant Construction Painter & Decorator,./utils/embeddings/PMKVY_JobRoles/data/Assistant Construction Painter & Decorator.pt
+Assistant Cotton Grader (Ginning),./utils/embeddings/PMKVY_JobRoles/data/Assistant Cotton Grader (Ginning).pt
+Assistant Design Maker - Textiles,./utils/embeddings/PMKVY_JobRoles/data/Assistant Design Maker - Textiles.pt
+Assistant Electrician,./utils/embeddings/PMKVY_JobRoles/data/Assistant Electrician.pt
+Assistant Electricity Meter Reader Billing & Cash Collector,./utils/embeddings/PMKVY_JobRoles/data/Assistant Electricity Meter Reader Billing & Cash Collector.pt
+Assistant Electronic Mechanic,./utils/embeddings/PMKVY_JobRoles/data/Assistant Electronic Mechanic.pt
+Assistant False Ceiling and Drywall Installer,./utils/embeddings/PMKVY_JobRoles/data/Assistant False Ceiling and Drywall Installer.pt
+Assistant Ginning Fitter,./utils/embeddings/PMKVY_JobRoles/data/Assistant Ginning Fitter.pt
+Assistant Installation Computing And Peripherals,./utils/embeddings/PMKVY_JobRoles/data/Assistant Installation Computing And Peripherals.pt
+Assistant Interior Designer- Commercial,./utils/embeddings/PMKVY_JobRoles/data/Assistant Interior Designer- Commercial.pt
+"Assistant Interior Designer- Residence, Kitchen","./utils/embeddings/PMKVY_JobRoles/data/Assistant Interior Designer- Residence, Kitchen.pt"
+Assistant Machine Operator - Injection Moulding Plastic,./utils/embeddings/PMKVY_JobRoles/data/Assistant Machine Operator - Injection Moulding Plastic.pt
+Assistant Machine Operator - Stretch Blow Moulding Plastic,./utils/embeddings/PMKVY_JobRoles/data/Assistant Machine Operator - Stretch Blow Moulding Plastic.pt
+Assistant Manual Metal Arc Welding- Shielded Metal Arc Welding Welder,./utils/embeddings/PMKVY_JobRoles/data/Assistant Manual Metal Arc Welding- Shielded Metal Arc Welding Welder.pt
+Assistant Mason,./utils/embeddings/PMKVY_JobRoles/data/Assistant Mason.pt
+Assistant Mechanic -  Instrumentation,./utils/embeddings/PMKVY_JobRoles/data/Assistant Mechanic -  Instrumentation.pt
+Assistant Nail Technician,./utils/embeddings/PMKVY_JobRoles/data/Assistant Nail Technician.pt
+Assistant Operator - Plastic Waste Recycling and Processing,./utils/embeddings/PMKVY_JobRoles/data/Assistant Operator - Plastic Waste Recycling and Processing.pt
+Assistant Operator - Printing and Packaging,./utils/embeddings/PMKVY_JobRoles/data/Assistant Operator - Printing and Packaging.pt
+Assistant Operator - Tyre Balancing,./utils/embeddings/PMKVY_JobRoles/data/Assistant Operator - Tyre Balancing.pt
+Assistant Operator- Material Handling and Storage,./utils/embeddings/PMKVY_JobRoles/data/Assistant Operator- Material Handling and Storage.pt
+Assistant Operator- Plastic 3D Printing,./utils/embeddings/PMKVY_JobRoles/data/Assistant Operator- Plastic 3D Printing.pt
+Assistant Operator- Plastic Extrusion Machine,./utils/embeddings/PMKVY_JobRoles/data/Assistant Operator- Plastic Extrusion Machine.pt
+Assistant Plumber - General,./utils/embeddings/PMKVY_JobRoles/data/Assistant Plumber - General.pt
+Assistant Rigger - Heavy Material,./utils/embeddings/PMKVY_JobRoles/data/Assistant Rigger - Heavy Material.pt
+Assistant Scaffolder - System,./utils/embeddings/PMKVY_JobRoles/data/Assistant Scaffolder - System.pt
+Assistant Shuttering Carpenter,./utils/embeddings/PMKVY_JobRoles/data/Assistant Shuttering Carpenter.pt
+Assistant Spa Therapist,./utils/embeddings/PMKVY_JobRoles/data/Assistant Spa Therapist.pt
+Assistant Surveyor,./utils/embeddings/PMKVY_JobRoles/data/Assistant Surveyor.pt
+Assistant Technician-Street Light Installation and Maintenance,./utils/embeddings/PMKVY_JobRoles/data/Assistant Technician-Street Light Installation and Maintenance.pt
+Assistant Yoga Instructor,./utils/embeddings/PMKVY_JobRoles/data/Assistant Yoga Instructor.pt
+"Assistant- Maintenance (Pharma, Biologics and Medical Device Facility)- Mechanical and Fitting","./utils/embeddings/PMKVY_JobRoles/data/Assistant- Maintenance (Pharma, Biologics and Medical Device Facility)- Mechanical and Fitting.pt"
+"Assistant- Manufacturing and Packaging (Pharma, Biologics and Medical device)","./utils/embeddings/PMKVY_JobRoles/data/Assistant- Manufacturing and Packaging (Pharma, Biologics and Medical device).pt"
+"Assistant- Manufacturing and Packaging - Pharma, Biologics and Medical Devices","./utils/embeddings/PMKVY_JobRoles/data/Assistant- Manufacturing and Packaging - Pharma, Biologics and Medical Devices.pt"
+"Assistant- Secondary & Tertiary Packaging (Pharma, Biologics and Medical device)","./utils/embeddings/PMKVY_JobRoles/data/Assistant- Secondary & Tertiary Packaging (Pharma, Biologics and Medical device).pt"
+Assistant-Mine Surveyor,./utils/embeddings/PMKVY_JobRoles/data/Assistant-Mine Surveyor.pt
+Associate Customer Care (Voice & Non-Voice),./utils/embeddings/PMKVY_JobRoles/data/Associate Customer Care (Voice & Non-Voice).pt
+Associate Designer die and mould for plastic including toys,./utils/embeddings/PMKVY_JobRoles/data/Associate Designer die and mould for plastic including toys.pt
+Associate- Regulatory Affairs and Intellectual Property (IVD and Medical Devices),./utils/embeddings/PMKVY_JobRoles/data/Associate- Regulatory Affairs and Intellectual Property (IVD and Medical Devices).pt
+Associate- Store (Pharma- Bio Pharma - Medical Devices) - Retail Pharmacy operations,./utils/embeddings/PMKVY_JobRoles/data/Associate- Store (Pharma- Bio Pharma - Medical Devices) - Retail Pharmacy operations.pt
+Associate- Store (Pharma- Bio Pharma - Medical Devices),./utils/embeddings/PMKVY_JobRoles/data/Associate- Store (Pharma- Bio Pharma - Medical Devices).pt
+Asst. Electrician,./utils/embeddings/PMKVY_JobRoles/data/Asst. Electrician.pt
+"Asst. Fitter - Levelling, Alignment & Balancing","./utils/embeddings/PMKVY_JobRoles/data/Asst. Fitter - Levelling, Alignment & Balancing.pt"
+Asst. Mechanic - Bearing Maintenance,./utils/embeddings/PMKVY_JobRoles/data/Asst. Mechanic - Bearing Maintenance.pt
+"Attendant Sub-Station (66-11, 33-11 KV) - Power Distribution","./utils/embeddings/PMKVY_JobRoles/data/Attendant Sub-Station (66-11, 33-11 KV) - Power Distribution.pt"
+Autoconer Tenter,./utils/embeddings/PMKVY_JobRoles/data/Autoconer Tenter.pt
+Automotive Additive Manufacturing Engineer,./utils/embeddings/PMKVY_JobRoles/data/Automotive Additive Manufacturing Engineer.pt
+Automotive Additive Manufacturing Operator,./utils/embeddings/PMKVY_JobRoles/data/Automotive Additive Manufacturing Operator.pt
+Automotive Additive Manufacturing Technician,./utils/embeddings/PMKVY_JobRoles/data/Automotive Additive Manufacturing Technician.pt
+Automotive Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Automotive Assembly Operator.pt
+Automotive Assembly Technician,./utils/embeddings/PMKVY_JobRoles/data/Automotive Assembly Technician.pt
+Automotive Automation and Robotics Engineer,./utils/embeddings/PMKVY_JobRoles/data/Automotive Automation and Robotics Engineer.pt
+Automotive CNC Machining Technician,./utils/embeddings/PMKVY_JobRoles/data/Automotive CNC Machining Technician.pt
+Automotive IIOT Application Engineer,./utils/embeddings/PMKVY_JobRoles/data/Automotive IIOT Application Engineer.pt
+Automotive IIOT Application Technician,./utils/embeddings/PMKVY_JobRoles/data/Automotive IIOT Application Technician.pt
+Automotive Machining Assistant,./utils/embeddings/PMKVY_JobRoles/data/Automotive Machining Assistant.pt
+Automotive Machining Operator,./utils/embeddings/PMKVY_JobRoles/data/Automotive Machining Operator.pt
+Automotive Sales Executive,./utils/embeddings/PMKVY_JobRoles/data/Automotive Sales Executive.pt
+Automotive Showroom Host,./utils/embeddings/PMKVY_JobRoles/data/Automotive Showroom Host.pt
+Automotive Telecaller,./utils/embeddings/PMKVY_JobRoles/data/Automotive Telecaller.pt
+Automotive Washer,./utils/embeddings/PMKVY_JobRoles/data/Automotive Washer.pt
+Automotive Welding Machine Operator (Manual and Robotics),./utils/embeddings/PMKVY_JobRoles/data/Automotive Welding Machine Operator (Manual and Robotics).pt
+Ayurveda Ahar and Poshan Sahyaka,./utils/embeddings/PMKVY_JobRoles/data/Ayurveda Ahar and Poshan Sahyaka.pt
+Ayurveda Dietician,./utils/embeddings/PMKVY_JobRoles/data/Ayurveda Dietician.pt
+Ayurveda Masseur,./utils/embeddings/PMKVY_JobRoles/data/Ayurveda Masseur.pt
+Backhoe Loader Operator,./utils/embeddings/PMKVY_JobRoles/data/Backhoe Loader Operator.pt
+Baking Techncian-Operative,./utils/embeddings/PMKVY_JobRoles/data/Baking Techncian-Operative.pt
+Bale Press Operator,./utils/embeddings/PMKVY_JobRoles/data/Bale Press Operator.pt
+Bamboo Grower,./utils/embeddings/PMKVY_JobRoles/data/Bamboo Grower.pt
+Bamboo Work Artisan,./utils/embeddings/PMKVY_JobRoles/data/Bamboo Work Artisan.pt
+Bar Bender and Steel fixer,./utils/embeddings/PMKVY_JobRoles/data/Bar Bender and Steel fixer.pt
+Basic Scaffold Inspector,./utils/embeddings/PMKVY_JobRoles/data/Basic Scaffold Inspector.pt
+Basics of Clinical Data Management,./utils/embeddings/PMKVY_JobRoles/data/Basics of Clinical Data Management.pt
+Batching Plant Operator,./utils/embeddings/PMKVY_JobRoles/data/Batching Plant Operator.pt
+Battery System Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Battery System Assembly Operator.pt
+Battery System Design Engineer,./utils/embeddings/PMKVY_JobRoles/data/Battery System Design Engineer.pt
+Battery System Repair Technician,./utils/embeddings/PMKVY_JobRoles/data/Battery System Repair Technician.pt
+Bead Extrusion and Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Bead Extrusion and Assembly Operator.pt
+Beam Carrier - Loader,./utils/embeddings/PMKVY_JobRoles/data/Beam Carrier - Loader.pt
+Beauty Therapist,./utils/embeddings/PMKVY_JobRoles/data/Beauty Therapist.pt
+Beekeeper,./utils/embeddings/PMKVY_JobRoles/data/Beekeeper.pt
+Bicycle Mechanic,./utils/embeddings/PMKVY_JobRoles/data/Bicycle Mechanic.pt
+Bioinformatics Associate- Analyst,./utils/embeddings/PMKVY_JobRoles/data/Bioinformatics Associate- Analyst.pt
+Bioinformatics Scientist,./utils/embeddings/PMKVY_JobRoles/data/Bioinformatics Scientist.pt
+Biologist- Biotechnologist,./utils/embeddings/PMKVY_JobRoles/data/Biologist- Biotechnologist.pt
+Biomass Depot Operator,./utils/embeddings/PMKVY_JobRoles/data/Biomass Depot Operator.pt
+Blockchain App Developer,./utils/embeddings/PMKVY_JobRoles/data/Blockchain App Developer.pt
+Blockchain Architect,./utils/embeddings/PMKVY_JobRoles/data/Blockchain Architect.pt
+Blockchain Security Engineer,./utils/embeddings/PMKVY_JobRoles/data/Blockchain Security Engineer.pt
+Blockchain Strategist,./utils/embeddings/PMKVY_JobRoles/data/Blockchain Strategist.pt
+Blockchain Support Analyst,./utils/embeddings/PMKVY_JobRoles/data/Blockchain Support Analyst.pt
+Blockchain Test Engineer,./utils/embeddings/PMKVY_JobRoles/data/Blockchain Test Engineer.pt
+Blowroom Operator,./utils/embeddings/PMKVY_JobRoles/data/Blowroom Operator.pt
+Bottom Polisher - Diamond Processing,./utils/embeddings/PMKVY_JobRoles/data/Bottom Polisher - Diamond Processing.pt
+Brackishwater Aquaculture Farmer- Crab,./utils/embeddings/PMKVY_JobRoles/data/Brackishwater Aquaculture Farmer- Crab.pt
+Brackishwater Aquaculture Farmer- Finfish,./utils/embeddings/PMKVY_JobRoles/data/Brackishwater Aquaculture Farmer- Finfish.pt
+Brackishwater Aquaculture Farmer,./utils/embeddings/PMKVY_JobRoles/data/Brackishwater Aquaculture Farmer.pt
+Brick Mason,./utils/embeddings/PMKVY_JobRoles/data/Brick Mason.pt
+"Bridal, Fashion & Portfolio Makeup Artist","./utils/embeddings/PMKVY_JobRoles/data/Bridal, Fashion & Portfolio Makeup Artist.pt"
+Broadbnd Technician,./utils/embeddings/PMKVY_JobRoles/data/Broadbnd Technician.pt
+Building Automation Specialist,./utils/embeddings/PMKVY_JobRoles/data/Building Automation Specialist.pt
+Building Management System Project Manager,./utils/embeddings/PMKVY_JobRoles/data/Building Management System Project Manager.pt
+Building Operator- Hoses,./utils/embeddings/PMKVY_JobRoles/data/Building Operator- Hoses.pt
+Bulk Milk Cooler (BMC) Operator,./utils/embeddings/PMKVY_JobRoles/data/Bulk Milk Cooler (BMC) Operator.pt
+Bulldozer Operator,./utils/embeddings/PMKVY_JobRoles/data/Bulldozer Operator.pt
+Business Correspondent-Facilitator,./utils/embeddings/PMKVY_JobRoles/data/Business Correspondent-Facilitator.pt
+Butter and Ghee Processing Operator,./utils/embeddings/PMKVY_JobRoles/data/Butter and Ghee Processing Operator.pt
+Cabling Technician,./utils/embeddings/PMKVY_JobRoles/data/Cabling Technician.pt
+CAD- CAM Designer- Plastic Product Including Toys,./utils/embeddings/PMKVY_JobRoles/data/CAD- CAM Designer- Plastic Product Including Toys.pt
+CAD- CAM Designer- Plastic Product,./utils/embeddings/PMKVY_JobRoles/data/CAD- CAM Designer- Plastic Product.pt
+Carbon Farming Practitioner,./utils/embeddings/PMKVY_JobRoles/data/Carbon Farming Practitioner.pt
+Card Puncher (Automatic Machine),./utils/embeddings/PMKVY_JobRoles/data/Card Puncher (Automatic Machine).pt
+Carding Operator,./utils/embeddings/PMKVY_JobRoles/data/Carding Operator.pt
+Career and Education Counsellor,./utils/embeddings/PMKVY_JobRoles/data/Career and Education Counsellor.pt
+"Carpenter- Kitchen, Cabinets, and Beds, General Repairs and Maintenance","./utils/embeddings/PMKVY_JobRoles/data/Carpenter- Kitchen, Cabinets, and Beds, General Repairs and Maintenance.pt"
+"Carpenter- Wooden Doors and Windows with Frames, General Repairs and Maintenance","./utils/embeddings/PMKVY_JobRoles/data/Carpenter- Wooden Doors and Windows with Frames, General Repairs and Maintenance.pt"
+Carpet Weaver,./utils/embeddings/PMKVY_JobRoles/data/Carpet Weaver.pt
+Carving Artisan,./utils/embeddings/PMKVY_JobRoles/data/Carving Artisan.pt
+Casting Operator (Metal Handicrafts),./utils/embeddings/PMKVY_JobRoles/data/Casting Operator (Metal Handicrafts).pt
+CCTV Installation Technician,./utils/embeddings/PMKVY_JobRoles/data/CCTV Installation Technician.pt
+CCTV Supervisor,./utils/embeddings/PMKVY_JobRoles/data/CCTV Supervisor.pt
+CCTV Video Footage Auditor,./utils/embeddings/PMKVY_JobRoles/data/CCTV Video Footage Auditor.pt
+Ceramics and Teracotta Toy Maker-,./utils/embeddings/PMKVY_JobRoles/data/Ceramics and Teracotta Toy Maker-.pt
+Character designer,./utils/embeddings/PMKVY_JobRoles/data/Character designer.pt
+"Chemist - Production (Pharma, Cosmetics & Biologics)- API - Excipient Manufacturing","./utils/embeddings/PMKVY_JobRoles/data/Chemist - Production (Pharma, Cosmetics & Biologics)- API - Excipient Manufacturing.pt"
+Chemist - Retail Pharmacy- Regulated Business Operations,./utils/embeddings/PMKVY_JobRoles/data/Chemist - Retail Pharmacy- Regulated Business Operations.pt
+"Chemist Store (Pharma, Biological Products and Medical Devices)","./utils/embeddings/PMKVY_JobRoles/data/Chemist Store (Pharma, Biological Products and Medical Devices).pt"
+Chick Sexing and Grading Technician,./utils/embeddings/PMKVY_JobRoles/data/Chick Sexing and Grading Technician.pt
+Chilling Plant Technician,./utils/embeddings/PMKVY_JobRoles/data/Chilling Plant Technician.pt
+Circular loom operator (Shuttle type),./utils/embeddings/PMKVY_JobRoles/data/Circular loom operator (Shuttle type).pt
+Clearance Support Agent,./utils/embeddings/PMKVY_JobRoles/data/Clearance Support Agent.pt
+Clinical Data Validation and Quality Control,./utils/embeddings/PMKVY_JobRoles/data/Clinical Data Validation and Quality Control.pt
+Cloud Administrator,./utils/embeddings/PMKVY_JobRoles/data/Cloud Administrator.pt
+Cloud Application Developer,./utils/embeddings/PMKVY_JobRoles/data/Cloud Application Developer.pt
+Cloud Architect,./utils/embeddings/PMKVY_JobRoles/data/Cloud Architect.pt
+Cloud Computing – Jr. Analyst,./utils/embeddings/PMKVY_JobRoles/data/Cloud Computing – Jr. Analyst.pt
+Cloud Consultant,./utils/embeddings/PMKVY_JobRoles/data/Cloud Consultant.pt
+Cloud Infrastructure analyst,./utils/embeddings/PMKVY_JobRoles/data/Cloud Infrastructure analyst.pt
+Cloud Risk and Compliance Officer,./utils/embeddings/PMKVY_JobRoles/data/Cloud Risk and Compliance Officer.pt
+Cloud Security Analyst,./utils/embeddings/PMKVY_JobRoles/data/Cloud Security Analyst.pt
+CMS Engineer - Wind Power Plant,./utils/embeddings/PMKVY_JobRoles/data/CMS Engineer - Wind Power Plant.pt
+CNC Operator Vertical Machining Center,./utils/embeddings/PMKVY_JobRoles/data/CNC Operator Vertical Machining Center.pt
+CNC Programmer,./utils/embeddings/PMKVY_JobRoles/data/CNC Programmer.pt
+Coconut Grower cum Primary Processor,./utils/embeddings/PMKVY_JobRoles/data/Coconut Grower cum Primary Processor.pt
+Cocoon tester cum purchaser- Textile MSME,./utils/embeddings/PMKVY_JobRoles/data/Cocoon tester cum purchaser- Textile MSME.pt
+Coffee Plantation Worker,./utils/embeddings/PMKVY_JobRoles/data/Coffee Plantation Worker.pt
+Cold Storage Technician,./utils/embeddings/PMKVY_JobRoles/data/Cold Storage Technician.pt
+Combing Operator,./utils/embeddings/PMKVY_JobRoles/data/Combing Operator.pt
+Combing Preparatory Operator,./utils/embeddings/PMKVY_JobRoles/data/Combing Preparatory Operator.pt
+Commis Electives- Pastry-Bakery Commis,./utils/embeddings/PMKVY_JobRoles/data/Commis Electives- Pastry-Bakery Commis.pt
+Community Journalist,./utils/embeddings/PMKVY_JobRoles/data/Community Journalist.pt
+Compactor Operator,./utils/embeddings/PMKVY_JobRoles/data/Compactor Operator.pt
+Compositor,./utils/embeddings/PMKVY_JobRoles/data/Compositor.pt
+Compressor Operator,./utils/embeddings/PMKVY_JobRoles/data/Compressor Operator.pt
+Concrete Pump Operator,./utils/embeddings/PMKVY_JobRoles/data/Concrete Pump Operator.pt
+Cone Winder-cum-Pirn Winder,./utils/embeddings/PMKVY_JobRoles/data/Cone Winder-cum-Pirn Winder.pt
+Cone Winding Operator-Manual & Assembly Winding,./utils/embeddings/PMKVY_JobRoles/data/Cone Winding Operator-Manual & Assembly Winding.pt
+Consignment Booking Assistant,./utils/embeddings/PMKVY_JobRoles/data/Consignment Booking Assistant.pt
+Consignment Tracking Executive,./utils/embeddings/PMKVY_JobRoles/data/Consignment Tracking Executive.pt
+Construction Electrician-LV,./utils/embeddings/PMKVY_JobRoles/data/Construction Electrician-LV.pt
+Construction Painter & Decorator,./utils/embeddings/PMKVY_JobRoles/data/Construction Painter & Decorator.pt
+Construction Technician-Wind Power Plant,./utils/embeddings/PMKVY_JobRoles/data/Construction Technician-Wind Power Plant.pt
+Consultant Network Security,./utils/embeddings/PMKVY_JobRoles/data/Consultant Network Security.pt
+Consumer Energy Meter Technician,./utils/embeddings/PMKVY_JobRoles/data/Consumer Energy Meter Technician.pt
+Core Blockchain Developer,./utils/embeddings/PMKVY_JobRoles/data/Core Blockchain Developer.pt
+Correspondent,./utils/embeddings/PMKVY_JobRoles/data/Correspondent.pt
+Cottage Cheese Maker,./utils/embeddings/PMKVY_JobRoles/data/Cottage Cheese Maker.pt
+Cotton Cultivator,./utils/embeddings/PMKVY_JobRoles/data/Cotton Cultivator.pt
+Counter Sales Executive- Tourism & Hospitality,./utils/embeddings/PMKVY_JobRoles/data/Counter Sales Executive- Tourism & Hospitality.pt
+Courier Delivery Executive,./utils/embeddings/PMKVY_JobRoles/data/Courier Delivery Executive.pt
+Course on Computer Concepts,./utils/embeddings/PMKVY_JobRoles/data/Course on Computer Concepts.pt
+Craft Baker(v3),./utils/embeddings/PMKVY_JobRoles/data/Craft Baker(v3).pt
+Crawler Crane Operator,./utils/embeddings/PMKVY_JobRoles/data/Crawler Crane Operator.pt
+Credit Processing Officer,./utils/embeddings/PMKVY_JobRoles/data/Credit Processing Officer.pt
+Crochet Lace Tailor,./utils/embeddings/PMKVY_JobRoles/data/Crochet Lace Tailor.pt
+Customer care Executive Non Voice (Divyangjan)-LD,./utils/embeddings/PMKVY_JobRoles/data/Customer care Executive Non Voice (Divyangjan)-LD.pt
+Customer Care Executive-Domestic- Non- Voice,./utils/embeddings/PMKVY_JobRoles/data/Customer Care Executive-Domestic- Non- Voice.pt
+Customer Care Executive-Domestic- Voice,./utils/embeddings/PMKVY_JobRoles/data/Customer Care Executive-Domestic- Voice.pt
+Customer Care Executive,./utils/embeddings/PMKVY_JobRoles/data/Customer Care Executive.pt
+Customer Service Executive - Elective 1 (Meet and Greet officer),./utils/embeddings/PMKVY_JobRoles/data/Customer Service Executive - Elective 1 (Meet and Greet officer).pt
+Cutter - Goods and Garments,./utils/embeddings/PMKVY_JobRoles/data/Cutter - Goods and Garments.pt
+Cutter- Footwear,./utils/embeddings/PMKVY_JobRoles/data/Cutter- Footwear.pt
+Cyber Security Assistant,./utils/embeddings/PMKVY_JobRoles/data/Cyber Security Assistant.pt
+Cyber Security Associate,./utils/embeddings/PMKVY_JobRoles/data/Cyber Security Associate.pt
+Dairy Farmer-Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Dairy Farmer-Entrepreneur.pt
+Dancer,./utils/embeddings/PMKVY_JobRoles/data/Dancer.pt
+DAS Set Top Box Installation & Service Technician,./utils/embeddings/PMKVY_JobRoles/data/DAS Set Top Box Installation & Service Technician.pt
+Data Annotator,./utils/embeddings/PMKVY_JobRoles/data/Data Annotator.pt
+Data Entry Operator (Divyangjan)-LD,./utils/embeddings/PMKVY_JobRoles/data/Data Entry Operator (Divyangjan)-LD.pt
+Data Feeder – Warehouse,./utils/embeddings/PMKVY_JobRoles/data/Data Feeder – Warehouse.pt
+DCS Programmer and Troubleshooter,./utils/embeddings/PMKVY_JobRoles/data/DCS Programmer and Troubleshooter.pt
+Debt Recovery Agent,./utils/embeddings/PMKVY_JobRoles/data/Debt Recovery Agent.pt
+Designer Plastic Products including toys,./utils/embeddings/PMKVY_JobRoles/data/Designer Plastic Products including toys.pt
+Desludging Operator,./utils/embeddings/PMKVY_JobRoles/data/Desludging Operator.pt
+DevOps Engineer,./utils/embeddings/PMKVY_JobRoles/data/DevOps Engineer.pt
+Diamond Assorter,./utils/embeddings/PMKVY_JobRoles/data/Diamond Assorter.pt
+Die Attach and Wire Bonding Engineer,./utils/embeddings/PMKVY_JobRoles/data/Die Attach and Wire Bonding Engineer.pt
+Digital Agriculture Extension Promoter,./utils/embeddings/PMKVY_JobRoles/data/Digital Agriculture Extension Promoter.pt
+Digital Cable Technician - Access,./utils/embeddings/PMKVY_JobRoles/data/Digital Cable Technician - Access.pt
+Direct Seller,./utils/embeddings/PMKVY_JobRoles/data/Direct Seller.pt
+Disrtibution Network Helper,./utils/embeddings/PMKVY_JobRoles/data/Disrtibution Network Helper.pt
+Distributor Sales Representative,./utils/embeddings/PMKVY_JobRoles/data/Distributor Sales Representative.pt
+Distributor Salesman,./utils/embeddings/PMKVY_JobRoles/data/Distributor Salesman.pt
+Domestic Biometric Data Operator,./utils/embeddings/PMKVY_JobRoles/data/Domestic Biometric Data Operator.pt
+Domestic IT Helpdesk Attendant,./utils/embeddings/PMKVY_JobRoles/data/Domestic IT Helpdesk Attendant.pt
+Draughtsman - Mechanical,./utils/embeddings/PMKVY_JobRoles/data/Draughtsman - Mechanical.pt
+Draughtsperson (Interior Design)- Commercial,./utils/embeddings/PMKVY_JobRoles/data/Draughtsperson (Interior Design)- Commercial.pt
+Draughtsperson (Interior Design)- Residential and Kitchen,./utils/embeddings/PMKVY_JobRoles/data/Draughtsperson (Interior Design)- Residential and Kitchen.pt
+Draw Frame Operator,./utils/embeddings/PMKVY_JobRoles/data/Draw Frame Operator.pt
+Drawing & Painting Artist,./utils/embeddings/PMKVY_JobRoles/data/Drawing & Painting Artist.pt
+Drive Test Engineer,./utils/embeddings/PMKVY_JobRoles/data/Drive Test Engineer.pt
+Drone Developer (Software),./utils/embeddings/PMKVY_JobRoles/data/Drone Developer (Software).pt
+Drone Manufacturing and Assembly Technician,./utils/embeddings/PMKVY_JobRoles/data/Drone Manufacturing and Assembly Technician.pt
+Drone Monitoring and Maintenance Associate,./utils/embeddings/PMKVY_JobRoles/data/Drone Monitoring and Maintenance Associate.pt
+Drone Multi Rotor Opertaor,./utils/embeddings/PMKVY_JobRoles/data/Drone Multi Rotor Opertaor.pt
+Drone operator - Over Dimensional Cargo,./utils/embeddings/PMKVY_JobRoles/data/Drone operator - Over Dimensional Cargo.pt
+Drone Service Technician,./utils/embeddings/PMKVY_JobRoles/data/Drone Service Technician.pt
+DTH Set Top Box Installation and Service Technician,./utils/embeddings/PMKVY_JobRoles/data/DTH Set Top Box Installation and Service Technician.pt
+Dumper-Tipper Operator,./utils/embeddings/PMKVY_JobRoles/data/Dumper-Tipper Operator.pt
+Dyestuff & Chemical Preparation Operator,./utils/embeddings/PMKVY_JobRoles/data/Dyestuff & Chemical Preparation Operator.pt
+Editor,./utils/embeddings/PMKVY_JobRoles/data/Editor.pt
+"Effluent Treatment Plant Operator – Life Sciences (Pharma, Bio-Pharma & Research)","./utils/embeddings/PMKVY_JobRoles/data/Effluent Treatment Plant Operator – Life Sciences (Pharma, Bio-Pharma & Research).pt"
+Electric Vehicle Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Assembly Operator.pt
+Electric Vehicle Assembly Technician,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Assembly Technician.pt
+Electric Vehicle Maintenance Technician,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Maintenance Technician.pt
+Electric Vehicle Product Design Engineer,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Product Design Engineer.pt
+Electric Vehicle Quality Control Inspector,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Quality Control Inspector.pt
+Electric Vehicle Service Lead Technician,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Service Lead Technician.pt
+Electric Vehicle Service technician,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Service technician.pt
+Electric Vehicle Test Engineer,./utils/embeddings/PMKVY_JobRoles/data/Electric Vehicle Test Engineer.pt
+Electrical Assembly Operator – Control Panel,./utils/embeddings/PMKVY_JobRoles/data/Electrical Assembly Operator – Control Panel.pt
+Electrical Technician,./utils/embeddings/PMKVY_JobRoles/data/Electrical Technician.pt
+Electrician - Domestic Solutions,./utils/embeddings/PMKVY_JobRoles/data/Electrician - Domestic Solutions.pt
+Electrician,./utils/embeddings/PMKVY_JobRoles/data/Electrician.pt
+Electronic Hardware Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Electronic Hardware Assembly Operator.pt
+Electronics Machine Maintenance Executive,./utils/embeddings/PMKVY_JobRoles/data/Electronics Machine Maintenance Executive.pt
+Embedded Full Stack IoT Analyst,./utils/embeddings/PMKVY_JobRoles/data/Embedded Full Stack IoT Analyst.pt
+Embedded Product Design Engineer - Technical Lead,./utils/embeddings/PMKVY_JobRoles/data/Embedded Product Design Engineer - Technical Lead.pt
+Embedded Software Engineer,./utils/embeddings/PMKVY_JobRoles/data/Embedded Software Engineer.pt
+Emergency Medical Technician-Basic,./utils/embeddings/PMKVY_JobRoles/data/Emergency Medical Technician-Basic.pt
+EMS Technician,./utils/embeddings/PMKVY_JobRoles/data/EMS Technician.pt
+Engineer-Technical Support(Level 1),./utils/embeddings/PMKVY_JobRoles/data/Engineer-Technical Support(Level 1).pt
+Engraving and Stamping Artisan,./utils/embeddings/PMKVY_JobRoles/data/Engraving and Stamping Artisan.pt
+Engraving- Carving- Etching Assistant,./utils/embeddings/PMKVY_JobRoles/data/Engraving- Carving- Etching Assistant.pt
+EOT Overhead Crane Operator,./utils/embeddings/PMKVY_JobRoles/data/EOT Overhead Crane Operator.pt
+Ergonomics Safety Steward,./utils/embeddings/PMKVY_JobRoles/data/Ergonomics Safety Steward.pt
+Excavator Operator,./utils/embeddings/PMKVY_JobRoles/data/Excavator Operator.pt
+Excavator- Pipeline,./utils/embeddings/PMKVY_JobRoles/data/Excavator- Pipeline.pt
+Executive – Secretarial Services,./utils/embeddings/PMKVY_JobRoles/data/Executive – Secretarial Services.pt
+Fabric Checker - Textiles,./utils/embeddings/PMKVY_JobRoles/data/Fabric Checker - Textiles.pt
+Fabric Mender - Textiles,./utils/embeddings/PMKVY_JobRoles/data/Fabric Mender - Textiles.pt
+Fabricator,./utils/embeddings/PMKVY_JobRoles/data/Fabricator.pt
+Failure Analysis & Reliability Engineer,./utils/embeddings/PMKVY_JobRoles/data/Failure Analysis & Reliability Engineer.pt
+False Ceiling and Drywall Installer,./utils/embeddings/PMKVY_JobRoles/data/False Ceiling and Drywall Installer.pt
+Fiber to-the Home (FTTH-X) Installer,./utils/embeddings/PMKVY_JobRoles/data/Fiber to-the Home (FTTH-X) Installer.pt
+Field Management Engineer,./utils/embeddings/PMKVY_JobRoles/data/Field Management Engineer.pt
+Field Sales Executive,./utils/embeddings/PMKVY_JobRoles/data/Field Sales Executive.pt
+Field Survey Enumerator,./utils/embeddings/PMKVY_JobRoles/data/Field Survey Enumerator.pt
+Field Technician - Air Conditioner,./utils/embeddings/PMKVY_JobRoles/data/Field Technician - Air Conditioner.pt
+Field Technician - Networking & Storage,./utils/embeddings/PMKVY_JobRoles/data/Field Technician - Networking & Storage.pt
+Field Technician - Other Home Appliances,./utils/embeddings/PMKVY_JobRoles/data/Field Technician - Other Home Appliances.pt
+Field Technician - UPS And Inverter,./utils/embeddings/PMKVY_JobRoles/data/Field Technician - UPS And Inverter.pt
+Field Technician Computing and Peripherals,./utils/embeddings/PMKVY_JobRoles/data/Field Technician Computing and Peripherals.pt
+Filer and Assembler,./utils/embeddings/PMKVY_JobRoles/data/Filer and Assembler.pt
+Finished Package Checker-cum-Packer - Spinning- Yarn Conditioning,./utils/embeddings/PMKVY_JobRoles/data/Finished Package Checker-cum-Packer - Spinning- Yarn Conditioning.pt
+Finisher and Packer,./utils/embeddings/PMKVY_JobRoles/data/Finisher and Packer.pt
+Fire Safety Technician (Oil & Gas),./utils/embeddings/PMKVY_JobRoles/data/Fire Safety Technician (Oil & Gas).pt
+Fish and Seafood Processing Technician,./utils/embeddings/PMKVY_JobRoles/data/Fish and Seafood Processing Technician.pt
+Fish Retailer,./utils/embeddings/PMKVY_JobRoles/data/Fish Retailer.pt
+Fisheries Extension Associate,./utils/embeddings/PMKVY_JobRoles/data/Fisheries Extension Associate.pt
+Fitness Trainer,./utils/embeddings/PMKVY_JobRoles/data/Fitness Trainer.pt
+Fitter - Chemical Processing (Textiles),./utils/embeddings/PMKVY_JobRoles/data/Fitter - Chemical Processing (Textiles).pt
+Fitter - Fabrication,./utils/embeddings/PMKVY_JobRoles/data/Fitter - Fabrication.pt
+Fitter - Post Spinning,./utils/embeddings/PMKVY_JobRoles/data/Fitter - Post Spinning.pt
+Fitter - Ring Spinning,./utils/embeddings/PMKVY_JobRoles/data/Fitter - Ring Spinning.pt
+Fitter - Shuttleless Weaving Machine- Air-Jet,./utils/embeddings/PMKVY_JobRoles/data/Fitter - Shuttleless Weaving Machine- Air-Jet.pt
+Fitter - Shuttleless Weaving Machine- Projectile,./utils/embeddings/PMKVY_JobRoles/data/Fitter - Shuttleless Weaving Machine- Projectile.pt
+Fitter Helper - Weaving,./utils/embeddings/PMKVY_JobRoles/data/Fitter Helper - Weaving.pt
+Fitter Spinning Preparatory,./utils/embeddings/PMKVY_JobRoles/data/Fitter Spinning Preparatory.pt
+Fitter Weaving Preparatory,./utils/embeddings/PMKVY_JobRoles/data/Fitter Weaving Preparatory.pt
+Fitter – Electrical and Electronic Assembly,./utils/embeddings/PMKVY_JobRoles/data/Fitter – Electrical and Electronic Assembly.pt
+Fitter – Mechanical Assembly,./utils/embeddings/PMKVY_JobRoles/data/Fitter – Mechanical Assembly.pt
+Floriculturist,./utils/embeddings/PMKVY_JobRoles/data/Floriculturist.pt
+Florist,./utils/embeddings/PMKVY_JobRoles/data/Florist.pt
+Food & Beverage Service Assistant,./utils/embeddings/PMKVY_JobRoles/data/Food & Beverage Service Assistant.pt
+Food Sales Promoter,./utils/embeddings/PMKVY_JobRoles/data/Food Sales Promoter.pt
+Food styling Photographer,./utils/embeddings/PMKVY_JobRoles/data/Food styling Photographer.pt
+Forensic Specialist,./utils/embeddings/PMKVY_JobRoles/data/Forensic Specialist.pt
+Forest Nursery Raiser,./utils/embeddings/PMKVY_JobRoles/data/Forest Nursery Raiser.pt
+Foundation for Pharma sales and Marketing,./utils/embeddings/PMKVY_JobRoles/data/Foundation for Pharma sales and Marketing.pt
+Four Wheeler Service Assistant,./utils/embeddings/PMKVY_JobRoles/data/Four Wheeler Service Assistant.pt
+Four Wheeler Service Technician,./utils/embeddings/PMKVY_JobRoles/data/Four Wheeler Service Technician.pt
+Freshwater Aquaculture Farmer,./utils/embeddings/PMKVY_JobRoles/data/Freshwater Aquaculture Farmer.pt
+Fruit Pulp Processing Technician (v3),./utils/embeddings/PMKVY_JobRoles/data/Fruit Pulp Processing Technician (v3).pt
+Functional Analyst - TMS,./utils/embeddings/PMKVY_JobRoles/data/Functional Analyst - TMS.pt
+Functional Analyst - WMS,./utils/embeddings/PMKVY_JobRoles/data/Functional Analyst - WMS.pt
+Fundamentals of Aggregation and Post-Harvest Handling of Farm Produce,./utils/embeddings/PMKVY_JobRoles/data/Fundamentals of Aggregation and Post-Harvest Handling of Farm Produce.pt
+Garbhini Rakshaka,./utils/embeddings/PMKVY_JobRoles/data/Garbhini Rakshaka.pt
+Gas Meter Reader,./utils/embeddings/PMKVY_JobRoles/data/Gas Meter Reader.pt
+Gemstone Final Shaper and Calibrator,./utils/embeddings/PMKVY_JobRoles/data/Gemstone Final Shaper and Calibrator.pt
+Gemstone Processor,./utils/embeddings/PMKVY_JobRoles/data/Gemstone Processor.pt
+General Duty Assistant,./utils/embeddings/PMKVY_JobRoles/data/General Duty Assistant.pt
+General Worker-Rubber Plantation,./utils/embeddings/PMKVY_JobRoles/data/General Worker-Rubber Plantation.pt
+Genetic Counselor,./utils/embeddings/PMKVY_JobRoles/data/Genetic Counselor.pt
+"Geriatric Caregiver (Institutional & Home Care)- Palliative Care, Dementia Care","./utils/embeddings/PMKVY_JobRoles/data/Geriatric Caregiver (Institutional & Home Care)- Palliative Care, Dementia Care.pt"
+Ginning Helper,./utils/embeddings/PMKVY_JobRoles/data/Ginning Helper.pt
+Goods Packaging Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Goods Packaging Machine Operator.pt
+Grader (Ribbed smoked sheet Trading),./utils/embeddings/PMKVY_JobRoles/data/Grader (Ribbed smoked sheet Trading).pt
+Grain Mill Operator,./utils/embeddings/PMKVY_JobRoles/data/Grain Mill Operator.pt
+Graphic Designer,./utils/embeddings/PMKVY_JobRoles/data/Graphic Designer.pt
+Grass Root Telecom Provider,./utils/embeddings/PMKVY_JobRoles/data/Grass Root Telecom Provider.pt
+Green Hydrogen Plant Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Green Hydrogen Plant Entrepreneur.pt
+Green Hydrogen Plant Junior Technician- Desalination,./utils/embeddings/PMKVY_JobRoles/data/Green Hydrogen Plant Junior Technician- Desalination.pt
+Green Hydrogen Plant Junior Technician- Electrolyser,./utils/embeddings/PMKVY_JobRoles/data/Green Hydrogen Plant Junior Technician- Electrolyser.pt
+Green Hydrogen Plant Junior Technician- Power Sources,./utils/embeddings/PMKVY_JobRoles/data/Green Hydrogen Plant Junior Technician- Power Sources.pt
+Green Hydrogen Plant Junior Technician- Storage,./utils/embeddings/PMKVY_JobRoles/data/Green Hydrogen Plant Junior Technician- Storage.pt
+Green Hydrogen Plant Technician,./utils/embeddings/PMKVY_JobRoles/data/Green Hydrogen Plant Technician.pt
+Greenhouse Operator,./utils/embeddings/PMKVY_JobRoles/data/Greenhouse Operator.pt
+Guest Service Associate (Food & Beverage) Barista Executive,./utils/embeddings/PMKVY_JobRoles/data/Guest Service Associate (Food & Beverage) Barista Executive.pt
+Guest Service Associate (Food & Beverage) Food & Beverage Service Associate,./utils/embeddings/PMKVY_JobRoles/data/Guest Service Associate (Food & Beverage) Food & Beverage Service Associate.pt
+Guest Service Associate (Front Office),./utils/embeddings/PMKVY_JobRoles/data/Guest Service Associate (Front Office).pt
+Gym Assistant (B&W),./utils/embeddings/PMKVY_JobRoles/data/Gym Assistant (B&W).pt
+Hand Block Printer,./utils/embeddings/PMKVY_JobRoles/data/Hand Block Printer.pt
+Hand Crochet Lace Maker,./utils/embeddings/PMKVY_JobRoles/data/Hand Crochet Lace Maker.pt
+Hand Embroiderer (Addawala),./utils/embeddings/PMKVY_JobRoles/data/Hand Embroiderer (Addawala).pt
+Hand Knitting Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Hand Knitting Machine Operator.pt
+Hand Spinning Operator,./utils/embeddings/PMKVY_JobRoles/data/Hand Spinning Operator.pt
+Handheld Devices (Handset & Tablet) Technician,./utils/embeddings/PMKVY_JobRoles/data/Handheld Devices (Handset & Tablet) Technician.pt
+Handloom Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Handloom Entrepreneur.pt
+Hank Dyer,./utils/embeddings/PMKVY_JobRoles/data/Hank Dyer.pt
+Hatchery Operator,./utils/embeddings/PMKVY_JobRoles/data/Hatchery Operator.pt
+Healthcare Quality Assurance Manager,./utils/embeddings/PMKVY_JobRoles/data/Healthcare Quality Assurance Manager.pt
+Helper -  Utility Hand Plant Operations,./utils/embeddings/PMKVY_JobRoles/data/Helper -  Utility Hand Plant Operations.pt
+Helper - Footwear Upper Making,./utils/embeddings/PMKVY_JobRoles/data/Helper - Footwear Upper Making.pt
+Helper Bar Bender and Steel Fixer,./utils/embeddings/PMKVY_JobRoles/data/Helper Bar Bender and Steel Fixer.pt
+Helper Electrician,./utils/embeddings/PMKVY_JobRoles/data/Helper Electrician.pt
+Helper Mason,./utils/embeddings/PMKVY_JobRoles/data/Helper Mason.pt
+HEMM Mechanic,./utils/embeddings/PMKVY_JobRoles/data/HEMM Mechanic.pt
+Hindi Typist,./utils/embeddings/PMKVY_JobRoles/data/Hindi Typist.pt
+HMI-SCADA Programmer and Troubleshooter,./utils/embeddings/PMKVY_JobRoles/data/HMI-SCADA Programmer and Troubleshooter.pt
+Hot Mix Plant Operator,./utils/embeddings/PMKVY_JobRoles/data/Hot Mix Plant Operator.pt
+House Keeper - Mechanised Equipments,./utils/embeddings/PMKVY_JobRoles/data/House Keeper - Mechanised Equipments.pt
+Housekeeping Assistant,./utils/embeddings/PMKVY_JobRoles/data/Housekeeping Assistant.pt
+HR Executive - Payroll and Employee Data Management,./utils/embeddings/PMKVY_JobRoles/data/HR Executive - Payroll and Employee Data Management.pt
+HVAC Technician,./utils/embeddings/PMKVY_JobRoles/data/HVAC Technician.pt
+Hydra Crane Operator,./utils/embeddings/PMKVY_JobRoles/data/Hydra Crane Operator.pt
+Hydroponics Technician,./utils/embeddings/PMKVY_JobRoles/data/Hydroponics Technician.pt
+Hygiene Coordinator,./utils/embeddings/PMKVY_JobRoles/data/Hygiene Coordinator.pt
+IC Package Engineer,./utils/embeddings/PMKVY_JobRoles/data/IC Package Engineer.pt
+Ice Cream Processing Technician,./utils/embeddings/PMKVY_JobRoles/data/Ice Cream Processing Technician.pt
+Ikkat Artisan,./utils/embeddings/PMKVY_JobRoles/data/Ikkat Artisan.pt
+In - Store Demonstrator,./utils/embeddings/PMKVY_JobRoles/data/In - Store Demonstrator.pt
+In Store Promoter,./utils/embeddings/PMKVY_JobRoles/data/In Store Promoter.pt
+Incoming Materials Inspector - Electronics Items,./utils/embeddings/PMKVY_JobRoles/data/Incoming Materials Inspector - Electronics Items.pt
+Industrial Automation Specialist,./utils/embeddings/PMKVY_JobRoles/data/Industrial Automation Specialist.pt
+Industrial Automation Technician,./utils/embeddings/PMKVY_JobRoles/data/Industrial Automation Technician.pt
+Industrial Electrician (Oil & Gas),./utils/embeddings/PMKVY_JobRoles/data/Industrial Electrician (Oil & Gas).pt
+Industrial Production Worker,./utils/embeddings/PMKVY_JobRoles/data/Industrial Production Worker.pt
+Industrial Welder (Oil & Gas),./utils/embeddings/PMKVY_JobRoles/data/Industrial Welder (Oil & Gas).pt
+Information and Communication Technology (ICT) Engineer - 5G Networks,./utils/embeddings/PMKVY_JobRoles/data/Information and Communication Technology (ICT) Engineer - 5G Networks.pt
+Infrastructure Technician - 5G Networks,./utils/embeddings/PMKVY_JobRoles/data/Infrastructure Technician - 5G Networks.pt
+Inland Capture Fisherman cum Primary Processor,./utils/embeddings/PMKVY_JobRoles/data/Inland Capture Fisherman cum Primary Processor.pt
+Inlay Artisan - Stonecraft,./utils/embeddings/PMKVY_JobRoles/data/Inlay Artisan - Stonecraft.pt
+Installation and Commissioning Technician (AM-FM Radio Station),./utils/embeddings/PMKVY_JobRoles/data/Installation and Commissioning Technician (AM-FM Radio Station).pt
+Instrumentation Technician (Control Valve),./utils/embeddings/PMKVY_JobRoles/data/Instrumentation Technician (Control Valve).pt
+Instrumentation Technician (Process Control),./utils/embeddings/PMKVY_JobRoles/data/Instrumentation Technician (Process Control).pt
+Insurance Agent,./utils/embeddings/PMKVY_JobRoles/data/Insurance Agent.pt
+Integrated Farming Practitioner,./utils/embeddings/PMKVY_JobRoles/data/Integrated Farming Practitioner.pt
+Interior Landscaper,./utils/embeddings/PMKVY_JobRoles/data/Interior Landscaper.pt
+Internet of Things (IoT) Assistant,./utils/embeddings/PMKVY_JobRoles/data/Internet of Things (IoT) Assistant.pt
+Internet of Things (IoT) Associate,./utils/embeddings/PMKVY_JobRoles/data/Internet of Things (IoT) Associate.pt
+Internet of Things (IoT) Developer,./utils/embeddings/PMKVY_JobRoles/data/Internet of Things (IoT) Developer.pt
+Inventory Clerk,./utils/embeddings/PMKVY_JobRoles/data/Inventory Clerk.pt
+IoT - Domain Specialist,./utils/embeddings/PMKVY_JobRoles/data/IoT - Domain Specialist.pt
+IoT - Network Specialist,./utils/embeddings/PMKVY_JobRoles/data/IoT - Network Specialist.pt
+IoT - Product Manager,./utils/embeddings/PMKVY_JobRoles/data/IoT - Product Manager.pt
+IoT - Security Specialist,./utils/embeddings/PMKVY_JobRoles/data/IoT - Security Specialist.pt
+IoT - Software Analyst,./utils/embeddings/PMKVY_JobRoles/data/IoT - Software Analyst.pt
+IoT - Solution Architect,./utils/embeddings/PMKVY_JobRoles/data/IoT - Solution Architect.pt
+IoT - Test Analyst,./utils/embeddings/PMKVY_JobRoles/data/IoT - Test Analyst.pt
+IoT Hardware Analyst,./utils/embeddings/PMKVY_JobRoles/data/IoT Hardware Analyst.pt
+IoT Installation Solution Architect,./utils/embeddings/PMKVY_JobRoles/data/IoT Installation Solution Architect.pt
+IoT Technical Service Operator,./utils/embeddings/PMKVY_JobRoles/data/IoT Technical Service Operator.pt
+Irrigation Pump Technician (Small Capacity),./utils/embeddings/PMKVY_JobRoles/data/Irrigation Pump Technician (Small Capacity).pt
+IT Coordinator In School,./utils/embeddings/PMKVY_JobRoles/data/IT Coordinator In School.pt
+Jack Hammer Operator,./utils/embeddings/PMKVY_JobRoles/data/Jack Hammer Operator.pt
+Jacquard Harness Builder,./utils/embeddings/PMKVY_JobRoles/data/Jacquard Harness Builder.pt
+Jacquard Weaver - Handloom,./utils/embeddings/PMKVY_JobRoles/data/Jacquard Weaver - Handloom.pt
+Jal Mitra,./utils/embeddings/PMKVY_JobRoles/data/Jal Mitra.pt
+Jewellery Appraiser and Valuer,./utils/embeddings/PMKVY_JobRoles/data/Jewellery Appraiser and Valuer.pt
+Jewellery Designer - CAD,./utils/embeddings/PMKVY_JobRoles/data/Jewellery Designer - CAD.pt
+Jewellery Designer,./utils/embeddings/PMKVY_JobRoles/data/Jewellery Designer.pt
+Jewellery Frame and Component maker,./utils/embeddings/PMKVY_JobRoles/data/Jewellery Frame and Component maker.pt
+Jewellery Polisher and Cleaner,./utils/embeddings/PMKVY_JobRoles/data/Jewellery Polisher and Cleaner.pt
+Jewellery Retail Merchandiser,./utils/embeddings/PMKVY_JobRoles/data/Jewellery Retail Merchandiser.pt
+Jr. CAM Programmer CNC Milling & Turn Mill,./utils/embeddings/PMKVY_JobRoles/data/Jr. CAM Programmer CNC Milling & Turn Mill.pt
+Jr. Designer - Die and Mould for Plastics,./utils/embeddings/PMKVY_JobRoles/data/Jr. Designer - Die and Mould for Plastics.pt
+Jr. Designer - Plastic Products,./utils/embeddings/PMKVY_JobRoles/data/Jr. Designer - Plastic Products.pt
+Jr. Machine Operator - CNC Milling of Plastic,./utils/embeddings/PMKVY_JobRoles/data/Jr. Machine Operator - CNC Milling of Plastic.pt
+Jr. Technician - Last Mile Active Network,./utils/embeddings/PMKVY_JobRoles/data/Jr. Technician - Last Mile Active Network.pt
+Jumbo Drill Operator,./utils/embeddings/PMKVY_JobRoles/data/Jumbo Drill Operator.pt
+Junior Backhoe Operator,./utils/embeddings/PMKVY_JobRoles/data/Junior Backhoe Operator.pt
+Junior Cyber Security Associate,./utils/embeddings/PMKVY_JobRoles/data/Junior Cyber Security Associate.pt
+Junior Engineer - Power Distribution,./utils/embeddings/PMKVY_JobRoles/data/Junior Engineer - Power Distribution.pt
+Junior Excavator Operator,./utils/embeddings/PMKVY_JobRoles/data/Junior Excavator Operator.pt
+Junior Field Technician  - Home Appliances,./utils/embeddings/PMKVY_JobRoles/data/Junior Field Technician  - Home Appliances.pt
+Junior Instrumentation Technician (Process Control),./utils/embeddings/PMKVY_JobRoles/data/Junior Instrumentation Technician (Process Control).pt
+Junior Mechanic (Electrical- Electronics- Instrumentation),./utils/embeddings/PMKVY_JobRoles/data/Junior Mechanic (Electrical- Electronics- Instrumentation).pt
+Junior Mechanic (Engine),./utils/embeddings/PMKVY_JobRoles/data/Junior Mechanic (Engine).pt
+Junior Mechanic (Hydraulic),./utils/embeddings/PMKVY_JobRoles/data/Junior Mechanic (Hydraulic).pt
+Junior Operator Crane,./utils/embeddings/PMKVY_JobRoles/data/Junior Operator Crane.pt
+Junior Paver Operator-Screedman,./utils/embeddings/PMKVY_JobRoles/data/Junior Paver Operator-Screedman.pt
+Junior Rubber Technician-Technical Assistant (Rubber),./utils/embeddings/PMKVY_JobRoles/data/Junior Rubber Technician-Technical Assistant (Rubber).pt
+Junior Software Developer,./utils/embeddings/PMKVY_JobRoles/data/Junior Software Developer.pt
+Junior Technician- Solar EV charging station,./utils/embeddings/PMKVY_JobRoles/data/Junior Technician- Solar EV charging station.pt
+Junior Technician-Solar Cold Storage,./utils/embeddings/PMKVY_JobRoles/data/Junior Technician-Solar Cold Storage.pt
+Junior Tower Crane Operator-Signalman,./utils/embeddings/PMKVY_JobRoles/data/Junior Tower Crane Operator-Signalman.pt
+Jute Beaming Operator,./utils/embeddings/PMKVY_JobRoles/data/Jute Beaming Operator.pt
+Jute Carding Operator,./utils/embeddings/PMKVY_JobRoles/data/Jute Carding Operator.pt
+Jute Products Stitching Operator,./utils/embeddings/PMKVY_JobRoles/data/Jute Products Stitching Operator.pt
+Jute Selector cum Assorter,./utils/embeddings/PMKVY_JobRoles/data/Jute Selector cum Assorter.pt
+Jute spinning Sardar (Jobber) cum Jr. Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Jute spinning Sardar (Jobber) cum Jr. Supervisor.pt
+Jute Weft Winding Operator,./utils/embeddings/PMKVY_JobRoles/data/Jute Weft Winding Operator.pt
+Kalamkari Artisan,./utils/embeddings/PMKVY_JobRoles/data/Kalamkari Artisan.pt
+Key Consignor Executive,./utils/embeddings/PMKVY_JobRoles/data/Key Consignor Executive.pt
+Kisan Drone Operator,./utils/embeddings/PMKVY_JobRoles/data/Kisan Drone Operator.pt
+Kitchen Trainee,./utils/embeddings/PMKVY_JobRoles/data/Kitchen Trainee.pt
+Knitting Machine Operator Circular Knitting,./utils/embeddings/PMKVY_JobRoles/data/Knitting Machine Operator Circular Knitting.pt
+Knitting Machine Operator Flat Bed Knitting,./utils/embeddings/PMKVY_JobRoles/data/Knitting Machine Operator Flat Bed Knitting.pt
+Knitting Machine Operator Warp Knitting,./utils/embeddings/PMKVY_JobRoles/data/Knitting Machine Operator Warp Knitting.pt
+Knotting Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Knotting Machine Operator.pt
+Lab Chemist (Latex),./utils/embeddings/PMKVY_JobRoles/data/Lab Chemist (Latex).pt
+Lab Chemist-Rubber,./utils/embeddings/PMKVY_JobRoles/data/Lab Chemist-Rubber.pt
+Land Transportation Executive,./utils/embeddings/PMKVY_JobRoles/data/Land Transportation Executive.pt
+Laser Marking & Cutting Process Engineer,./utils/embeddings/PMKVY_JobRoles/data/Laser Marking & Cutting Process Engineer.pt
+Laser Sawing Machine Operator - Diamond Processing,./utils/embeddings/PMKVY_JobRoles/data/Laser Sawing Machine Operator - Diamond Processing.pt
+Lasting Operator - Footwear,./utils/embeddings/PMKVY_JobRoles/data/Lasting Operator - Footwear.pt
+Latex Harvest Technician (Tapper),./utils/embeddings/PMKVY_JobRoles/data/Latex Harvest Technician (Tapper).pt
+LED light repair Technician (Divyangjan)-LD,./utils/embeddings/PMKVY_JobRoles/data/LED light repair Technician (Divyangjan)-LD.pt
+LED Light Repair Technician,./utils/embeddings/PMKVY_JobRoles/data/LED Light Repair Technician.pt
+LED Luminary Mechanical Assembly and Testing Technician,./utils/embeddings/PMKVY_JobRoles/data/LED Luminary Mechanical Assembly and Testing Technician.pt
+Lifeguard Pool,./utils/embeddings/PMKVY_JobRoles/data/Lifeguard Pool.pt
+Line Assembler - Telecom Products,./utils/embeddings/PMKVY_JobRoles/data/Line Assembler - Telecom Products.pt
+Line Patrolling Man (Oil & Gas),./utils/embeddings/PMKVY_JobRoles/data/Line Patrolling Man (Oil & Gas).pt
+Lineman Distribution Technician,./utils/embeddings/PMKVY_JobRoles/data/Lineman Distribution Technician.pt
+Livestock Green Management Promoter,./utils/embeddings/PMKVY_JobRoles/data/Livestock Green Management Promoter.pt
+Livestock Service Provider,./utils/embeddings/PMKVY_JobRoles/data/Livestock Service Provider.pt
+Loader Operator (Mining),./utils/embeddings/PMKVY_JobRoles/data/Loader Operator (Mining).pt
+Loader Operator-Underground,./utils/embeddings/PMKVY_JobRoles/data/Loader Operator-Underground.pt
+Loading Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Loading Supervisor.pt
+Loin Loom Weaver,./utils/embeddings/PMKVY_JobRoles/data/Loin Loom Weaver.pt
+LPG Mechanic,./utils/embeddings/PMKVY_JobRoles/data/LPG Mechanic.pt
+Machine Learning (ML) Engineer,./utils/embeddings/PMKVY_JobRoles/data/Machine Learning (ML) Engineer.pt
+Machine Operator - Injection Moulding Plastic,./utils/embeddings/PMKVY_JobRoles/data/Machine Operator - Injection Moulding Plastic.pt
+Machine Operator - Sanitary Napkin,./utils/embeddings/PMKVY_JobRoles/data/Machine Operator - Sanitary Napkin.pt
+Machine Operator - Stretch Blow Moulding Plastic,./utils/embeddings/PMKVY_JobRoles/data/Machine Operator - Stretch Blow Moulding Plastic.pt
+Machine Operator -CNC Turning of Plastic (Lathe),./utils/embeddings/PMKVY_JobRoles/data/Machine Operator -CNC Turning of Plastic (Lathe).pt
+Machine Operator – CNC Milling of Plastic,./utils/embeddings/PMKVY_JobRoles/data/Machine Operator – CNC Milling of Plastic.pt
+Maintenance Technician,./utils/embeddings/PMKVY_JobRoles/data/Maintenance Technician.pt
+Make-up Artist,./utils/embeddings/PMKVY_JobRoles/data/Make-up Artist.pt
+Manual Metal Arc Welding-Shielded Metal Arc Welding Welder,./utils/embeddings/PMKVY_JobRoles/data/Manual Metal Arc Welding-Shielded Metal Arc Welding Welder.pt
+Mason Concrete,./utils/embeddings/PMKVY_JobRoles/data/Mason Concrete.pt
+Mason Tiling,./utils/embeddings/PMKVY_JobRoles/data/Mason Tiling.pt
+Master Gardener,./utils/embeddings/PMKVY_JobRoles/data/Master Gardener.pt
+Master Wellness Neurotherapist,./utils/embeddings/PMKVY_JobRoles/data/Master Wellness Neurotherapist.pt
+Material Handling Equipment (MHE) Maintenance Technician,./utils/embeddings/PMKVY_JobRoles/data/Material Handling Equipment (MHE) Maintenance Technician.pt
+Mechanic (Electrical- Electronics-Instrumentation),./utils/embeddings/PMKVY_JobRoles/data/Mechanic (Electrical- Electronics-Instrumentation).pt
+Mechanic (Engine),./utils/embeddings/PMKVY_JobRoles/data/Mechanic (Engine).pt
+Mechanic (Hydraulic),./utils/embeddings/PMKVY_JobRoles/data/Mechanic (Hydraulic).pt
+Mechanic - Belt Conveyor,./utils/embeddings/PMKVY_JobRoles/data/Mechanic - Belt Conveyor.pt
+Mechanic- Hydraulic & Pneumatic System,./utils/embeddings/PMKVY_JobRoles/data/Mechanic- Hydraulic & Pneumatic System.pt
+Mechanical Engineering & Plumbing General Manager,./utils/embeddings/PMKVY_JobRoles/data/Mechanical Engineering & Plumbing General Manager.pt
+Mechanical Fitter Electronics,./utils/embeddings/PMKVY_JobRoles/data/Mechanical Fitter Electronics.pt
+Mechatronics Designer & System Integrator,./utils/embeddings/PMKVY_JobRoles/data/Mechatronics Designer & System Integrator.pt
+Mechatronics Maintenance Specialist,./utils/embeddings/PMKVY_JobRoles/data/Mechatronics Maintenance Specialist.pt
+Medical Equipment Assistant (Basic Clinical Equipment),./utils/embeddings/PMKVY_JobRoles/data/Medical Equipment Assistant (Basic Clinical Equipment).pt
+Medical Sales Representative,./utils/embeddings/PMKVY_JobRoles/data/Medical Sales Representative.pt
+Medicinal and Aromatic Plants Grower,./utils/embeddings/PMKVY_JobRoles/data/Medicinal and Aromatic Plants Grower.pt
+Merchandiser,./utils/embeddings/PMKVY_JobRoles/data/Merchandiser.pt
+Merchant Relationship Executive,./utils/embeddings/PMKVY_JobRoles/data/Merchant Relationship Executive.pt
+Metal Inert Gas - Metal Active Gas -Gas Metal Arc Welder (MIG-MAG-GMAW),./utils/embeddings/PMKVY_JobRoles/data/Metal Inert Gas - Metal Active Gas -Gas Metal Arc Welder (MIG-MAG-GMAW).pt
+Metal Setter (Basic),./utils/embeddings/PMKVY_JobRoles/data/Metal Setter (Basic).pt
+Micro-Irrigation Technician,./utils/embeddings/PMKVY_JobRoles/data/Micro-Irrigation Technician.pt
+Microfinace Executive,./utils/embeddings/PMKVY_JobRoles/data/Microfinace Executive.pt
+Milk Procurement & Input Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Milk Procurement & Input Supervisor.pt
+Mine Electrician,./utils/embeddings/PMKVY_JobRoles/data/Mine Electrician.pt
+Mine Mechanic-Fitter,./utils/embeddings/PMKVY_JobRoles/data/Mine Mechanic-Fitter.pt
+Mine Shotfirer-Blaster,./utils/embeddings/PMKVY_JobRoles/data/Mine Shotfirer-Blaster.pt
+Mine Welder,./utils/embeddings/PMKVY_JobRoles/data/Mine Welder.pt
+Mineral Processing Operator,./utils/embeddings/PMKVY_JobRoles/data/Mineral Processing Operator.pt
+Mining Mate-Sirdar,./utils/embeddings/PMKVY_JobRoles/data/Mining Mate-Sirdar.pt
+MIS Data Analyst – Financial Services,./utils/embeddings/PMKVY_JobRoles/data/MIS Data Analyst – Financial Services.pt
+Mobile Device Management Analyst,./utils/embeddings/PMKVY_JobRoles/data/Mobile Device Management Analyst.pt
+Mobile Phone Hardware Repair Technician,./utils/embeddings/PMKVY_JobRoles/data/Mobile Phone Hardware Repair Technician.pt
+Molding Process Engineer,./utils/embeddings/PMKVY_JobRoles/data/Molding Process Engineer.pt
+Motor & Controller Repairing Technician,./utils/embeddings/PMKVY_JobRoles/data/Motor & Controller Repairing Technician.pt
+Motor and Controller Design Engineer,./utils/embeddings/PMKVY_JobRoles/data/Motor and Controller Design Engineer.pt
+"Mulberry cocoon sorter, drier cum grader","./utils/embeddings/PMKVY_JobRoles/data/Mulberry cocoon sorter, drier cum grader.pt"
+Multi - Purpose Associate,./utils/embeddings/PMKVY_JobRoles/data/Multi - Purpose Associate.pt
+Multi Skill Technician (Electrical),./utils/embeddings/PMKVY_JobRoles/data/Multi Skill Technician (Electrical).pt
+Multipurpose Assistant- Furniture Production and Installation- Installation,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Installation.pt
+"Multipurpose Assistant- Furniture Production and Installation- Machine Shop, Installation","./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Machine Shop, Installation.pt"
+Multipurpose Assistant- Furniture Production and Installation- Machine Shop,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Machine Shop.pt
+Multipurpose Assistant- Furniture Production and Installation- Packaging,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Packaging.pt
+Multipurpose Assistant- Furniture Production and Installation- Storekeeping & Warehousing,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Storekeeping & Warehousing.pt
+Multipurpose Assistant- Furniture Production and Installation- Surface Finishing,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Surface Finishing.pt
+Multipurpose Assistant- Furniture Production and Installation- Upholstery,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Upholstery.pt
+"Multipurpose Assistant- Furniture Production and Installation- Wood Workshop, Installation","./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Wood Workshop, Installation.pt"
+Multipurpose Assistant- Furniture Production and Installation- Wood Workshop,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Assistant- Furniture Production and Installation- Wood Workshop.pt
+Multipurpose Draughtsperson (Design and Build)- Furniture Design,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Draughtsperson (Design and Build)- Furniture Design.pt
+Multipurpose Draughtsperson (Design and Build)- Interior Design,./utils/embeddings/PMKVY_JobRoles/data/Multipurpose Draughtsperson (Design and Build)- Interior Design.pt
+Music Programmer,./utils/embeddings/PMKVY_JobRoles/data/Music Programmer.pt
+Nail Technician,./utils/embeddings/PMKVY_JobRoles/data/Nail Technician.pt
+O&M Electrical & Instrumentation Technician- Wind Power Plant,./utils/embeddings/PMKVY_JobRoles/data/O&M Electrical & Instrumentation Technician- Wind Power Plant.pt
+O&M Mechanical Technician-Wind Power Plant,./utils/embeddings/PMKVY_JobRoles/data/O&M Mechanical Technician-Wind Power Plant.pt
+Office Assistant,./utils/embeddings/PMKVY_JobRoles/data/Office Assistant.pt
+Office Operations Executive,./utils/embeddings/PMKVY_JobRoles/data/Office Operations Executive.pt
+Oilseed Crop Grower,./utils/embeddings/PMKVY_JobRoles/data/Oilseed Crop Grower.pt
+Open-End Spinning Tenter,./utils/embeddings/PMKVY_JobRoles/data/Open-End Spinning Tenter.pt
+Operator - Mobile Equipment,./utils/embeddings/PMKVY_JobRoles/data/Operator - Mobile Equipment.pt
+Operator - Plasma Cutter,./utils/embeddings/PMKVY_JobRoles/data/Operator - Plasma Cutter.pt
+Operator Plastic Extrusion Machine,./utils/embeddings/PMKVY_JobRoles/data/Operator Plastic Extrusion Machine.pt
+Operator- Plastic 3D printing,./utils/embeddings/PMKVY_JobRoles/data/Operator- Plastic 3D printing.pt
+Optical Fiber Splicer,./utils/embeddings/PMKVY_JobRoles/data/Optical Fiber Splicer.pt
+Optical Fiber Technician,./utils/embeddings/PMKVY_JobRoles/data/Optical Fiber Technician.pt
+Organic Farm & Business Promoter,./utils/embeddings/PMKVY_JobRoles/data/Organic Farm & Business Promoter.pt
+Organic Grower,./utils/embeddings/PMKVY_JobRoles/data/Organic Grower.pt
+Ornamental Fish Farmer,./utils/embeddings/PMKVY_JobRoles/data/Ornamental Fish Farmer.pt
+Package Design Engineer,./utils/embeddings/PMKVY_JobRoles/data/Package Design Engineer.pt
+Packaging Designer,./utils/embeddings/PMKVY_JobRoles/data/Packaging Designer.pt
+Packing Machine Worker-Food Processing,./utils/embeddings/PMKVY_JobRoles/data/Packing Machine Worker-Food Processing.pt
+Panchakarma Assistant,./utils/embeddings/PMKVY_JobRoles/data/Panchakarma Assistant.pt
+Pantry Associate,./utils/embeddings/PMKVY_JobRoles/data/Pantry Associate.pt
+Paper Mache Products Artisan,./utils/embeddings/PMKVY_JobRoles/data/Paper Mache Products Artisan.pt
+Patient Relations Associate,./utils/embeddings/PMKVY_JobRoles/data/Patient Relations Associate.pt
+Paver Operator,./utils/embeddings/PMKVY_JobRoles/data/Paver Operator.pt
+Payal Maker,./utils/embeddings/PMKVY_JobRoles/data/Payal Maker.pt
+Payment and Transaction management,./utils/embeddings/PMKVY_JobRoles/data/Payment and Transaction management.pt
+PCB Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/PCB Assembly Operator.pt
+Pedicurist & Manicurist,./utils/embeddings/PMKVY_JobRoles/data/Pedicurist & Manicurist.pt
+Personal Trainer (B&W),./utils/embeddings/PMKVY_JobRoles/data/Personal Trainer (B&W).pt
+Pharmacovigilance Case- Processing (Incidents -adverse event using software including AI tools),./utils/embeddings/PMKVY_JobRoles/data/Pharmacovigilance Case- Processing (Incidents -adverse event using software including AI tools).pt
+Physical Education Assistant (Primary Years),./utils/embeddings/PMKVY_JobRoles/data/Physical Education Assistant (Primary Years).pt
+Pick And Place Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Pick And Place Assembly Operator.pt
+Pipe Fitter (Power Plant),./utils/embeddings/PMKVY_JobRoles/data/Pipe Fitter (Power Plant).pt
+Pipe Fitter – Oil & Gas-City Gas Distribution,./utils/embeddings/PMKVY_JobRoles/data/Pipe Fitter – Oil & Gas-City Gas Distribution.pt
+Pirn Winding Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Pirn Winding Machine Operator.pt
+Planner-Diamond processing,./utils/embeddings/PMKVY_JobRoles/data/Planner-Diamond processing.pt
+Plant Biscuit Production Specialist,./utils/embeddings/PMKVY_JobRoles/data/Plant Biscuit Production Specialist.pt
+Plant Nursery Associate,./utils/embeddings/PMKVY_JobRoles/data/Plant Nursery Associate.pt
+Plastic Waste Segregator,./utils/embeddings/PMKVY_JobRoles/data/Plastic Waste Segregator.pt
+Plumber - General,./utils/embeddings/PMKVY_JobRoles/data/Plumber - General.pt
+Poultry Farm Supervisor- Breeder-Layer,./utils/embeddings/PMKVY_JobRoles/data/Poultry Farm Supervisor- Breeder-Layer.pt
+Poultry Farm Supervisor- Broiler,./utils/embeddings/PMKVY_JobRoles/data/Poultry Farm Supervisor- Broiler.pt
+Poultry Farm Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Poultry Farm Supervisor.pt
+Prakriti Evaluator,./utils/embeddings/PMKVY_JobRoles/data/Prakriti Evaluator.pt
+Pre- Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Pre- Assembly Operator.pt
+Precision Farming Technician,./utils/embeddings/PMKVY_JobRoles/data/Precision Farming Technician.pt
+Processed Food Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Processed Food Entrepreneur.pt
+Processing Assistant -TSR,./utils/embeddings/PMKVY_JobRoles/data/Processing Assistant -TSR.pt
+Processing Technician-RSS Rubber,./utils/embeddings/PMKVY_JobRoles/data/Processing Technician-RSS Rubber.pt
+Product Assembly Assistant(Solar-LED),./utils/embeddings/PMKVY_JobRoles/data/Product Assembly Assistant(Solar-LED).pt
+Product Manager - Web & Mobile,./utils/embeddings/PMKVY_JobRoles/data/Product Manager - Web & Mobile.pt
+Production Assistant,./utils/embeddings/PMKVY_JobRoles/data/Production Assistant.pt
+Production Engineer,./utils/embeddings/PMKVY_JobRoles/data/Production Engineer.pt
+"Production Machine Operator- Active Pharmaceutical Ingredient (API)- Bulk Drug - Non Sterile Manufacturing, Non Sterile Packaging","./utils/embeddings/PMKVY_JobRoles/data/Production Machine Operator- Active Pharmaceutical Ingredient (API)- Bulk Drug - Non Sterile Manufacturing, Non Sterile Packaging.pt"
+Professional Makeup Artist,./utils/embeddings/PMKVY_JobRoles/data/Professional Makeup Artist.pt
+Programmable Logic Controller (PLC) Programmer and Troubleshooter,./utils/embeddings/PMKVY_JobRoles/data/Programmable Logic Controller (PLC) Programmer and Troubleshooter.pt
+Project Assistant Planner - Wind Power Plant,./utils/embeddings/PMKVY_JobRoles/data/Project Assistant Planner - Wind Power Plant.pt
+Project Engineer - 5G Networks,./utils/embeddings/PMKVY_JobRoles/data/Project Engineer - 5G Networks.pt
+Project Manager - Electronics,./utils/embeddings/PMKVY_JobRoles/data/Project Manager - Electronics.pt
+Project Supervisor - City Gas Distribution (CGD),./utils/embeddings/PMKVY_JobRoles/data/Project Supervisor - City Gas Distribution (CGD).pt
+Pump Operator-Mining,./utils/embeddings/PMKVY_JobRoles/data/Pump Operator-Mining.pt
+Puppet Maker-Artisan,./utils/embeddings/PMKVY_JobRoles/data/Puppet Maker-Artisan.pt
+Purchase Executive,./utils/embeddings/PMKVY_JobRoles/data/Purchase Executive.pt
+Quality Analysis & Reliability Engineer,./utils/embeddings/PMKVY_JobRoles/data/Quality Analysis & Reliability Engineer.pt
+Quality Control Inspector - Footwear,./utils/embeddings/PMKVY_JobRoles/data/Quality Control Inspector - Footwear.pt
+Quality Manager - Electronics,./utils/embeddings/PMKVY_JobRoles/data/Quality Manager - Electronics.pt
+Receiving Assistant,./utils/embeddings/PMKVY_JobRoles/data/Receiving Assistant.pt
+Receptionist,./utils/embeddings/PMKVY_JobRoles/data/Receptionist.pt
+Recruitment Executive,./utils/embeddings/PMKVY_JobRoles/data/Recruitment Executive.pt
+Remote Helpdesk Technician,./utils/embeddings/PMKVY_JobRoles/data/Remote Helpdesk Technician.pt
+Retail Cashier,./utils/embeddings/PMKVY_JobRoles/data/Retail Cashier.pt
+Retail Merchandiser (Divyangjan)-LD,./utils/embeddings/PMKVY_JobRoles/data/Retail Merchandiser (Divyangjan)-LD.pt
+Retail Outlet Attendant (Oil & Gas),./utils/embeddings/PMKVY_JobRoles/data/Retail Outlet Attendant (Oil & Gas).pt
+Retail Pharmacy Management and Sales,./utils/embeddings/PMKVY_JobRoles/data/Retail Pharmacy Management and Sales.pt
+Retail Sales Associate,./utils/embeddings/PMKVY_JobRoles/data/Retail Sales Associate.pt
+Rig-Mounted Drill Operator,./utils/embeddings/PMKVY_JobRoles/data/Rig-Mounted Drill Operator.pt
+Ring Frame Doffer,./utils/embeddings/PMKVY_JobRoles/data/Ring Frame Doffer.pt
+Ring Frame Operator,./utils/embeddings/PMKVY_JobRoles/data/Ring Frame Operator.pt
+Ring Frame Tenter,./utils/embeddings/PMKVY_JobRoles/data/Ring Frame Tenter.pt
+Robotics Automation Lead,./utils/embeddings/PMKVY_JobRoles/data/Robotics Automation Lead.pt
+Rooftop Solar Grid Junior Engineer,./utils/embeddings/PMKVY_JobRoles/data/Rooftop Solar Grid Junior Engineer.pt
+Roto Artist,./utils/embeddings/PMKVY_JobRoles/data/Roto Artist.pt
+Rubber Autoclave Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Autoclave Operator.pt
+Rubber Calendaring Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Calendaring Supervisor.pt
+Rubber Compression Moulding Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Compression Moulding Operator.pt
+Rubber Extruder Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Extruder Operator.pt
+Rubber Extrusion Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Extrusion Supervisor.pt
+Rubber Injection Moulding Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Injection Moulding Operator.pt
+Rubber Internal Mixer Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Internal Mixer Operator.pt
+Rubber Mill Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Mill Operator.pt
+Rubber Mixing Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Mixing Supervisor.pt
+Rubber Moulding -Curing Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Moulding -Curing Supervisor.pt
+Rubber Nursery Worker-General,./utils/embeddings/PMKVY_JobRoles/data/Rubber Nursery Worker-General.pt
+Rubber Product Finishing Operator,./utils/embeddings/PMKVY_JobRoles/data/Rubber Product Finishing Operator.pt
+Rubber Product Finishing Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Product Finishing Supervisor.pt
+Rubber Product-Quality Assurance Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Product-Quality Assurance Supervisor.pt
+Rubber Warehouse Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Rubber Warehouse Supervisor.pt
+Safai Mitra,./utils/embeddings/PMKVY_JobRoles/data/Safai Mitra.pt
+Safety Steward,./utils/embeddings/PMKVY_JobRoles/data/Safety Steward.pt
+Safety Supervisor (OSHE),./utils/embeddings/PMKVY_JobRoles/data/Safety Supervisor (OSHE).pt
+Sales Executive (Media Org),./utils/embeddings/PMKVY_JobRoles/data/Sales Executive (Media Org).pt
+Sample Maker - Footwear,./utils/embeddings/PMKVY_JobRoles/data/Sample Maker - Footwear.pt
+Saw Singulation Process Engineer,./utils/embeddings/PMKVY_JobRoles/data/Saw Singulation Process Engineer.pt
+Script Researcher,./utils/embeddings/PMKVY_JobRoles/data/Script Researcher.pt
+Sculpt Artist,./utils/embeddings/PMKVY_JobRoles/data/Sculpt Artist.pt
+Search Engine Marketing Executive,./utils/embeddings/PMKVY_JobRoles/data/Search Engine Marketing Executive.pt
+Search Engine Optimization Executive,./utils/embeddings/PMKVY_JobRoles/data/Search Engine Optimization Executive.pt
+Security Analyst,./utils/embeddings/PMKVY_JobRoles/data/Security Analyst.pt
+Security Infrastructure Specialist,./utils/embeddings/PMKVY_JobRoles/data/Security Infrastructure Specialist.pt
+Security Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Security Supervisor.pt
+Senior Beauty Therapist,./utils/embeddings/PMKVY_JobRoles/data/Senior Beauty Therapist.pt
+Senior Wellness Neurotherapist,./utils/embeddings/PMKVY_JobRoles/data/Senior Wellness Neurotherapist.pt
+Sericulturist,./utils/embeddings/PMKVY_JobRoles/data/Sericulturist.pt
+Service Technician – Home Appliances,./utils/embeddings/PMKVY_JobRoles/data/Service Technician – Home Appliances.pt
+Sewing Machine Operator - Knits,./utils/embeddings/PMKVY_JobRoles/data/Sewing Machine Operator - Knits.pt
+Sewing Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Sewing Machine Operator.pt
+Shipment Classification Agent,./utils/embeddings/PMKVY_JobRoles/data/Shipment Classification Agent.pt
+Shrimp Farmer,./utils/embeddings/PMKVY_JobRoles/data/Shrimp Farmer.pt
+Shuttering Carpenter (Elective- System Formwork - Conventional Formwork),./utils/embeddings/PMKVY_JobRoles/data/Shuttering Carpenter (Elective- System Formwork - Conventional Formwork).pt
+Shuttering Carpenter,./utils/embeddings/PMKVY_JobRoles/data/Shuttering Carpenter.pt
+Shuttle Loom Operator cum Pirn Winder- Power loom,./utils/embeddings/PMKVY_JobRoles/data/Shuttle Loom Operator cum Pirn Winder- Power loom.pt
+Shuttleless Loom Operator- Airjet loom,./utils/embeddings/PMKVY_JobRoles/data/Shuttleless Loom Operator- Airjet loom.pt
+Site - Reliability Analyst,./utils/embeddings/PMKVY_JobRoles/data/Site - Reliability Analyst.pt
+Size Mixer,./utils/embeddings/PMKVY_JobRoles/data/Size Mixer.pt
+Sizing Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Sizing Machine Operator.pt
+Skid Steer Loader Operator,./utils/embeddings/PMKVY_JobRoles/data/Skid Steer Loader Operator.pt
+Skiving Operator,./utils/embeddings/PMKVY_JobRoles/data/Skiving Operator.pt
+Small Hydro Power Plant Technician-(Jal Urja Mitra),./utils/embeddings/PMKVY_JobRoles/data/Small Hydro Power Plant Technician-(Jal Urja Mitra).pt
+Smartphone Assembly Technician,./utils/embeddings/PMKVY_JobRoles/data/Smartphone Assembly Technician.pt
+Social Media Executive,./utils/embeddings/PMKVY_JobRoles/data/Social Media Executive.pt
+Social Media Influencer,./utils/embeddings/PMKVY_JobRoles/data/Social Media Influencer.pt
+Software Developer -Product Development,./utils/embeddings/PMKVY_JobRoles/data/Software Developer -Product Development.pt
+Software Developer-IT Services,./utils/embeddings/PMKVY_JobRoles/data/Software Developer-IT Services.pt
+Software Programmer,./utils/embeddings/PMKVY_JobRoles/data/Software Programmer.pt
+Software Vulnerability-Penetration Tester,./utils/embeddings/PMKVY_JobRoles/data/Software Vulnerability-Penetration Tester.pt
+Solar Cold Storage Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Solar Cold Storage Entrepreneur.pt
+Solar EV Charging Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Solar EV Charging Entrepreneur.pt
+Solar LED Technician,./utils/embeddings/PMKVY_JobRoles/data/Solar LED Technician.pt
+Solar Lighting Assembler,./utils/embeddings/PMKVY_JobRoles/data/Solar Lighting Assembler.pt
+Solar Panel Installation Technician,./utils/embeddings/PMKVY_JobRoles/data/Solar Panel Installation Technician.pt
+Solar Photovoltaic Entrepreneur,./utils/embeddings/PMKVY_JobRoles/data/Solar Photovoltaic Entrepreneur.pt
+Solar Pump Technician,./utils/embeddings/PMKVY_JobRoles/data/Solar Pump Technician.pt
+Solar PV Cell Manufacturing Technician,./utils/embeddings/PMKVY_JobRoles/data/Solar PV Cell Manufacturing Technician.pt
+Solar PV Installation Helper,./utils/embeddings/PMKVY_JobRoles/data/Solar PV Installation Helper.pt
+Solar PV Installer (Suryamitra),./utils/embeddings/PMKVY_JobRoles/data/Solar PV Installer (Suryamitra).pt
+Solar PV Installer -Electrical,./utils/embeddings/PMKVY_JobRoles/data/Solar PV Installer -Electrical.pt
+Solar PV Module Manufacturing Technician,./utils/embeddings/PMKVY_JobRoles/data/Solar PV Module Manufacturing Technician.pt
+Solar Water Pumping Junior Engineer,./utils/embeddings/PMKVY_JobRoles/data/Solar Water Pumping Junior Engineer.pt
+Solder Ball Attach - Process Engineer,./utils/embeddings/PMKVY_JobRoles/data/Solder Ball Attach - Process Engineer.pt
+Sound Editor,./utils/embeddings/PMKVY_JobRoles/data/Sound Editor.pt
+Spa Therapist,./utils/embeddings/PMKVY_JobRoles/data/Spa Therapist.pt
+"Specialist- Quality Assurance (Pharma, Biological Products and Medical Devices) - Equipment Validation","./utils/embeddings/PMKVY_JobRoles/data/Specialist- Quality Assurance (Pharma, Biological Products and Medical Devices) - Equipment Validation.pt"
+Speed Frame Operator - Tenter and Doffer,./utils/embeddings/PMKVY_JobRoles/data/Speed Frame Operator - Tenter and Doffer.pt
+Spice Processing Technician v3,./utils/embeddings/PMKVY_JobRoles/data/Spice Processing Technician v3.pt
+Sports Masseur,./utils/embeddings/PMKVY_JobRoles/data/Sports Masseur.pt
+Squash and Juice Processing Technician,./utils/embeddings/PMKVY_JobRoles/data/Squash and Juice Processing Technician.pt
+Sr. Associate - Desktop Publishing (DTP),./utils/embeddings/PMKVY_JobRoles/data/Sr. Associate - Desktop Publishing (DTP).pt
+Sr. Associate-F & A Complex,./utils/embeddings/PMKVY_JobRoles/data/Sr. Associate-F & A Complex.pt
+Sr. Jewellery Designer,./utils/embeddings/PMKVY_JobRoles/data/Sr. Jewellery Designer.pt
+Stainless Steel Fabricator,./utils/embeddings/PMKVY_JobRoles/data/Stainless Steel Fabricator.pt
+Still Photographer (Digital),./utils/embeddings/PMKVY_JobRoles/data/Still Photographer (Digital).pt
+Stitching Operator - Footwear,./utils/embeddings/PMKVY_JobRoles/data/Stitching Operator - Footwear.pt
+Stitching Operator - Goods and Garments,./utils/embeddings/PMKVY_JobRoles/data/Stitching Operator - Goods and Garments.pt
+Stone Fixer - Imitation Jewellery,./utils/embeddings/PMKVY_JobRoles/data/Stone Fixer - Imitation Jewellery.pt
+Store Keeper (Petroleum Products),./utils/embeddings/PMKVY_JobRoles/data/Store Keeper (Petroleum Products).pt
+Storyboard Artist,./utils/embeddings/PMKVY_JobRoles/data/Storyboard Artist.pt
+Street Food Vendor - Standalone,./utils/embeddings/PMKVY_JobRoles/data/Street Food Vendor - Standalone.pt
+Supervisor (Plant & Machinery),./utils/embeddings/PMKVY_JobRoles/data/Supervisor (Plant & Machinery).pt
+Supervisor Maintenance (Infrastructure Equipment),./utils/embeddings/PMKVY_JobRoles/data/Supervisor Maintenance (Infrastructure Equipment).pt
+Supply Chain Associate,./utils/embeddings/PMKVY_JobRoles/data/Supply Chain Associate.pt
+Supply Chain Executive,./utils/embeddings/PMKVY_JobRoles/data/Supply Chain Executive.pt
+System Architect – 5G Cloud RAN,./utils/embeddings/PMKVY_JobRoles/data/System Architect – 5G Cloud RAN.pt
+Tank Lorry Driver-Petroleum Products,./utils/embeddings/PMKVY_JobRoles/data/Tank Lorry Driver-Petroleum Products.pt
+Tape Plant Operator,./utils/embeddings/PMKVY_JobRoles/data/Tape Plant Operator.pt
+Tape Winder,./utils/embeddings/PMKVY_JobRoles/data/Tape Winder.pt
+Tarakasi Jeweller,./utils/embeddings/PMKVY_JobRoles/data/Tarakasi Jeweller.pt
+Technical Artist (AR-VR),./utils/embeddings/PMKVY_JobRoles/data/Technical Artist (AR-VR).pt
+Technical Supervisor – Automatic Train Protection System (ATPS),./utils/embeddings/PMKVY_JobRoles/data/Technical Supervisor – Automatic Train Protection System (ATPS).pt
+Technical Support Engineer,./utils/embeddings/PMKVY_JobRoles/data/Technical Support Engineer.pt
+Technician 5G - Active Network Installation,./utils/embeddings/PMKVY_JobRoles/data/Technician 5G - Active Network Installation.pt
+Technician Instrumentation,./utils/embeddings/PMKVY_JobRoles/data/Technician Instrumentation.pt
+Technician – TQC for Plastic Materials & Products,./utils/embeddings/PMKVY_JobRoles/data/Technician – TQC for Plastic Materials & Products.pt
+Technician –AutomaticTrain Protection System (ATPS),./utils/embeddings/PMKVY_JobRoles/data/Technician –AutomaticTrain Protection System (ATPS).pt
+Telecom Customer Care Executive - Call Center-Relationship Center,./utils/embeddings/PMKVY_JobRoles/data/Telecom Customer Care Executive - Call Center-Relationship Center.pt
+Telecom Customer Care Executive - Repair Center,./utils/embeddings/PMKVY_JobRoles/data/Telecom Customer Care Executive - Repair Center.pt
+Telecom E-waste Handler,./utils/embeddings/PMKVY_JobRoles/data/Telecom E-waste Handler.pt
+Telecom Rigger - 5G and Legacy Networks,./utils/embeddings/PMKVY_JobRoles/data/Telecom Rigger - 5G and Legacy Networks.pt
+Telecom Surface Mount Technology (SMT) Technician,./utils/embeddings/PMKVY_JobRoles/data/Telecom Surface Mount Technology (SMT) Technician.pt
+Telecom Technician - IOT Devices-System,./utils/embeddings/PMKVY_JobRoles/data/Telecom Technician - IOT Devices-System.pt
+Telecom Terminal Equipment Application Developer (Android),./utils/embeddings/PMKVY_JobRoles/data/Telecom Terminal Equipment Application Developer (Android).pt
+Telehealth Services Coordinator,./utils/embeddings/PMKVY_JobRoles/data/Telehealth Services Coordinator.pt
+Testing and Calibration Technician (Electrotechnical),./utils/embeddings/PMKVY_JobRoles/data/Testing and Calibration Technician (Electrotechnical).pt
+Testing and Calibration Technician (Mechanical-Dimensions),./utils/embeddings/PMKVY_JobRoles/data/Testing and Calibration Technician (Mechanical-Dimensions).pt
+Textile Dyeing Machine Operator- Jigger,./utils/embeddings/PMKVY_JobRoles/data/Textile Dyeing Machine Operator- Jigger.pt
+Textile Finishing Machine Operator- Stenter,./utils/embeddings/PMKVY_JobRoles/data/Textile Finishing Machine Operator- Stenter.pt
+Textile Post Processing Machine Operator- Washing Range,./utils/embeddings/PMKVY_JobRoles/data/Textile Post Processing Machine Operator- Washing Range.pt
+Textile Printing Machine Operator- Printing Screen Making,./utils/embeddings/PMKVY_JobRoles/data/Textile Printing Machine Operator- Printing Screen Making.pt
+Textile Processing Preparatory Operator- Singeing & Desizing,./utils/embeddings/PMKVY_JobRoles/data/Textile Processing Preparatory Operator- Singeing & Desizing.pt
+TFO Tenter,./utils/embeddings/PMKVY_JobRoles/data/TFO Tenter.pt
+Through Hole Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Through Hole Assembly Operator.pt
+Tower Crane Operator,./utils/embeddings/PMKVY_JobRoles/data/Tower Crane Operator.pt
+Tower Technician,./utils/embeddings/PMKVY_JobRoles/data/Tower Technician.pt
+Tractor Service Mechanic,./utils/embeddings/PMKVY_JobRoles/data/Tractor Service Mechanic.pt
+Traditional Hand Embroiderer,./utils/embeddings/PMKVY_JobRoles/data/Traditional Hand Embroiderer.pt
+TRAFFIC COORDINATOR (Media Organisations),./utils/embeddings/PMKVY_JobRoles/data/TRAFFIC COORDINATOR (Media Organisations).pt
+Transit and Self-Loading Mixer Operator,./utils/embeddings/PMKVY_JobRoles/data/Transit and Self-Loading Mixer Operator.pt
+Transplant Coordinator,./utils/embeddings/PMKVY_JobRoles/data/Transplant Coordinator.pt
+Transport Consolidator,./utils/embeddings/PMKVY_JobRoles/data/Transport Consolidator.pt
+Transport Coordinator,./utils/embeddings/PMKVY_JobRoles/data/Transport Coordinator.pt
+TV Repair Technician,./utils/embeddings/PMKVY_JobRoles/data/TV Repair Technician.pt
+Twister cum Doubler - Handloom,./utils/embeddings/PMKVY_JobRoles/data/Twister cum Doubler - Handloom.pt
+Two Shaft Handloom Weaver,./utils/embeddings/PMKVY_JobRoles/data/Two Shaft Handloom Weaver.pt
+Two Wheeler Service Assistant,./utils/embeddings/PMKVY_JobRoles/data/Two Wheeler Service Assistant.pt
+Two Wheeler Service Technician,./utils/embeddings/PMKVY_JobRoles/data/Two Wheeler Service Technician.pt
+Tyre Building Operator- Radial Light truck,./utils/embeddings/PMKVY_JobRoles/data/Tyre Building Operator- Radial Light truck.pt
+Tyre Building Operator- Truck and Bus (Bias Tyre),./utils/embeddings/PMKVY_JobRoles/data/Tyre Building Operator- Truck and Bus (Bias Tyre).pt
+Tyre Fitter-Servicing and Maintenance,./utils/embeddings/PMKVY_JobRoles/data/Tyre Fitter-Servicing and Maintenance.pt
+Tyre Mounted Crane Operator,./utils/embeddings/PMKVY_JobRoles/data/Tyre Mounted Crane Operator.pt
+Upcycling Scraps and E-waste Artisan,./utils/embeddings/PMKVY_JobRoles/data/Upcycling Scraps and E-waste Artisan.pt
+User Experience Designer,./utils/embeddings/PMKVY_JobRoles/data/User Experience Designer.pt
+Video Blogger,./utils/embeddings/PMKVY_JobRoles/data/Video Blogger.pt
+Village Level Milk Collection Center Incharge,./utils/embeddings/PMKVY_JobRoles/data/Village Level Milk Collection Center Incharge.pt
+VLSI Design Engineer,./utils/embeddings/PMKVY_JobRoles/data/VLSI Design Engineer.pt
+Voice-Over Artist,./utils/embeddings/PMKVY_JobRoles/data/Voice-Over Artist.pt
+Vriksh Sanrakshak,./utils/embeddings/PMKVY_JobRoles/data/Vriksh Sanrakshak.pt
+Wafer Back Grinding Engineer,./utils/embeddings/PMKVY_JobRoles/data/Wafer Back Grinding Engineer.pt
+Wafer Dicing Engineer,./utils/embeddings/PMKVY_JobRoles/data/Wafer Dicing Engineer.pt
+Wafer Test and Sort Engineer,./utils/embeddings/PMKVY_JobRoles/data/Wafer Test and Sort Engineer.pt
+Walk Tour Facilitator,./utils/embeddings/PMKVY_JobRoles/data/Walk Tour Facilitator.pt
+Warehouse Associate,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Associate.pt
+Warehouse Binner,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Binner.pt
+Warehouse Claims Coordinator,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Claims Coordinator.pt
+Warehouse Executive,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Executive.pt
+Warehouse Manager,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Manager.pt
+Warehouse Packer,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Packer.pt
+Warehouse Picker,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Picker.pt
+Warehouse Quality Checker,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Quality Checker.pt
+Warehouse Supervisor,./utils/embeddings/PMKVY_JobRoles/data/Warehouse Supervisor.pt
+Warper - Direct Warping Machine,./utils/embeddings/PMKVY_JobRoles/data/Warper - Direct Warping Machine.pt
+Warper - Handloom,./utils/embeddings/PMKVY_JobRoles/data/Warper - Handloom.pt
+Washing Machine Operator,./utils/embeddings/PMKVY_JobRoles/data/Washing Machine Operator.pt
+Water Pump Operator,./utils/embeddings/PMKVY_JobRoles/data/Water Pump Operator.pt
+Wax setter,./utils/embeddings/PMKVY_JobRoles/data/Wax setter.pt
+Web Developer,./utils/embeddings/PMKVY_JobRoles/data/Web Developer.pt
+Welder (GTAW),./utils/embeddings/PMKVY_JobRoles/data/Welder (GTAW).pt
+Welding Operator Electronics,./utils/embeddings/PMKVY_JobRoles/data/Welding Operator Electronics.pt
+Wellness Neurotherapist,./utils/embeddings/PMKVY_JobRoles/data/Wellness Neurotherapist.pt
+Wheel Loader Operator,./utils/embeddings/PMKVY_JobRoles/data/Wheel Loader Operator.pt
+Wind Resource Assessor and Site Surveyor - Wind Power Plant,./utils/embeddings/PMKVY_JobRoles/data/Wind Resource Assessor and Site Surveyor - Wind Power Plant.pt
+Winding Operator (Electronics SSC),./utils/embeddings/PMKVY_JobRoles/data/Winding Operator (Electronics SSC).pt
+Winding Operator (Mining SSC),./utils/embeddings/PMKVY_JobRoles/data/Winding Operator (Mining SSC).pt
+Winding Tenter- Autoconer,./utils/embeddings/PMKVY_JobRoles/data/Winding Tenter- Autoconer.pt
+Wire Saw Operator,./utils/embeddings/PMKVY_JobRoles/data/Wire Saw Operator.pt
+Wireless Technician,./utils/embeddings/PMKVY_JobRoles/data/Wireless Technician.pt
+Wireman Control Panel Electronics,./utils/embeddings/PMKVY_JobRoles/data/Wireman Control Panel Electronics.pt
+Wiring Harness Assembly Operator,./utils/embeddings/PMKVY_JobRoles/data/Wiring Harness Assembly Operator.pt
+Wooden Toy Maker-Artisan,./utils/embeddings/PMKVY_JobRoles/data/Wooden Toy Maker-Artisan.pt
+Yoga Instructor (B&W),./utils/embeddings/PMKVY_JobRoles/data/Yoga Instructor (B&W).pt
+Yoga Trainer (B&W),./utils/embeddings/PMKVY_JobRoles/data/Yoga Trainer (B&W).pt
+Yoga Wellness Trainer,./utils/embeddings/PMKVY_JobRoles/data/Yoga Wellness Trainer.pt

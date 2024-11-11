@@ -1,0 +1,41 @@
+SECTOR NAME,EMBEDDING_PATH
+Aerospace and Aviation,./utils/embeddings/PMKVY_sectors/data/Aerospace and Aviation.pt
+Agriculture Skill Council of India,./utils/embeddings/PMKVY_sectors/data/Agriculture Skill Council of India.pt
+Agriculture,./utils/embeddings/PMKVY_sectors/data/Agriculture.pt
+"Apparel, Made-Ups & Home Furnishing","./utils/embeddings/PMKVY_sectors/data/Apparel, Made-Ups & Home Furnishing.pt"
+Automotive,./utils/embeddings/PMKVY_sectors/data/Automotive.pt
+Beauty & Wellness,./utils/embeddings/PMKVY_sectors/data/Beauty & Wellness.pt
+BFSI,./utils/embeddings/PMKVY_sectors/data/BFSI.pt
+Capital Goods Skill Council,./utils/embeddings/PMKVY_sectors/data/Capital Goods Skill Council.pt
+Construction,./utils/embeddings/PMKVY_sectors/data/Construction.pt
+Electronics Sector Skills Council Of India (ESSCI),./utils/embeddings/PMKVY_sectors/data/Electronics Sector Skills Council Of India (ESSCI).pt
+Electronics,./utils/embeddings/PMKVY_sectors/data/Electronics.pt
+Food Processing,./utils/embeddings/PMKVY_sectors/data/Food Processing.pt
+Furniture and Fittings Skill Council,./utils/embeddings/PMKVY_sectors/data/Furniture and Fittings Skill Council.pt
+Gem and Jewellery,./utils/embeddings/PMKVY_sectors/data/Gem and Jewellery.pt
+Green Jobs,./utils/embeddings/PMKVY_sectors/data/Green Jobs.pt
+Handicrafts and Carpet,./utils/embeddings/PMKVY_sectors/data/Handicrafts and Carpet.pt
+Healthcare,./utils/embeddings/PMKVY_sectors/data/Healthcare.pt
+Hydrocarbon,./utils/embeddings/PMKVY_sectors/data/Hydrocarbon.pt
+Infrastructure Equipment,./utils/embeddings/PMKVY_sectors/data/Infrastructure Equipment.pt
+Iron & Steel,./utils/embeddings/PMKVY_sectors/data/Iron & Steel.pt
+IT-ITeS,./utils/embeddings/PMKVY_sectors/data/IT-ITeS.pt
+Leather,./utils/embeddings/PMKVY_sectors/data/Leather.pt
+Life Sciences,./utils/embeddings/PMKVY_sectors/data/Life Sciences.pt
+Logistics,./utils/embeddings/PMKVY_sectors/data/Logistics.pt
+Management,./utils/embeddings/PMKVY_sectors/data/Management.pt
+Media and Entertainment,./utils/embeddings/PMKVY_sectors/data/Media and Entertainment.pt
+Media,./utils/embeddings/PMKVY_sectors/data/Media.pt
+Mining,./utils/embeddings/PMKVY_sectors/data/Mining.pt
+NIELIT,./utils/embeddings/PMKVY_sectors/data/NIELIT.pt
+Persons with Disability,./utils/embeddings/PMKVY_sectors/data/Persons with Disability.pt
+Plumbing,./utils/embeddings/PMKVY_sectors/data/Plumbing.pt
+Power,./utils/embeddings/PMKVY_sectors/data/Power.pt
+RCPSDC,./utils/embeddings/PMKVY_sectors/data/RCPSDC.pt
+Retail,./utils/embeddings/PMKVY_sectors/data/Retail.pt
+Safety Skill Development Foundation,./utils/embeddings/PMKVY_sectors/data/Safety Skill Development Foundation.pt
+Skill Council for Green Jobs,./utils/embeddings/PMKVY_sectors/data/Skill Council for Green Jobs.pt
+Sports,./utils/embeddings/PMKVY_sectors/data/Sports.pt
+Telecom,./utils/embeddings/PMKVY_sectors/data/Telecom.pt
+Textile Sector Skill Council,./utils/embeddings/PMKVY_sectors/data/Textile Sector Skill Council.pt
+Tourism and hospitality,./utils/embeddings/PMKVY_sectors/data/Tourism and hospitality.pt
