@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginated Job Listings with jQuery Search</title>
+    <style>
+        /* CSS styling remains the same */
+        /* ... */
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Job Listings</h1>
+        <div class="header-links">
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+            <a href="#">Application Status</a>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search jobs...">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div id="job-list">
+            <!-- Job cards will be injected here by JavaScript -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevBtn" disabled>Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </main>
+
+    <script>
+        const jobsPerPage = 10;
+        let currentPage = 1;
+        let jobs = [];
+        let filteredJobs = [];
+
+        function totalPages() {
+            return Math.ceil(filteredJobs.length / jobsPerPage);
+        }
+
+        function renderJobs() {
+            const jobList = $("#job-list");
+            jobList.empty();
+
+            const start = (currentPage - 1) * jobsPerPage;
+            const jobsToDisplay = filteredJobs.slice(start, start + jobsPerPage);
+
+            jobsToDisplay.forEach(job => {
+                const jobCard = $(`
+                    <div class="job-card">
+                        <div class="badge">Job</div>
+                        <h2>${job.JobTitle}</h2>
+                        <div class="company-name">${job.CompanyName}</div>
+                        <div class="job-details">
+                            <span>📅 ${new Date(job.PostedOn).toLocaleDateString()}</span>
+                            <span>📍 ${job.JobLocations}, ${job.JobLocationState}</span>
+                            <span>💼 ${job.IndustryName} | ${job.JobStatus} | ${job.JoiningPriority} Start</span>
+                        </div>
+                        <div class="salary">₹ ${job.MinCtcMonthly} - ${job.MaxCtcMonthly} / month</div>
+                        <a href="#" class="view-details">View Details ➔</a>
+                    </div>
+                `);
+                jobList.append(jobCard);
+            });
+
+            $("#prevBtn").prop("disabled", currentPage === 1);
+            $("#nextBtn").prop("disabled", currentPage === totalPages());
+        }
+
+        function updatePagination() {
+            renderJobs();
+        }
+
+        function searchJobs() {
+            const query = $("#searchInput").val().toLowerCase();
+            filteredJobs = jobs.filter(job => 
+                job.JobTitle.toLowerCase().includes(query) ||
+                job.CompanyName.toLowerCase().includes(query) ||
+                job.JobLocations.toLowerCase().includes(query) ||
+                job.IndustryName.toLowerCase().includes(query)
+            );
+            currentPage = 1;
+            updatePagination();
+        }
+
+        $("#searchBtn").on("click", searchJobs);
+
+        $("#prevBtn").on("click", function () {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        });
+
+        $("#nextBtn").on("click", function () {
+            if (currentPage < totalPages()) {
+                currentPage++;
+                updatePagination();
+            }
+        });
+
+        function fetchJobs() {
+            $.ajax({
+                url: 'https://api-fe.skillindiadigital.gov.in/api/jobs/filter', // Change this URL to your actual API endpoint
+                method: 'POST',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.data) {
+                        jobs = response.data; // Access nested job data
+                        filteredJobs = [...jobs]; // Initialize filtered jobs
+                        updatePagination(); // Display the first page
+                    } else {
+                        console.error("Unexpected data format:", response);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Failed to fetch jobs:", error);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            fetchJobs(); // Load jobs from the server when the page loads
+        });
+    </script>
+
+</body>
+</html>
