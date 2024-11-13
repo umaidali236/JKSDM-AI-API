@@ -633,13 +633,41 @@ def recommendFLAfterPsychometry():
     
     return RESULTANT_DPR
 
+#related to foreign languages
 
-FL_path = "../db/Foreign Language Report.csv"
-language_data=pd.read_csv(FL_path)
+@app.route('/api/v1/get_languages', methods=['POST'])
+@cross_origin()
+def getFlanguages():
+    filepath = "../db/Foreign Language Report.csv"
+    languages_data=pd.read_csv(filepath)
+    unique_languages=languages_data['Name Of Language'].unique()
+    language_to_Country=dict()
+    language_to_Country={
+        'Arabic':'Saudi Arabia',
+        'German':'Germany',
+        'Japanese':'Japan',
+        'Chinese':'China',
+        'Russian':'Russia',
+        'Dutch':'Netherlands',
+        'Nigerian':'Nigeria',
+        'French':'France',
+        'Italian':'Italy',
+        'Korean':'South Korea',
+        'Portuguese':'Portugal',
+        'Spanish':'Spain',
+        'Indonesian':'Indonesia',
+        'Turkish':'Turkey'
+    }
+    formatted_languages = [[language_to_Country.get(lang,'Unknown Country'),lang] for lang in unique_languages]
 
+    return jsonify(formatted_languages)
 
 @app.route('/api/v1/recommend_languages', methods=['POST'])
+@cross_origin()
 def recommend_languages():
+    FL_path = "../db/Foreign Language Report.csv"
+    language_data=pd.read_csv(FL_path)
+
     user_input = request.get_json()
     
     if not user_input or 'interested_languages' not in user_input:
@@ -664,7 +692,6 @@ def recommend_languages():
 
     sorted_response = sorted(response, key=lambda x: x['language'])
     return jsonify({"recommendations": sorted_response})
-
 
 @app.route("/")
 def home():

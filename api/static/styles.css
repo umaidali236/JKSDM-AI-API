@@ -183,3 +183,101 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+
+
+
+/*===================== styles for section with id = "languageSelectionContainer" ======================*/
+
+#languageSelectionContainer {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+/* header,
+footer {
+    width: 100vw;
+} */
+
+#languageSelectionContainer .container {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#languageSelectionContainer .container h2 {
+    font-size: larger;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#languageForm .checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#languageForm label {
+    display: flex; /* Use flex to align items */
+    align-items: center; /* Center align checkbox and text */
+    margin: 10px 0;
+    width: calc(50% - 10px); /* Set width to 50% of the container with spacing */
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+#languageForm input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#languageForm input[type="checkbox"] + span {
+    border: 1px solid #b9f0ff;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+#languageForm input[type="checkbox"]:checked + span {
+    background-color: #00b37d;
+}
+
+#languageForm button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    background-color: #00b37d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+#languageForm button:hover {
+    background-color: #009966; /* Change color on hover */
+}
+
+#languageForm label:hover {
+    background-color: rgba(8, 239, 166, 0.238); /* Light background on hover */
+}
+
+/* ============== End =============== */

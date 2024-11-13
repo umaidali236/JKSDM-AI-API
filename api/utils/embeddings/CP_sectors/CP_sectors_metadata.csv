@@ -1,0 +1,22 @@
+SECTOR NAME,EMBEDDING_PATH
+BFSI,./utils/embeddings/CP_sectors/data/BFSI.pt
+Defence,./utils/embeddings/CP_sectors/data/Defence.pt
+Design,./utils/embeddings/CP_sectors/data/Design.pt
+Education,./utils/embeddings/CP_sectors/data/Education.pt
+Engineering,./utils/embeddings/CP_sectors/data/Engineering.pt
+Fine Arts,./utils/embeddings/CP_sectors/data/Fine Arts.pt
+Fisheries,./utils/embeddings/CP_sectors/data/Fisheries.pt
+General,./utils/embeddings/CP_sectors/data/General.pt
+Government,./utils/embeddings/CP_sectors/data/Government.pt
+Health & Wellness,./utils/embeddings/CP_sectors/data/Health & Wellness.pt
+Hospitality & Tourism,./utils/embeddings/CP_sectors/data/Hospitality & Tourism.pt
+IT,./utils/embeddings/CP_sectors/data/IT.pt
+Language,./utils/embeddings/CP_sectors/data/Language.pt
+Legal,./utils/embeddings/CP_sectors/data/Legal.pt
+Logistics,./utils/embeddings/CP_sectors/data/Logistics.pt
+Management,./utils/embeddings/CP_sectors/data/Management.pt
+Media,./utils/embeddings/CP_sectors/data/Media.pt
+Science,./utils/embeddings/CP_sectors/data/Science.pt
+Social Studies,./utils/embeddings/CP_sectors/data/Social Studies.pt
+Sports,./utils/embeddings/CP_sectors/data/Sports.pt
+Vocational,./utils/embeddings/CP_sectors/data/Vocational.pt

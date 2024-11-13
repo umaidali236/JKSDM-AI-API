@@ -1,0 +1,501 @@
+CAREER NAME,EMBEDDING_PATH
+Academic Researcher,./utils/embeddings/CP_careers/data/Academic Researcher.pt
+Accent Trainer,./utils/embeddings/CP_careers/data/Accent Trainer.pt
+Actor,./utils/embeddings/CP_careers/data/Actor.pt
+Actuary,./utils/embeddings/CP_careers/data/Actuary.pt
+Acupuncturist,./utils/embeddings/CP_careers/data/Acupuncturist.pt
+Aeronautical Engineer,./utils/embeddings/CP_careers/data/Aeronautical Engineer.pt
+Agniveer,./utils/embeddings/CP_careers/data/Agniveer.pt
+Agricultural Engineer,./utils/embeddings/CP_careers/data/Agricultural Engineer.pt
+Agronomist,./utils/embeddings/CP_careers/data/Agronomist.pt
+Air Hostess_Purser,./utils/embeddings/CP_careers/data/Air Hostess_Purser.pt
+Air Traffic Controller,./utils/embeddings/CP_careers/data/Air Traffic Controller.pt
+Airline Cargo Assistant,./utils/embeddings/CP_careers/data/Airline Cargo Assistant.pt
+Airline Customer Service Executive,./utils/embeddings/CP_careers/data/Airline Customer Service Executive.pt
+Airline Ground Support Equipment Operator,./utils/embeddings/CP_careers/data/Airline Ground Support Equipment Operator.pt
+Anaesthesiologist,./utils/embeddings/CP_careers/data/Anaesthesiologist.pt
+Anchor,./utils/embeddings/CP_careers/data/Anchor.pt
+Animal Health Worker,./utils/embeddings/CP_careers/data/Animal Health Worker.pt
+Animator,./utils/embeddings/CP_careers/data/Animator.pt
+Anthropologist,./utils/embeddings/CP_careers/data/Anthropologist.pt
+Applique Artisan,./utils/embeddings/CP_careers/data/Applique Artisan.pt
+Aquaculture Worker,./utils/embeddings/CP_careers/data/Aquaculture Worker.pt
+Arbitrator,./utils/embeddings/CP_careers/data/Arbitrator.pt
+Archaeologist,./utils/embeddings/CP_careers/data/Archaeologist.pt
+Architect,./utils/embeddings/CP_careers/data/Architect.pt
+Archivist,./utils/embeddings/CP_careers/data/Archivist.pt
+Aromatherapist,./utils/embeddings/CP_careers/data/Aromatherapist.pt
+Art Dealer,./utils/embeddings/CP_careers/data/Art Dealer.pt
+Art Director,./utils/embeddings/CP_careers/data/Art Director.pt
+Art Historian,./utils/embeddings/CP_careers/data/Art Historian.pt
+Artificial Intelligence Engineer,./utils/embeddings/CP_careers/data/Artificial Intelligence Engineer.pt
+Artist,./utils/embeddings/CP_careers/data/Artist.pt
+Assistant Beauty Therapist,./utils/embeddings/CP_careers/data/Assistant Beauty Therapist.pt
+Assistant Carpenter â Wooden Furniture,./utils/embeddings/CP_careers/data/Assistant Carpenter â Wooden Furniture.pt
+Assistant Catering Manager,./utils/embeddings/CP_careers/data/Assistant Catering Manager.pt
+Assistant False Ceiling & Drywall Installer,./utils/embeddings/CP_careers/data/Assistant False Ceiling & Drywall Installer.pt
+Assistant Hair Stylist,./utils/embeddings/CP_careers/data/Assistant Hair Stylist.pt
+Assistant Professor,./utils/embeddings/CP_careers/data/Assistant Professor.pt
+Assistant Surveyor,./utils/embeddings/CP_careers/data/Assistant Surveyor.pt
+Assistant Teacher,./utils/embeddings/CP_careers/data/Assistant Teacher.pt
+"Asst. Fitter- Levelling, Alignment & Balancing","./utils/embeddings/CP_careers/data/Asst. Fitter- Levelling, Alignment & Balancing.pt"
+Astrophysicist,./utils/embeddings/CP_careers/data/Astrophysicist.pt
+Athlete Development Specialist,./utils/embeddings/CP_careers/data/Athlete Development Specialist.pt
+Auctioneer,./utils/embeddings/CP_careers/data/Auctioneer.pt
+Augmented Reality Engineer,./utils/embeddings/CP_careers/data/Augmented Reality Engineer.pt
+Auto Service Technician Level 3,./utils/embeddings/CP_careers/data/Auto Service Technician Level 3.pt
+Automobile Engineer,./utils/embeddings/CP_careers/data/Automobile Engineer.pt
+Automotive Electrician,./utils/embeddings/CP_careers/data/Automotive Electrician.pt
+Auto_E-Rickshaw Driver and Technician,./utils/embeddings/CP_careers/data/Auto_E-Rickshaw Driver and Technician.pt
+Auxiliary Nurse Midwifery (ANM),./utils/embeddings/CP_careers/data/Auxiliary Nurse Midwifery (ANM).pt
+Ayurvedic Doctor,./utils/embeddings/CP_careers/data/Ayurvedic Doctor.pt
+Bacteriologist,./utils/embeddings/CP_careers/data/Bacteriologist.pt
+Bamboo Mat Weaver,./utils/embeddings/CP_careers/data/Bamboo Mat Weaver.pt
+Bamboo Utility Product Tailor,./utils/embeddings/CP_careers/data/Bamboo Utility Product Tailor.pt
+Bank Clerk,./utils/embeddings/CP_careers/data/Bank Clerk.pt
+Bank Manager_Branch Manager,./utils/embeddings/CP_careers/data/Bank Manager_Branch Manager.pt
+Bank Probationary Officer,./utils/embeddings/CP_careers/data/Bank Probationary Officer.pt
+Bartender_Mixologist,./utils/embeddings/CP_careers/data/Bartender_Mixologist.pt
+Big Data Analyst,./utils/embeddings/CP_careers/data/Big Data Analyst.pt
+Bioinformatics Engineering,./utils/embeddings/CP_careers/data/Bioinformatics Engineering.pt
+Biomedical Engineer,./utils/embeddings/CP_careers/data/Biomedical Engineer.pt
+Biotechnology Engineer,./utils/embeddings/CP_careers/data/Biotechnology Engineer.pt
+Blockchain Developer,./utils/embeddings/CP_careers/data/Blockchain Developer.pt
+Blogger,./utils/embeddings/CP_careers/data/Blogger.pt
+Border Security Force (BSF),./utils/embeddings/CP_careers/data/Border Security Force (BSF).pt
+Botanist,./utils/embeddings/CP_careers/data/Botanist.pt
+BPO executive,./utils/embeddings/CP_careers/data/BPO executive.pt
+Brand Manager,./utils/embeddings/CP_careers/data/Brand Manager.pt
+Broadcast Technology,./utils/embeddings/CP_careers/data/Broadcast Technology.pt
+Bulldozer Operator,./utils/embeddings/CP_careers/data/Bulldozer Operator.pt
+Business Development Coordinator,./utils/embeddings/CP_careers/data/Business Development Coordinator.pt
+CAD Designer for Carpets,./utils/embeddings/CP_careers/data/CAD Designer for Carpets.pt
+CAD Jewellery Designer,./utils/embeddings/CP_careers/data/CAD Jewellery Designer.pt
+Cake artist,./utils/embeddings/CP_careers/data/Cake artist.pt
+Calligrapher,./utils/embeddings/CP_careers/data/Calligrapher.pt
+Cameraperson,./utils/embeddings/CP_careers/data/Cameraperson.pt
+Camp Helper,./utils/embeddings/CP_careers/data/Camp Helper.pt
+Cardiologist,./utils/embeddings/CP_careers/data/Cardiologist.pt
+Career Counsellor,./utils/embeddings/CP_careers/data/Career Counsellor.pt
+Caregiving â Persons with Disabilities (Non Clinical),./utils/embeddings/CP_careers/data/Caregiving â Persons with Disabilities (Non Clinical).pt
+Cartographer,./utils/embeddings/CP_careers/data/Cartographer.pt
+Cartoonist,./utils/embeddings/CP_careers/data/Cartoonist.pt
+CCTV Installation Technician,./utils/embeddings/CP_careers/data/CCTV Installation Technician.pt
+Ceramic technologist_engineer,./utils/embeddings/CP_careers/data/Ceramic technologist_engineer.pt
+Ceramics_Glass Designer,./utils/embeddings/CP_careers/data/Ceramics_Glass Designer.pt
+Chartered Accountant,./utils/embeddings/CP_careers/data/Chartered Accountant.pt
+Chef,./utils/embeddings/CP_careers/data/Chef.pt
+Chemical Engineer,./utils/embeddings/CP_careers/data/Chemical Engineer.pt
+Child Caretaker (Non-Clinical),./utils/embeddings/CP_careers/data/Child Caretaker (Non-Clinical).pt
+Child Development Specialist,./utils/embeddings/CP_careers/data/Child Development Specialist.pt
+Chiropractor,./utils/embeddings/CP_careers/data/Chiropractor.pt
+Chocolatier,./utils/embeddings/CP_careers/data/Chocolatier.pt
+Choreographer,./utils/embeddings/CP_careers/data/Choreographer.pt
+Cinematographer,./utils/embeddings/CP_careers/data/Cinematographer.pt
+CISF officer,./utils/embeddings/CP_careers/data/CISF officer.pt
+Civil Engineering_Structural Engineering,./utils/embeddings/CP_careers/data/Civil Engineering_Structural Engineering.pt
+Clinical Psychologist,./utils/embeddings/CP_careers/data/Clinical Psychologist.pt
+Cloud engineer,./utils/embeddings/CP_careers/data/Cloud engineer.pt
+CNC Operator – Turning,./utils/embeddings/CP_careers/data/CNC Operator – Turning.pt
+Coach,./utils/embeddings/CP_careers/data/Coach.pt
+Coast Guard,./utils/embeddings/CP_careers/data/Coast Guard.pt
+Coffee Tasters_Sommelier_Baristas_Q Graders,./utils/embeddings/CP_careers/data/Coffee Tasters_Sommelier_Baristas_Q Graders.pt
+Cold Chain Process Management Specialist,./utils/embeddings/CP_careers/data/Cold Chain Process Management Specialist.pt
+Commercial Driver,./utils/embeddings/CP_careers/data/Commercial Driver.pt
+Commissioning Editor,./utils/embeddings/CP_careers/data/Commissioning Editor.pt
+Community journalist,./utils/embeddings/CP_careers/data/Community journalist.pt
+Company Secretary,./utils/embeddings/CP_careers/data/Company Secretary.pt
+Compliance Officer,./utils/embeddings/CP_careers/data/Compliance Officer.pt
+Computer hardware engineer,./utils/embeddings/CP_careers/data/Computer hardware engineer.pt
+Computer network architect,./utils/embeddings/CP_careers/data/Computer network architect.pt
+Computer Science Engineering,./utils/embeddings/CP_careers/data/Computer Science Engineering.pt
+Computer Scientist,./utils/embeddings/CP_careers/data/Computer Scientist.pt
+Construction – Painter and Decorator,./utils/embeddings/CP_careers/data/Construction – Painter and Decorator.pt
+Content Writer,./utils/embeddings/CP_careers/data/Content Writer.pt
+Contract Administrator,./utils/embeddings/CP_careers/data/Contract Administrator.pt
+Conveyor Operation & Maintenance technician,./utils/embeddings/CP_careers/data/Conveyor Operation & Maintenance technician.pt
+Copy Editor,./utils/embeddings/CP_careers/data/Copy Editor.pt
+Copywriter,./utils/embeddings/CP_careers/data/Copywriter.pt
+Corporate Legal Advisor_Compliance Officer,./utils/embeddings/CP_careers/data/Corporate Legal Advisor_Compliance Officer.pt
+Corrosion Engineer,./utils/embeddings/CP_careers/data/Corrosion Engineer.pt
+Cosmetic Dermatologist,./utils/embeddings/CP_careers/data/Cosmetic Dermatologist.pt
+Cost & Works Accountant,./utils/embeddings/CP_careers/data/Cost & Works Accountant.pt
+Creative Writer,./utils/embeddings/CP_careers/data/Creative Writer.pt
+Criminologist,./utils/embeddings/CP_careers/data/Criminologist.pt
+Crochet Lace Maker- Furnishings,./utils/embeddings/CP_careers/data/Crochet Lace Maker- Furnishings.pt
+CRPF officer,./utils/embeddings/CP_careers/data/CRPF officer.pt
+Curator,./utils/embeddings/CP_careers/data/Curator.pt
+Curriculum Developer,./utils/embeddings/CP_careers/data/Curriculum Developer.pt
+Customer Care Executive,./utils/embeddings/CP_careers/data/Customer Care Executive.pt
+Customs Officer,./utils/embeddings/CP_careers/data/Customs Officer.pt
+Cyber Security Specialist,./utils/embeddings/CP_careers/data/Cyber Security Specialist.pt
+Cytologist_Cytotechnologist,./utils/embeddings/CP_careers/data/Cytologist_Cytotechnologist.pt
+Dairy Farmer_Entrepreneur,./utils/embeddings/CP_careers/data/Dairy Farmer_Entrepreneur.pt
+Dairy Technologist,./utils/embeddings/CP_careers/data/Dairy Technologist.pt
+Dance Therapist,./utils/embeddings/CP_careers/data/Dance Therapist.pt
+Dancer,./utils/embeddings/CP_careers/data/Dancer.pt
+Data Collector or Field Survey Enumerator,./utils/embeddings/CP_careers/data/Data Collector or Field Survey Enumerator.pt
+Data Scientist,./utils/embeddings/CP_careers/data/Data Scientist.pt
+Database administrator,./utils/embeddings/CP_careers/data/Database administrator.pt
+Demographer,./utils/embeddings/CP_careers/data/Demographer.pt
+Dentist,./utils/embeddings/CP_careers/data/Dentist.pt
+Dento Oral Hygienist,./utils/embeddings/CP_careers/data/Dento Oral Hygienist.pt
+Design Engineer,./utils/embeddings/CP_careers/data/Design Engineer.pt
+Detective,./utils/embeddings/CP_careers/data/Detective.pt
+Development Operations Engineer,./utils/embeddings/CP_careers/data/Development Operations Engineer.pt
+Dialysis Technician,./utils/embeddings/CP_careers/data/Dialysis Technician.pt
+Dietician,./utils/embeddings/CP_careers/data/Dietician.pt
+Digital Marketing Expert,./utils/embeddings/CP_careers/data/Digital Marketing Expert.pt
+Director,./utils/embeddings/CP_careers/data/Director.pt
+Disc Jockey,./utils/embeddings/CP_careers/data/Disc Jockey.pt
+Distribution Manager,./utils/embeddings/CP_careers/data/Distribution Manager.pt
+Distributor Sales Representative,./utils/embeddings/CP_careers/data/Distributor Sales Representative.pt
+Doors & Windows Fixer,./utils/embeddings/CP_careers/data/Doors & Windows Fixer.pt
+Draughtsman,./utils/embeddings/CP_careers/data/Draughtsman.pt
+DTH Set Top Box Installation & Service Technician (Cable TV Operator ),./utils/embeddings/CP_careers/data/DTH Set Top Box Installation & Service Technician (Cable TV Operator ).pt
+Dubbing Artist or Voice Actor,./utils/embeddings/CP_careers/data/Dubbing Artist or Voice Actor.pt
+E- Waste Collector,./utils/embeddings/CP_careers/data/E- Waste Collector.pt
+Ecologist,./utils/embeddings/CP_careers/data/Ecologist.pt
+Economist,./utils/embeddings/CP_careers/data/Economist.pt
+Editor,./utils/embeddings/CP_careers/data/Editor.pt
+Editorial Assistant,./utils/embeddings/CP_careers/data/Editorial Assistant.pt
+Elderly Caretaker (Non clinical),./utils/embeddings/CP_careers/data/Elderly Caretaker (Non clinical).pt
+Electric Vehicle Assembly Technician,./utils/embeddings/CP_careers/data/Electric Vehicle Assembly Technician.pt
+Electrical and Electronics Engineer,./utils/embeddings/CP_careers/data/Electrical and Electronics Engineer.pt
+Electrician- General,./utils/embeddings/CP_careers/data/Electrician- General.pt
+Electronic Designer_VLSI_Embedded System Designer,./utils/embeddings/CP_careers/data/Electronic Designer_VLSI_Embedded System Designer.pt
+Electronics and Communication Engineer,./utils/embeddings/CP_careers/data/Electronics and Communication Engineer.pt
+Emergency Medical Technician (EMT),./utils/embeddings/CP_careers/data/Emergency Medical Technician (EMT).pt
+Endocrinologist,./utils/embeddings/CP_careers/data/Endocrinologist.pt
+Engineering Physicist,./utils/embeddings/CP_careers/data/Engineering Physicist.pt
+English Literature Scholar,./utils/embeddings/CP_careers/data/English Literature Scholar.pt
+ENT Doctor,./utils/embeddings/CP_careers/data/ENT Doctor.pt
+Environmental Engineer,./utils/embeddings/CP_careers/data/Environmental Engineer.pt
+Epigraphist,./utils/embeddings/CP_careers/data/Epigraphist.pt
+Equity Research Analyst,./utils/embeddings/CP_careers/data/Equity Research Analyst.pt
+Event Manager,./utils/embeddings/CP_careers/data/Event Manager.pt
+Farmer- Backyard_Small Poultry FarmerGoat farmer Piggery MaricultureSericulture Bee keeping,./utils/embeddings/CP_careers/data/Farmer- Backyard_Small Poultry FarmerGoat farmer Piggery MaricultureSericulture Bee keeping.pt
+Fashion Designer,./utils/embeddings/CP_careers/data/Fashion Designer.pt
+Field Technician-Other Home Appliances,./utils/embeddings/CP_careers/data/Field Technician-Other Home Appliances.pt
+Film_Video Designer,./utils/embeddings/CP_careers/data/Film_Video Designer.pt
+Finance Manager,./utils/embeddings/CP_careers/data/Finance Manager.pt
+Financial Accountant,./utils/embeddings/CP_careers/data/Financial Accountant.pt
+Financial Analyst,./utils/embeddings/CP_careers/data/Financial Analyst.pt
+Financial Engineer,./utils/embeddings/CP_careers/data/Financial Engineer.pt
+Fire fighter,./utils/embeddings/CP_careers/data/Fire fighter.pt
+Fire Technology_Safety Engineer,./utils/embeddings/CP_careers/data/Fire Technology_Safety Engineer.pt
+Fish and Sea food Processor,./utils/embeddings/CP_careers/data/Fish and Sea food Processor.pt
+Fisheries Development Officer,./utils/embeddings/CP_careers/data/Fisheries Development Officer.pt
+Fisheries Extension Officer,./utils/embeddings/CP_careers/data/Fisheries Extension Officer.pt
+Fisheries Officer,./utils/embeddings/CP_careers/data/Fisheries Officer.pt
+Fishery Technician_Aquaculture Technician,./utils/embeddings/CP_careers/data/Fishery Technician_Aquaculture Technician.pt
+Fitter â Mechanical Assembly,./utils/embeddings/CP_careers/data/Fitter â Mechanical Assembly.pt
+Fitter – Electrical and Electronic Assembly,./utils/embeddings/CP_careers/data/Fitter – Electrical and Electronic Assembly.pt
+Fitter – Processing,./utils/embeddings/CP_careers/data/Fitter – Processing.pt
+Fitter- Fabrication,./utils/embeddings/CP_careers/data/Fitter- Fabrication.pt
+Florist,./utils/embeddings/CP_careers/data/Florist.pt
+Food & Beverage Manager,./utils/embeddings/CP_careers/data/Food & Beverage Manager.pt
+Food & Beverage Service – Steward,./utils/embeddings/CP_careers/data/Food & Beverage Service – Steward.pt
+Food Engineer,./utils/embeddings/CP_careers/data/Food Engineer.pt
+Footwear Designer,./utils/embeddings/CP_careers/data/Footwear Designer.pt
+Foreign Language Teacher,./utils/embeddings/CP_careers/data/Foreign Language Teacher.pt
+Forensic Engineer,./utils/embeddings/CP_careers/data/Forensic Engineer.pt
+Forensic Scientist,./utils/embeddings/CP_careers/data/Forensic Scientist.pt
+Front Office Associate,./utils/embeddings/CP_careers/data/Front Office Associate.pt
+FSSAI officer,./utils/embeddings/CP_careers/data/FSSAI officer.pt
+Full stack developer,./utils/embeddings/CP_careers/data/Full stack developer.pt
+Game Designer and Developer,./utils/embeddings/CP_careers/data/Game Designer and Developer.pt
+General Duty Assistant-Advanced Options- Maternal & Newborn Care_ Critical Care_ Dialysis_ Parturition,./utils/embeddings/CP_careers/data/General Duty Assistant-Advanced Options- Maternal & Newborn Care_ Critical Care_ Dialysis_ Parturition.pt
+General Housekeeper,./utils/embeddings/CP_careers/data/General Housekeeper.pt
+General Physician,./utils/embeddings/CP_careers/data/General Physician.pt
+Genetic Engineer_Geneticist,./utils/embeddings/CP_careers/data/Genetic Engineer_Geneticist.pt
+Geo-Informatics Engineer,./utils/embeddings/CP_careers/data/Geo-Informatics Engineer.pt
+Geographer,./utils/embeddings/CP_careers/data/Geographer.pt
+Geologist,./utils/embeddings/CP_careers/data/Geologist.pt
+GNM (General Nurse and Midwife),./utils/embeddings/CP_careers/data/GNM (General Nurse and Midwife).pt
+Gramin Dak Sevaks,./utils/embeddings/CP_careers/data/Gramin Dak Sevaks.pt
+Graphics Designer,./utils/embeddings/CP_careers/data/Graphics Designer.pt
+Gynaecologist,./utils/embeddings/CP_careers/data/Gynaecologist.pt
+"Health, Safety and Environment Officer","./utils/embeddings/CP_careers/data/Health, Safety and Environment Officer.pt"
+Healthcare Manager,./utils/embeddings/CP_careers/data/Healthcare Manager.pt
+Help desk analyst,./utils/embeddings/CP_careers/data/Help desk analyst.pt
+Helper Bar Bender and Steel Fixer,./utils/embeddings/CP_careers/data/Helper Bar Bender and Steel Fixer.pt
+Helper – Fabrication,./utils/embeddings/CP_careers/data/Helper – Fabrication.pt
+Helper – Shuttering Carpenter,./utils/embeddings/CP_careers/data/Helper – Shuttering Carpenter.pt
+Hindi typist,./utils/embeddings/CP_careers/data/Hindi typist.pt
+Historian,./utils/embeddings/CP_careers/data/Historian.pt
+Home Cook,./utils/embeddings/CP_careers/data/Home Cook.pt
+Home Delivery Boy,./utils/embeddings/CP_careers/data/Home Delivery Boy.pt
+Homeopathy Doctor,./utils/embeddings/CP_careers/data/Homeopathy Doctor.pt
+Horticulturist,./utils/embeddings/CP_careers/data/Horticulturist.pt
+Housekeeping Attendant (Manual Cleaning),./utils/embeddings/CP_careers/data/Housekeeping Attendant (Manual Cleaning).pt
+Human Resource Manager,./utils/embeddings/CP_careers/data/Human Resource Manager.pt
+Human Rights Lawyer,./utils/embeddings/CP_careers/data/Human Rights Lawyer.pt
+Hydroponics Technician,./utils/embeddings/CP_careers/data/Hydroponics Technician.pt
+Illustrator,./utils/embeddings/CP_careers/data/Illustrator.pt
+Immunologist,./utils/embeddings/CP_careers/data/Immunologist.pt
+Indian Administrative Service,./utils/embeddings/CP_careers/data/Indian Administrative Service.pt
+Indian Air Force officer,./utils/embeddings/CP_careers/data/Indian Air Force officer.pt
+Indian Army Officer,./utils/embeddings/CP_careers/data/Indian Army Officer.pt
+Indian Foreign Service,./utils/embeddings/CP_careers/data/Indian Foreign Service.pt
+Indian Forest Service,./utils/embeddings/CP_careers/data/Indian Forest Service.pt
+Indian Home Guard,./utils/embeddings/CP_careers/data/Indian Home Guard.pt
+Indian Navy Officer,./utils/embeddings/CP_careers/data/Indian Navy Officer.pt
+Indian Police Service,./utils/embeddings/CP_careers/data/Indian Police Service.pt
+Indian Railway Accounts Service,./utils/embeddings/CP_careers/data/Indian Railway Accounts Service.pt
+Indian Railway Personnel Service,./utils/embeddings/CP_careers/data/Indian Railway Personnel Service.pt
+Indian Railway Service of Electrical Engineers,./utils/embeddings/CP_careers/data/Indian Railway Service of Electrical Engineers.pt
+Indian Railway Service of Engineers,./utils/embeddings/CP_careers/data/Indian Railway Service of Engineers.pt
+Indian Railway Service of Mechanical Engineers,./utils/embeddings/CP_careers/data/Indian Railway Service of Mechanical Engineers.pt
+Indian Railway Service of Signal Engineers,./utils/embeddings/CP_careers/data/Indian Railway Service of Signal Engineers.pt
+Indian Railway Stores Service (IRSS),./utils/embeddings/CP_careers/data/Indian Railway Stores Service (IRSS).pt
+Indian Railways Traffic Service (IRTS),./utils/embeddings/CP_careers/data/Indian Railways Traffic Service (IRTS).pt
+Indian Revenue Service,./utils/embeddings/CP_careers/data/Indian Revenue Service.pt
+Industrial Designer,./utils/embeddings/CP_careers/data/Industrial Designer.pt
+Industrial Engineer,./utils/embeddings/CP_careers/data/Industrial Engineer.pt
+Industrial Production Worker â Food Processing,./utils/embeddings/CP_careers/data/Industrial Production Worker â Food Processing.pt
+Information Technology Engineer,./utils/embeddings/CP_careers/data/Information Technology Engineer.pt
+Inspector of Income Tax,./utils/embeddings/CP_careers/data/Inspector of Income Tax.pt
+Installer â Frameless Glass Doors_Windows,./utils/embeddings/CP_careers/data/Installer â Frameless Glass Doors_Windows.pt
+Instrumentation Engineer,./utils/embeddings/CP_careers/data/Instrumentation Engineer.pt
+Insurance Agent,./utils/embeddings/CP_careers/data/Insurance Agent.pt
+Interior Designer,./utils/embeddings/CP_careers/data/Interior Designer.pt
+International Business Manager,./utils/embeddings/CP_careers/data/International Business Manager.pt
+International Relations Specialist,./utils/embeddings/CP_careers/data/International Relations Specialist.pt
+Internet of Things (IoT) Solutions Architect,./utils/embeddings/CP_careers/data/Internet of Things (IoT) Solutions Architect.pt
+Interpreter,./utils/embeddings/CP_careers/data/Interpreter.pt
+Inventory Manager,./utils/embeddings/CP_careers/data/Inventory Manager.pt
+Investment Banker,./utils/embeddings/CP_careers/data/Investment Banker.pt
+Investment_ Portfolio Manager,./utils/embeddings/CP_careers/data/Investment_ Portfolio Manager.pt
+ITBP officer,./utils/embeddings/CP_careers/data/ITBP officer.pt
+Journalist,./utils/embeddings/CP_careers/data/Journalist.pt
+Judge,./utils/embeddings/CP_careers/data/Judge.pt
+Jute Handloom Weaver,./utils/embeddings/CP_careers/data/Jute Handloom Weaver.pt
+Kitchen Steward,./utils/embeddings/CP_careers/data/Kitchen Steward.pt
+KPO executive,./utils/embeddings/CP_careers/data/KPO executive.pt
+Lapidarist,./utils/embeddings/CP_careers/data/Lapidarist.pt
+Lawyer_Law Officer_Advocate,./utils/embeddings/CP_careers/data/Lawyer_Law Officer_Advocate.pt
+Leather Technologist,./utils/embeddings/CP_careers/data/Leather Technologist.pt
+Lecturer (College & University),./utils/embeddings/CP_careers/data/Lecturer (College & University).pt
+Lexicographer,./utils/embeddings/CP_careers/data/Lexicographer.pt
+Librarian,./utils/embeddings/CP_careers/data/Librarian.pt
+Life Insurance Agent,./utils/embeddings/CP_careers/data/Life Insurance Agent.pt
+"Lifeguard (Pool Guard, Beach Lifeguard, Lifesaver)","./utils/embeddings/CP_careers/data/Lifeguard (Pool Guard, Beach Lifeguard, Lifesaver).pt"
+Light Vehicle Driver (LMV),./utils/embeddings/CP_careers/data/Light Vehicle Driver (LMV).pt
+Linguist,./utils/embeddings/CP_careers/data/Linguist.pt
+Literary Agent,./utils/embeddings/CP_careers/data/Literary Agent.pt
+Loan Officer,./utils/embeddings/CP_careers/data/Loan Officer.pt
+Loco Pilot,./utils/embeddings/CP_careers/data/Loco Pilot.pt
+Logistics Analyst,./utils/embeddings/CP_careers/data/Logistics Analyst.pt
+Logistics Manager,./utils/embeddings/CP_careers/data/Logistics Manager.pt
+Loom Supervisor – Knotted Carpet,./utils/embeddings/CP_careers/data/Loom Supervisor – Knotted Carpet.pt
+Manufacturing Engineer,./utils/embeddings/CP_careers/data/Manufacturing Engineer.pt
+Marine Engineering,./utils/embeddings/CP_careers/data/Marine Engineering.pt
+Mason (General),./utils/embeddings/CP_careers/data/Mason (General).pt
+Mason (Stone),./utils/embeddings/CP_careers/data/Mason (Stone).pt
+Mason (Tiling),./utils/embeddings/CP_careers/data/Mason (Tiling).pt
+Massage Therapist,./utils/embeddings/CP_careers/data/Massage Therapist.pt
+Master Hand Embroiderer (Hand Crafted Textiles),./utils/embeddings/CP_careers/data/Master Hand Embroiderer (Hand Crafted Textiles).pt
+Mathematician,./utils/embeddings/CP_careers/data/Mathematician.pt
+Mechanical Engineer,./utils/embeddings/CP_careers/data/Mechanical Engineer.pt
+Mechanical Fitter,./utils/embeddings/CP_careers/data/Mechanical Fitter.pt
+Media Planner,./utils/embeddings/CP_careers/data/Media Planner.pt
+Medical Representative,./utils/embeddings/CP_careers/data/Medical Representative.pt
+Medical Technician,./utils/embeddings/CP_careers/data/Medical Technician.pt
+Medical Transcriptionist,./utils/embeddings/CP_careers/data/Medical Transcriptionist.pt
+Medical Writer,./utils/embeddings/CP_careers/data/Medical Writer.pt
+Medico Legal Advisor,./utils/embeddings/CP_careers/data/Medico Legal Advisor.pt
+Merchant Navy,./utils/embeddings/CP_careers/data/Merchant Navy.pt
+Metallurgical Engineer,./utils/embeddings/CP_careers/data/Metallurgical Engineer.pt
+Meteorologist,./utils/embeddings/CP_careers/data/Meteorologist.pt
+Microfinance Executive,./utils/embeddings/CP_careers/data/Microfinance Executive.pt
+Military Engineering Services,./utils/embeddings/CP_careers/data/Military Engineering Services.pt
+Mining Engineer,./utils/embeddings/CP_careers/data/Mining Engineer.pt
+Model,./utils/embeddings/CP_careers/data/Model.pt
+Multi Skill Technician (Electrical),./utils/embeddings/CP_careers/data/Multi Skill Technician (Electrical).pt
+Multi Skill Technician (Food Processing),./utils/embeddings/CP_careers/data/Multi Skill Technician (Food Processing).pt
+Multi-Tasking Staff,./utils/embeddings/CP_careers/data/Multi-Tasking Staff.pt
+Multimedia Designer,./utils/embeddings/CP_careers/data/Multimedia Designer.pt
+Museologist,./utils/embeddings/CP_careers/data/Museologist.pt
+Musician,./utils/embeddings/CP_careers/data/Musician.pt
+Nanotechnology _ Nanoscience,./utils/embeddings/CP_careers/data/Nanotechnology _ Nanoscience.pt
+Nature Guide,./utils/embeddings/CP_careers/data/Nature Guide.pt
+Naturopathic Doctor,./utils/embeddings/CP_careers/data/Naturopathic Doctor.pt
+Network Administrator,./utils/embeddings/CP_careers/data/Network Administrator.pt
+Nuclear Engineer,./utils/embeddings/CP_careers/data/Nuclear Engineer.pt
+Nurse,./utils/embeddings/CP_careers/data/Nurse.pt
+Nutritionist,./utils/embeddings/CP_careers/data/Nutritionist.pt
+Occupational Therapist,./utils/embeddings/CP_careers/data/Occupational Therapist.pt
+Office Administrator,./utils/embeddings/CP_careers/data/Office Administrator.pt
+Oil Technologist,./utils/embeddings/CP_careers/data/Oil Technologist.pt
+Oncologist,./utils/embeddings/CP_careers/data/Oncologist.pt
+Online Advertising Manager,./utils/embeddings/CP_careers/data/Online Advertising Manager.pt
+Operations Manager,./utils/embeddings/CP_careers/data/Operations Manager.pt
+Operator – Boring Machine,./utils/embeddings/CP_careers/data/Operator – Boring Machine.pt
+Ophthalmologist,./utils/embeddings/CP_careers/data/Ophthalmologist.pt
+Optical Engineer,./utils/embeddings/CP_careers/data/Optical Engineer.pt
+Optometrist,./utils/embeddings/CP_careers/data/Optometrist.pt
+Orthopaedist,./utils/embeddings/CP_careers/data/Orthopaedist.pt
+Orthotist_Prosthetist,./utils/embeddings/CP_careers/data/Orthotist_Prosthetist.pt
+Package Dyeing Machine Operator,./utils/embeddings/CP_careers/data/Package Dyeing Machine Operator.pt
+Paediatrician,./utils/embeddings/CP_careers/data/Paediatrician.pt
+Paleontologist,./utils/embeddings/CP_careers/data/Paleontologist.pt
+Palliative and Hospital Care Specialist,./utils/embeddings/CP_careers/data/Palliative and Hospital Care Specialist.pt
+Paramedic,./utils/embeddings/CP_careers/data/Paramedic.pt
+Pastry Chef,./utils/embeddings/CP_careers/data/Pastry Chef.pt
+Patent Lawyer,./utils/embeddings/CP_careers/data/Patent Lawyer.pt
+Perfusion Technologist,./utils/embeddings/CP_careers/data/Perfusion Technologist.pt
+Periodontist,./utils/embeddings/CP_careers/data/Periodontist.pt
+Petroleum Engineer,./utils/embeddings/CP_careers/data/Petroleum Engineer.pt
+Pharmaceutical Engineering,./utils/embeddings/CP_careers/data/Pharmaceutical Engineering.pt
+Pharmacist,./utils/embeddings/CP_careers/data/Pharmacist.pt
+Phlebotomist,./utils/embeddings/CP_careers/data/Phlebotomist.pt
+Photographer,./utils/embeddings/CP_careers/data/Photographer.pt
+Photojournalist,./utils/embeddings/CP_careers/data/Photojournalist.pt
+Physical Educator,./utils/embeddings/CP_careers/data/Physical Educator.pt
+Physical or Fitness Trainer,./utils/embeddings/CP_careers/data/Physical or Fitness Trainer.pt
+Physicist,./utils/embeddings/CP_careers/data/Physicist.pt
+Physiotherapist,./utils/embeddings/CP_careers/data/Physiotherapist.pt
+Pilot,./utils/embeddings/CP_careers/data/Pilot.pt
+Pisciculturist,./utils/embeddings/CP_careers/data/Pisciculturist.pt
+Plumber,./utils/embeddings/CP_careers/data/Plumber.pt
+Police Constable,./utils/embeddings/CP_careers/data/Police Constable.pt
+Political Scientist,./utils/embeddings/CP_careers/data/Political Scientist.pt
+Port Operations Manager,./utils/embeddings/CP_careers/data/Port Operations Manager.pt
+Pre-School Educator,./utils/embeddings/CP_careers/data/Pre-School Educator.pt
+Printing Engineer_Technologist,./utils/embeddings/CP_careers/data/Printing Engineer_Technologist.pt
+Process Engineer,./utils/embeddings/CP_careers/data/Process Engineer.pt
+Producer,./utils/embeddings/CP_careers/data/Producer.pt
+Product Designer,./utils/embeddings/CP_careers/data/Product Designer.pt
+Production Designer,./utils/embeddings/CP_careers/data/Production Designer.pt
+Production Manager,./utils/embeddings/CP_careers/data/Production Manager.pt
+Programmer_coder_software engineer,./utils/embeddings/CP_careers/data/Programmer_coder_software engineer.pt
+Proofreader,./utils/embeddings/CP_careers/data/Proofreader.pt
+Property Manager,./utils/embeddings/CP_careers/data/Property Manager.pt
+Psephologist,./utils/embeddings/CP_careers/data/Psephologist.pt
+Psychiatrist,./utils/embeddings/CP_careers/data/Psychiatrist.pt
+Psychological Counsellor _Counselling Psychologist,./utils/embeddings/CP_careers/data/Psychological Counsellor _Counselling Psychologist.pt
+Public Health Officer,./utils/embeddings/CP_careers/data/Public Health Officer.pt
+Public Policy Advisor,./utils/embeddings/CP_careers/data/Public Policy Advisor.pt
+Public Relations Manager,./utils/embeddings/CP_careers/data/Public Relations Manager.pt
+Public Relations Officer (PRO),./utils/embeddings/CP_careers/data/Public Relations Officer (PRO).pt
+Publicist,./utils/embeddings/CP_careers/data/Publicist.pt
+Publisher,./utils/embeddings/CP_careers/data/Publisher.pt
+Pulmonologists,./utils/embeddings/CP_careers/data/Pulmonologists.pt
+Purchasing and Materials Manager,./utils/embeddings/CP_careers/data/Purchasing and Materials Manager.pt
+Quality Assurance Engineer,./utils/embeddings/CP_careers/data/Quality Assurance Engineer.pt
+Radio Jockey,./utils/embeddings/CP_careers/data/Radio Jockey.pt
+Radiologist,./utils/embeddings/CP_careers/data/Radiologist.pt
+Railway Engineer,./utils/embeddings/CP_careers/data/Railway Engineer.pt
+Railway Protection Force (RPF),./utils/embeddings/CP_careers/data/Railway Protection Force (RPF).pt
+Real Estate Agent,./utils/embeddings/CP_careers/data/Real Estate Agent.pt
+Real Estate Consultant,./utils/embeddings/CP_careers/data/Real Estate Consultant.pt
+Receptionist,./utils/embeddings/CP_careers/data/Receptionist.pt
+Referee (Football),./utils/embeddings/CP_careers/data/Referee (Football).pt
+Refrigeration Technician,./utils/embeddings/CP_careers/data/Refrigeration Technician.pt
+Rehabilitation Specialist,./utils/embeddings/CP_careers/data/Rehabilitation Specialist.pt
+Relationship Manager,./utils/embeddings/CP_careers/data/Relationship Manager.pt
+Retail Cashier,./utils/embeddings/CP_careers/data/Retail Cashier.pt
+Retail Manager,./utils/embeddings/CP_careers/data/Retail Manager.pt
+Retail Store Operations Assistant,./utils/embeddings/CP_careers/data/Retail Store Operations Assistant.pt
+Risk manager,./utils/embeddings/CP_careers/data/Risk manager.pt
+Robotics Engineer,./utils/embeddings/CP_careers/data/Robotics Engineer.pt
+Room Attendant,./utils/embeddings/CP_careers/data/Room Attendant.pt
+Rubber Technologist,./utils/embeddings/CP_careers/data/Rubber Technologist.pt
+Rural Development Specialist_Manager,./utils/embeddings/CP_careers/data/Rural Development Specialist_Manager.pt
+Sales and Marketing Manager,./utils/embeddings/CP_careers/data/Sales and Marketing Manager.pt
+Sales Engineer,./utils/embeddings/CP_careers/data/Sales Engineer.pt
+Salesman_Sales Representative,./utils/embeddings/CP_careers/data/Salesman_Sales Representative.pt
+School Counsellor,./utils/embeddings/CP_careers/data/School Counsellor.pt
+School Teacher,./utils/embeddings/CP_careers/data/School Teacher.pt
+Scientific Assistant (IMD),./utils/embeddings/CP_careers/data/Scientific Assistant (IMD).pt
+Screenwriter,./utils/embeddings/CP_careers/data/Screenwriter.pt
+Scriptwriter,./utils/embeddings/CP_careers/data/Scriptwriter.pt
+Sculptor,./utils/embeddings/CP_careers/data/Sculptor.pt
+Secretary_Personal Assistant,./utils/embeddings/CP_careers/data/Secretary_Personal Assistant.pt
+Seed Technologist,./utils/embeddings/CP_careers/data/Seed Technologist.pt
+Seismologist,./utils/embeddings/CP_careers/data/Seismologist.pt
+Self-employed e-tailer,./utils/embeddings/CP_careers/data/Self-employed e-tailer.pt
+SEO Manager,./utils/embeddings/CP_careers/data/SEO Manager.pt
+Service Fulfilment Executive,./utils/embeddings/CP_careers/data/Service Fulfilment Executive.pt
+Sewing Machine Operator,./utils/embeddings/CP_careers/data/Sewing Machine Operator.pt
+Showroom Hostess _ Host,./utils/embeddings/CP_careers/data/Showroom Hostess _ Host.pt
+Shrimp Farmer,./utils/embeddings/CP_careers/data/Shrimp Farmer.pt
+Singer,./utils/embeddings/CP_careers/data/Singer.pt
+Smart Manufacturing and Automation Engineering,./utils/embeddings/CP_careers/data/Smart Manufacturing and Automation Engineering.pt
+SmartPhone Repair Technician,./utils/embeddings/CP_careers/data/SmartPhone Repair Technician.pt
+Social Media Executive,./utils/embeddings/CP_careers/data/Social Media Executive.pt
+Social Media Manager,./utils/embeddings/CP_careers/data/Social Media Manager.pt
+Social Worker,./utils/embeddings/CP_careers/data/Social Worker.pt
+Sociologist,./utils/embeddings/CP_careers/data/Sociologist.pt
+Software application packager,./utils/embeddings/CP_careers/data/Software application packager.pt
+Soil Scientist,./utils/embeddings/CP_careers/data/Soil Scientist.pt
+Solar & LED Technician,./utils/embeddings/CP_careers/data/Solar & LED Technician.pt
+Sommelier,./utils/embeddings/CP_careers/data/Sommelier.pt
+Sound Engineer,./utils/embeddings/CP_careers/data/Sound Engineer.pt
+Sound Recordist,./utils/embeddings/CP_careers/data/Sound Recordist.pt
+Spa therapist,./utils/embeddings/CP_careers/data/Spa therapist.pt
+Space Scientist,./utils/embeddings/CP_careers/data/Space Scientist.pt
+Special Educator,./utils/embeddings/CP_careers/data/Special Educator.pt
+Speech-Language Pathologist (SLP) and Audiologist,./utils/embeddings/CP_careers/data/Speech-Language Pathologist (SLP) and Audiologist.pt
+Sports Agent_Manager,./utils/embeddings/CP_careers/data/Sports Agent_Manager.pt
+Sports Analyst,./utils/embeddings/CP_careers/data/Sports Analyst.pt
+Sports Equipment Manager,./utils/embeddings/CP_careers/data/Sports Equipment Manager.pt
+Sports Lawyer,./utils/embeddings/CP_careers/data/Sports Lawyer.pt
+Sports Medicine Specialist,./utils/embeddings/CP_careers/data/Sports Medicine Specialist.pt
+Sports Psychologist,./utils/embeddings/CP_careers/data/Sports Psychologist.pt
+Sports Scout,./utils/embeddings/CP_careers/data/Sports Scout.pt
+Sportsperson,./utils/embeddings/CP_careers/data/Sportsperson.pt
+SSB – Sashastra Seema Bal officer,./utils/embeddings/CP_careers/data/SSB – Sashastra Seema Bal officer.pt
+Statistician,./utils/embeddings/CP_careers/data/Statistician.pt
+Stock Broker,./utils/embeddings/CP_careers/data/Stock Broker.pt
+Stone Cutter (Cutting machine operator) – Stone craft,./utils/embeddings/CP_careers/data/Stone Cutter (Cutting machine operator) – Stone craft.pt
+Store Keeper – Construction,./utils/embeddings/CP_careers/data/Store Keeper – Construction.pt
+Stringing_Beading Artisan (Fashion Jewellery),./utils/embeddings/CP_careers/data/Stringing_Beading Artisan (Fashion Jewellery).pt
+Sub-inspector of Police,./utils/embeddings/CP_careers/data/Sub-inspector of Police.pt
+Sugar Technologist,./utils/embeddings/CP_careers/data/Sugar Technologist.pt
+Supply chain manager,./utils/embeddings/CP_careers/data/Supply chain manager.pt
+Surgeon,./utils/embeddings/CP_careers/data/Surgeon.pt
+Systems Analyst,./utils/embeddings/CP_careers/data/Systems Analyst.pt
+Talent Manager,./utils/embeddings/CP_careers/data/Talent Manager.pt
+Tattoo artist,./utils/embeddings/CP_careers/data/Tattoo artist.pt
+Tax Auditor,./utils/embeddings/CP_careers/data/Tax Auditor.pt
+Tea Plantation Manager,./utils/embeddings/CP_careers/data/Tea Plantation Manager.pt
+Tea Taster,./utils/embeddings/CP_careers/data/Tea Taster.pt
+Technical Writer,./utils/embeddings/CP_careers/data/Technical Writer.pt
+Technician- Dental_Radiation therapy_Anaesthesia_Dialysis_Operation theater_Blood bank_Vision_Panchkarma,./utils/embeddings/CP_careers/data/Technician- Dental_Radiation therapy_Anaesthesia_Dialysis_Operation theater_Blood bank_Vision_Panchkarma.pt
+Textile Designer,./utils/embeddings/CP_careers/data/Textile Designer.pt
+Textile Engineer,./utils/embeddings/CP_careers/data/Textile Engineer.pt
+Theatre Artist,./utils/embeddings/CP_careers/data/Theatre Artist.pt
+Tool Engineer,./utils/embeddings/CP_careers/data/Tool Engineer.pt
+Tour Guide,./utils/embeddings/CP_careers/data/Tour Guide.pt
+Tour Operator,./utils/embeddings/CP_careers/data/Tour Operator.pt
+Tower Technician,./utils/embeddings/CP_careers/data/Tower Technician.pt
+Toxicologist,./utils/embeddings/CP_careers/data/Toxicologist.pt
+Toy Designer,./utils/embeddings/CP_careers/data/Toy Designer.pt
+Trainee Chef_Assistant cook,./utils/embeddings/CP_careers/data/Trainee Chef_Assistant cook.pt
+Trainer,./utils/embeddings/CP_careers/data/Trainer.pt
+Translator,./utils/embeddings/CP_careers/data/Translator.pt
+Transportation Manager,./utils/embeddings/CP_careers/data/Transportation Manager.pt
+Travel Consultant,./utils/embeddings/CP_careers/data/Travel Consultant.pt
+Umpire (Cricket),./utils/embeddings/CP_careers/data/Umpire (Cricket).pt
+Unani Doctor,./utils/embeddings/CP_careers/data/Unani Doctor.pt
+Unarmed Security Guard,./utils/embeddings/CP_careers/data/Unarmed Security Guard.pt
+Urban Planner,./utils/embeddings/CP_careers/data/Urban Planner.pt
+Urologist,./utils/embeddings/CP_careers/data/Urologist.pt
+User experience designer,./utils/embeddings/CP_careers/data/User experience designer.pt
+Vegetable Grower Electives- Leafy Vegetables _ Salad Vegetables _ Root Vegetables _Cucurbit Crops _ Solanaceous Crops _ Pod Vegetables _ Bulb Vegetables _Perennial Vegetables _ Tuber Vegetables _ Okra,./utils/embeddings/CP_careers/data/Vegetable Grower Electives- Leafy Vegetables _ Salad Vegetables _ Root Vegetables _Cucurbit Crops _ Solanaceous Crops _ Pod Vegetables _ Bulb Vegetables _Perennial Vegetables _ Tuber Vegetables _ Okra.pt
+Venture capitalist,./utils/embeddings/CP_careers/data/Venture capitalist.pt
+Veterinarian,./utils/embeddings/CP_careers/data/Veterinarian.pt
+Vineyard Grower,./utils/embeddings/CP_careers/data/Vineyard Grower.pt
+Virologist,./utils/embeddings/CP_careers/data/Virologist.pt
+Virtual Reality Engineer,./utils/embeddings/CP_careers/data/Virtual Reality Engineer.pt
+Visual Communication Designer,./utils/embeddings/CP_careers/data/Visual Communication Designer.pt
+Visual Merchandiser,./utils/embeddings/CP_careers/data/Visual Merchandiser.pt
+Waste collectors,./utils/embeddings/CP_careers/data/Waste collectors.pt
+Water Resource Engineer,./utils/embeddings/CP_careers/data/Water Resource Engineer.pt
+Web Analyst,./utils/embeddings/CP_careers/data/Web Analyst.pt
+Web Designer,./utils/embeddings/CP_careers/data/Web Designer.pt
+Wood Polisher,./utils/embeddings/CP_careers/data/Wood Polisher.pt
+Yoga Instructor,./utils/embeddings/CP_careers/data/Yoga Instructor.pt
+Zoologist,./utils/embeddings/CP_careers/data/Zoologist.pt
