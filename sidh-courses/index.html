@@ -397,15 +397,17 @@
     </main>
 
     <script>
-        const coursesPerPage = 100;
+        const coursesPerPage = 2;
         let currentPage = 1;
         let courses = [];
+        let filteredSectors = [];
         let filteredCourses = [];
         let totalCoursesFetched = 0 ;
-        
-        let selectedSector = ""; // To track the selected sector
-        let filteredSectors = [];
-        let selectedPrice = "";
+
+        let selectedSector = []; // To track the selected sector
+        let selectedPrice = [];
+
+        let query = "";
         
         function totalPages() {
             return Math.ceil(totalCoursesFetched/coursesPerPage);
@@ -420,13 +422,13 @@
 
             const coursesToDisplay = filteredCourses; //all courses as filtered courses are paginated in this API.
             
-            console.log(coursesToDisplay);
+            //console.log(coursesToDisplay);
             coursesToDisplay.forEach(course => {
                 const courseCard = $(`
                 <div class="course-card">
                     <div class="course-card-header">
                         <span class="course-mode">Online</span>
-                        <span class="course-cost">Paid</span>
+                        <span class="course-cost">${getCoursePriceById(course.TypeId)}</span>
                     </div>
 
                     <div class="course-card-body">
@@ -438,7 +440,8 @@
                             <p class="course-provider">${course.CreatedBy}</p>
 
                             <!-- Domain/category -->
-                            <span class="course-domain">${course.Domains[0]?.Domain || "N/A"}</span>
+                            
+                            <span class="course-domain">${getSectorNamesById(course.Sector)}</span>
 
                             <!-- Icons for sharing and favorite -->
                             <!--<div class="course-icons">-->
@@ -483,52 +486,71 @@
             const mins = minutes % 60;
             return `${hours} Hours ${mins > 0 ? mins + " Minutes" : ""}`;
         }
-       
+        
+        
+        
+        function getSectorNamesById(sectors_present) {
+            sector_names = [];
+            for (i=0; i<sectors_present.length;i++)
+                {
+                    for (j=0;j<filteredSectors.length; j++)
+                        {
+                            if (parseInt(sectors_present[i].SectorId) == parseInt(filteredSectors[j].Code))
+                                {
+                                    
+                                    
+                                    sector_name = filteredSectors[j].Name;
+                                    sector_names.push(sector_name); 
+
+                                }
+
+                        }
+                }
+            //const sector = filteredSectors.find(s => s.Id === sectorId);
+            return sector_names ? sector_names : ""; // Returns the sector name or null if not found
+            console.log(sector_names);
+        }
+
+
+        function getCoursePriceById(price_id) {
+            for (j=0;j<filteredPrices.length; j++)
+                {
+                    if (price_id == filteredPrices[j].Id)
+                        {
+                            return filteredPrices[j].Name;
+
+                        }
+                }
+        }
        
         function searchCourses() {
+            currentPage = 1;
             query = $("#searchInput").val().toLowerCase();
             selectedSector = $("#sectorFilter").val();
             selectedPrice = $("#priceFilter").val();
+            
+            if (selectedSector == ""){
+                selectedSector = [];
+            }
+            else{
+                selectedSector = [parseInt(selectedSector)];
+            }
+            if (selectedPrice == ""){
+                selectedPrice = [];
+            }
+            else{
+                selectedPrice = [parseInt(selectedPrice)];
+            }
+
+
             fetchCourses();
         }
 
 
         $("#searchBtn").on("click", searchCourses);
+        $("#sectorFilter").on("change", searchCourses);
+        $("#priceFilter").on("change", searchCourses);
 
-        // $("#sectorFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     //const selectedSector = $("#locationFilter").val();
-        //     //const salarySortOrder = $("#salaryFilter").val();
-        //     //const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderCourses(query, $(this).val(), selectedState, salarySortOrder, vacancySortOrder);
-        // });
-
-        // $("#locationFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     const salarySortOrder = $("#salaryFilter").val();
-        //     const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderJobs(query, selectedSector, $(this).val(), salarySortOrder, vacancySortOrder);
-        // });
-
-        // $("#salaryFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     const selectedState = $("#locationFilter").val();
-        //     $("#vacancyFilter").val("NoSort");
-        //     const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderJobs(query, selectedSector, selectedState, $(this).val(), vacancySortOrder);
-        // });
-
-        // $("#vacancyFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     $("#salaryFilter").val("NoSort");
-        //     const salarySortOrder = $("#salaryFilter").val();
-        //     const selectedState = $("#locationFilter").val();
-            
-        //     filterAndRenderJobs(query, selectedSector, selectedState, salarySortOrder, $(this).val());
-        // });
 
 
 
@@ -568,7 +590,7 @@
 
             const pricesDropdown = $("#priceFilter");   
             prices.forEach(price => {
-                const option = new Option(price.name, sector.code);
+                const option = new Option(price.name, price.code);
                 pricesDropdown.append(option);
             });
         }
@@ -579,6 +601,7 @@
                 url: 'https://api-fe.skillindiadigital.gov.in/api/sectors', // Change this URL to your actual API endpoint
                 method: 'GET',
                 dataType: 'json',
+                async: false, 
                 contentType:'application/json',                          
                 data: JSON.stringify({}),
                 beforeSend: function(xhr) {
@@ -602,10 +625,13 @@
 
         function fetchPrices()
         {
+           
+            
             $.ajax({
                 url: 'https://api-fe.skillindiadigital.gov.in/api/course-v3/course-price-list-data', // Change this URL to your actual API endpoint
                 method: 'GET',
                 dataType: 'json',
+                async: false, 
                 contentType:'application/json',                          
                 data: JSON.stringify({}),
                 beforeSend: function(xhr) {
@@ -629,6 +655,7 @@
 
 
         function fetchCourses() {
+            
             $("#loader").show(); // Show loader when starting the fetch
             $.ajax({
                 url: 'https://api-fe.skillindiadigital.gov.in/api/course-v3/course-list-result', // Change this URL to your actual API endpoint
@@ -636,7 +663,7 @@
                 dataType: 'json',
                 contentType:'application/json',                          
                 data: JSON.stringify({
-                    "CourseStatusId":[],"Keyword":"","Sector":[],"Language":[],"TypeId":[],"Price":[],"Rating":[],"CourseProviderId":[],"CourseId":[],"SchemaId":[],"ProgramBy":[],"InitiativeOfs":[],"Domains":[],"LearningProductTypes":[],"Programs":[],"Duration":[],"Credit":[],"Availability":[],"CreatedBy":[],"CertificateType":[],"PageNumber":currentPage,"PageSize":coursesPerPage,"Occupations":[],"SortBy":null,"SortSet":null
+                    "CourseStatusId":[],"Keyword":query,"Sector":selectedSector,"Language":[],"TypeId":selectedPrice,"Price":[],"Rating":[],"CourseProviderId":[],"CourseId":[],"SchemaId":[],"ProgramBy":[],"InitiativeOfs":[],"Domains":[],"LearningProductTypes":[],"Programs":[],"Duration":[],"Credit":[],"Availability":[],"CreatedBy":[],"CertificateType":[],"PageNumber":currentPage,"PageSize":coursesPerPage,"Occupations":[],"SortBy":null,"SortSet":null
                 }),
                 beforeSend: function(xhr) {
                     // Add the CORS header for cross-origin requests
@@ -650,8 +677,6 @@
                         totalCoursesFetched = response.Data.Pagination.TotalCount;
                         filteredCourses = [...courses]; // Initialize filtered jobs
                         //populateLocationFilter();
-                        fetchSectors();
-                        fetchPrices();
                         updatePagination(); // Display the first page
                     } else {
                         console.error("Unexpected data format:", response);
@@ -665,6 +690,8 @@
         }
 
         $(document).ready(function () {
+            fetchPrices();
+            fetchSectors();
             fetchCourses(); // Load jobs from the server when the page loads
         });
 
