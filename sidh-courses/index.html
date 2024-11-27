@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings | NSDC Job-X </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .loader{
+            display: none; /* Hide loader initially */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: #fff;
+        }
+
+        .loaderanim {
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            top:50%;
+            left:50%;
+            border: 8px solid #f3f3f3; /* Light grey border */
+            border-top: 8px solid #3498db; /* Blue border for rotating part */
+            border-radius: 50%; /* Makes it circular */
+            animation: spin 1s linear infinite; /* Spin animation */
+            z-index: 1001;
+        }
+
+        /* Define the spinning animation */
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f8f8;
+            color: #161616;
+        }
+
+        /* Header styling */
+        header {
+            width: 100%;
+            background-color: #0077cc;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            padding: 0 10%;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+        }
+
+        /* Header links styling */
+        .header-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .header-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Search Bar Styling */
+        .search-container {
+            margin: 100px auto 20px;
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #0077cc;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Main content styling */
+        main {
+            margin-top: 80px; /* Space for header */
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+        /* Course Card */
+.course-card {
+    background-color: #fff;
+    padding: 25px; /* Increased padding */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Slightly heavier shadow */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 25px; /* Increased margin-bottom */
+}
+
+.course-card:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4); /* Slightly heavier shadow */
+}
+
+/* Course Main Content Section (Two Columns) */
+.course-card-body {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    
+}
+
+/* Course Image (Left Column) */
+.course-image {
+    flex: 1 1 400px; /* Flex-grow, flex-shrink, and min-width for responsive layout */
+    max-width: 400px; /* Maximum width of the image */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height:100%;
+}
+
+.course-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    max-width: 100%;         /* Ensure the image scales appropriately */
+    max-height: 100%;        /* Prevent image from overflowing */
+    object-fit: contain;     /* Preserve aspect ratio */
+}
+
+
+.course-details-container {
+    flex: 2 1 200px; /* Flex-grow, flex-shrink, and min-width for the details section */
+    
+}
+
+
+/* Header Section */
+.course-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Added margin to separate from content */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Mode and Cost Tags */
+.course-mode,
+.course-cost {
+    font-size: 14px; /* Increased font size */
+    font-weight: bold;
+    padding: 8px 14px; /* Increased padding for more visibility */
+    border-radius: 20px; /* Rounded border */
+}
+.course-cost{text-transform: uppercase;}
+.course-mode {
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-size:1.1em;
+}
+
+.course-cost {
+    background-color: #bbdefb;
+    color: #0d47a1;
+    font-size:1.1em;
+}
+
+/* Title */
+.course-title {
+    font-size: 25px; /* Larger font for title */
+    font-weight: bold; /* Bold title */
+    margin: 10px 0; /* Increased margin */
+    color: #020202; /* Darker color for title */
+    text-transform: uppercase;
+}
+
+/* Course Provider */
+.course-provider {
+    font-size: 14px; /* Increased font size */
+    color: #626161;
+    font-weight: bold;
+}
+
+/* Domain */
+.course-domain {
+    font-size: 16px; /* Slightly larger font for domain */
+    color: #0b66d5;
+    font-weight: bold;
+    padding-top:10px;
+}
+
+/* Icons Section */
+.course-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Increased gap between icons */
+}
+
+/* Course Details List */
+.course-details {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0; /* Increased margin */
+}
+
+.course-details li {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Larger font size for details */
+    margin-bottom: 8px; /* Increased margin between items */
+}
+
+.course-details i {
+    margin-right: 8px; /* Increased margin for icon */
+}
+
+/* Footer Section */
+.course-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Increased margin-top */
+}
+
+        .apply-button {
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .apply-button:hover {
+        background-color: #e65100;
+        }
+
+        .compare-checkbox {
+        font-size: 12px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        }
+
+                
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #004aad;
+            color: #fff;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .pagination button {
+            padding: 8px 15px;
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .pagination button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .loader {
+            display: none; /* Hide loader initially */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: #333;
+            z-index: 1000;
+        }
+        /* Dropdown styling */
+        .filter-container {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-container select:hover {
+            border-color: #333;
+        }
+
+        .filter-container select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="loader" id="loader"><div class="loaderanim" id="loaderanim"></div></div>
+    <!-- Header Section -->
+    <header>
+        <h1></h1>
+    </header>
+    <!-- Filter Section -->
+    
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search courses by Name or Sector">
+        <button id="searchBtn">Search</button>
+    </div>
+    <div class="filter-container">
+        <select id="sectorFilter">
+            <option value="">All Sectors</option>
+        </select>
+        <select id="placeFilter">
+            <option value="">All</option>
+            <!-- Options will be dynamically populated -->
+        </select>
+        <select id="paymentFilter">
+            <option value="NoSort">Sort by Payment</option>
+            <option value="lowToHigh">Low to High</option>
+            <option value="highToLow">High to Low</option>
+        </select>
+
+    </div>`
+    <!-- Search Bar -->
+    <!-- Main Content -->
+    <main>
+        <div id="course-list">
+            <!-- Course  cards will be injected here by JavaScript -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevBtn" disabled>Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </main>
+
+    <script>
+        const coursesPerPage = 100;
+        let currentPage = 1;
+        let courses = [];
+        let filteredCourses = [];
+        let totalCoursesFetched = 0 ;
+        
+        let selectedSector = ""; // To track the selected sector
+        let filteredSectors = [];
+        
+        function totalPages() {
+            return Math.ceil(totalCoursesFetched/coursesPerPage);
+        }
+
+        function renderCourses() {
+            const courseList = $("#course-list");
+            courseList.empty();
+
+            // const start = (currentPage - 1) * coursesPerPage;
+            //const coursesToDisplay = filteredCourses.slice(start, start + coursesPerPage);
+
+            const coursesToDisplay = filteredCourses; //all courses as filtered courses are paginated in this API.
+            
+            console.log(coursesToDisplay);
+            coursesToDisplay.forEach(course => {
+                const courseCard = $(`
+                <div class="course-card">
+                    <div class="course-card-header">
+                        <span class="course-mode">Online</span>
+                        <span class="course-cost">Paid</span>
+                    </div>
+
+                    <div class="course-card-body">
+                        <div class="course-image">
+                            <img src="${course.CourseImageUrl}" alt="" />
+                        </div>
+                        <div class="course-details-container">
+                            <h3 class="course-title">${course.Title}</h3>
+                            <p class="course-provider">${course.CreatedBy}</p>
+
+                            <!-- Domain/category -->
+                            <span class="course-domain">${course.Domains[0]?.Domain || "N/A"}</span>
+
+                            <!-- Icons for sharing and favorite -->
+                            <!--<div class="course-icons">-->
+                            <!--<button class="icon share-icon">🔗</button>-->
+                            <!--<button class="icon favorite-icon">❤️</button>-->
+                            <!--</div>-->
+
+                            <!-- Details: language, duration, credits, and rating -->
+                            <ul class="course-details">
+                                <li><i class="fa-solid fa-language"></i> Language: <b>&nbsp;${course.Language}</b></li>
+                                <li><i class="fa-solid fa-clock"></i> Duration: <b>&nbsp;${formatDuration(course.CourseDurations[0]?.Minutes || 0)}</b></li>
+                                <li><i class="fa fa-info-circle"></i> Credits Earned (if any): <b>&nbsp;${course.Credit}</b></li>
+                                <li><i class="fa fa-star"></i> Course Rating: <b>&nbsp;${course.CourseStatistic.RatingAverage} (${course.CourseStatistic.RatingTotal} reviews) </b> </li>
+                            </ul>
+
+                            <!-- Footer with apply and compare -->
+                            <div class="course-card-footer">
+                                <button class="apply-button">View Details→</button>
+                        </div>
+                        </div>
+                        
+                    </div> 
+                </div>  
+                `);
+
+
+                courseList.append(courseCard);
+            });
+
+            $("#prevBtn").prop("disabled", currentPage === 1);
+            //$("#nextBtn").prop("disabled", currentPage === totalPages());
+            $("#nextBtn").prop("disabled", currentPage >= totalPages());
+        }
+
+        function updatePagination() {
+            renderCourses();
+        }
+
+
+        function formatDuration(minutes) {
+            const hours = Math.floor(minutes / 60);
+            const mins = minutes % 60;
+            return `${hours} Hours ${mins > 0 ? mins + " Minutes" : ""}`;
+        }
+        // function searchCourses() {
+        //     const query = $("#searchInput").val().toLowerCase();
+        //     const selectedSector = $("#sectorFilter").val();
+        //     const salarySortOrder = $("#salaryFilter").val();
+        //     const vacancySortOrder = $("#vacancyFilter").val();
+        //     filterAndRenderJobs(query, selectedSector, selectedState, salarySortOrder, vacancySortOrder);
+        // }
+
+        // function filterAndRenderJobs(query, sector, state, salarySortOrder, vacancySortOrder) {
+        //     filteredJobs = jobs.filter(job => 
+        //         (job.JobTitle.toLowerCase().includes(query) ||
+        //         job.CompanyName.toLowerCase().includes(query) ||
+        //         job.JobLocations.toLowerCase().includes(query) ||
+        //         job.IndustryName.toLowerCase().includes(query) || 
+        //         job.MinEduQual.toLowerCase().includes(query)) &&
+        //         (sector === "" || job.IndustryName === sector) && 
+        //         (state === "" || job.JobLocationState === state)
+        //     );
+        //   //Add Sorting mechanism
+
+        //     currentPage = 1;
+        //     updatePagination();
+        // }
+
+
+        //$("#searchBtn").on("click", searchCourses);
+
+        // $("#sectorFilter").on("change", function () {
+        //     const query = $("#searchInput").val().toLowerCase();
+        //     //const selectedSector = $("#locationFilter").val();
+        //     //const salarySortOrder = $("#salaryFilter").val();
+        //     //const vacancySortOrder = $("#vacancyFilter").val();
+        //     filterAndRenderCourses(query, $(this).val(), selectedState, salarySortOrder, vacancySortOrder);
+        // });
+
+        // $("#locationFilter").on("change", function () {
+        //     const query = $("#searchInput").val().toLowerCase();
+        //     const selectedSector = $("#sectorFilter").val();
+        //     const salarySortOrder = $("#salaryFilter").val();
+        //     const vacancySortOrder = $("#vacancyFilter").val();
+        //     filterAndRenderJobs(query, selectedSector, $(this).val(), salarySortOrder, vacancySortOrder);
+        // });
+
+        // $("#salaryFilter").on("change", function () {
+        //     const query = $("#searchInput").val().toLowerCase();
+        //     const selectedSector = $("#sectorFilter").val();
+        //     const selectedState = $("#locationFilter").val();
+        //     $("#vacancyFilter").val("NoSort");
+        //     const vacancySortOrder = $("#vacancyFilter").val();
+        //     filterAndRenderJobs(query, selectedSector, selectedState, $(this).val(), vacancySortOrder);
+        // });
+
+        // $("#vacancyFilter").on("change", function () {
+        //     const query = $("#searchInput").val().toLowerCase();
+        //     const selectedSector = $("#sectorFilter").val();
+        //     $("#salaryFilter").val("NoSort");
+        //     const salarySortOrder = $("#salaryFilter").val();
+        //     const selectedState = $("#locationFilter").val();
+            
+        //     filterAndRenderJobs(query, selectedSector, selectedState, salarySortOrder, $(this).val());
+        // });
+
+
+
+        
+
+
+        $("#prevBtn").on("click", function () {
+            if (currentPage > 1) {
+                currentPage--;
+                fetchCourses();
+                updatePagination();
+            }
+        });
+
+        $("#nextBtn").on("click", function () {
+            if (currentPage < totalPages()) {
+                currentPage++;
+                fetchCourses(); 
+                updatePagination();
+            }
+        });
+
+        function populateSectorDropdown() {
+            const sectors = [...new Set(courses.map(course => course.IndustryName))]; // Get unique sectors
+            const sectorDropdown = $("#sectorFilter");
+            sectors.sort();
+            sectors.forEach(sector => {
+                sectorDropdown.append(new Option(sector, sector));
+            });
+        }
+        
+        // function populateLocationFilter() {
+        //     const uniqueStates = [...new Set(jobs.map(job => job.JobLocationState))];
+        //     const locationFilter = $("#locationFilter");
+        //     uniqueStates.sort();
+        //     uniqueStates.forEach(state => {
+        //         const option = $('<option>', { value: state, text: state });
+        //         locationFilter.append(option);
+        //     });
+        // }
+
+
+        // function filterJobsByState() {
+        //     const selectedState = $("#locationFilter").val();
+        //     if (selectedState) {
+        //         filteredJobs = jobs.filter(job => job.JobLocationState === selectedState);
+        //     } else {
+        //         filteredJobs = [...jobs]; // Show all jobs if no state is selected
+        //     }
+        //     currentPage = 1; // Reset to the first page
+        //     updatePagination();
+        // }
+        function fetchSectors()
+        {
+            $.ajax({
+                url: 'https://api-fe.skillindiadigital.gov.in/api/sectors', // Change this URL to your actual API endpoint
+                method: 'GET',
+                dataType: 'json',
+                contentType:'application/json',                          
+                data: JSON.stringify({}),
+                beforeSend: function(xhr) {
+                    // Add the CORS header for cross-origin requests
+                    xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+                },
+                success: function(response) {
+                    if (response.IsSuccess && response.Data && response.Data.results) {
+                        //jobs = response.Data.Results; // Access nested job data // all jobs
+                        filteredSectors = response.Data.results; 
+                    } else {
+                        console.error("Unexpected data format:", response);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Failed to fetch sectors:", error);
+                }
+            });
+
+        }
+
+
+        function fetchCourses() {
+            $("#loader").show(); // Show loader when starting the fetch
+            $.ajax({
+                url: 'https://api-fe.skillindiadigital.gov.in/api/course-v3/course-list-result', // Change this URL to your actual API endpoint
+                method: 'POST',
+                dataType: 'json',
+                contentType:'application/json',                          
+                data: JSON.stringify({
+                    "CourseStatusId":[],"Keyword":"","Sector":[],"Language":[],"TypeId":[],"Price":[],"Rating":[],"CourseProviderId":[],"CourseId":[],"SchemaId":[],"ProgramBy":[],"InitiativeOfs":[],"Domains":[],"LearningProductTypes":[],"Programs":[],"Duration":[],"Credit":[],"Availability":[],"CreatedBy":[],"CertificateType":[],"PageNumber":currentPage,"PageSize":coursesPerPage,"Occupations":[],"SortBy":null,"SortSet":null
+                }),
+                beforeSend: function(xhr) {
+                    // Add the CORS header for cross-origin requests
+                    xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+                },
+                success: function(response) {
+                    $("#loader").hide(); // Hide loader on success
+                    if (response.IsSuccess && response.Data && response.Data.Courses) {
+                        //jobs = response.Data.Results; // Access nested job data // all jobs
+                        courses = response.Data.Courses.filter(course => course.Availability === 1); //only active jobs
+                        totalCoursesFetched = response.Data.Pagination.TotalCount;
+                        filteredCourses = [...courses]; // Initialize filtered jobs
+                        //populateLocationFilter();
+                        //populateSectorDropdown();
+                        updatePagination(); // Display the first page
+                    } else {
+                        console.error("Unexpected data format:", response);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    $("#loader").hide(); // Hide loader on error
+                    console.error("Failed to fetch Courses:", error);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            fetchCourses(); // Load jobs from the server when the page loads
+        });
+
+    </script>
+
+</body>
+</html>
