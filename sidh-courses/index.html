@@ -375,15 +375,11 @@
         <select id="sectorFilter">
             <option value="">All Sectors</option>
         </select>
-        <select id="placeFilter">
-            <option value="">All</option>
+        <select id="priceFilter">
+            <option value="">Both: Free and Paid</option>
             <!-- Options will be dynamically populated -->
         </select>
-        <select id="paymentFilter">
-            <option value="NoSort">Sort by Payment</option>
-            <option value="lowToHigh">Low to High</option>
-            <option value="highToLow">High to Low</option>
-        </select>
+       
 
     </div>`
     <!-- Search Bar -->
@@ -409,6 +405,7 @@
         
         let selectedSector = ""; // To track the selected sector
         let filteredSectors = [];
+        let selectedPrice = "";
         
         function totalPages() {
             return Math.ceil(totalCoursesFetched/coursesPerPage);
@@ -486,32 +483,17 @@
             const mins = minutes % 60;
             return `${hours} Hours ${mins > 0 ? mins + " Minutes" : ""}`;
         }
-        // function searchCourses() {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     const salarySortOrder = $("#salaryFilter").val();
-        //     const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderJobs(query, selectedSector, selectedState, salarySortOrder, vacancySortOrder);
-        // }
-
-        // function filterAndRenderJobs(query, sector, state, salarySortOrder, vacancySortOrder) {
-        //     filteredJobs = jobs.filter(job => 
-        //         (job.JobTitle.toLowerCase().includes(query) ||
-        //         job.CompanyName.toLowerCase().includes(query) ||
-        //         job.JobLocations.toLowerCase().includes(query) ||
-        //         job.IndustryName.toLowerCase().includes(query) || 
-        //         job.MinEduQual.toLowerCase().includes(query)) &&
-        //         (sector === "" || job.IndustryName === sector) && 
-        //         (state === "" || job.JobLocationState === state)
-        //     );
-        //   //Add Sorting mechanism
-
-        //     currentPage = 1;
-        //     updatePagination();
-        // }
+       
+       
+        function searchCourses() {
+            query = $("#searchInput").val().toLowerCase();
+            selectedSector = $("#sectorFilter").val();
+            selectedPrice = $("#priceFilter").val();
+            fetchCourses();
+        }
 
 
-        //$("#searchBtn").on("click", searchCourses);
+        $("#searchBtn").on("click", searchCourses);
 
         // $("#sectorFilter").on("change", function () {
         //     const query = $("#searchInput").val().toLowerCase();
@@ -570,35 +552,27 @@
         });
 
         function populateSectorDropdown() {
-            const sectors = [...new Set(courses.map(course => course.IndustryName))]; // Get unique sectors
-            const sectorDropdown = $("#sectorFilter");
-            sectors.sort();
+            const sectors = filteredSectors.map(sector => ({code: sector.Code,name: sector.Name}));
+            sectors.sort((a, b) => a.name.localeCompare(b.name));
+
+            const sectorDropdown = $("#sectorFilter");   
             sectors.forEach(sector => {
-                sectorDropdown.append(new Option(sector, sector));
+                const option = new Option(sector.name, sector.code);
+                sectorDropdown.append(option);
+            });
+        }
+
+        function populatePriceDropdown() {
+            const prices = filteredPrices.map(price => ({code: price.Id,name: price.Name}));
+            prices.sort((a, b) => a.name.localeCompare(b.name));
+
+            const pricesDropdown = $("#priceFilter");   
+            prices.forEach(price => {
+                const option = new Option(price.name, sector.code);
+                pricesDropdown.append(option);
             });
         }
         
-        // function populateLocationFilter() {
-        //     const uniqueStates = [...new Set(jobs.map(job => job.JobLocationState))];
-        //     const locationFilter = $("#locationFilter");
-        //     uniqueStates.sort();
-        //     uniqueStates.forEach(state => {
-        //         const option = $('<option>', { value: state, text: state });
-        //         locationFilter.append(option);
-        //     });
-        // }
-
-
-        // function filterJobsByState() {
-        //     const selectedState = $("#locationFilter").val();
-        //     if (selectedState) {
-        //         filteredJobs = jobs.filter(job => job.JobLocationState === selectedState);
-        //     } else {
-        //         filteredJobs = [...jobs]; // Show all jobs if no state is selected
-        //     }
-        //     currentPage = 1; // Reset to the first page
-        //     updatePagination();
-        // }
         function fetchSectors()
         {
             $.ajax({
@@ -615,6 +589,7 @@
                     if (response.IsSuccess && response.Data && response.Data.results) {
                         //jobs = response.Data.Results; // Access nested job data // all jobs
                         filteredSectors = response.Data.results; 
+                        populateSectorDropdown();
                     } else {
                         console.error("Unexpected data format:", response);
                     }
@@ -623,7 +598,33 @@
                     console.error("Failed to fetch sectors:", error);
                 }
             });
+        }
 
+        function fetchPrices()
+        {
+            $.ajax({
+                url: 'https://api-fe.skillindiadigital.gov.in/api/course-v3/course-price-list-data', // Change this URL to your actual API endpoint
+                method: 'GET',
+                dataType: 'json',
+                contentType:'application/json',                          
+                data: JSON.stringify({}),
+                beforeSend: function(xhr) {
+                    // Add the CORS header for cross-origin requests
+                    xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+                },
+                success: function(response) {
+                    if (response.IsSuccess && response.Data) {
+                        //jobs = response.Data.Results; // Access nested job data // all jobs
+                        filteredPrices = response.Data; 
+                        populatePriceDropdown();
+                    } else {
+                        console.error("Unexpected data format:", response);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Failed to fetch types of courses:", error);
+                }
+            });
         }
 
 
@@ -649,7 +650,8 @@
                         totalCoursesFetched = response.Data.Pagination.TotalCount;
                         filteredCourses = [...courses]; // Initialize filtered jobs
                         //populateLocationFilter();
-                        //populateSectorDropdown();
+                        fetchSectors();
+                        fetchPrices();
                         updatePagination(); // Display the first page
                     } else {
                         console.error("Unexpected data format:", response);
