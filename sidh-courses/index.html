@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Listings | NSDC Job-X </title>
+    <title>Courses Listings | NSDC SIDH </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Reset margins and paddings */
@@ -126,142 +126,143 @@
             max-width: 800px;
         }
         /* Course Card */
-.course-card {
-    background-color: #fff;
-    padding: 25px; /* Increased padding */
-    border-radius: 10px; /* Slightly more rounded corners */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Slightly heavier shadow */
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-bottom: 25px; /* Increased margin-bottom */
-}
+        .course-card {
+            background-color: #fff;
+            padding: 25px; /* Increased padding */
+            border-radius: 10px; /* Slightly more rounded corners */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Slightly heavier shadow */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-bottom: 25px; /* Increased margin-bottom */
+        }
 
-.course-card:hover {
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4); /* Slightly heavier shadow */
-}
+        .course-card:hover {
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4); /* Slightly heavier shadow */
+        }
 
-/* Course Main Content Section (Two Columns) */
-.course-card-body {
-    display: flex;
-    gap: 20px; /* Space between columns */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    
-}
+        /* Course Main Content Section (Two Columns) */
+        .course-card-body {
+            display: flex;
+            gap: 20px; /* Space between columns */
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            align-items: center;
+            
+        }
 
-/* Course Image (Left Column) */
-.course-image {
-    flex: 1 1 400px; /* Flex-grow, flex-shrink, and min-width for responsive layout */
-    max-width: 400px; /* Maximum width of the image */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
-    height:100%;
-}
+        /* Course Image (Left Column) */
+        .course-image {
+            flex: 1 1 400px; /* Flex-grow, flex-shrink, and min-width for responsive layout */
+            max-width: 400px; /* Maximum width of the image */
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+            height:100%;
+        }
 
-.course-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners for the image */
-    max-width: 100%;         /* Ensure the image scales appropriately */
-    max-height: 100%;        /* Prevent image from overflowing */
-    object-fit: contain;     /* Preserve aspect ratio */
-}
-
-
-.course-details-container {
-    flex: 2 1 200px; /* Flex-grow, flex-shrink, and min-width for the details section */
-    
-}
+        .course-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Rounded corners for the image */
+            max-width: 100%;         /* Ensure the image scales appropriately */
+            max-height: 100%;        /* Prevent image from overflowing */
+            object-fit: contain;     /* Preserve aspect ratio */
+        }
 
 
-/* Header Section */
-.course-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px; /* Added margin to separate from content */
-    padding: 10px;
-    border-radius: 5px;
-}
+        .course-details-container {
+            flex: 2 1 200px; /* Flex-grow, flex-shrink, and min-width for the details section */
+            
+        }
 
 
-/* Mode and Cost Tags */
-.course-mode,
-.course-cost {
-    font-size: 14px; /* Increased font size */
-    font-weight: bold;
-    padding: 8px 14px; /* Increased padding for more visibility */
-    border-radius: 20px; /* Rounded border */
-}
-.course-cost{text-transform: uppercase;}
-.course-mode {
-    background-color: #e0f7fa;
-    color: #00796b;
-    font-size:1.1em;
-}
+        /* Header Section */
+        .course-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px; /* Added margin to separate from content */
+            padding: 10px;
+            border-bottom: 1px solid #2f2e2e;
+        }
 
-.course-cost {
-    background-color: #bbdefb;
-    color: #0d47a1;
-    font-size:1.1em;
-}
 
-/* Title */
-.course-title {
-    font-size: 25px; /* Larger font for title */
-    font-weight: bold; /* Bold title */
-    margin: 10px 0; /* Increased margin */
-    color: #020202; /* Darker color for title */
-    text-transform: uppercase;
-}
+        /* Mode and Cost Tags */
+        .course-mode,
+        .course-cost {
+            font-size: 14px; /* Increased font size */
+            font-weight: bold;
+            padding: 8px 14px; /* Increased padding for more visibility */
+            border-radius: 20px; /* Rounded border */
+        }
+        .course-cost{text-transform: uppercase;}
+        .course-mode {
+            background-color: #e0f7fa;
+            color: #00796b;
+            font-size:1.1em;
+        }
 
-/* Course Provider */
-.course-provider {
-    font-size: 14px; /* Increased font size */
-    color: #626161;
-    font-weight: bold;
-}
+        .course-cost {
+            background-color: #bbdefb;
+            color: #0d47a1;
+            font-size:1.1em;
+        }
 
-/* Domain */
-.course-domain {
-    font-size: 16px; /* Slightly larger font for domain */
-    color: #0b66d5;
-    font-weight: bold;
-    padding-top:10px;
-}
+        /* Title */
+        .course-title {
+            font-size: 25px; /* Larger font for title */
+            font-weight: bold; /* Bold title */
+            margin: 10px 0; /* Increased margin */
+            color: #020202; /* Darker color for title */
+            text-transform: uppercase;
+        }
 
-/* Icons Section */
-.course-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px; /* Increased gap between icons */
-}
+        /* Course Provider */
+        .course-provider {
+            font-size: 14px; /* Increased font size */
+            color: #626161;
+            font-weight: bold;
+        }
 
-/* Course Details List */
-.course-details {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0; /* Increased margin */
-}
+        /* Domain */
+        .course-domain {
+            font-size: 16px; /* Slightly larger font for domain */
+            color: #0b66d5;
+            font-weight: normal;
+            padding-top:10px;
+        }
 
-.course-details li {
-    display: flex;
-    align-items: center;
-    font-size: 16px; /* Larger font size for details */
-    margin-bottom: 8px; /* Increased margin between items */
-}
+        /* Icons Section */
+        .course-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px; /* Increased gap between icons */
+        }
 
-.course-details i {
-    margin-right: 8px; /* Increased margin for icon */
-}
+        /* Course Details List */
+        .course-details {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0; /* Increased margin */
+        }
 
-/* Footer Section */
-.course-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px; /* Increased margin-top */
-}
+        .course-details li {
+            display: flex;
+            align-items: center;
+            font-size: 16px; /* Larger font size for details */
+            margin-bottom: 8px; /* Increased margin between items */
+        }
+
+        .course-details i {
+            margin-right: 8px; /* Increased margin for icon */
+        }
+
+        /* Footer Section */
+        .course-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px; /* Increased margin-top */
+        }
 
         .apply-button {
         background-color: #ff9800;
@@ -368,7 +369,7 @@
     
     
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search courses by Name or Sector">
+        <input type="text" id="searchInput" placeholder="Search courses...">
         <button id="searchBtn">Search</button>
     </div>
     <div class="filter-container">
@@ -379,6 +380,7 @@
             <option value="">Both: Free and Paid</option>
             <!-- Options will be dynamically populated -->
         </select>
+
        
 
     </div>`
@@ -441,7 +443,7 @@
 
                             <!-- Domain/category -->
                             
-                            <span class="course-domain">${getSectorNamesById(course.Sector)}</span>
+                            <span class="course-domain"><b>Sector:</b> ${getSectorNamesById(course.Sector)}</span>
 
                             <!-- Icons for sharing and favorite -->
                             <!--<div class="course-icons">-->
@@ -459,7 +461,7 @@
 
                             <!-- Footer with apply and compare -->
                             <div class="course-card-footer">
-                                <button class="apply-button">View Details→</button>
+                                <a href="https://www.skillindiadigital.gov.in/courses/detail/${course.Id}" target="_blank"><button class="apply-button">View Details→</button></a>
                         </div>
                         </div>
                         
@@ -500,10 +502,9 @@
                                     
                                     
                                     sector_name = filteredSectors[j].Name;
-                                    sector_names.push(sector_name); 
+                                    sector_names.push(" "+ sector_name+" "); 
 
                                 }
-
                         }
                 }
             //const sector = filteredSectors.find(s => s.Id === sectorId);
@@ -550,11 +551,6 @@
         $("#searchBtn").on("click", searchCourses);
         $("#sectorFilter").on("change", searchCourses);
         $("#priceFilter").on("change", searchCourses);
-
-
-
-
-        
 
 
         $("#prevBtn").on("click", function () {
@@ -652,7 +648,6 @@
                 }
             });
         }
-
 
         function fetchCourses() {
             

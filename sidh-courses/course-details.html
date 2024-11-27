@@ -376,17 +376,8 @@
     </main>
 
     <script>
-        const coursesPerPage = 10;
-        let currentPage = 1;
-        let courses = [];
-        let filteredCourses = [];
-        let totalPagesFetched = 0 ;
-        let selectedSector = ""; // To track the selected sector
-        function totalPages() {
-            return Math.ceil(totalPagesFetched);
-        }
 
-        function renderCourses() {
+        function renderCourse() {
             const courseList = $("#course-list");
             courseList.empty();
 
@@ -401,37 +392,43 @@
                 <div class="course-card">
                     <div class="course-card-header">
                         <span class="course-mode">Online</span>
-                        <span class="course-cost">Paid</span>
+                        <span class="course-cost">${getCoursePriceById(course.TypeId)}</span>
                     </div>
-                  <div class="course-image">
-                    <img src="${course.CourseImageUrl}" alt="" />
-                  </div>
-                <h3 class="course-title">${course.Title}</h3>
-                <!-- Provider name -->
-                <p class="course-provider">${course.CreatedBy}</p>
 
-                <!-- Domain/category -->
-                <span class="course-domain">${course.Domains[0]?.Domain || "N/A"}</span>
+                    <div class="course-card-body">
+                        <div class="course-image">
+                            <img src="${course.CourseImageUrl}" alt="" />
+                        </div>
+                        <div class="course-details-container">
+                            <h3 class="course-title">${course.Title}</h3>
+                            <p class="course-provider">${course.CreatedBy}</p>
 
-                <!-- Icons for sharing and favorite -->
-                <!--<div class="course-icons">-->
-                <!--<button class="icon share-icon">🔗</button>-->
-                <!--<button class="icon favorite-icon">❤️</button>-->
-                <!--</div>-->
+                            <!-- Domain/category -->
+                            
+                            <span class="course-domain"><b>Sector:</b> ${getSectorNamesById(course.Sector)}</span>
 
-                <!-- Details: language, duration, credits, and rating -->
-                <ul class="course-details">
-                    <li><i class="fa-solid fa-language"></i> Language: <b>&nbsp;${course.Language}</b></li>
-                    <li><i class="fa-solid fa-clock"></i> Duration: <b>&nbsp;${formatDuration(course.CourseDurations[0]?.Minutes || 0)}</b></li>
-                    <li><i class="fa fa-info-circle"></i> Credits Earned (if any): <b>&nbsp;${course.Credit}</b></li>
-                    <li><i class="fa fa-star"></i> Course Rating: <b>&nbsp;${course.CourseStatistic.RatingAverage} (${course.CourseStatistic.RatingTotal} reviews) </b> </li>
-                </ul>
+                            <!-- Icons for sharing and favorite -->
+                            <!--<div class="course-icons">-->
+                            <!--<button class="icon share-icon">🔗</button>-->
+                            <!--<button class="icon favorite-icon">❤️</button>-->
+                            <!--</div>-->
 
-                <!-- Footer with apply and compare -->
-                <div class="course-card-footer">
-                    <button class="apply-button">View Details→</button>
-                </div>
-                </div>   
+                            <!-- Details: language, duration, credits, and rating -->
+                            <ul class="course-details">
+                                <li><i class="fa-solid fa-language"></i> Language: <b>&nbsp;${course.Language}</b></li>
+                                <li><i class="fa-solid fa-clock"></i> Duration: <b>&nbsp;${formatDuration(course.CourseDurations[0]?.Minutes || 0)}</b></li>
+                                <li><i class="fa fa-info-circle"></i> Credits Earned (if any): <b>&nbsp;${course.Credit}</b></li>
+                                <li><i class="fa fa-star"></i> Course Rating: <b>&nbsp;${course.CourseStatistic.RatingAverage} (${course.CourseStatistic.RatingTotal} reviews) </b> </li>
+                            </ul>
+
+                            <!-- Footer with apply and compare -->
+                            <div class="course-card-footer">
+                                <a href="https://www.skillindiadigital.gov.in/courses/detail/${course.Id}" target="_blank"><button class="apply-button">View Details→</button></a>
+                        </div>
+                        </div>
+                        
+                    </div> 
+                </div>  
                 `);
 
 
@@ -453,120 +450,7 @@
             const mins = minutes % 60;
             return `${hours} Hours ${mins > 0 ? mins + " Minutes" : ""}`;
         }
-        // function searchCourses() {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     const salarySortOrder = $("#salaryFilter").val();
-        //     const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderJobs(query, selectedSector, selectedState, salarySortOrder, vacancySortOrder);
-        // }
-
-        // function filterAndRenderJobs(query, sector, state, salarySortOrder, vacancySortOrder) {
-        //     filteredJobs = jobs.filter(job => 
-        //         (job.JobTitle.toLowerCase().includes(query) ||
-        //         job.CompanyName.toLowerCase().includes(query) ||
-        //         job.JobLocations.toLowerCase().includes(query) ||
-        //         job.IndustryName.toLowerCase().includes(query) || 
-        //         job.MinEduQual.toLowerCase().includes(query)) &&
-        //         (sector === "" || job.IndustryName === sector) && 
-        //         (state === "" || job.JobLocationState === state)
-        //     );
-        //   //Add Sorting mechanism
-
-        //     currentPage = 1;
-        //     updatePagination();
-        // }
-
-
-        //$("#searchBtn").on("click", searchCourses);
-
-        // $("#sectorFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     //const selectedSector = $("#locationFilter").val();
-        //     //const salarySortOrder = $("#salaryFilter").val();
-        //     //const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderCourses(query, $(this).val(), selectedState, salarySortOrder, vacancySortOrder);
-        // });
-
-        // $("#locationFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     const salarySortOrder = $("#salaryFilter").val();
-        //     const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderJobs(query, selectedSector, $(this).val(), salarySortOrder, vacancySortOrder);
-        // });
-
-        // $("#salaryFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     const selectedState = $("#locationFilter").val();
-        //     $("#vacancyFilter").val("NoSort");
-        //     const vacancySortOrder = $("#vacancyFilter").val();
-        //     filterAndRenderJobs(query, selectedSector, selectedState, $(this).val(), vacancySortOrder);
-        // });
-
-        // $("#vacancyFilter").on("change", function () {
-        //     const query = $("#searchInput").val().toLowerCase();
-        //     const selectedSector = $("#sectorFilter").val();
-        //     $("#salaryFilter").val("NoSort");
-        //     const salarySortOrder = $("#salaryFilter").val();
-        //     const selectedState = $("#locationFilter").val();
-            
-        //     filterAndRenderJobs(query, selectedSector, selectedState, salarySortOrder, $(this).val());
-        // });
-
-
-
         
-
-
-        $("#prevBtn").on("click", function () {
-            if (currentPage > 1) {
-                currentPage--;
-                fetchCourses();
-                updatePagination();
-            }
-        });
-
-        $("#nextBtn").on("click", function () {
-            if (currentPage < totalPages()) {
-                currentPage++;
-                fetchCourses(); 
-                updatePagination();
-            }
-        });
-
-        function populateSectorDropdown() {
-            const sectors = [...new Set(courses.map(course => course.IndustryName))]; // Get unique sectors
-            const sectorDropdown = $("#sectorFilter");
-            sectors.sort();
-            sectors.forEach(sector => {
-                sectorDropdown.append(new Option(sector, sector));
-            });
-        }
-        
-        // function populateLocationFilter() {
-        //     const uniqueStates = [...new Set(jobs.map(job => job.JobLocationState))];
-        //     const locationFilter = $("#locationFilter");
-        //     uniqueStates.sort();
-        //     uniqueStates.forEach(state => {
-        //         const option = $('<option>', { value: state, text: state });
-        //         locationFilter.append(option);
-        //     });
-        // }
-
-
-        // function filterJobsByState() {
-        //     const selectedState = $("#locationFilter").val();
-        //     if (selectedState) {
-        //         filteredJobs = jobs.filter(job => job.JobLocationState === selectedState);
-        //     } else {
-        //         filteredJobs = [...jobs]; // Show all jobs if no state is selected
-        //     }
-        //     currentPage = 1; // Reset to the first page
-        //     updatePagination();
-        // }
-
         function fetchCourses() {
             $("#loader").show(); // Show loader when starting the fetch
             $.ajax({
