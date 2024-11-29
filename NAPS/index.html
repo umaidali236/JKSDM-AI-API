@@ -117,6 +117,32 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        .filter-container-stipend {
+            margin: 10px auto 20px;
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .filter-container-stipend input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 40%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .filter-container-stipend button {
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #0077cc;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
         /* Main content styling */
         main {
@@ -125,167 +151,56 @@
             width: 80%;
             max-width: 800px;
         }
-        /* Course Card */
-        .course-card {
+
+        /* Job card styling */
+        .apprenticeship-card {
             background-color: #fff;
-            padding: 25px; /* Increased padding */
-            border-radius: 10px; /* Slightly more rounded corners */
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Slightly heavier shadow */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
+            gap: 10px;
             position: relative;
-            margin-bottom: 25px; /* Increased margin-bottom */
+            margin-bottom: 20px;
         }
 
-        .course-card:hover {
-            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4); /* Slightly heavier shadow */
+        .apprenticeship-card h2 {
+            font-size: 1.4em;
+            color: #121212;
         }
 
-        /* Course Main Content Section (Two Columns) */
-        .course-card-body {
-            display: flex;
-            gap: 20px; /* Space between columns */
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            align-items: center;
-            
-        }
-
-        /* Course Image (Left Column) */
-        .course-image {
-            flex: 1 1 400px; /* Flex-grow, flex-shrink, and min-width for responsive layout */
-            max-width: 400px; /* Maximum width of the image */
-            justify-content: center;  /* Center horizontally */
-            align-items: center;      /* Center vertically */
-            height:100%;
-        }
-
-        .course-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px; /* Rounded corners for the image */
-            max-width: 100%;         /* Ensure the image scales appropriately */
-            max-height: 100%;        /* Prevent image from overflowing */
-            object-fit: contain;     /* Preserve aspect ratio */
-        }
-
-
-        .course-details-container {
-            flex: 2 1 200px; /* Flex-grow, flex-shrink, and min-width for the details section */
-            
-        }
-
-
-        /* Header Section */
-        .course-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px; /* Added margin to separate from content */
-            padding: 10px;
-            border-bottom: 1px solid #2f2e2e;
-        }
-
-
-        /* Mode and Cost Tags */
-        .course-mode,
-        .course-cost {
-            font-size: 14px; /* Increased font size */
+        .apprenticeship-card .company-name {
             font-weight: bold;
-            padding: 8px 14px; /* Increased padding for more visibility */
-            border-radius: 20px; /* Rounded border */
-        }
-        .course-cost{text-transform: uppercase;}
-        .course-mode {
-            background-color: #e0f7fa;
-            color: #00796b;
-            font-size:1.1em;
+            color: #666;
         }
 
-        .course-cost {
-            background-color: #bbdefb;
-            color: #0d47a1;
-            font-size:1.1em;
+        .apprenticeship-card .apprenticeship-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: #2f2d2d;
         }
 
-        /* Title */
-        .course-title {
-            font-size: 25px; /* Larger font for title */
-            font-weight: bold; /* Bold title */
-            margin: 10px 0; /* Increased margin */
-            color: #020202; /* Darker color for title */
-            text-transform: uppercase;
-        }
-
-        /* Course Provider */
-        .course-provider {
-            font-size: 14px; /* Increased font size */
-            color: #626161;
+        .apprenticeship-card .salary {
             font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
         }
 
-        /* Domain */
-        .course-domain {
-            font-size: 16px; /* Slightly larger font for domain */
-            color: #0b66d5;
-            font-weight: normal;
-            padding-top:10px;
-        }
-
-        /* Icons Section */
-        .course-icons {
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px; /* Increased gap between icons */
-        }
-
-        /* Course Details List */
-        .course-details {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0; /* Increased margin */
-        }
-
-        .course-details li {
-            display: flex;
+        .apprenticeship-card .view-details {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
             align-items: center;
-            font-size: 16px; /* Larger font size for details */
-            margin-bottom: 8px; /* Increased margin between items */
+            gap: 5px;
+            margin-top: 10px;
         }
 
-        .course-details i {
-            margin-right: 8px; /* Increased margin for icon */
+        .apprenticeship-card .view-details:hover {
+            color: #005fa3;
         }
-
-        /* Footer Section */
-        .course-card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px; /* Increased margin-top */
-        }
-
-        .apply-button {
-        background-color: #ff9800;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        }
-
-        .apply-button:hover {
-        background-color: #e65100;
-        }
-
-        .compare-checkbox {
-        font-size: 12px;
-        color: #555;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        }
-
-                
 
         .badge {
             position: absolute;
@@ -293,10 +208,11 @@
             right: 15px;
             background-color: #004aad;
             color: #fff;
-            font-size: 0.9em;
+            font-size: 1.2em;
             padding: 5px 10px;
             border-radius: 5px;
         }
+
 
         .pagination {
             display: flex;
@@ -368,10 +284,7 @@
     <!-- Filter Section -->
     
     
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search Apprenticeships...">
-        <button id="searchBtn">Search</button>
-    </div>
+    <div class="search-container"></div>
     <div class="filter-container">
         <select id="sectorFilter">
             <option value="">All Sectors</option>
@@ -380,14 +293,21 @@
             <option value="">All States</option>
             <!-- Options will be dynamically populated -->
         </select>
-
+    </div>
+    <div class="filter-container-stipend">
+        <label>Stipend From</label><input type="text" name="stipend_from_Filter" id="stipend_from_Filter" placeholder="Stipend From" value="0">
+        <label>Stipend Upto</label><input type="text" name="stipend_from_Filter" id="stipend_upto_Filter" placeholder="Stipend upto" value="100000">
+        <button id="searchBtn">Search</button>
+    </div>
+    <h2 id="totalOpportunities" style="text-align:center;margin-top: 30px;"></h2>
+        
        
 
     </div>`
     <!-- Search Bar -->
     <!-- Main Content -->
     <main>
-        <div id="course-list">
+        <div id="apprenticeship-list">
             <!-- Course  cards will be injected here by JavaScript -->
         </div>
 
@@ -399,20 +319,26 @@
     </main>
 
     <script>
-        const apprenticeshipsPerPage = 2;
+        const apprenticeshipsPerPage = 10;
         let currentPage = 1;
         let apprenticeships = [];
         
+
+        
         let filteredApprenticeships = [];
-        let filteredSectors = [];
-        let filteredLocations= [];
+
+        let selectedSector = "";
+        let selectedLocation = "";
+        let selectedStipendFrom = 0;
+        let selectedStipendUpto = 999999999;
         
 
         let totalApprenticeshipsFetched = 0 ;
 
-        let selectedSector = "";
-        let query = "";
+  
+        let variable_url = 'https://api.apprenticeshipindia.gov.in/opportunities/search?page='+currentPage+'&page_size='+apprenticeshipsPerPage;
         
+
         function totalPages() {
             return Math.ceil(totalApprenticeshipsFetched/apprenticeshipsPerPage);
         }
@@ -423,6 +349,42 @@
 
         function renderApprenticeships()
         {
+            
+            const apprenticeshipList = $("#apprenticeship-list");
+            apprenticeshipList.empty();
+
+            // const start = (currentPage - 1) * coursesPerPage;
+            //const coursesToDisplay = filteredCourses.slice(start, start + coursesPerPage);
+
+            const apprenticeshipsToDisplay = filteredApprenticeships; //all courses as filtered courses are paginated in this API.
+            
+            //console.log(coursesToDisplay);
+            apprenticeshipsToDisplay.forEach(apprenticeship => {
+                const apprenticeshipCard = $(`
+                <div class="apprenticeship-card">
+                        <div class="badge">Apprenticeship</div>
+                        <h2>${apprenticeship.name}</h2>
+                        <div class="company-name">${apprenticeship.establishment.establishment_name}</div>
+                        <div class="apprenticeship-details">
+                            <span>📍 Location of Work: <b> ${apprenticeship.locations[0].address.district_name} (${apprenticeship.locations[0].address.state_name}) </b></span>
+                            <span>💼 Sector: <b>${apprenticeship.course.sector.name} </b></span>
+                            <span>📜 MinimumQualification: <b>${apprenticeship.course.minimum_qualification[0].minimum_qualification.length>0? apprenticeship.course.minimum_qualification[0].minimum_qualification.title: 'N/A' }</b></span>
+                            <span>⏱︎ Duration of Apprenticeship: <b>${Math.ceil(apprenticeship.trainings[0].bt_days_duration+apprenticeship.trainings[0].ojt_days_duration)/30} month(s)</b></span>
+                            <span>📅 Posted/Updated on: <b>${new Date(apprenticeship.updated_at.date).toLocaleDateString('en-US', {day: 'numeric',month: 'short',year: 'numeric'})}</b></span>
+                            
+                            <span><i class="fa-solid fa-people-group"></i> VACANCY: <b>${apprenticeship.number_of_vacancies}</b></span>
+                            
+                        </div>
+                        <div class="salary">Stipend: ₹ ${apprenticeship.stipend_from} - ${apprenticeship.stipend_upto}</div>
+                        <a href="apprenticeship-details.html?apprenticeshipId=${apprenticeship.id}" class="view-details">View Details ➔</a>
+                    </div>
+                `);
+                
+                console.log(apprenticeshipCard.html());
+                apprenticeshipList.append(apprenticeshipCard);
+            });
+
+
             $("#prevBtn").prop("disabled", currentPage === 1);
             //$("#nextBtn").prop("disabled", currentPage === totalPages());
             $("#nextBtn").prop("disabled", currentPage >= totalPages());
@@ -453,14 +415,27 @@
        
         function searchApprenticeships() {
             currentPage = 1;
-            query = $("#searchInput").val().toLowerCase();
             selectedSector = $("#sectorFilter").val();
+            selectedLocation = $("#locationFilter").val();
+
+            
+            selectedStipendFrom = $("#stipend_from_Filter").val();
+            selectedStipendUpto = $("#stipend_upto_Filter").val();
+
+
+            if (selectedLocation == ""){
+                variable_url = 'https://api.apprenticeshipindia.gov.in/opportunities/search?page='+currentPage+'&page_size='+apprenticeshipsPerPage+'&stipend_from='+selectedStipendFrom+'&stipend_upto='+selectedStipendUpto+'&sector_id='+selectedSector;
+            }
+            else{
+                variable_url = 'https://api.apprenticeshipindia.gov.in/opportunities/search?page='+currentPage+'&page_size='+apprenticeshipsPerPage+'&stipend_from='+selectedStipendFrom+'&stipend_upto='+selectedStipendUpto+'&locations[0][type]=state&locations[0][id]='+selectedLocation+'&sector_id='+selectedSector;
+            }
             fetchApprenticeships();
         }
 
 
         $("#searchBtn").on("click", searchApprenticeships);
-        $("#sectorFilter").on("change", searchApprenticeships);
+        $("#locationFilter").on("change", searchApprenticeships);
+
 
 
         $("#prevBtn").on("click", function () {
@@ -505,7 +480,7 @@
         function fetchSectors()
         {
             $.ajax({
-                url: 'https://api.apprenticeshipindia.gov.in/sectors?page_size=9999&search=', // Change this URL to your actual API endpoint
+                url: 'https://api.apprenticeshipindia.gov.in/sectors?page_size=9999', // Change this URL to your actual API endpoint
                 method: 'GET',
                 dataType: 'json',
                 async: false, 
@@ -562,13 +537,14 @@
 
         function fetchApprenticeships() {
             
+
+        
             $("#loader").show(); // Show loader when starting the fetch
             $.ajax({
-                url: 'https://api.apprenticeshipindia.gov.in/opportunities/search?page='+currentPage+'&page_size='+apprenticeshipsPerPage, // Change this URL to your actual API endpoint
+                url: variable_url, 
                 method: 'GET',
                 dataType: 'json',
                 contentType:'application/json',                          
-                data: JSON.stringify({ }),
                 beforeSend: function(xhr) {
                     // Add the CORS header for cross-origin requests
                     xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
@@ -577,8 +553,10 @@
                     $("#loader").hide(); // Hide loader on success
                     if (response.data) {
                         //jobs = response.Data.Results; // Access nested job data // all jobs
-                        apprenticeships = response.data; //only active jobs
+                        apprenticeships = response.data.filter(apprenticeship => apprenticeship.number_of_vacancies > 0);
                         totalApprenticeshipsFetched = response.meta.total;
+                        $("#totalOpportunities").html(totalApprenticeshipsFetched+ ' Opportunities Fetched');
+                        
                         filteredApprenticeships = [...apprenticeships]; // Initialize filtered jobs
                         //populateLocationFilter();
                         updatePagination(); // Display the first page
@@ -592,8 +570,9 @@
                 }
             });
         }
-
+        $("#loader").show();
         $(document).ready(function () {
+            
             fetchSectors();
             fetchLocations();
             fetchApprenticeships(); // Load jobs from the server when the page loads
