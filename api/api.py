@@ -17,10 +17,99 @@ import random
 #BERT PART
 from transformers import BertTokenizer, BertModel
 import torch
+import xml.etree.ElementTree as ET
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 model.eval()
 
+
+
+
+print("Loding Career Paths")
+## CAREER OPTIONS
+courses = dict()
+root = ET.parse('../db/all_courses.xml')
+for i, item in enumerate(root.findall('course')):
+    courses[i] = dict()
+    if item.tag == "course": 
+        for node in item:
+            courses[i]['course_id'] = node.find('id').text
+            courses[i]['course_level'] = node.find('level').text       
+            courses[i]['course_name'] = node.find('name').text            
+            courses[i]['description']= node.find('description').text
+            courses[i]['parent'] = node.find('parent').text
+
+            if not int(courses[i]['course_level'][1:]) == 100:  #non-leaf node
+                #print(node.find('name').text)
+                courses[i]['node_placement'] = 'non-leaf'
+                courses[i]['children'] = dict()
+                children = node.find('children')
+                for j, child in enumerate(children.findall('child')):
+                    child_type = child.find('child_type').text
+                    #print(child_type)
+                    child_name = child.find('child_name').text
+                    courses[i]['children'][j] = {'child_type':child_type, 'child_name':child_name}
+                #print(courses[i]['children'])
+
+            if int(courses[i]['course_level'][1:]) == 100:  #leaf node
+
+                courses[i]['node_placement'] = 'leaf'
+                courses[i]['duration'] =  node.find('duration').text
+                courses[i]['sector'] =  node.find('sector').text
+                colleges = node.find('offline')
+                courses[i]['offline'] = []
+                for col in colleges.findall('college'):
+                    courses[i]['offline'].append(col.text)
+
+
+print("Loding NCS Career Paths")
+## NCS CAREER OPTIONS            
+NCS_CAREER_PATHS = pd.read_excel('../db/CAREERS_500.xlsx')
+Y_FILLED_SECTORS = NCS_CAREER_PATHS['Sector'].fillna(method='ffill', axis=0)
+Y_FILLED_SECTOR_DESC = NCS_CAREER_PATHS['Sector Description'].fillna(method='ffill', axis=0)
+ncs_sector_names = list(Y_FILLED_SECTORS.unique())
+NCS_CAREER_PATHS['Sector'] = Y_FILLED_SECTORS
+NCS_CAREER_PATHS['Sector Description'] = Y_FILLED_SECTOR_DESC
+ncs_career_names = list(NCS_CAREER_PATHS['Career Name'].unique())
+ncscourses = dict()
+for i, ncs_sector_name in enumerate(ncs_sector_names):
+    ncscourses[i] = dict()
+    ncscourses[i]['course_id'] = 'C'+"".join(ncs_sector_name.split(" ")).strip()   
+    ncscourses[i]['course_level'] = "D3"
+    ncscourses[i]['course_name'] = ncs_sector_name
+    ncscourses[i]['description']= str(NCS_CAREER_PATHS[NCS_CAREER_PATHS['Sector'] == ncs_sector_name]['Sector Description'].tolist()[0])
+    ncscourses[i]['parent'] = "Intermediate (11th/12th)"
+    ncscourses[i]['node_placement'] = 'non-leaf'
+    if str(ncs_sector_name) == "nan":
+        continue
+
+    courses_in_ncs_sector = NCS_CAREER_PATHS[NCS_CAREER_PATHS['Sector'] == ncs_sector_name]['Career Name'].tolist().copy()
+    ncscourses[i]['children'] = dict()
+    for jx, cx in enumerate(courses_in_ncs_sector):
+        ncscourses[i]['children'][jx] = {'child_type':'ncscourse', 'child_name':", ".join(cx.split("/"))}
+
+
+
+for k in range(i+1, NCS_CAREER_PATHS.shape[0]+(i+1)):
+    ncscourses[k] = dict()
+    ncscourses[k]['course_id'] = 'C_NCS_ENDPOINT'+str(k)  
+    ncscourses[k]['course_level'] = "D100"
+    ncscourses[k]['course_name'] = ", ".join(NCS_CAREER_PATHS['Career Name'].iloc[k-i-1].split("/"))
+    ncscourses[k]['description']= NCS_CAREER_PATHS['Career Description'].iloc[k-i-1]
+    ncscourses[k]['parent'] = NCS_CAREER_PATHS['Sector'].iloc[k-i-1]
+    ncscourses[k]['node_placement'] = 'leaf'
+    ncscourses[k]['sector'] =  NCS_CAREER_PATHS['Sector'].iloc[k-i-1]
+    ncscourses[k]['offline'] = str(NCS_CAREER_PATHS['Where will you study?'].iloc[k-i-1])
+    ncscourses[k]['duration'] = ''
+    ncscourses[k]['details'] = {'personalCompetencies': str(NCS_CAREER_PATHS['Personal Competencies'].iloc[k-i-1]), 
+                                'whereToWork': str(NCS_CAREER_PATHS['Where will you work?'].iloc[k-i-1]),
+                                'expectedGrowthPath': str(NCS_CAREER_PATHS['Expected Growth Path'].iloc[k-i-1]),
+                                'fees': str(NCS_CAREER_PATHS['Fees'].iloc[k-i-1]),
+                                'scholarshipsAndLoans': str(NCS_CAREER_PATHS['Scholarships & Loans'].iloc[k-i-1]),
+                                'expectedIncome': str(NCS_CAREER_PATHS['Expected Income'].iloc[k-i-1]),
+                                'externalLink': str(NCS_CAREER_PATHS['NCS Link'].iloc[k-i-1]).lower()
+
+                               }
 
 
 
@@ -490,6 +579,29 @@ def returnQuestionBank():
     return_value["message"] = all_questions
     return json.dumps(return_value, indent=4)
 
+@app.route('/api/v1/ExploreCareerOptions', methods=['GET'])
+@cross_origin()
+def return_CareerOptions():
+     # Get the 'id' query parameter from the request
+    qualification = request.args.get('qualification', '10th')
+    course_type = request.args.get('course_type', 'course')
+    course_id = request.args.get('course_id', 'C10')
+    if course_type == "course":
+        for c in courses.keys():
+            if courses[c]['course_name'] == qualification:
+                print(courses[c]['course_name'])
+                courses[c]['course_type'] = 'course'
+                returnValue = {'status':'success', 'message':courses[c]}
+                return jsonify(returnValue) 
+    elif course_type == "ncscourse":
+        for c in ncscourses.keys():
+            if ncscourses[c]['course_name'] == qualification:
+                print(ncscourses[c]['course_name'])
+                ncscourses[c]['course_type'] ='ncscourse'
+                print(ncscourses[c])
+                returnValue = {'status':'success', 'message':ncscourses[c]}
+                return jsonify(returnValue)
+    return jsonify({'status':'fail', 'message':'Error EXC100- Course not found. Try again'})
 
 
 

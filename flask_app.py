@@ -54,7 +54,7 @@ app = Flask(__name__)
 print("Loding Career Paths")
 ## CAREER OPTIONS
 courses = dict()
-root = ET.parse('./db/all_courses.xml')
+root = ET.parse('../db/all_courses.xml')
 for i, item in enumerate(root.findall('course')):
     courses[i] = dict()
     if item.tag == "course": 
@@ -90,7 +90,7 @@ for i, item in enumerate(root.findall('course')):
 
 print("Loding NCS Career Paths")
 ## NCS CAREER OPTIONS            
-NCS_CAREER_PATHS = pd.read_excel('./db/CAREERS_500.xlsx')
+NCS_CAREER_PATHS = pd.read_excel('../db/CAREERS_500.xlsx')
 Y_FILLED_SECTORS = NCS_CAREER_PATHS['Sector'].fillna(method='ffill', axis=0)
 Y_FILLED_SECTOR_DESC = NCS_CAREER_PATHS['Sector Description'].fillna(method='ffill', axis=0)
 ncs_sector_names = list(Y_FILLED_SECTORS.unique())
