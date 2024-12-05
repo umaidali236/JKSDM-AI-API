@@ -429,8 +429,8 @@
                 const courseCard = $(`
                 <div class="course-card">
                     <div class="course-card-header">
-                        <span class="course-mode">Online</span>
-                        <span class="course-cost">X</span>
+                        <span class="course-mode">Offline</span>
+                        <span class="course-cost">${course.CourseCategory}</span>
                     </div>
 
                     <div class="course-card-body">
@@ -452,7 +452,7 @@
                             <!-- Details: language, duration, credits, and rating -->
                             <ul class="course-details">
                                 
-                                <li><i class="fa-solid fa-clock"></i> Duration: <b>&nbsp;${course.Duration}}</b></li>
+                                <li><i class="fa-solid fa-clock"></i> Duration: <b>&nbsp;${course.Duration*10} hours</b></li>
                             </ul>
 
                             <!-- Footer with apply and compare -->
@@ -590,12 +590,10 @@
         function fetchSectors()
         {
             $.ajax({
-                url: 'https://api-fe.skillindiadigital.gov.in/api/sectors', // Change this URL to your actual API endpoint
-                method: 'GET',
-                dataType: 'json',
-                async: false, 
-                contentType:'application/json',                          
-                data: JSON.stringify({}),
+                url: 'http://jksdm.pragyaware.com/B2BWebService.aspx', // Change this URL to your actual API endpoint
+                method: 'POST',
+                async: false,                         
+                data: {'method':1, 'Mode':'Sector'},
                 beforeSend: function(xhr) {
                     // Add the CORS header for cross-origin requests
                     xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
@@ -646,26 +644,25 @@
         }
 
         function fetchCourses() {
-            
             $("#loader").show(); // Show loader when starting the fetch
             $.ajax({
                 url: 'http://jksdm.pragyaware.com/B2BWebService.aspx', // Change this URL to your actual API endpoint
                 method: 'POST',
-                data:{"Method":1, "Mode":"Course"},                     
+                data:{"Method":1, "Mode":"Course", "coursesPerPage":coursesPerPage, "currentPage":currentPage},                     
                 // data: JSON.stringify({
                 //     "Method":[],"Keyword":query,"Sector":selectedSector,"Language":[],"TypeId":selectedPrice,"Price":[],"Rating":[],"CourseProviderId":[],"CourseId":[],"SchemaId":[],"ProgramBy":[],"InitiativeOfs":[],"Domains":[],"LearningProductTypes":[],"Programs":[],"Duration":[],"Credit":[],"Availability":[],"CreatedBy":[],"CertificateType":[],"PageNumber":currentPage,"PageSize":coursesPerPage,"Occupations":[],"SortBy":null,"SortSet":null
                 // }),
-                beforeSend: function(xhr) {
-                    // Add the CORS header for cross-origin requests
-                    xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
-                },
+                // beforeSend: function(xhr) {
+                //     // Add the CORS header for cross-origin requests
+                //     xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow all origins
+                // },
                 success: function(response) {
                     $("#loader").hide(); // Hide loader on success
-                    if (response.Status && responise.Data && response.Status ==1) {
+                    if (response.Status && response.Data && response.Status ==1) {
                         //jobs = response.Data.Results; // Access nested job data // all jobs
-                        //courses = response.filter(course => course.Availability === 1); //only active jobs
+                        courses = response.Data.filter(course => course['Training Center Approval Status']=== 'Approved'); //only active jobs
                         //totalCoursesFetched = response.Data.Pagination.TotalCount;
-                        courses = response.Data; //only active jobs
+                        //courses = response.Data; //only active jobs
                         filteredCourses = [...courses]; // Initialize filtered jobs
                         //populateLocationFilter();
                         updatePagination(); // Display the first page

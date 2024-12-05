@@ -668,7 +668,7 @@
                     $("#loader").hide(); // Hide loader on success
                     if (response.IsSuccess && response.Data && response.Data.Courses) {
                         //jobs = response.Data.Results; // Access nested job data // all jobs
-                        courses = response.Data.Courses.filter(course => course.Availability === 1); //only active jobs
+                        courses = response.Data.Courses; //only active jobs
                         totalCoursesFetched = response.Data.Pagination.TotalCount;
                         filteredCourses = [...courses]; // Initialize filtered jobs
                         //populateLocationFilter();
