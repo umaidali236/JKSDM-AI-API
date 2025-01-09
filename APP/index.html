@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+     /* General Reset */
+body, h1, h2, p, a, input, label, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f9fc; /* Light gray background matching design */
+  color: #333;
+  line-height: 1.5;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003865; /* Dark blue */
+}
+
+.govt-label {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Login Form Section */
+main {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #003865; /* Dark blue */
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#otp-number {
+  font-weight: bold;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.alt-login {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.alt-login .email-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.alt-login .email-link:hover {
+  text-decoration: underline;
+}
+
+.terms {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.terms label a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.terms label a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #003865;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  background: #002140;
+}
+
+.register-section {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.register-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-section a:hover {
+  text-decoration: underline;
+}
+
+/* OTP Section */
+#otp-section {
+  text-align: center;
+  display: none; /* Initially hidden */
+}
+
+.otp-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.otp-input input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.otp-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.btn-resend {
+  background: #cccccc;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-resend:hover {
+  background: #bbbbbb;
+}
+
+.timer {
+  color: #555;
+  font-size: 14px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #555;
+}
+
+.illustration {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .otp-input input {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+  </style>
+
+
+</head>
+
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login Page</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <div class="login-container">
+        <!-- Header -->
+        <header class="header">
+          <div class="logo-section">
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            <div class="title">JK Youth Skill & Entrepreneurship</div>
+          </div>
+          <div class="govt-label">Government of J&K</div>
+        </header>
+    
+        <!-- Login Form -->
+        <main>
+          <h1>Login to Account</h1>
+          <form class="login-form" id="login-form">
+            <label for="mobile-number">Mobile Number</label>
+            <input type="text" id="mobile-number" name="mobile-number" placeholder="Enter Mobile Number" required>
+    
+            <div class="alt-login">
+              <span>Login with</span>
+              <a href="#" class="email-link">E-mail</a>
+            </div>
+    
+            <div class="terms">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+            </div>
+    
+            <button type="submit" class="btn">Send OTP</button>
+          </form>
+    
+          <div class="register-section">
+            <p>Don't have an account? <a href="#">Register</a></p>
+            <p>Version : 1.0.1</p>
+            <a href="#" class="help-link">Help And Support</a>
+          </div>
+        </main>
+    
+        <!-- Footer -->
+        <footer class="footer">
+          <p>Free Courses, Career Guidance, Stipend and much more.....</p>
+          <img src="illustration.png" alt="Illustration" class="illustration">
+        </footer>
+      </div>
+    
+    </body>
+    </html>
+    
+</body>
+
+<script>
+    document.querySelector('#login-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const mobileNumber = document.querySelector('#mobile-number').value;
+
+  if (mobileNumber) {
+    // Show OTP Section
+    document.querySelector('#login-section').classList.add('hidden');
+    document.querySelector('#otp-section').classList.remove('hidden');
+    document.querySelector('#otp-number').textContent = mobileNumber;
+
+    // Start Timer
+    startTimer(1, 58);
+  } else {
+    alert('Please enter your mobile number.');
+  }
+});
+
+function startTimer(minutes, seconds) {
+  const timer = document.querySelector('#timer');
+  let time = minutes * 60 + seconds;
+
+  const interval = setInterval(() => {
+    const mins = Math.floor(time / 60);
+    const secs = time % 60;
+
+    timer.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    time--;
+
+    if (time < 0) clearInterval(interval);
+  }, 1000);
+}
+
+</script>
+</html>

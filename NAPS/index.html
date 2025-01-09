@@ -248,6 +248,7 @@
         /* Dropdown styling */
         .filter-container {
             display: flex;
+            flex-direction: column;
             justify-content: flex-start;
             padding: 10px 0;
         }
@@ -289,7 +290,7 @@
         <select id="sectorFilter">
             <option value="">All Sectors</option>
         </select>
-        <select id="locationFilter">
+        <select id="locationFilter" style="margin-top:10px;">
             <option value="">All States</option>
             <!-- Options will be dynamically populated -->
         </select>
@@ -363,6 +364,7 @@
                 const apprenticeshipCard = $(`
                 <div class="apprenticeship-card">
                         <div class="badge">Apprenticeship</div>
+                        <br><br>
                         <h2>${apprenticeship.name}</h2>
                         <div class="company-name">${apprenticeship.establishment.establishment_name}</div>
                         <div class="apprenticeship-details">
@@ -434,7 +436,7 @@
 
 
         $("#searchBtn").on("click", searchApprenticeships);
-        //s$("#locationFilter").on("change", searchApprenticeships);
+        //$("#locationFilter").on("change", searchApprenticeships);
 
 
 
